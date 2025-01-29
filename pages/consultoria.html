@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consuktoria</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/consultoria.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="../img/Idea logo general/Logo png.png" alt="Logo" width="50" height="50" />
+        </a>
+
+        <!-- Botón Responsive -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <!-- Menú Nosotros -->
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="nosotrosDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">  
+                Nosotros
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="nosotrosDropdown">
+                <li><a class="dropdown-item" href="#">Misión</a></li>
+                <li><a class="dropdown-item" href="#">Visión</a></li>
+                <li><a class="dropdown-item" href="#">Contáctanos</a></li>
+              </ul>
+            </li>
+
+            <!-- Menú Servicios -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Servicios
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+                <li>
+                  <a class="dropdown-item" href="../pages/consultoria.html">Consultoría en Software</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/desarrollo.html">Desarrollo de Software a la Medida</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./integracion.html">Integración de Sistemas</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./capacitaciones.html">Capacitación en Software</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Otros Links -->
+            <li class="nav-item"><a class="nav-link" href="#">Equipo</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Laboratorio Tecnológico</a>
+            </li>
+          </ul>
+
+          <!-- Botón Contáctanos -->
+          <a href="#contacto" class="btn btn-danger px-4 ms-3">Contáctanos</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-text">
+        <h1>Transforma tu negocio con nuestra <span class="highlight">consultoría</span> especializada</h1>
+    </div>
+    <div class="hero-image">
+        <img src="../img/porque.jpg" alt="Consultoría">
+    </div>
+    
+</section>
+    <!-- Cita estilizada -->
+    <div class="quote">
+      <p>“El buen software es una inversión, no un gasto”<br> - Martin Fowler</p>
+  </div>
+
+  <section class="text-center py-5 bg-light position-relative overflow-hidden">
+    <div class="container">
+      <!-- Título con animación -->
+      <h2 class="fw-bold display-4 mb-5" data-aos="fade-down" data-aos-duration="800">
+        Consultoría en Software
+      </h2>
+
+      <div class="row align-items-center">
+        <!-- Imagen libre -->
+        <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-duration="1200">
+          <div class="image-container position-relative">
+            <img src="../img/Consultoria iconos/consultoria degradado.png" alt="Imagen de detalles"
+              class="img-fluid w-50 rounded" style="animation: zoomIn 1.5s" />
+              <div class="floating-bg"></div> 
+              
+          </div>
+        </div>
+
+        <!-- Contenido de texto -->
+        <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+          <h5 class="fw-bold mb-3">¿No sabes por dónde empezar?</h5>
+          <p class="text-muted fs-5 mb-4">
+            Nuestro equipo de consultores evalúa tus procesos, identifica
+            oportunidades de mejora y te propone soluciones tecnológicas
+            concretas. Te asesoramos en la selección, diseño y planificación
+            de soluciones tecnológicas que se adapten a las necesidades
+            específicas de tu negocio. Trabajamos contigo para:
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Elementos decorativos animados (en las esquinas inferiores) -->
+    <div class="decorative-circle position-absolute rounded-circle" style="
+          width: 150px;
+          height: 150px;
+          background: rgba(0, 0, 0, 0.05);
+          bottom: -30px;
+          right: -40px;
+          animation: float 8s ease-in-out infinite;
+        "></div>
+    <div class="decorative-circle position-absolute rounded-circle" style="
+          width: 300px;
+          height: 300px;
+          background: rgba(0, 0, 0, 0.05);
+          bottom: 100px;
+          left: 200px;
+          animation: float 8s ease-in-out infinite;
+        "></div>
+  </section>
+
+  <section class="text-center py-5 bg-light position-relative overflow-hidden">
+    <div class="container">
+      <!-- Título con animación -->
+      <h2 class="fw-bold display-4 mb-5" data-aos="fade-down" data-aos-duration="800">
+        Nuestro Proceso
+      </h2>
+      <!-- Pasos -->
+      <div class="row g-5">
+        <!-- Paso 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-lg h-100">
+            <div class="card-body text-center">
+              <div
+                class="rounded-circle bg-danger text-white mx-auto mb-4 d-flex align-items-center justify-content-center shadow"
+                style="width: 90px; height: 90px; font-size: 2.5rem">
+                1
+              </div>
+              <h5 class="fw-bold mb-3">Analizar tus necesidades</h5>
+              <p class="text-muted">
+                Estudiamos tus necesidades específicas para encontrar la mejor
+                solución.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Paso 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="card border-0 shadow-lg h-100">
+            <div class="card-body text-center">
+              <div
+                class="rounded-circle bg-primary text-white mx-auto mb-4 d-flex align-items-center justify-content-center shadow"
+                style="width: 90px; height: 90px; font-size: 2.5rem">
+                2
+              </div>
+              <h5 class="fw-bold mb-3">Diseño de estrategias</h5>
+              <p class="text-muted">
+                Creamos una estrategia tecnológica alineada con tus objetivos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Paso 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="card border-0 shadow-lg h-100">
+            <div class="card-body text-center">
+              <div
+                class="rounded-circle bg-danger text-white mx-auto mb-4 d-flex align-items-center justify-content-center shadow"
+                style="width: 90px; height: 90px; font-size: 2.5rem">
+                3
+              </div>
+              <h5 class="fw-bold mb-3">Definición del roadmap</h5>
+              <p class="text-muted">
+                Definimos los pasos y herramientas necesarias para la
+                implementación.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Elemento decorativo animado -->
+    <div class="decorative-circle position-absolute rounded-circle" style="
+          width: 200px;
+          height: 200px;
+          background: rgba(0, 0, 0, 0.05);
+          top: -50px;
+          left: -50px;
+          animation: float 8s ease-in-out infinite;
+        "></div>
+  </section>
+
+  <section class="text-center text-white py-5 position-relative" style="
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        overflow: hidden;
+      ">
+    <div class="container">
+      <!-- Título con animación -->
+      <h2 class="fw-bold mb-5 display-4" data-aos="fade-down" data-aos-duration="800">
+        ¿Cómo funciona?
+      </h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <ul class="list-unstyled text-start">
+            <!-- Elemento 1 -->
+            <li class="d-flex align-items-center mb-5" data-aos="fade-right" data-aos-delay="200">
+              <div
+                class="icon-box bg-white text-danger rounded-circle me-4 d-flex align-items-center justify-content-center"
+                style="width: 60px; height: 60px; font-size: 2rem">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <span class="fs-4">Reunión inicial para entender su negocio</span>
+            </li>
+            <!-- Elemento 2 -->
+            <li class="d-flex align-items-center mb-5" data-aos="fade-right" data-aos-delay="400">
+              <div
+                class="icon-box bg-white text-danger rounded-circle me-4 d-flex align-items-center justify-content-center"
+                style="width: 60px; height: 60px; font-size: 2rem">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <span class="fs-4">Análisis de procesos y tecnologías iniciales</span>
+            </li>
+            <!-- Elemento 3 -->
+            <li class="d-flex align-items-center mb-5" data-aos="fade-right" data-aos-delay="400">
+              <div
+                class="icon-box bg-white text-danger rounded-circle me-4 d-flex align-items-center justify-content-center"
+                style="width: 70px; height: 60px; font-size: 2rem">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <span class="fs-4">Presentación de un propuesta personalizada con opciones de
+                software y estrategias</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Elemento decorativo animado -->
+    <div class="decorative-circle position-absolute rounded-circle" style="
+          width: 150px;
+          height: 150px;
+          background: rgba(255, 255, 255, 0.1);
+          top: 10%;
+          right: -50px;
+          animation: float 6s ease-in-out infinite;
+        "></div>
+  </section>
+
+  <section class="text-center py-5 bg-white">
+    <div class="container">
+      <blockquote class="blockquote text-dark">
+        <p class="fw-bold display-6">
+          "Llevamos tus ideas a la realidad tecnológica"
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <footer class="bg-primary text-light py-5 position-relative">
+    <div class="footer-overlay"></div>
+    <!-- Capa oscura encima de la imagen -->
+    <div class="container">
+      <div class="row">
+        <!-- Logo y Redes Sociales -->
+        <div class="col-md-3 text-center text-md-start">
+          <img src="../img/logo-blanco.png" alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
+          <div class="d-flex justify-content-center justify-content-md-start gap-2">
+            <a href="#" class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
+            <a href="#" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
+          </div>
+        </div>
+
+        <!-- Programas y Enlaces Directos -->
+        <div class="col-md-3">
+          <h5 class="fw-bold">Nuestros Programas</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-light text-decoration-none">Posgrado</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none">Pregrados</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none">Tecnologías</a>
+            </li>
+          </ul>
+          <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none">Sistema de Gestión Académica</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none">FAQs</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Normatividad -->
+        <div class="col-md-3">
+          <h5 class="fw-bold">Normatividad y Políticas</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-light text-decoration-none">Acceso a la Información Pública</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none">Política de Protección de Datos</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none">Estados Financieros</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mapa y Contacto -->
+        <div class="col-md-3 text-center text-md-start">
+          <h5 class="fw-bold">Ubicación</h5>
+          <div class="map-container" style="
+                height: 150px;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 10px;
+              ">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
+              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
+            #30-20 Bogotá D.C.
+          </p>
+          <p>
+            <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
+            6607, 6608
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./java/app.js"></script>
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

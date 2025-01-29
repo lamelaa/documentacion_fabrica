@@ -1,0 +1,223 @@
+
+body {
+    font-family: Arial, sans-serif;
+  }
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border: none;
+  transition: background-color 0.5s, box-shadow 0.3s;
+  background-color: white;
+  border-bottom: 2px solid #e9ecef;
+  padding: 10px 15px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Espaciado para el Hero */
+.hero {
+  margin-top: 80px; /* Esto asegura que el contenido del hero no quede oculto */
+}
+
+/* Estilo del Logo */
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+/* Links del Navbar */
+.navbar-nav .nav-link {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: lowercase;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d32f2f;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  color: black;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background-color: #d32f2f;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Botón Contáctanos */
+.btn-danger {
+  background-color: #d32f2f;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-danger:hover {
+  background-color: #b71c1c;
+}
+
+
+.floating-img {
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* Fondo decorativo detrás de la imagen */
+.floating-bg {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: blur(50px);
+}
+
+/* Animación de flotación */
+@keyframes floatAnimation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.hero-section {
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+.highlight {
+  color: red;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* --- Recorte de imagen solo en pantallas grandes --- */
+@media (min-width: 992px) {
+  .hero-image img {
+      clip-path: ellipse(70% 100% at 100% 50%);
+  }
+}
+/* --- Ajustes en pantallas pequeñas (móviles) --- */
+@media (max-width: 991px) {
+  .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 5%;
+  }
+  .hero-text {
+      width: 100%;
+  }
+  .hero-image {
+      width: 100%;
+  }
+}
+/* --- Cita inferior fija --- */
+.quote {
+  width: 100%;
+  background: black;
+  color: white;
+  text-align: left;
+  padding: 15px 30px;
+  font-size: 1rem;
+}
+
+
+  /* Estilo para los iconos dentro de los círculos */
+.icon-circle {
+    width: 90px;
+    height: 90px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Efecto hover en las tarjetas */
+.hover-effect {
+    transition: transform 0.3s ease-in-out;
+}
+.hover-effect:hover {
+    transform: translateY(-10px);
+}
+
+/* Elemento decorativo flotante */
+.decorative-circle {
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.05);
+    top: -50px;
+    left: -50px;
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Animación flotante */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+}
+
+
+/* Efecto flotante en el fondo */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* Colores personalizados */
+.text-primary { color: #306998; } /* Python */
+.text-warning { color: #f7df1e; } /* JavaScript */
+.text-danger { color: #f44336; } /* Java */
+.text-purple { color: #512bd4; } /* .NET */
+
+/* Añadir imagen de fondo y capa oscura */
+footer {
+    background-image: url('../img/fondo.webp'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+  }
+  
+  /* Overlay oscuro encima de la imagen de fondo */
+  .footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Capa oscura */
+    z-index: 1;
+  }
+  
+  /* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
+  footer .container {
+    position: relative;
+    z-index: 2;
+  }
