@@ -4,11 +4,17 @@
 body {
   font-family: Arial, sans-serif;
 }
+header{
+  position: sticky;
+  top: 0px;
+  animation-timeline: scroll();
+  animation-range: 0 200px;
+}
 
 .hero-section,
 .stats-section,
 footer {
-  background: url("../img/fondo.webp") no-repeat center center/cover;
+  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
   color: #fff;
   position: relative;
 }
@@ -24,11 +30,64 @@ footer::after {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
 }
-
 .hero-section {
-  padding: 150px 0;
+  position: relative;
+  background: url('../assets/img/fondo.webp') no-repeat center center/cover;
+  height: 89vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
+/* Capa de opacidad */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Opacidad */
+}
+
+/* Contenido sobre la imagen */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Texto destacado */
+.highlight {
+  color: #e4022c;
+  font-weight: bold;
+}
+
+/* Botón */
+.hero-button {
+  background-color: #273474;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.hero-button:hover {
+  background-color: dark#273474;
+}
+
+/* Ícono de engranaje */
+.gear-icon {
+  font-size: 50px;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .hero-section .container,
 .stats-section .container,
 footer .container {
@@ -37,14 +96,14 @@ footer .container {
 }
 
 #redess{
-  color:  #2E3092;
+  color:  #273474;
 }
 /* -----------------------------------------------
      Navbar Styles
      ----------------------------------------------- */
 /* Navbar */
 .navbar {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 10;
@@ -72,13 +131,13 @@ footer .container {
   color: black;
   font-size: 16px;
   font-weight: bold;
-  text-transform: lowercase;
+  
   margin: 0 10px;
   transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #d32f2f;
+  color: #e4022c;
 }
 
 /* Dropdown */
@@ -95,14 +154,14 @@ footer .container {
 }
 
 .dropdown-item:hover {
-  background-color: #d32f2f;
+  background-color: #e4022c;
   color: white;
   border-radius: 5px;
 }
 
 /* Botón Contáctanos */
 .btn-danger {
-  background-color: #d32f2f;
+  background-color: #e4022c;
   border: none;
   font-size: 16px;
   font-weight: bold;
@@ -110,7 +169,7 @@ footer .container {
 }
 
 .btn-danger:hover {
-  background-color: #b71c1c;
+  background-color: #e4022c;
 }
 
 
@@ -129,12 +188,12 @@ footer .container {
 
 /* Estilo del título */
 .section-title {
-  color: #d32f2f;
+  color: #e4022c;
   /* Rojo intenso */
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
-  border-bottom: 3px solid #d32f2f;
+  border-bottom: 3px solid #e4022c;
   display: inline-block;
 }
 
@@ -221,56 +280,59 @@ footer .container {
 /* Animación para las tarjetas del equipo */
 
 .team-member {
-  background-color: #fff;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  background: #fff;
   border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .team-member img {
+  width: 250px;
+  height: 300px;
   object-fit: cover;
+
 }
 
 .social-icons a {
-  transition: color 0.1s ease;
+  display: inline-block;
+  color: #273474;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #007bff;
+  transform: scale(1.2);
+  color: #e4022c;
 }
 
-.carousel-indicators button {
-  background-color: #ff0000;
- 
+/* Estilos para las flechas del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px; /* Tamaño fijo para evitar solapamientos */
+    height: 50px;
+    background-color: rgba(228, 2, 43, 0.375); /* Color de fondo */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Asegura que las flechas estén por encima del contenido */
 }
 
-.carousel-indicators button {
-  background-color: #ff0000;
-  border: none;
-}
-.carousel-indicators button.active {
-  background-color: #ca0101;
-} 
-
-.carousel-indicators button.active1 {
-  background-color: #ca0101;
-} 
-
-
-
-.stat-item:hover .stat-icon {
-  transform: scale(1.1);
-  transition: transform 0.1s ease;
+.carousel-control-prev {
+    left: -60px; /* Ajustar posición para que no toque las tarjetas */
 }
 
-.stat-item:hover h3 {
-  color: #ff4747;
-  /* Cambia el color del número al pasar el mouse */
-  transition: color 0.1s ease;
+.carousel-control-next {
+    right: -60px;
 }
 
 
