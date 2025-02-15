@@ -223,9 +223,9 @@ footer .container {
 
 /* Imagen #a4022conda */
 .profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 220px;
+  height: 280px;
+  border-radius: 5%;
   object-fit: cover;
   margin-right: 30px;
 }
@@ -331,9 +331,9 @@ body {
 
 /* Estilos del Hero */
 .hero {
-  height: 92vh;
+  height: 90vh;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(3, 21, 48, 0.784)),
-    url('../assets/img/fondo.webp') center/cover no-repeat;
+    url('../assets/img/integrantes/Foto\ con\ todos.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,3 +371,4 @@ body {
   background-color: #a4022c;
   transform: scale(1.05);
 }
+

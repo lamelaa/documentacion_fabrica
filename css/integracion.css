@@ -186,6 +186,12 @@ footer .container {
   margin: 20px 0;
 }
 
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #A4022C;
+}
+
 .hero .btn-custom {
   background-color: white;
   color: #273474;
@@ -203,3 +209,50 @@ footer .container {
   color: white;
   transform: scale(1.05);
 }
+
+  /* Animación flotante */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(15px); }
+  }
+
+  .decorative-circle {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: rgba(0, 0, 0, 0.05);
+    top: -50px;
+    left: -50px;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Tarjetas con efecto hover */
+  .hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-effect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Iconos circulares */
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Efecto de vibración en los iconos al pasar el mouse */
+  .hover-effect:hover .icon-circle {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  }
