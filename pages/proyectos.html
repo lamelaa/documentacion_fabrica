@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyectos Uniempresarial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/proyectos.css" />
+    <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon" />
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <style>
+        /* 🌟 Estilos Generales */
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+        }
+
+        /* ✨ Hero Section Mejorado */
+        .hero-section {
+            min-height: 89vh;
+            /* Ocupa toda la pantalla */
+            background: url("../assets/img/proyectos1.jpg") no-repeat center center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efecto de fondo oscuro */
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            /* Oscurece la imagen */
+            backdrop-filter: blur(3px);
+            /* Efecto desenfoque */
+            z-index: 0;
+        }
+
+        .hero-section>.container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Estilos del título */
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Estilos del texto */
+        .hero-text {
+            font-size: 1.4rem;
+            margin-top: 15px;
+            line-height: 1.7;
+            font-weight: 300;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 🎨 Botón Personalizado */
+        .btn-custom {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #a4022c, #273474);
+            border: none;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        /* Efecto Hover */
+        .btn-custom:hover {
+            background: linear-gradient(45deg, #273474, #a4022c);
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(255, 75, 75, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .hero-text {
+                font-size: 1.2rem;
+            }
+
+            .btn-custom {
+                font-size: 1.1rem;
+                padding: 12px 30px;
+            }
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .section-text {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        /* 🎯 Sección Características */
+        .features-section {
+            margin-top: 50px;
+            padding: 50px 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item {
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: #273474;
+            margin-bottom: 10px;
+        }
+
+        /* 🌟 Animaciones */
+        [data-aos] {
+            transition: all 0.5s ease-in-out;
+        }
+
+        .text-red {
+            color: #a4022c;
+        }
+
+        .project-card {
+            padding: 35px;
+            border-radius: 12px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .bg-green {
+            background-color: #00a676;
+        }
+
+        .bg-blue {
+            background-color: #273474;
+        }
+
+        .bg-red {
+            background-color: #a4022c;
+        }
+
+        .btn-light {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 14px 28px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .btn-light:hover {
+            background-color: #e9ecef;
+            transform: scale(1.05);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .logo-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            max-width: 120px;
+        }
+
+        .section-divider {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* 🎨 Estilos Generales */
+        /* 🎨 Estilos Generales */
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #a4022c;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* 📌 Diseño de proyectos */
+        .project {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .project-text {
+            flex: 1;
+            padding: 40px;
+            text-align: left;
+        }
+
+        .project-text h3 {
+            font-size: 1.8rem;
+            color: #273474;
+            margin-bottom: 15px;
+        }
+
+        .project-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* 🎬 Contenedor de Video */
+        .project-media {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .project.reverse .project-media {
+            border-radius: 12px 0 0 12px;
+        }
+
+        .bg-video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .logo-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 35%;
+            max-width: 100px;
+            opacity: 0.9;
+        }
+
+        /* 🔵 Barra de Progreso */
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #a4022c, #ff4d6d);
+            transition: width 0.5s ease-in-out;
+        }
+
+        .progress-text {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #a4022c;
+        }
+
+        /* Animación de entrada con AOS */
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+        }
+
+        /* Efecto de elevación en tarjetas */
+        .project-card {
+            padding: 35px;
+            border-radius: 12px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Animación en el texto */
+        h3 {
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h3::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 100%;
+            height: 3px;
+            background: #273474;
+            transform: translateX(-50%) scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        h3:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        /* Animación en videos */
+        .video-container {
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scale(0.95);
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+
+        .video-container:hover {
+            transform: scale(1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animación de opacidad en videos */
+        .bg-video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .video-container:hover .bg-video {
+            opacity: 1;
+        }
+
+        /* Logo en video */
+        .logo-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            max-width: 120px;
+            opacity: 0.9;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .video-container:hover .logo-overlay {
+            opacity: 1;
+        }
+
+        /* Separador de secciones animado */
+        .section-divider {
+            text-align: center;
+            margin: 50px 0;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-in-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+                </a>
+
+                <!-- Botón Responsive -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <!-- Menú Nosotros -->
+                        <a class="nav-link" href="../index.html">INICIO</a>
+                        <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+                        <!-- Menú Servicios -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICIOS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN
+                                        SOFTWARE</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA
+                                        MEDIDA</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE
+                                        SISTEMAS</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN
+                                        SOFTWARE</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Otros Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/equipo.html">EQUIPO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">NOTICIAS FUSOFT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
+                                rel="noreterrer noopener">UNIEMPRESARIAL</a>
+                        </li>
+                    </ul>
+
+                    <!-- Botón Contáctanos -->
+                    <a href="../pages/contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <h1 class="hero-title">Innovación y Tecnología para tu Negocio</h1>
+                    <p class="hero-text">
+                        En <strong>FUsoft</strong>, llevamos tus ideas al siguiente nivel
+                        con soluciones tecnológicas avanzadas. Diseñamos software a medida
+                        para optimizar procesos, mejorar la eficiencia y potenciar el
+                        crecimiento empresarial.
+                    </p>
+                    <a href="#mas-informacion" class="btn btn-custom">Descubre más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-3 feature-item" data-aos="zoom-in">
+                    <i class="fas fa-lightbulb feature-icon"></i>
+                    <p>Soluciones basadas en innovación</p>
+                </div>
+                <div class="col-md-3 feature-item" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <p>Productos escalables para tu negocio</p>
+                </div>
+                <div class="col-md-3 feature-item" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-handshake feature-icon"></i>
+                    <p>Conexión perfecta y soporte continuo</p>
+                </div>
+                <div class="col-md-3 feature-item" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-laptop-code feature-icon"></i>
+                    <p>Interfaces intuitivas y eficientes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Proyectos Destacados</h2>
+        </div>
+
+        <!-- Proyecto ONCE 22 -->
+        <div class="project my-5">
+            <div class="project-text">
+                <h3>Proyecto ONCE 22</h3>
+                <p>
+                    Plataforma innovadora para facilitar la compra y arriendo de
+                    apartamentos en Bogotá, mejorando la experiencia de propietarios y
+                    arrendatarios.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, publicado</span>
+                </div>
+            </div>
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/22.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/once22.png" alt="Logo Proyecto ONCE 22" class="logo-overlay" />
+            </div>
+        </div>
+
+        <!-- Inducarton -->
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/carton.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/inducarton.png" alt="Logo Inducarton" class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Inducarton</h3>
+                <p>Se desarrolló la página web solicitada por la empresa.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/rector.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Pagina Rector</h3>
+                <p>
+                    Creamos una plataforma personalizada con la información y
+                    funcionalidades solicitadas por el rector de la universidad.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider">
+            <h3>Proyectos <span class="text-red">Uniempresarial</span></h3>
+        </div>
+
+        <div class="project reverse my-5"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/proyectoGeneral.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Proyecto General</h3>
+                <p>
+                    Unificamos en una sola plataforma todos los proyectos en ejecución,
+                    brindando acceso centralizado para los encargados de distintas
+                    áreas..
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/certificados.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Generador de Certificados</h3>
+                <p>
+                    Desarrollamos una herramienta para validar certificados de manera
+                    segura y eficiente, tanto para empresas externas como para nuestra
+                    universidad.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/biblioteca.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Agendamiento de biblioteca.</h3>
+                <p>
+                    Optimizamos el uso de espacios con una plataforma de reserva de
+                    salas, permitiendo a los estudiantes verificar disponibilidad y
+                    gestionar su tiempo con mayor facilidad.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/bienestar.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Bienestar Universitario.</h3>
+                <p>
+                    Facilitamos la planificación y gestión de actividades del área de
+                    bienestar, asegurando una mejor experiencia para toda la comunidad
+                    universitaria.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider">
+            <h3>Proyectos en <span class="text-red">Desarrollo</span></h3>
+        </div>
+
+        <div class="project reverse my-5"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/costos.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Estructura de Costos.</h3>
+                <p>
+                    Implementamos un sistema para administrar y consultar información
+                    histórica de costos universitarios, mejorando la toma de decisiones
+                    estratégicas.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 10%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/gestion.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Proyecto Coformacion.</h3>
+                <p>
+                    Facilitamos el proceso de coformación entre estudiantes y empresas,
+                    permitiendo una integración más efectiva en el mundo laboral.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 30%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Más proyectos aquí... -->
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/proyectos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,65 +1,164 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Proyectos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            border-radius: 15px;
-        }
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .card img {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-        .project-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="container py-5">
-        <h1 class="text-center mb-4">Mis Proyectos</h1>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proyecto 1">
-                    <div class="card-body text-center">
-                        <h5 class="project-title">Proyecto 1</h5>
-                        <p class="card-text">Descripción breve del proyecto 1.</p>
-                    </div>
-                </div>
+<style>
+    /* 🎨 Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a4022c;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* 📌 Diseño de proyectos */
+.project {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-text {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+}
+
+.project-text h3 {
+    font-size: 1.8rem;
+    color: #273474;
+    margin-bottom: 15px;
+}
+
+.project-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* 🎬 Contenedor de Video */
+.project-media {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 12px 12px 0;
+}
+
+.project.reverse .project-media {
+    border-radius: 12px 0 0 12px;
+}
+
+.bg-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    max-width: 100px;
+    opacity: 0.9;
+}
+
+/* 🔵 Barra de Progreso */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 15px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #a4022c, #ff4d6d);
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-text {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #a4022c;
+}
+
+</style>
+
+<section class="container my-5">
+    <div class="section-title">
+        <h2>Proyectos Destacados</h2>
+    </div>
+
+    <!-- Proyecto ONCE 22 -->
+    <div class="project">
+        <div class="project-text">
+            <h3>Proyecto ONCE 22</h3>
+            <p>
+                Plataforma innovadora para facilitar la compra y arriendo de apartamentos en Bogotá,
+                mejorando la experiencia de propietarios y arrendatarios.
+            </p>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 100%"></div>
+                <span class="progress-text">Terminado, publicado</span>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proyecto 2">
-                    <div class="card-body text-center">
-                        <h5 class="project-title">Proyecto 2</h5>
-                        <p class="card-text">Descripción breve del proyecto 2.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proyecto 3">
-                    <div class="card-body text-center">
-                        <h5 class="project-title">Proyecto 3</h5>
-                        <p class="card-text">Descripción breve del proyecto 3.</p>
-                    </div>
-                </div>
+        </div>
+        <div class="project-media">
+            <video autoplay loop muted playsinline class="bg-video">
+                <source src="../assets/video/22.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+            <img src="../assets/img/once22.png" alt="Logo Proyecto ONCE 22" class="logo-overlay">
+        </div>
+    </div>
+
+    <!-- Inducarton -->
+    <div class="project reverse">
+        <div class="project-media">
+            <video autoplay loop muted playsinline class="bg-video">
+                <source src="../assets/video/carton.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+            <img src="../assets/img/inducarton.png" alt="Logo Inducarton" class="logo-overlay">
+        </div>
+        <div class="project-text">
+            <h3>Inducarton</h3>
+            <p>Se desarrolló la página web solicitada por la empresa.</p>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 100%"></div>
+                <span class="progress-text">Terminado, en revisión</span>
             </div>
         </div>
     </div>
-</body>
-</html>
+
+    <!-- Más proyectos aquí... -->
+
+</section>
