@@ -1,164 +1,377 @@
-<style>
-    /* 🎨 Estilos Generales */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-}
+<section class="team-section text-center py-5" data-aos="fade-up" data-aos-duration="1500">
+    <div class="container">
+        <h2 class="fw-bold mb-5" style="font-size: 2.5rem; color: #333;">
+            Nuestro <span class="text-danger">Equipo</span>
+        </h2>
+        <!-- Carrusel -->
+        <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1"></button>
+          </div>
 
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
+      <!-- Carrusel -->
+      <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
 
-.section-title h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #a4022c;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
+          <!-- Grupo 1 -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Alejandro Aguilera.jpg" alt="Jhones Bi" class="img-fluid " >
+                  <h5 class="fw-bold mt-3">Alejandro Aguilera</h5>
+                  <p class="text-muted">Bases de Datos</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/alejoaguilera" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a> 
+                  </div>
+                </div>
+              </div>
 
-/* 📌 Diseño de proyectos */
-.project {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin-bottom: 40px;
-    transition: transform 0.3s ease-in-out;
-}
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Anderson Castro.jpg" alt="Sani Awesome" class="img-fluid " >
+                  <h5 class="fw-bold mt-3">Anderson Castro</h5>
+                  <p class="text-muted">Soporte</p>
+                  <div class="social-icons">
+                    <a href="https://heylink.me/AndersonCC/" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
 
-.project:hover {
-    transform: translateY(-5px);
-}
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Angel Canchilla.jpg" alt="Andrio Willi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Angel Canchilla</h5>
+                  <p class="text-muted">Desarrollador</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/Angel_Da" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
 
-.project.reverse {
-    flex-direction: row-reverse;
-}
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Brayam chavarro.jpg" alt="Afa Jonson" class="img-fluid">
+                  <h5 class="fw-bold mt-3">Brayam Chavarro</h5>
+                  <p class="text-muted">Bases de Datos</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/BrayamChavarro"  target="_blank" rel="noreterrer noopener"class="btn btn-sm btn-custom">Portafolio</a>   
+                  </div>
+                </div>
+              </div>
 
-.project-text {
-    flex: 1;
-    padding: 40px;
-    text-align: left;
-}
-
-.project-text h3 {
-    font-size: 1.8rem;
-    color: #273474;
-    margin-bottom: 15px;
-}
-
-.project-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-/* 🎬 Contenedor de Video */
-.project-media {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-    border-radius: 0 12px 12px 0;
-}
-
-.project.reverse .project-media {
-    border-radius: 12px 0 0 12px;
-}
-
-.bg-video {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.logo-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 35%;
-    max-width: 100px;
-    opacity: 0.9;
-}
-
-/* 🔵 Barra de Progreso */
-.progress-container {
-    width: 100%;
-    height: 8px;
-    background: #ddd;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-top: 15px;
-    position: relative;
-}
-
-.progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, #a4022c, #ff4d6d);
-    transition: width 0.5s ease-in-out;
-}
-
-.progress-text {
-    display: block;
-    font-size: 0.9rem;
-    margin-top: 8px;
-    text-align: center;
-    font-weight: bold;
-    color: #a4022c;
-}
-
-</style>
-
-<section class="container my-5">
-    <div class="section-title">
-        <h2>Proyectos Destacados</h2>
-    </div>
-
-    <!-- Proyecto ONCE 22 -->
-    <div class="project">
-        <div class="project-text">
-            <h3>Proyecto ONCE 22</h3>
-            <p>
-                Plataforma innovadora para facilitar la compra y arriendo de apartamentos en Bogotá,
-                mejorando la experiencia de propietarios y arrendatarios.
-            </p>
-            <div class="progress-container">
-                <div class="progress-bar" style="width: 100%"></div>
-                <span class="progress-text">Terminado, publicado</span>
             </div>
-        </div>
-        <div class="project-media">
-            <video autoplay loop muted playsinline class="bg-video">
-                <source src="../assets/video/22.mp4" type="video/mp4">
-                Tu navegador no soporta videos HTML5.
-            </video>
-            <img src="../assets/img/once22.png" alt="Logo Proyecto ONCE 22" class="logo-overlay">
-        </div>
-    </div>
+          </div>
 
-    <!-- Inducarton -->
-    <div class="project reverse">
-        <div class="project-media">
-            <video autoplay loop muted playsinline class="bg-video">
-                <source src="../assets/video/carton.mp4" type="video/mp4">
-                Tu navegador no soporta videos HTML5.
-            </video>
-            <img src="../assets/img/inducarton.png" alt="Logo Inducarton" class="logo-overlay">
-        </div>
-        <div class="project-text">
-            <h3>Inducarton</h3>
-            <p>Se desarrolló la página web solicitada por la empresa.</p>
-            <div class="progress-container">
-                <div class="progress-bar" style="width: 100%"></div>
-                <span class="progress-text">Terminado, en revisión</span>
+          <!-- Grupo 2 -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/cristian reyes-removebg-preview.jpg" alt="Jhones Bi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Cristian Reyes</h5>
+                  <p class="text-muted">Desarrollador</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/Cristian_Reyes" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/crsitian vega.jpg" alt="Sani Awesome" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Cristian Vega</h5>
+                  <p class="text-muted">Inteligencia Artificial</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/cristian_vega_cv" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Daniel Garcia.jpg" alt="Andrio Willi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Daniel Garcia</h5>
+                  <p class="text-muted">Diseñador</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/garciadanielof" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Daniela Bernal.jpg" alt="Afa Jonson" class="img-fluid">
+                  <h5 class="fw-bold mt-3">Daniela Bernal</h5>
+                  <p class="text-muted">Finanzas y Comercio Exterior</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/dani11bernal" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
+          </div>
+          <!--Grupo 3-->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/David Niño.jpg" alt="Jhones Bi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">David Niño</h5>
+                  <p class="text-muted">Diseñador</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/David_nino" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/David Perez.jpg" alt="Sani Awesome" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">David Perez</h5>
+                  <p class="text-muted">Inteligencia Artificial</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/David10Paez" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Deivid Arevalo.jpg" alt="Andrio Willi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Deivid Arevalo</h5>
+                  <p class="text-muted">Diseñador</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/darevalo79" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Deivid Garcia.jpg" alt="Afa Jonson" class="img-fluid">
+                  <h5 class="fw-bold mt-3">Deivid Garcia</h5>
+                  <p class="text-muted">Negocios Internacionales</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/dim0864" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--Grupo 4-->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Fabian Ariza.jpg" alt="Jhones Bi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Fabian Ariza</h5>
+                  <p class="text-muted">Inteligencia Artificial</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/mrTony0" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Fabian Camargo.jpg" alt="Sani Awesome" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Fabian Camargo</h5>
+                  <p class="text-muted">Investigador</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/Iskahn" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/holmant Alarcon.jpg" alt="Andrio Willi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Holmant Alarcon</h5>
+                  <p class="text-muted">Soporte</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/HolmantAlarcon" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Juan Gomez.jpg" alt="Afa Jonson" class="img-fluid">
+                  <h5 class="fw-bold mt-3">Juan Gomez</h5>
+                  <p class="text-muted">Diseñador</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/jGomezL" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!--Grupo 5-->
+          <div class="carousel-item ">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Juan Piraquive.jpg" alt="Jhones Bi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Juan Piraquive</h5>
+                  <p class="text-muted">Soporte</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/Pirvito" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/karol Garzon.jpg" alt="Sani Awesome" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Karol Garzon</h5>
+                  <p class="text-muted">Investigadora</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/karolgarzon"  target="_blank" rel="noreterrer noopener"class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Laura Casteblanco.jpg" alt="Andrio Willi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Laura Casteblanco</h5>
+                  <p class="text-muted">Marketing</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/laurascastel" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Luis Forero.jpg" alt="Afa Jonson" class="img-fluid">
+                  <h5 class="fw-bold mt-3">Luis Forero</h5>
+                  <p class="text-muted">Desarrollador</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/luissforero" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!--Grupo 6-->
+          <div class="carousel-item ">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Paula Rubio.jpg" alt="Jhones Bi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Paula Rubio</h5>
+                  <p class="text-muted">Investigadora</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/PaulaAndreaRubioMoreno" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Santiago Garcia.jpg" alt="Sani Awesome" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Santiago Garcia</h5>
+                  <p class="text-muted">Desarrollador</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/Santiago2412?utm_source=linktree_admin_share"  target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Santiago Marin.jpg" alt="Andrio Willi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Santiago Marin</h5>
+                  <p class="text-muted">Bases de Datos</p>
+                  <div class="social-icons">
+                    <a href="#" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Sara Bonilla.jpg" alt="Afa Jonson" class="img-fluid">
+                  <h5 class="fw-bold mt-3">Sara Bonilla</h5>
+                  <p class="text-muted">Finanzas y Comercio Exterior</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/sara2514" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!--Grupo 6-->
+          <div class="carousel-item ">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Sebastian Romero.jpg" alt="Jhones Bi" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Sebastian Romero</h5>
+                  <p class="text-muted">Inteligencia Artificial</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/SebastianDavidRomero" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Zullie Diaz.jpg" alt="Sani Awesome" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Zullie Diaz</h5>
+                  <p class="text-muted">Investigadora</p>
+                  <div class="social-icons">
+                    <a href="https://www.atom.bio/zulliediaz" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Eidan Cardenas.jpg" alt="Sani Awesome" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Eidan Cardenas</h5>
+                  <p class="text-muted">Bases de Datos</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/eidancardenas"  target="_blank" rel="noreterrer noopener"class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="team-member p-4">
+                  <img src="assets/img/integrantes/Juan Mendivelzo-removebg-preview.jpg" alt="Sani Awesome" class="img-fluid ">
+                  <h5 class="fw-bold mt-3">Juan Mendivelso</h5>
+                  <p class="text-muted">Soporte</p>
+                  <div class="social-icons">
+                    <a href="https://linktr.ee/JuanLuisMV" target="_blank" rel="noreterrer noopener" class="btn btn-sm btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
         </div>
+
+    
+      </div>
     </div>
-
-    <!-- Más proyectos aquí... -->
-
-</section>
+  </section>

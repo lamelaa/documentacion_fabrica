@@ -32,7 +32,6 @@ footer::after {
 }
 .hero-section {
   position: relative;
-  background: url('../assets/img/fondo.webp') no-repeat center center/cover;
   height: 89vh;
   display: flex;
   align-items: center;
@@ -291,12 +290,6 @@ footer .container {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.team-member img {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
-
-}
 
 .social-icons a {
   display: inline-block;
@@ -412,4 +405,128 @@ footer .container {
   font-size: 2.5rem;
   font-weight: bold;
   color: #dc3545;
+}
+/* Estilos generales del portafolio */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.portfolio-video {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Efecto de hover en los videos */
+.portfolio-item:hover .portfolio-video {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Superposición de descripción */
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostrar la superposición al pasar el mouse */
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+
+/* Hacer que las imágenes mantengan su proporción sin cortar las caras */
+.team-member img {
+  width: 100%;
+  height: auto; /* Evita cortes */
+  max-height: 300px; /* Mantiene proporción sin deformar */
+  object-fit: contain; /* Muestra toda la imagen sin recortes */
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 768px) {
+  .carousel-inner {
+      display: flex;
+      overflow-x: auto; /* Permite desplazamiento táctil */
+      scroll-snap-type: x mandatory; /* Se desliza por secciones */
+  }
+
+  .carousel-item {
+      flex: 0 0 100%;
+      scroll-snap-align: center; /* Centra cada elemento */
+  }
+
+  /* Hacer las flechas del carrusel más pequeñas y sutiles */
+  .carousel-control-prev,
+  .carousel-control-next {
+      width: 30px; 
+      height: 30px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+  }
+
+  /* Mejor separación entre elementos */
+  .team-member {
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 1.8rem; /* Reduce el tamaño del título en móvil */
+  }
+}
+.team-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.img-container {
+  width: 170px;
+  height: 220px;
+  margin: 0 auto; 
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-custom {
+  background: #e4022c;
+  color: white;
+  border-radius: 50px;
+  padding: 8px 15px;
+  transition: background 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-custom:hover {
+  background: #273474;
+}
+
+@media (max-width: 768px) {
+  .team-card {
+      max-width: 320px;
+  }
 }
