@@ -19,12 +19,18 @@
 <body>
   <section>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0">
-      <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-          <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logos juntos -->
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand me-2" href="#">
+            <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+          </a>
+          <a class="navbar-brand" href="#">
+            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
+              height="50" />
+          </a>
+        </div>
 
         <!-- Botón Responsive -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -35,55 +41,30 @@
         <!-- Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
-            <!-- Menú Nosotros -->
             <a class="nav-link" href="../index.html">INICIO</a>
             <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-            <!-- Menú Servicios -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                SERVICIOS
-              </a>
+                data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
               <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-                <li>
-                  <a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a>
-                </li>
+                <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+                <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
+                <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
+                <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
               </ul>
             </li>
-
-            <!-- Otros Links -->
             <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                rel="noreterrer noopener">UNIEMPRESARIAL</a>
-
-            </li>
-
+            <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
+                rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
           </ul>
-          
           <!-- Botón Contáctanos -->
           <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
         </div>
-        
       </div>
-      <a class="navbar-brand" href="#">
-        <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50" height="50" />
-      </a>
-      
     </nav>
   </section>
+   
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">

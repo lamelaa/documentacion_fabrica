@@ -11,21 +11,24 @@ html {
 
 /* Navbar */
 .navbar {
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
-  border: none;
-  transition: background-color 0.5s, box-shadow 0.3s;
+  z-index: 1000;
   background-color: white;
   border-bottom: 2px solid #e9ecef;
   padding: 10px 15px;
   font-family: 'Arial', sans-serif;
 }
 
+body {
+  padding-top: 80px;
+  /* Ajusta este valor si el navbar es más alto */
+}
+
 /* Estilo del Logo */
 .navbar-brand img {
-  margin-right: 10px;
+  max-height: 50px;
 }
 
 /* Links del Navbar */
@@ -73,6 +76,12 @@ html {
   background-color: #a4022c;
 }
 
+.navbar-brand img {
+  max-height: 50px;
+}
+
+/* Responsive: Centrar los logos en móvil */
+
 
 /* Mejoras de responsividad */
 @media (max-width: 768px) {
@@ -107,6 +116,7 @@ footer::after {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
 }
+
 /* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
 footer .container {
   position: relative;
@@ -276,10 +286,10 @@ body {
   background-color: #f8f9fa;
 }
 
-  /* Secciones */
-  .section {
-    padding: 50px 0;
-  }
+/* Secciones */
+.section {
+  padding: 50px 0;
+}
 
 .section-title {
   text-align: center;
@@ -371,4 +381,3 @@ body {
   background-color: #a4022c;
   transform: scale(1.05);
 }
-

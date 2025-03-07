@@ -4,23 +4,24 @@ body {
 
 /* Navbar */
 .navbar {
-    position: relative;
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
-    border: none;
-    transition: background-color 0.5s, box-shadow 0.3s;
+    z-index: 1000;
     background-color: white;
     border-bottom: 2px solid #e9ecef;
     padding: 10px 15px;
     font-family: 'Arial', sans-serif;
 }
 
-
+body {
+    padding-top: 80px;
+    /* Ajusta este valor si el navbar es más alto */
+}
 
 /* Estilo del Logo */
 .navbar-brand img {
-    margin-right: 10px;
+    max-height: 50px;
 }
 
 /* Links del Navbar */
@@ -28,13 +29,12 @@ body {
     color: black;
     font-size: 16px;
     font-weight: bold;
-
     margin: 0 10px;
     transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #e4022c;
+    color: #a4022c;
 }
 
 /* Dropdown */
@@ -51,14 +51,14 @@ body {
 }
 
 .dropdown-item:hover {
-    background-color: #e4022c;
+    background-color: #a4022c;
     color: white;
     border-radius: 5px;
 }
 
 /* Botón Contáctanos */
 .btn-danger {
-    background-color: #e4022c;
+    background-color: #a4022c;
     border: none;
     font-size: 16px;
     font-weight: bold;
@@ -66,11 +66,12 @@ body {
 }
 
 .btn-danger:hover {
-    background-color: #e4022c;
+    background-color: #a4022c;
 }
 
-/* Estilos necesarios */
-
+.navbar-brand img {
+    max-height: 50px;
+}
 
 /*animacion como funciona*/
 @keyframes float {
@@ -87,19 +88,19 @@ body {
 
 /* Añadir imagen de fondo y capa oscura */
 footer {
-  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
-  position: relative;
+    background: url("../assets/img/fondo.webp") no-repeat center center/cover;
+    color: #fff;
+    position: relative;
 }
 
 footer::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
@@ -107,6 +108,7 @@ footer .container {
     position: relative;
     z-index: 2;
 }
+
 /* Estilos generales */
 body {
     font-family: 'Poppins', sans-serif;
@@ -198,5 +200,3 @@ body {
     box-shadow: 0 6px 20px rgba(255, 61, 0, 0.5);
     transform: scale(1.05);
 }
-
-

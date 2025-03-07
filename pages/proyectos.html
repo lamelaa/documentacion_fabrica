@@ -453,70 +453,52 @@
     <!-- Navbar -->
     <section>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#">
-                    <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
-                </a>
-
-                <!-- Botón Responsive -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <!-- Menú Nosotros -->
-                        <a class="nav-link" href="../index.html">INICIO</a>
-                        <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-                        <!-- Menú Servicios -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                SERVICIOS
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-                                <li>
-                                    <a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN
-                                        SOFTWARE</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA
-                                        MEDIDA</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE
-                                        SISTEMAS</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN
-                                        SOFTWARE</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <!-- Otros Links -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/equipo.html">EQUIPO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                                rel="noreterrer noopener">UNIEMPRESARIAL</a>
-                        </li>
-                    </ul>
-
-                    <!-- Botón Contáctanos -->
-                    <a href="../pages/contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logos juntos -->
+            <div class="d-flex align-items-center">
+              <a class="navbar-brand me-2" href="#">
+                <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+              </a>
+              <a class="navbar-brand" href="#">
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
+                  height="50" />
+              </a>
             </div>
+    
+            <!-- Botón Responsive -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <a class="nav-link" href="../index.html">INICIO</a>
+                <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+                  <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+                    <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+                    <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
+                    <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
+                    <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
+                    rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
+              </ul>
+              <!-- Botón Contáctanos -->
+              <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+            </div>
+          </div>
         </nav>
-    </section>
+      </section>
+    
 
     <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center justify-content-center text-center">
@@ -559,7 +541,219 @@
         </div>
     </section>
 
-    
+    <section class="container my-5" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Proyectos Destacados</h2>
+        </div>
+
+        <!-- Proyecto ONCE 22 -->
+        <div class="project my-5" data-aos="fade-up">
+            <div class="project-text" data-aos="fade-right" data-aos-delay="100">
+                <h3>Proyecto ONCE 22</h3>
+                <p>
+                    Plataforma innovadora para facilitar la compra y arriendo de
+                    apartamentos en Bogotá, mejorando la experiencia de propietarios y
+                    arrendatarios.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, publicado</span>
+                </div>
+            </div>
+            <div class="project-media" data-aos="fade-left" data-aos-delay="200">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/22.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/once22.png" alt="Logo Proyecto ONCE 22" class="logo-overlay" />
+            </div>
+        </div>
+
+        <!-- Inducarton -->
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/carton.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/inducarton.png" alt="Logo Inducarton" class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Inducarton</h3>
+                <p>Se desarrolló la página web solicitada por la empresa.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/rector.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Pagina Rector</h3>
+                <p>
+                    Creamos una plataforma personalizada con la información y
+                    funcionalidades solicitadas por el rector de la universidad.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider">
+            <h3>Proyectos <span class="text-red">Uniempresarial</span></h3>
+        </div>
+
+        <div class="project reverse my-5"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/proyectoGeneral.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Proyecto General</h3>
+                <p>
+                    Unificamos en una sola plataforma todos los proyectos en ejecución,
+                    brindando acceso centralizado para los encargados de distintas
+                    áreas.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/certificados.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Generador de Certificados</h3>
+                <p>
+                    Desarrollamos una herramienta para validar certificados de manera
+                    segura y eficiente, tanto para empresas externas como para nuestra
+                    universidad.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/biblioteca.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Agendamiento de biblioteca.</h3>
+                <p>
+                    Optimizamos el uso de espacios con una plataforma de reserva de
+                    salas, permitiendo a los estudiantes verificar disponibilidad y
+                    gestionar su tiempo con mayor facilidad.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/bienestar.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Bienestar Universitario.</h3>
+                <p>
+                    Facilitamos la planificación y gestión de actividades del área de
+                    bienestar, asegurando una mejor experiencia para toda la comunidad
+                    universitaria.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider">
+            <h3>Proyectos en <span class="text-red">Desarrollo</span></h3>
+        </div>
+
+        <div class="project reverse my-5"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/costos.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Estructura de Costos.</h3>
+                <p>
+                    Implementamos un sistema para administrar y consultar información
+                    histórica de costos universitarios, mejorando la toma de decisiones
+                    estratégicas.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 10%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project reverse"data-aos="fade-up">
+            <div class="project-media">
+                <video autoplay loop muted playsinline class="bg-video">
+                    <source src="../assets/video/gestion.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+                    class="logo-overlay" />
+            </div>
+            <div class="project-text">
+                <h3>Proyecto Coformacion.</h3>
+                <p>
+                    Facilitamos el proceso de coformación entre estudiantes y empresas,
+                    permitiendo una integración más efectiva en el mundo laboral.
+                </p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 30%"></div>
+                    <span class="progress-text">Terminado, en revisión</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Más proyectos aquí... -->
+    </section>
     <footer class="bg-primary text-light py-5">
         <div class="container">
           <div class="row">

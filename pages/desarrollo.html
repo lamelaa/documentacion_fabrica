@@ -16,73 +16,63 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0">
-    <div class="container">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
-      </a>
+  <section>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logos juntos -->
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand me-2" href="#">
+            <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+          </a>
+          <a class="navbar-brand" href="#">
+            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
+              height="50" />
+          </a>
+        </div>
 
-      <!-- Botón Responsive -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Botón Responsive -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <!-- Menú Nosotros -->
-          <a class="nav-link" href="../index.html">INICIO</a>
-          <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-
-          <!-- Menú Servicios -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              SERVICIOS
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-              <li>
-                <a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Otros Links -->
-          <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank" rel="noreterrer noopener">UNIEMPRESARIAL</a>
-          </li>
-        </ul>
-
-        <!-- Botón Contáctanos -->
-        <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <a class="nav-link" href="../index.html">INICIO</a>
+            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+              <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+                <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+                <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
+                <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
+                <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
+                rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
+          </ul>
+          <!-- Botón Contáctanos -->
+          <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   </section>
+
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-        <h1>Innovamos con <span>software</span> de alto impacto</h1>
-        <p>Creamos soluciones digitales a medida que transforman negocios y potencian el futuro.</p>
-        <a href="./contacto.html" class="btn-custom">Descubre nuestras soluciones</a>
+      <h1>Innovamos con <span>software</span> de alto impacto</h1>
+      <p>Creamos soluciones digitales a medida que transforman negocios y potencian el futuro.</p>
+      <a href="./contacto.html" class="btn-custom">Descubre nuestras soluciones</a>
     </div>
-</section>
+  </section>
 
 
   <section
@@ -140,7 +130,7 @@
       <h2 class="fw-bold display-4 mb-5" data-aos="zoom-in" data-aos-duration="800">
         Áreas de Especialización
       </h2>
-  
+
       <!-- Especializaciones -->
       <div class="row g-5">
         <!-- ERP y CRM -->
@@ -157,7 +147,7 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Aplicaciones móviles -->
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
           <div class="card border-0 shadow-lg h-100 hover-effect">
@@ -172,7 +162,7 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Plataformas web y e-commerce -->
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
           <div class="card border-0 shadow-lg h-100 hover-effect">
@@ -187,7 +177,7 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Automatización de procesos -->
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="800">
           <div class="card border-0 shadow-lg h-100 hover-effect">
@@ -204,7 +194,7 @@
         </div>
       </div>
     </div>
-  
+
     <!-- Elemento decorativo animado -->
     <div class="decorative-circle"></div>
   </section>
@@ -212,65 +202,69 @@
   <section class="text-center text-white py-5 position-relative" style="
     background: linear-gradient(to right, #1e3c72, #2a5298);
     overflow: hidden;">
-  <div class="container">
-    <!-- Título con animación -->
-    <h2 class="fw-bold mb-4 display-5" data-aos="fade-down" data-aos-duration="800">
-      Tecnologías que Utilizamos
-    </h2>
+    <div class="container">
+      <!-- Título con animación -->
+      <h2 class="fw-bold mb-4 display-5" data-aos="fade-down" data-aos-duration="800">
+        Tecnologías que Utilizamos
+      </h2>
 
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8">
-        <ul class="list-unstyled text-center text-md-start">
-          <!-- Python -->
-          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="200">
-            <div class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-              style="width: 45px; height: 45px; font-size: 1.5rem;">
-              <i class="fab fa-python"></i>
-            </div>
-            <span class="fs-6 fs-md-5">Desarrollo con Python para IA, Data Science y automatización</span>
-          </li>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <ul class="list-unstyled text-center text-md-start">
+            <!-- Python -->
+            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="200">
+              <div
+                class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
+                style="width: 45px; height: 45px; font-size: 1.5rem;">
+                <i class="fab fa-python"></i>
+              </div>
+              <span class="fs-6 fs-md-5">Desarrollo con Python para IA, Data Science y automatización</span>
+            </li>
 
-          <!-- JavaScript (React, Node.js) -->
-          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="400">
-            <div class="icon-box bg-white text-warning rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-              style="width: 45px; height: 45px; font-size: 1.5rem;">
-              <i class="fab fa-js"></i>
-            </div>
-            <span class="fs-6 fs-md-5">Aplicaciones web y móviles con React, Node.js y Vue.js</span>
-          </li>
+            <!-- JavaScript (React, Node.js) -->
+            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="400">
+              <div
+                class="icon-box bg-white text-warning rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
+                style="width: 45px; height: 45px; font-size: 1.5rem;">
+                <i class="fab fa-js"></i>
+              </div>
+              <span class="fs-6 fs-md-5">Aplicaciones web y móviles con React, Node.js y Vue.js</span>
+            </li>
 
-          <!-- Java -->
-          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="600">
-            <div class="icon-box bg-white text-danger rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-              style="width: 45px; height: 45px; font-size: 1.5rem;">
-              <i class="fab fa-java"></i>
-            </div>
-            <span class="fs-6 fs-md-5">Sistemas empresariales robustos con Java y Spring Boot</span>
-          </li>
+            <!-- Java -->
+            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="600">
+              <div
+                class="icon-box bg-white text-danger rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
+                style="width: 45px; height: 45px; font-size: 1.5rem;">
+                <i class="fab fa-java"></i>
+              </div>
+              <span class="fs-6 fs-md-5">Sistemas empresariales robustos con Java y Spring Boot</span>
+            </li>
 
-          <!-- .NET -->
-          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="800">
-            <div class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-              style="width: 45px; height: 45px; font-size: 1.5rem;">
-              <i class="fab fa-microsoft"></i>
-            </div>
-            <span class="fs-6 fs-md-5">Aplicaciones escalables con .NET y C#</span>
-          </li>
-        </ul>
+            <!-- .NET -->
+            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="800">
+              <div
+                class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
+                style="width: 45px; height: 45px; font-size: 1.5rem;">
+                <i class="fab fa-microsoft"></i>
+              </div>
+              <span class="fs-6 fs-md-5">Aplicaciones escalables con .NET y C#</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Elemento decorativo animado (solo en pantallas grandes) -->
-  <div class="decorative-circle position-absolute rounded-circle d-none d-md-block" style="
+    <!-- Elemento decorativo animado (solo en pantallas grandes) -->
+    <div class="decorative-circle position-absolute rounded-circle d-none d-md-block" style="
     width: 100px;
     height: 100px;
     background: rgba(255, 255, 255, 0.1);
     top: 10%;
     right: -30px;
     animation: float 6s ease-in-out infinite;">
-  </div>
-</section>
+    </div>
+  </section>
 
 
   <section class="text-center py-5 bg-white">
@@ -317,7 +311,8 @@
               <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
             </li>
             <li>
-              <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en Software</a>
+              <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en
+                Software</a>
             </li>
           </ul>
           <h5 class="fw-bold mt-4">Enlaces Directos</h5>

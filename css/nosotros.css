@@ -4,71 +4,71 @@ body {
 
 /* Navbar */
 .navbar {
-    position: relative;
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
-    border: none;
-    transition: background-color 0.5s, box-shadow 0.3s;
+    z-index: 1000;
     background-color: white;
     border-bottom: 2px solid #e9ecef;
     padding: 10px 15px;
     font-family: 'Arial', sans-serif;
-}
-
-
-
-/* Estilo del Logo */
-.navbar-brand img {
-    margin-right: 10px;
-}
-
-/* Links del Navbar */
-.navbar-nav .nav-link {
+  }
+  
+  body {
+    padding-top: 80px; /* Ajusta este valor si el navbar es más alto */
+  }
+  /* Estilo del Logo */
+  .navbar-brand img {
+    max-height: 50px;
+  }
+  
+  /* Links del Navbar */
+  .navbar-nav .nav-link {
     color: black;
     font-size: 16px;
     font-weight: bold;
-
     margin: 0 10px;
     transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #e4022c;
-}
-
-/* Dropdown */
-.dropdown-menu {
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #a4022c;
+  }
+  
+  /* Dropdown */
+  .dropdown-menu {
     border-radius: 8px;
     border: 1px solid #ddd;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-item {
+  }
+  
+  .dropdown-item {
     color: black;
     font-size: 14px;
     padding: 10px 20px;
-}
-
-.dropdown-item:hover {
-    background-color: #e4022c;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #a4022c;
     color: white;
     border-radius: 5px;
-}
-
-/* Botón Contáctanos */
-.btn-danger {
-    background-color: #e4022c;
+  }
+  
+  /* Botón Contáctanos */
+  .btn-danger {
+    background-color: #a4022c;
     border: none;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.btn-danger:hover {
-    background-color: #e4022c;
-}
-
+  }
+  
+  .btn-danger:hover {
+    background-color: #a4022c;
+  }
+  .navbar-brand img {
+    max-height: 50px;
+  }
 /* Estilos necesarios */
 
 

@@ -14,66 +14,52 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0">
-    <div class="container">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="./assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
-      </a>
+  <section>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logos juntos -->
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand me-2" href="#">
+            <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+          </a>
+          <a class="navbar-brand" href="#">
+            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
+              height="50" />
+          </a>
+        </div>
 
-      <!-- Botón Responsive -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Botón Responsive -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/nosotros.html">NOSOTROS</a>
-          </li>
-          <!-- Menú Servicios -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              SERVICIOS
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-              <li>
-                <a class="dropdown-item" href="./pages/consultoria.html">CONSULTORIA EN SOFTWARE</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="./pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="./pages/integracion.html">INTEGRACION DE SISTEMAS</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="./pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Otros Links -->
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/equipo.html">EQUIPO</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/proyectos.html">PROYECTOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-              rel="noreterrer noopener">UNIEMPRESARIAL</a>
-          </li>
-        </ul>
-
-        <!-- Botón Contáctanos -->
-        <a href="./pages/contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+              <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+                <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+                <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
+                <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
+                <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
+                rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
+          </ul>
+          <!-- Botón Contáctanos -->
+          <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </section>
 
   <!-- Hero Section -->
   <div class="hero-section">
@@ -99,36 +85,40 @@
         <div class="col-lg-3 col-md-6 col-12">
           <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" data-aos="fade-up" data-aos-delay="100">
             <div class="service-icon text-center">
-              <img src="assets/img/Consultoria iconos/consultoria azul.png" class="img-fluid" alt="Consultoría en Software" />
+              <img src="assets/img/Consultoria iconos/consultoria azul.png" class="img-fluid"
+                alt="Consultoría en Software" />
             </div>
             <div class="card-body d-flex flex-column text-center">
               <h5 class="card-title text-danger mb-3">Consultoría en Software</h5>
               <p class="card-text mb-4 text-muted">
-                Transformamos ideas en soluciones tecnológicas para optimizar procesos y maximizar tu competitividad digital.
+                Transformamos ideas en soluciones tecnológicas para optimizar procesos y maximizar tu competitividad
+                digital.
               </p>
               <a href="./pages/consultoria.html" class="btn btn-danger mt-auto">Más información</a>
             </div>
           </div>
         </div>
-  
+
         <!-- Desarrollo de Software -->
-        <div class="col-lg-3 col-md-8 col-12">
+        <div class="col-lg-3 col-md-10 col-12">
           <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" data-aos="fade-up" data-aos-delay="200">
             <div class="service-icon text-center">
-              <img src="assets/img/Software a la medida iconos/software azul.png" class="img-fluid" alt="Desarrollo de Software" />
+              <img src="assets/img/Software a la medida iconos/software azul.png" class="img-fluid"
+                alt="Desarrollo de Software" />
             </div>
             <div class="card-body d-flex flex-column text-center">
               <h5 class="card-title text-danger mb-3">Desarrollo de Software</h5>
               <p class="card-text mb-4 text-muted">
-                Transformamos tu visión en código, creando soluciones a medida que potencian la eficiencia de tu empresa.
+                Transformamos tu visión en código, creando soluciones a medida que potencian la eficiencia de tu
+                empresa.
               </p>
               <a href="./pages/desarrollo.html" class="btn btn-danger mt-auto">Más información</a>
             </div>
           </div>
         </div>
-  
+
         <!-- Integración de Sistemas -->
-        <div class="col-lg-3 col-md-8 col-12">
+        <div class="col-lg-3 col-md-10 col-12">
           <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" data-aos="fade-up" data-aos-delay="300">
             <div class="service-icon text-center">
               <img src="assets/img/Integración de sistemas logos/Integración de sistemas azul.png" class="img-fluid"
@@ -143,12 +133,13 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Capacitación en Software -->
-        <div class="col-lg-3 col-md-8 col-12">
+        <div class="col-lg-3 col-md-10 col-12">
           <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" data-aos="fade-up" data-aos-delay="400">
             <div class="service-icon text-center">
-              <img src="assets/img/Capacitaciones iconos/Capacitaciones azul.png" class="img-fluid" alt="Capacitación en Software" />
+              <img src="assets/img/Capacitaciones iconos/Capacitaciones azul.png" class="img-fluid"
+                alt="Capacitación en Software" />
             </div>
             <div class="card-body d-flex flex-column text-center">
               <h5 class="card-title text-danger mb-3">Capacitación en Software</h5>
@@ -162,7 +153,7 @@
       </div>
     </div>
   </section>
-  
+
 
   <section class="about-us py-5 bg-light" data-aos="fade-up" data-aos-duration="1500">
     <div class="container">
@@ -468,7 +459,7 @@
                     </div>
                     <h5 class="fw-bold mt-3">Deivid Arevalo</h5>
                     <p class="text-muted">Diseño Web</p>
-                
+
                     <a href="https://linktr.ee/darevalo79" target="_blank" class="btn btn-custom">Portafolio</a>
                   </div>
                 </div>
@@ -525,7 +516,7 @@
                     </div>
                     <h5 class="fw-bold mt-3">Holmant Alarcon</h5>
                     <p class="text-muted">Soporte</p>
-                    
+
                     <a href="https://linktr.ee/HolmantAlarcon" target="_blank" class="btn btn-custom">Portafolio</a>
                   </div>
                 </div>
@@ -582,7 +573,7 @@
                     </div>
                     <h5 class="fw-bold mt-3">Laura Casteblanco</h5>
                     <p class="text-muted">Marketing</p>
-                    
+
                     <a href="https://linktr.ee/laurascastel" target="_blank" class="btn btn-custom">Portafolio</a>
                   </div>
                 </div>
@@ -602,7 +593,7 @@
               </div>
             </div>
           </div>
-          
+
           <!--grupo 7-->
           <div class="carousel-item">
             <div class="row justify-content-center">
@@ -614,7 +605,8 @@
                     </div>
                     <h5 class="fw-bold mt-3">Paula Rubio</h5>
                     <p class="text-muted">Investigadora</p>
-                    <a href="https://linktr.ee/PaulaAndreaRubioMoreno" target="_blank" class="btn btn-custom">Portafolio</a>
+                    <a href="https://linktr.ee/PaulaAndreaRubioMoreno" target="_blank"
+                      class="btn btn-custom">Portafolio</a>
                   </div>
                 </div>
               </div>
@@ -627,7 +619,8 @@
                     </div>
                     <h5 class="fw-bold mt-3">Santiago Garcia</h5>
                     <p class="text-muted">Desarrollador</p>
-                    <a href="https://linktr.ee/Santiago2412?utm_source=linktree_admin_share" target="_blank" class="btn btn-custom">Portafolio</a>
+                    <a href="https://linktr.ee/Santiago2412?utm_source=linktree_admin_share" target="_blank"
+                      class="btn btn-custom">Portafolio</a>
                   </div>
                 </div>
               </div>
@@ -640,7 +633,7 @@
                     </div>
                     <h5 class="fw-bold mt-3">Santiago Marin</h5>
                     <p class="text-muted">Bases de Datos</p>
-                    
+
                     <a href="#" target="_blank" class="btn btn-custom">Portafolio</a>
                   </div>
                 </div>
@@ -660,8 +653,8 @@
               </div>
             </div>
           </div>
-           <!--grupo 7-->
-           <div class="carousel-item">
+          <!--grupo 7-->
+          <div class="carousel-item">
             <div class="row justify-content-center">
               <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                 <div class="card team-card">
@@ -671,7 +664,8 @@
                     </div>
                     <h5 class="fw-bold mt-3">Sebastian Romero</h5>
                     <p class="text-muted">Inteligencia Artificial</p>
-                    <a href="https://linktr.ee/SebastianDavidRomero" target="_blank" class="btn btn-custom">Portafolio</a>
+                    <a href="https://linktr.ee/SebastianDavidRomero" target="_blank"
+                      class="btn btn-custom">Portafolio</a>
                   </div>
                 </div>
               </div>
@@ -697,7 +691,7 @@
                     </div>
                     <h5 class="fw-bold mt-3">Eidan Cardenas</h5>
                     <p class="text-muted">Bases de Datos</p>
-                
+
                     <a href="https://linktr.ee/eidancardenas" target="_blank" class="btn btn-custom">Portafolio</a>
                   </div>
                 </div>

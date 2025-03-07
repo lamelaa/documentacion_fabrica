@@ -4,38 +4,24 @@ body {
 
 /* Navbar */
 .navbar {
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
-  border: none;
-  transition: background-color 0.5s, box-shadow 0.3s;
+  z-index: 1000;
   background-color: white;
   border-bottom: 2px solid #e9ecef;
   padding: 10px 15px;
   font-family: 'Arial', sans-serif;
 }
 
-header {
-  position: sticky;
-  top: 0px;
-  animation-timeline: scroll();
-  animation-range: 0 200px;
+body {
+  padding-top: 80px;
+  /* Ajusta este valor si el navbar es más alto */
 }
-
-@keyframes adjust-header {
-  to {
-    background: rgba(0, 0, 0, .3);
-    backdrop-filter: blur(5px);
-    font-size: 12px;
-    height: 24px;
-  }
-}
-
 
 /* Estilo del Logo */
 .navbar-brand img {
-  margin-right: 10px;
+  max-height: 50px;
 }
 
 /* Links del Navbar */
@@ -81,6 +67,10 @@ header {
 
 .btn-danger:hover {
   background-color: #a4022c;
+}
+
+.navbar-brand img {
+  max-height: 50px;
 }
 
 /* Estilos necesarios */
@@ -210,49 +200,57 @@ footer .container {
   transform: scale(1.05);
 }
 
-  /* Animación flotante */
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(15px); }
+/* Animación flotante */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
   }
 
-  .decorative-circle {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    background: rgba(0, 0, 0, 0.05);
-    top: -50px;
-    left: -50px;
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
+  50% {
+    transform: translateY(15px);
   }
+}
 
-  /* Tarjetas con efecto hover */
-  .hover-effect {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .hover-effect:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
-  }
+.decorative-circle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: rgba(0, 0, 0, 0.05);
+  top: -50px;
+  left: -50px;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
 
-  /* Iconos circulares */
-  .icon-circle {
-    width: 80px;
-    height: 80px;
-    font-size: 2rem;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    margin: 0 auto 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+/* Tarjetas con efecto hover */
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  /* Efecto de vibración en los iconos al pasar el mouse */
-  .hover-effect:hover .icon-circle {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
-  }
+.hover-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Iconos circulares */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de vibración en los iconos al pasar el mouse */
+.hover-effect:hover .icon-circle {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}

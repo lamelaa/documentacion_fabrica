@@ -9,23 +9,24 @@ body {
 
 /* Navbar */
 .navbar {
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
-  border: none;
-  transition: background-color 0.5s, box-shadow 0.3s;
+  z-index: 1000;
   background-color: white;
   border-bottom: 2px solid #e9ecef;
   padding: 10px 15px;
   font-family: 'Arial', sans-serif;
 }
 
-
+body {
+  padding-top: 80px;
+  /* Ajusta este valor si el navbar es más alto */
+}
 
 /* Estilo del Logo */
 .navbar-brand img {
-  margin-right: 10px;
+  max-height: 50px;
 }
 
 /* Links del Navbar */
@@ -33,7 +34,6 @@ body {
   color: black;
   font-size: 16px;
   font-weight: bold;
-
   margin: 0 10px;
   transition: color 0.3s ease;
 }
@@ -72,6 +72,10 @@ body {
 
 .btn-danger:hover {
   background-color: #a4022c;
+}
+
+.navbar-brand img {
+  max-height: 50px;
 }
 
 /* Estilos necesarios */

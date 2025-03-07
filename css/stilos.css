@@ -4,7 +4,8 @@
 body {
   font-family: Arial, sans-serif;
 }
-header{
+
+header {
   position: sticky;
   top: 0px;
   animation-timeline: scroll();
@@ -30,6 +31,7 @@ footer::after {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
 }
+
 .hero-section {
   position: relative;
   height: 89vh;
@@ -47,7 +49,8 @@ footer::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Opacidad */
+  background: rgba(0, 0, 0, 0.4);
+  /* Opacidad */
 }
 
 /* Contenido sobre la imagen */
@@ -87,6 +90,7 @@ footer::after {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .hero-section .container,
 .stats-section .container,
 footer .container {
@@ -94,24 +98,28 @@ footer .container {
   z-index: 1;
 }
 
-#redess{
-  color:  #273474;
+#redess {
+  color: #273474;
 }
+
 /* -----------------------------------------------
      Navbar Styles
      ----------------------------------------------- */
 /* Navbar */
 .navbar {
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
-  border: none;
-  transition: background-color 0.5s, box-shadow 0.3s;
+  z-index: 1000;
   background-color: white;
   border-bottom: 2px solid #e9ecef;
   padding: 10px 15px;
   font-family: 'Arial', sans-serif;
+}
+
+body {
+  padding-top: 80px;
+  /* Ajusta este valor si el navbar es más alto */
 }
 
 /* Espaciado para el Hero */
@@ -130,7 +138,7 @@ footer .container {
   color: black;
   font-size: 16px;
   font-weight: bold;
-  
+
   margin: 0 10px;
   transition: color 0.3s ease;
 }
@@ -307,25 +315,29 @@ footer .container {
 /* Estilos para las flechas del carrusel */
 .carousel-control-prev,
 .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px; /* Tamaño fijo para evitar solapamientos */
-    height: 50px;
-    background-color: rgba(228, 2, 43, 0.375); /* Color de fondo */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10; /* Asegura que las flechas estén por encima del contenido */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  /* Tamaño fijo para evitar solapamientos */
+  height: 50px;
+  background-color: rgba(228, 2, 43, 0.375);
+  /* Color de fondo */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  /* Asegura que las flechas estén por encima del contenido */
 }
 
 .carousel-control-prev {
-    left: -60px; /* Ajustar posición para que no toque las tarjetas */
+  left: -60px;
+  /* Ajustar posición para que no toque las tarjetas */
 }
 
 .carousel-control-next {
-    right: -60px;
+  right: -60px;
 }
 
 
@@ -343,8 +355,8 @@ footer .container {
   /* Amplía la imagen un poco al pasar el ratón */
 }
 
- /* Animación en hover para las tarjetas */
- .service-card {
+/* Animación en hover para las tarjetas */
+.service-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -375,6 +387,7 @@ footer .container {
 .service-icon img {
   width: 60px;
 }
+
 .stat-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -406,6 +419,7 @@ footer .container {
   font-weight: bold;
   color: #dc3545;
 }
+
 /* Estilos generales del portafolio */
 .portfolio-item {
   position: relative;
@@ -448,42 +462,50 @@ footer .container {
 /* Hacer que las imágenes mantengan su proporción sin cortar las caras */
 .team-member img {
   width: 100%;
-  height: auto; /* Evita cortes */
-  max-height: 300px; /* Mantiene proporción sin deformar */
-  object-fit: contain; /* Muestra toda la imagen sin recortes */
+  height: auto;
+  /* Evita cortes */
+  max-height: 300px;
+  /* Mantiene proporción sin deformar */
+  object-fit: contain;
+  /* Muestra toda la imagen sin recortes */
 }
 
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
   .carousel-inner {
-      display: flex;
-      overflow-x: auto; /* Permite desplazamiento táctil */
-      scroll-snap-type: x mandatory; /* Se desliza por secciones */
+    display: flex;
+    overflow-x: auto;
+    /* Permite desplazamiento táctil */
+    scroll-snap-type: x mandatory;
+    /* Se desliza por secciones */
   }
 
   .carousel-item {
-      flex: 0 0 100%;
-      scroll-snap-align: center; /* Centra cada elemento */
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    /* Centra cada elemento */
   }
 
   /* Hacer las flechas del carrusel más pequeñas y sutiles */
   .carousel-control-prev,
   .carousel-control-next {
-      width: 30px; 
-      height: 30px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
   }
 
   /* Mejor separación entre elementos */
   .team-member {
-      padding: 15px;
+    padding: 15px;
   }
 
   h2 {
-      font-size: 1.8rem; /* Reduce el tamaño del título en móvil */
+    font-size: 1.8rem;
+    /* Reduce el tamaño del título en móvil */
   }
 }
+
 .team-card {
   background: #fff;
   border-radius: 15px;
@@ -501,7 +523,7 @@ footer .container {
 .img-container {
   width: 170px;
   height: 220px;
-  margin: 0 auto; 
+  margin: 0 auto;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -527,6 +549,6 @@ footer .container {
 
 @media (max-width: 768px) {
   .team-card {
-      max-width: 320px;
+    max-width: 320px;
   }
 }
