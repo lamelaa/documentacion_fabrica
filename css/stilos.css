@@ -1,554 +1,637 @@
-/* -----------------------------------------------
-   General Styles
-   ----------------------------------------------- */
-body {
-  font-family: Arial, sans-serif;
-}
+  /* -----------------------------------------------
+    General Styles
+    ----------------------------------------------- */
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 72px; /* Ajusta este valor según la altura exacta de tu navbar */
+    }
 
-header {
-  position: sticky;
-  top: 0px;
-  animation-timeline: scroll();
-  animation-range: 0 200px;
-}
-
-.hero-section,
-.stats-section,
-footer {
-  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
-  position: relative;
-}
-
-.hero-section::after,
-.stats-section::after,
-footer::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.hero-section {
-  position: relative;
-  height: 89vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-/* Capa de opacidad */
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  /* Opacidad */
-}
-
-/* Contenido sobre la imagen */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 20px;
-}
-
-/* Texto destacado */
-.highlight {
-  color: #e4022c;
-  font-weight: bold;
-}
-
-/* Botón */
-.hero-button {
-  background-color: #273474;
-  color: white;
-  border-radius: 5px;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-}
-
-.hero-button:hover {
-  background-color: dark#273474;
-}
-
-/* Ícono de engranaje */
-.gear-icon {
-  font-size: 50px;
-  position: absolute;
-  top: -35px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hero-section .container,
-.stats-section .container,
-footer .container {
-  position: relative;
-  z-index: 1;
-}
-
-#redess {
-  color: #273474;
-}
-
-/* -----------------------------------------------
-     Navbar Styles
-     ----------------------------------------------- */
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #e9ecef;
-  padding: 10px 15px;
-  font-family: 'Arial', sans-serif;
-}
-
-body {
-  padding-top: 80px;
-  /* Ajusta este valor si el navbar es más alto */
-}
-
-/* Espaciado para el Hero */
-.hero {
-  margin-top: 80px;
-  /* Esto asegura que el contenido del hero no quede oculto */
-}
-
-/* Estilo del Logo */
-.navbar-brand img {
-  margin-right: 10px;
-}
-
-/* Links del Navbar */
-.navbar-nav .nav-link {
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #e4022c;
-}
-
-/* Dropdown */
-.dropdown-menu {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-item {
-  color: black;
-  font-size: 14px;
-  padding: 10px 20px;
-}
-
-.dropdown-item:hover {
-  background-color: #e4022c;
-  color: white;
-  border-radius: 5px;
-}
-
-/* Botón Contáctanos */
-.btn-danger {
-  background-color: #e4022c;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.btn-danger:hover {
-  background-color: #e4022c;
-}
-
-
-/* Estilo general para la sección */
-
-
-.about-us {
-  background-color: #f8f9fa;
-  /* Color de fondo suave */
-  padding: 60px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-
-
-/* Estilo del título */
-.section-title {
-  color: #e4022c;
-  /* Rojo intenso */
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #e4022c;
-  display: inline-block;
-}
-
-
-.image-container::before {
-  content: '';
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  background: rgba(0, 0, 0, 0.05);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  z-index: 0;
-}
-
-
-
-
-/* -----------------------------------------------
-     Responsive Styles (Mobile & Tablet)
-     ----------------------------------------------- */
-@media (max-width: 768px) {
-  .navbar-nav .nav-item {
-    padding: 10px 0;
+  header {
+    position: sticky;
+    top: 0px;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
   }
 
-  .navbar-toggler {
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+  .hero-section,
+  .stats-section,
+  footer {
+    background: url("../assets/img/fondo.webp") no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+  }
+
+  .hero-section::after,
+  .stats-section::after,
+  footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .hero-section {
+    position: relative;
+    height: 89vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  /* Capa de opacidad */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Opacidad */
+  }
+
+  /* Contenido sobre la imagen */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  /* Texto destacado */
+  .highlight {
+    color: #e4022c;
+    font-weight: bold;
+  }
+
+  /* Botón */
+  .hero-button {
+    background-color: #273474;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .hero-button:hover {
+    background-color: dark#273474;
+  }
+
+  /* Ícono de engranaje */
+  .gear-icon {
+    font-size: 50px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-section .container,
+  .stats-section .container,
+  footer .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  #redess {
+    color: #273474;
+  }
+
+  /* -----------------------------------------------
+      Navbar Styles
+      ----------------------------------------------- */
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 2px solid #e9ecef;
+    padding: 10px 15px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    height: 72px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    padding-top: 72px !important; /* Fuerza este valor */
+    margin: 0 !important; /* Elimina márgenes por defecto */
+  }
+
+  /* Espaciado para el Hero */
+  .hero {
+    margin-top: 80px;
+    /* Esto asegura que el contenido del hero no quede oculto */
+  }
+
+  /* Estilo del Logo */
+  .navbar-brand img {
+    margin-right: 10px;
+  }
+
+  /* Links del Navbar */
+  .navbar-nav .nav-link {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #e4022c;
+  }
+
+  /* Dropdown */
+  .dropdown-menu {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-item {
+    color: black;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .dropdown-item:hover {
+    background-color: #e4022c;
+    color: white;
+    border-radius: 5px;
+  }
+
+  /* Botón Contáctanos */
+  .btn-danger {
+    background-color: #e4022c;
     border: none;
-    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .btn-danger:hover {
+    background-color: #e4022c;
+  }
+
+
+  /* Estilo general para la sección */
+
+
+  .about-us {
+    background-color: #f8f9fa;
+    /* Color de fondo suave */
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+
+
+  /* Estilo del título */
+  .section-title {
+    color: #e4022c;
+    /* Rojo intenso */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e4022c;
+    display: inline-block;
+  }
+
+
+  .image-container::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: rgba(0, 0, 0, 0.05);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 0;
+  }
+
+
+
+
+  /* -----------------------------------------------
+      Responsive Styles (Mobile & Tablet)
+      ----------------------------------------------- */
+  @media (max-width: 768px) {
+    .navbar-nav .nav-item {
+      padding: 10px 0;
+    }
+
+    .navbar-toggler {
+      padding: 0.5rem 1rem;
+      font-size: 1.5rem;
+      border: none;
+      background-color: transparent;
+    }
+
+    .navbar-nav {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .navbar-collapse {
+      padding-top: 10px;
+    }
+
+    .navbar-dark .navbar-nav {
+      background-color: #000000;
+    }
+  }
+
+  /* -----------------------------------------------
+    Servicios Section - Estilos Generales
+    ----------------------------------------------- */
+
+
+
+  .card-img-top {
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  /* -----------------------------------------------
+      Responsive Design
+      ----------------------------------------------- */
+  @media (max-width: 768px) {
+    #servicios h2 {
+      font-size: 2rem;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Estilo General del Navbar */
+
+  /* Animación para las tarjetas del equipo */
+
+  .team-member {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .team-member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .social-icons a {
+    display: inline-block;
+    color: #273474;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.2);
+    color: #e4022c;
+  }
+
+  /* Estilos para las flechas del carrusel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    /* Tamaño fijo para evitar solapamientos */
+    height: 50px;
+    background-color: rgba(228, 2, 43, 0.375);
+    /* Color de fondo */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    /* Asegura que las flechas estén por encima del contenido */
+  }
+
+  .carousel-control-prev {
+    left: -60px;
+    /* Ajustar posición para que no toque las tarjetas */
+  }
+
+  .carousel-control-next {
+    right: -60px;
+  }
+
+
+  .stat-item img {
+    max-width: 60px;
+    /* Limita el ancho máximo */
+    height: auto;
+    /* Mantiene la proporción original */
+    transition: transform 0.3s ease;
+    /* Efecto de transición para el hover */
+  }
+
+  .stat-item img:hover {
+    transform: scale(1.1);
+    /* Amplía la imagen un poco al pasar el ratón */
+  }
+
+  /* Animación en hover para las tarjetas */
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Icono de servicio */
+  .service-icon {
+    width: 100px;
+    height: 100px;
+    margin: -50px auto 10px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover .service-icon {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-icon img {
+    width: 60px;
+  }
+
+  .stat-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .stat-icon-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-icon {
+    width: 60px;
+    height: auto;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #dc3545;
+  }
+
+  /* Estilos generales del portafolio */
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .portfolio-video {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  /* Efecto de hover en los videos */
+  .portfolio-item:hover .portfolio-video {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+
+  /* Superposición de descripción */
+  .portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Mostrar la superposición al pasar el mouse */
+  .portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+  }
+
+
+  /* Hacer que las imágenes mantengan su proporción sin cortar las caras */
+  .team-member img {
+    width: 100%;
+    height: auto;
+    /* Evita cortes */
+    max-height: 300px;
+    /* Mantiene proporción sin deformar */
+    object-fit: contain;
+    /* Muestra toda la imagen sin recortes */
+  }
+
+  /* Ajustes específicos para móviles */
+  @media (max-width: 768px) {
+    .carousel-inner {
+      display: flex;
+      overflow-x: auto;
+      /* Permite desplazamiento táctil */
+      scroll-snap-type: x mandatory;
+      /* Se desliza por secciones */
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+      /* Centra cada elemento */
+    }
+
+    /* Hacer las flechas del carrusel más pequeñas y sutiles */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 30px;
+      height: 30px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+    }
+
+    /* Mejor separación entre elementos */
+    .team-member {
+      padding: 15px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      /* Reduce el tamaño del título en móvil */
+    }
+  }
+
+  .team-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .img-container {
+    width: 170px;
+    height: 220px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .btn-custom {
+    background: #e4022c;
+    color: white;
+    border-radius: 50px;
+    padding: 8px 15px;
+    transition: background 0.3s ease;
+    font-size: 14px;
+  }
+
+  .btn-custom:hover {
+    background: #273474;
+  }
+
+  @media (max-width: 768px) {
+    .team-card {
+      max-width: 320px;
+    }
+  }
+  .testimonials-section {
+    background: url('../assets/img/fondo.webp') center/cover no-repeat;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Capa oscura semi-transparente */
+  .testimonials-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Opacidad ajustable */
+    z-index: 0;
+  }
+
+  .testimonials-section .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ===============================================
+   NAVBAR MOBILE - Menú Hamburguesa corregido
+   =============================================== */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 72px; /* Altura de tu navbar */
+    left: 0;
+    width: 100%;
+    background-color: white !important; /* Fondo blanco */
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
   }
 
   .navbar-nav {
+    background-color: white !important; /* Doble seguro para el fondo */
+    margin-top: 15px;
+  }
+
+  .navbar-nav .nav-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link {
+    color: #273474 !important; /* Color oscuro para mejor contraste */
     font-size: 1.1rem;
-    text-align: center;
+    padding: 10px 15px;
+    display: block;
   }
 
-  .navbar-collapse {
-    padding-top: 10px;
+  .navbar-nav .nav-link:hover {
+    color: #e4022c !important;
+    background-color: #f8f8f8;
+    border-radius: 5px;
   }
 
-  .navbar-dark .navbar-nav {
-    background-color: #000000;
-  }
-}
-
-/* -----------------------------------------------
-   Servicios Section - Estilos Generales
-   ----------------------------------------------- */
-
-
-
-.card-img-top {
-  height: 200px;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-/* -----------------------------------------------
-     Responsive Design
-     ----------------------------------------------- */
-@media (max-width: 768px) {
-  #servicios h2 {
-    font-size: 2rem;
+  .dropdown-menu {
+    background-color: #f9f9f9 !important;
+    border: none;
+    box-shadow: none;
+    margin-left: 15px;
+    width: calc(100% - 30px);
   }
 
-  .card-body {
-    padding: 15px;
-  }
-
-  .card-title {
-    font-size: 1.2rem;
-  }
-
-  .card-text {
-    font-size: 0.9rem;
+  .dropdown-item {
+    padding: 10px 25px;
   }
 }
 
-/* Estilo General del Navbar */
-
-/* Animación para las tarjetas del equipo */
-
-.team-member {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-member:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-
-.social-icons a {
-  display: inline-block;
-  color: #273474;
-  margin: 0 5px;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #e4022c;
-}
-
-/* Estilos para las flechas del carrusel */
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  /* Tamaño fijo para evitar solapamientos */
-  height: 50px;
-  background-color: rgba(228, 2, 43, 0.375);
-  /* Color de fondo */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  /* Asegura que las flechas estén por encima del contenido */
-}
-
-.carousel-control-prev {
-  left: -60px;
-  /* Ajustar posición para que no toque las tarjetas */
-}
-
-.carousel-control-next {
-  right: -60px;
-}
-
-
-.stat-item img {
-  max-width: 60px;
-  /* Limita el ancho máximo */
-  height: auto;
-  /* Mantiene la proporción original */
-  transition: transform 0.3s ease;
-  /* Efecto de transición para el hover */
-}
-
-.stat-item img:hover {
-  transform: scale(1.1);
-  /* Amplía la imagen un poco al pasar el ratón */
-}
-
-/* Animación en hover para las tarjetas */
-.service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Icono de servicio */
-.service-icon {
-  width: 100px;
-  height: 100px;
-  margin: -50px auto 10px;
-  background: #f8f9fa;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-  transform: scale(1.1);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.service-icon img {
-  width: 60px;
-}
-
-.stat-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stat-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.stat-icon-container {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f8f9fa;
-  border-radius: 50%;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.stat-icon {
-  width: 60px;
-  height: auto;
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #dc3545;
-}
-
-/* Estilos generales del portafolio */
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.portfolio-video {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-/* Efecto de hover en los videos */
-.portfolio-item:hover .portfolio-video {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* Superposición de descripción */
-.portfolio-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  text-align: center;
-  padding: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Mostrar la superposición al pasar el mouse */
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 1;
-}
-
-
-/* Hacer que las imágenes mantengan su proporción sin cortar las caras */
-.team-member img {
-  width: 100%;
-  height: auto;
-  /* Evita cortes */
-  max-height: 300px;
-  /* Mantiene proporción sin deformar */
-  object-fit: contain;
-  /* Muestra toda la imagen sin recortes */
-}
-
-/* Ajustes específicos para móviles */
-@media (max-width: 768px) {
-  .carousel-inner {
-    display: flex;
-    overflow-x: auto;
-    /* Permite desplazamiento táctil */
-    scroll-snap-type: x mandatory;
-    /* Se desliza por secciones */
-  }
-
-  .carousel-item {
-    flex: 0 0 100%;
-    scroll-snap-align: center;
-    /* Centra cada elemento */
-  }
-
-  /* Hacer las flechas del carrusel más pequeñas y sutiles */
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 30px;
-    height: 30px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-  }
-
-  /* Mejor separación entre elementos */
-  .team-member {
-    padding: 15px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-    /* Reduce el tamaño del título en móvil */
-  }
-}
-
-.team-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 280px;
-}
-
-.team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.img-container {
-  width: 170px;
-  height: 220px;
-  margin: 0 auto;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.btn-custom {
-  background: #e4022c;
-  color: white;
-  border-radius: 50px;
-  padding: 8px 15px;
-  transition: background 0.3s ease;
-  font-size: 14px;
-}
-
-.btn-custom:hover {
-  background: #273474;
-}
-
-@media (max-width: 768px) {
-  .team-card {
-    max-width: 320px;
-  }
-}

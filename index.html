@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
   <title>Soluciones TI</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -11,35 +12,42 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="./css/stilos.css" />
   <link rel="icon" href="./assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon" />
+
 </head>
 
 <body>
   <section>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logos juntos -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-2">
+      <div class="container-fluid">
+        <!-- Logos y botón toggler alineados -->
         <div class="d-flex align-items-center">
-          <a class="navbar-brand me-2" href="#">
-            <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
-          </a>
-          <a class="navbar-brand" href="#">
-            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
-              height="50" />
-          </a>
+          <!-- Botón Responsive (solo visible en móvil) -->
+          <button class="navbar-toggler me-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <!-- Logos -->
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand me-2" href="#">
+              <img src="./assets/img/Nuevos logos/fUSoft corregido simple.png" alt="Logo" style="height: 40px; width: auto; max-width: 160px;">
+            </a>
+            <a class="navbar-brand d-none d-md-block" href="#">
+              <img src="./assets/img/Official Uniempresarial bussines material/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png" 
+                   alt="Logo" style="height: 40px; width: auto; max-width: 240px;">
+            </a>
+          </div>
         </div>
-
-        <!-- Botón Responsive -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-            <li class="nav-item dropdown">
+  
+        <!-- Contenido colapsable -->
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <!-- Links centrados -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+            </li>
+            <li class="nav-item dropdown mx-2">
               <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
               <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
@@ -49,13 +57,22 @@
                 <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="../pages/equipo.html">EQUIPO</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
+                rel="noreterrer noopener">UNIEMPRESARIAL</a>
+            </li>
           </ul>
-          <!-- Botón Contáctanos -->
-          <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+          
+          <!-- Botón Contáctanos alineado a la derecha -->
+          <div class="d-flex ms-lg-3">
+            <a href="./contacto.html" class="btn btn-danger px-4">CONTACTANOS</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -89,7 +106,7 @@
                 alt="Consultoría en Software" />
             </div>
             <div class="card-body d-flex flex-column text-center">
-              <h5 class="card-title text-danger mb-3">Consultoría en Software</h5>
+              <h5 class="card-title text-danger mb-3">Consultoría en Soluciones</h5>
               <p class="card-text mb-4 text-muted">
                 Transformamos ideas en soluciones tecnológicas para optimizar procesos y maximizar tu competitividad
                 digital.
@@ -107,7 +124,7 @@
                 alt="Desarrollo de Software" />
             </div>
             <div class="card-body d-flex flex-column text-center">
-              <h5 class="card-title text-danger mb-3">Desarrollo de Software</h5>
+              <h5 class="card-title text-danger mb-3">Desarrollo de Soluciones</h5>
               <p class="card-text mb-4 text-muted">
                 Transformamos tu visión en código, creando soluciones a medida que potencian la eficiencia de tu
                 empresa.
@@ -257,48 +274,53 @@
 
   <!-- Estadísticas -->
   <!-- Sección de Logros -->
-  <section class="stats-section text-center py-5 bg-light" data-aos="fade-up" data-aos-duration="1500">
-    <div class="container">
-      <h2 class="mb-5 fw-bold" style="font-size: 2.5rem">
-        Nuestros <span class="text-danger">Logros</span>
-      </h2>
-      <div class="row g-4">
-        <!-- Clientes satisfechos -->
-        <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-          <div class="stat-item shadow-lg p-4 rounded-4 bg-white">
-            <div class="stat-icon-container">
-              <img src="assets/img/clientes satisfechos/clientes azul.png" alt="Icono Clientes" class="stat-icon" />
+  <section class="testimonials-section text-center py-5 position-relative" data-aos="fade-up" data-aos-duration="1500">
+    <!-- Capa oscura semi-transparente -->
+    <div class="overlay"></div>
+    
+    <div class="container position-relative">
+        <h2 class="mb-5 fw-bold text-white" style="font-size: 2.5rem">
+            Lo que dicen <span class="text-danger">nuestros clientes</span>
+        </h2>
+        <div class="row g-4">
+            <!-- Testimonio 1 -->
+            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                <div class="testimonial-item shadow-lg p-4 rounded-4 bg-white">
+                    <div class="testimonial-img mb-3">
+                        <img src="assets/img/testimonios/persona1.jpg" alt="Cliente 1" class="rounded-circle" width="80">
+                    </div>
+                    <p class="text-muted">"El equipo superó mis expectativas. Excelente servicio y resultados increíbles."</p>
+                    <h5 class="fw-bold">Juan Pérez</h5>
+                    <small class="text-muted">CEO de Empresa X</small>
+                </div>
             </div>
-            <h3 class="stat-number" data-target="56">0</h3>
-            <p class="text-muted">Clientes satisfechos</p>
-          </div>
-        </div>
 
-        <!-- Proyectos completados -->
-        <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-          <div class="stat-item shadow-lg p-4 rounded-4 bg-white">
-            <div class="stat-icon-container">
-              <img src="assets/img/Proyectos terminados/proyectos terminados azul.png" alt="Icono Proyectos"
-                class="stat-icon" />
+            <!-- Testimonio 2 -->
+            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                <div class="testimonial-item shadow-lg p-4 rounded-4 bg-white">
+                    <div class="testimonial-img mb-3">
+                        <img src="assets/img/testimonios/persona2.jpg" alt="Cliente 2" class="rounded-circle" width="80">
+                    </div>
+                    <p class="text-muted">"Muy profesionales y atentos a los detalles. Recomiendo su trabajo al 100%."</p>
+                    <h5 class="fw-bold">María López</h5>
+                    <small class="text-muted">Gerente de Marketing</small>
+                </div>
             </div>
-            <h3 class="stat-number" data-target="14">0</h3>
-            <p class="text-muted">Proyectos completados</p>
-          </div>
-        </div>
 
-        <!-- Horas de soporte -->
-        <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
-          <div class="stat-item shadow-lg p-4 rounded-4 bg-white">
-            <div class="stat-icon-container">
-              <img src="assets/img/Tiempo de soporte/tiempo azul.png" alt="Icono Soporte" class="stat-icon" />
+            <!-- Testimonio 3 -->
+            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+                <div class="testimonial-item shadow-lg p-4 rounded-4 bg-white">
+                    <div class="testimonial-img mb-3">
+                        <img src="assets/img/testimonios/persona3.jpg" alt="Cliente 3" class="rounded-circle" width="80">
+                    </div>
+                    <p class="text-muted">"Increíble experiencia. La mejor decisión que tomamos para nuestro negocio."</p>
+                    <h5 class="fw-bold">Carlos Gómez</h5>
+                    <small class="text-muted">Fundador de Startup Y</small>
+                </div>
             </div>
-            <h3 class="stat-number" data-target="258">0</h3>
-            <p class="text-muted">Horas de soporte</p>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
   <!-- Sección de Equipo -->
   <section class="team-section text-center py-5" data-aos="fade-up" data-aos-duration="1500">
@@ -444,7 +466,7 @@
                     <div class="img-container">
                       <img src="assets/img/integrantes/David Perez.jpg" alt="Anderson Castro" />
                     </div>
-                    <h5 class="fw-bold mt-3">David Perez</h5>
+                    <h5 class="fw-bold mt-3">David Peez</h5>
                     <p class="text-muted">Inteligencia Artificial</p>
                     <a href="https://linktr.ee/David10Paez" target="_blank" class="btn btn-custom">Portafolio</a>
                   </div>
@@ -482,18 +504,6 @@
           <!--grupo 4-->
           <div class="carousel-item">
             <div class="row justify-content-center">
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Fabian Ariza.jpg" alt="Alejandro Aguilera" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Fabian Ariza</h5>
-                    <p class="text-muted">Inteligencia Artificial</p>
-                    <a href="https://linktr.ee/mrTony0" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
 
               <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                 <div class="card team-card">
@@ -526,6 +536,19 @@
                 <div class="card team-card">
                   <div class="card-body text-center">
                     <div class="img-container">
+                      <img src="assets/img/integrantes/Juan Piraquive.jpg" alt="Alejandro Aguilera" />
+                    </div>
+                    <h5 class="fw-bold mt-3">Juan Piraquive</h5>
+                    <p class="text-muted">Soporte</p>
+                    <a href="https://linktr.ee/Pirvito" target="_blank" class="btn btn-custom">Portafolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+                <div class="card team-card">
+                  <div class="card-body text-center">
+                    <div class="img-container">
                       <img src="assets/img/integrantes/Juan Gomez.jpg" alt="Brayam Chavarro" />
                     </div>
                     <h5 class="fw-bold mt-3">Juan Gomez</h5>
@@ -539,18 +562,6 @@
           <!--grupo 5-->
           <div class="carousel-item">
             <div class="row justify-content-center">
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Juan Piraquive.jpg" alt="Alejandro Aguilera" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Juan Piraquive</h5>
-                    <p class="text-muted">Soporte</p>
-                    <a href="https://linktr.ee/Pirvito" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
 
               <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                 <div class="card team-card">
@@ -591,12 +602,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <!--grupo 7-->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
               <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                 <div class="card team-card">
                   <div class="card-body text-center">
@@ -610,6 +616,13 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          
+
+          <!--grupo 7-->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
 
               <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                 <div class="card team-card">
@@ -643,23 +656,6 @@
                 <div class="card team-card">
                   <div class="card-body text-center">
                     <div class="img-container">
-                      <img src="assets/img/integrantes/Sara Bonilla.jpg" alt="Brayam Chavarro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Sara Bonilla</h5>
-                    <p class="text-muted">Finanzas y Comercio Exterior</p>
-                    <a href="https://linktr.ee/sara2514" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--grupo 7-->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
                       <img src="assets/img/integrantes/Sebastian Romero.jpg" alt="Alejandro Aguilera" />
                     </div>
                     <h5 class="fw-bold mt-3">Sebastian Romero</h5>
@@ -669,6 +665,13 @@
                   </div>
                 </div>
               </div>
+
+              
+            </div>
+          </div>
+          <!--grupo 7-->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
 
               <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                 <div class="card team-card">
@@ -693,19 +696,6 @@
                     <p class="text-muted">Bases de Datos</p>
 
                     <a href="https://linktr.ee/eidancardenas" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Juan Mendivelzo.jpg" alt="Brayam Chavarro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Juan Mendivelso</h5>
-                    <p class="text-muted">Finanzas y Comercio Exterior</p>
-                    <a href="https://linktr.ee/JuanLuisMV" target="_blank" class="btn btn-custom">Portafolio</a>
                   </div>
                 </div>
               </div>
