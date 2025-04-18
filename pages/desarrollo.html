@@ -2,388 +2,398 @@
 <html lang="es">
 
 <head>
+  <!-- Configuración general -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Verificación de Google Search Console -->
   <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
   <title>Desarrollo</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
+
+  <!-- Favicon del sitio -->
+  <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon" />
+
+  <!-- Estilos de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Íconos Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- Custom CSS -->
+
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="../css/desarrollo.css" />
-  <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon">
 </head>
 
 <body>
-  <!-- Navbar -->
-  <section>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logos juntos -->
-        <div class="d-flex align-items-center">
-          <a class="navbar-brand me-2" href="#">
-            <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
-          </a>
-          <a class="navbar-brand" href="#">
-            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
-              height="50" />
-          </a>
-        </div>
 
-        <!-- Botón Responsive -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <a class="nav-link" href="../index.html">INICIO</a>
-            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
-              <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-                <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
-                <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
-                <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
-                <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
-          </ul>
-          <!-- Botón Contáctanos -->
-          <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
-        </div>
+  <!-- ======================= NAVBAR ======================= -->
+  <!-- Barra de navegación fija en la parte superior -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      
+      <!-- Sección de logos (lado izquierdo) -->
+      <div class="d-flex align-items-center">
+        <!-- Logo de Fusoft -->
+        <a class="navbar-brand me-2" href="#">
+          <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo Fusoft" width="50" height="50" />
+        </a>
+        <!-- Logo de Uniempresarial -->
+        <a class="navbar-brand" href="#">
+          <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo UE" width="50" height="50" />
+        </a>
       </div>
-    </nav>
-  </section>
 
+      <!-- Botón hamburguesa para pantallas pequeñas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Innovamos con <span>software</span> de alto impacto</h1>
-      <p>Creamos soluciones digitales a medida que transforman negocios y potencian el futuro.</p>
-      <a href="./contacto.html" class="btn-custom">Descubre nuestras soluciones</a>
-    </div>
-  </section>
+      <!-- Menú de navegación colapsable -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <!-- Enlaces principales -->
+          <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a></li>
 
+          <!-- Dropdown de Servicios -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+            <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+              <li><a class="dropdown-item" href="../pages/consultoria.html">Consultoría en Software</a></li>
+              <li><a class="dropdown-item" href="../pages/desarrollo.html">Desarrollo de Software a la Medida</a></li>
+              <li><a class="dropdown-item" href="../pages/integracion.html">Integración de Sistemas</a></li>
+              <li><a class="dropdown-item" href="../pages/capacitaciones.html">Capacitación en Software</a></li>
+            </ul>
+          </li>
 
-  <section
-    class="d-flex align-items-center justify-content-center text-center vh-100 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <!-- Contenido centrado -->
-        <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
-          <h2 class="fw-bold display-5 text-dark mb-4">
-            Desarrollo de <span class="text-danger">Software a la Medida</span>
-          </h2>
-          <p class="text-muted fs-5">
-            Creamos soluciones <span class="fw-bold text-dark">personalizadas</span> que evolucionan contigo. Desde
-            <span class="text-danger">sistemas internos</span> hasta <span class="text-danger">plataformas en la
-              nube</span>,
-            garantizamos que se adapten a las necesidades de tu negocio.
-          </p>
-          <p class="text-muted fs-5">
-            Diseñamos software que <span class="fw-bold text-dark">trabaja como tú lo necesitas.</span>
-          </p>
+          <!-- Otros enlaces -->
+          <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank" rel="noopener noreferrer">UNIEMPRESARIAL</a>
+          </li>
+        </ul>
 
-        </div>
-
-        <!-- Imagen centrada con efecto flotante -->
-        <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="1200">
-          <div class="position-relative d-flex justify-content-center">
-            <img src="../assets/img/Software a la medida iconos/software degradado.png" alt="Desarrollo de software"
-              class="img-fluid w-50 rounded floating-img" />
-            <div class="floating-bg"></div> <!-- Elemento decorativo -->
-          </div>
-        </div>
+        <!-- Botón destacado de contacto -->
+        <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTÁCTANOS</a>
       </div>
     </div>
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 150px;
-          height: 150px;
-          background: rgba(0, 0, 0, 0.05);
-          bottom: -30px;
-          right: -40px;
-          animation: float 8s ease-in-out infinite;
-        "></div>
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 300px;
-          height: 300px;
-          background: rgba(0, 0, 0, 0.05);
-          bottom: 100px;
-          left: 200px;
-          animation: float 8s ease-in-out infinite;
-        "></div>
-  </section>
+  </nav>
+  <!-- =================== FIN NAVBAR =================== -->
 
-  <section class="text-center py-5 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold display-4 mb-5" data-aos="zoom-in" data-aos-duration="800">
-        Áreas de Especialización
-      </h2>
 
-      <!-- Especializaciones -->
-      <div class="row g-5">
-        <!-- ERP y CRM -->
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center">
-              <div class="icon-circle bg-primary">
-                <i class="fas fa-cogs"></i>
-              </div>
-              <h5 class="fw-bold mb-3">Sistemas de Gestión (ERP, CRM)</h5>
-              <p class="text-muted">
-                Implementamos soluciones empresariales para optimizar la administración y productividad.
-              </p>
-            </div>
-          </div>
-        </div>
+  <!-- ======================= HERO SECTION ======================= -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Innovamos con <span>software</span> de alto impacto</h1>
+    <p>Creamos soluciones digitales a medida que transforman negocios y potencian el futuro.</p>
+    <!-- Botón personalizado que redirige a la sección de contacto -->
+    <a href="./contacto.html" class="btn-custom">Descubre nuestras soluciones</a>
+  </div>
+</section>
 
-        <!-- Aplicaciones móviles -->
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center">
-              <div class="icon-circle bg-danger">
-                <i class="fas fa-mobile-alt"></i>
-              </div>
-              <h5 class="fw-bold mb-3">Aplicaciones Móviles</h5>
-              <p class="text-muted">
-                Diseñamos apps innovadoras para Android y iOS, garantizando experiencia y rendimiento.
-              </p>
-            </div>
-          </div>
-        </div>
+<!-- ======================= PRESENTACIÓN ======================= -->
+<section class="d-flex align-items-center justify-content-center text-center vh-100 bg-light position-relative overflow-hidden">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
 
-        <!-- Plataformas web y e-commerce -->
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center">
-              <div class="icon-circle bg-success">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <h5 class="fw-bold mb-3">Plataformas Web & E-commerce</h5>
-              <p class="text-muted">
-                Creamos plataformas escalables y seguras para potenciar negocios en línea.
-              </p>
-            </div>
-          </div>
-        </div>
+      <!-- Texto de introducción -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="fw-bold display-5 text-dark mb-4">
+          Desarrollo de <span class="text-danger">Software a la Medida</span>
+        </h2>
+        <p class="text-muted fs-5">
+          Creamos soluciones <span class="fw-bold text-dark">personalizadas</span> que evolucionan contigo. Desde
+          <span class="text-danger">sistemas internos</span> hasta <span class="text-danger">plataformas en la nube</span>,
+          garantizamos que se adapten a las necesidades de tu negocio.
+        </p>
+        <p class="text-muted fs-5">
+          Diseñamos software que <span class="fw-bold text-dark">trabaja como tú lo necesitas.</span>
+        </p>
+      </div>
 
-        <!-- Automatización de procesos -->
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="800">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center">
-              <div class="icon-circle bg-warning">
-                <i class="fas fa-robot"></i>
-              </div>
-              <h5 class="fw-bold mb-3">Automatización de Procesos</h5>
-              <p class="text-muted">
-                Optimizamos tareas repetitivas mediante IA, RPA y herramientas de automatización.
-              </p>
-            </div>
-          </div>
+      <!-- Imagen decorativa -->
+      <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="1200">
+        <div class="position-relative d-flex justify-content-center">
+          <img src="../assets/img/Software a la medida iconos/software degradado.png" 
+               alt="Ilustración sobre desarrollo de software" 
+               class="img-fluid w-50 rounded floating-img" />
+          <!-- Fondo flotante decorativo -->
+          <div class="floating-bg"></div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Elemento decorativo animado -->
-    <div class="decorative-circle"></div>
-  </section>
+  <!-- Círculos decorativos animados -->
+  <div class="decorative-circle position-absolute rounded-circle" style="
+        width: 150px;
+        height: 150px;
+        background: rgba(0, 0, 0, 0.05);
+        bottom: -30px;
+        right: -40px;
+        animation: float 8s ease-in-out infinite;"></div>
 
-  <section class="text-center text-white py-5 position-relative" style="
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    overflow: hidden;">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold mb-4 display-5" data-aos="fade-down" data-aos-duration="800">
-        Tecnologías que Utilizamos
-      </h2>
+  <div class="decorative-circle position-absolute rounded-circle" style="
+        width: 300px;
+        height: 300px;
+        background: rgba(0, 0, 0, 0.05);
+        bottom: 100px;
+        left: 200px;
+        animation: float 8s ease-in-out infinite;"></div>
+</section>
 
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
-          <ul class="list-unstyled text-center text-md-start">
-            <!-- Python -->
-            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="200">
-              <div
-                class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-                style="width: 45px; height: 45px; font-size: 1.5rem;">
-                <i class="fab fa-python"></i>
-              </div>
-              <span class="fs-6 fs-md-5">Desarrollo con Python para IA, Data Science y automatización</span>
-            </li>
-
-            <!-- JavaScript (React, Node.js) -->
-            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="400">
-              <div
-                class="icon-box bg-white text-warning rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-                style="width: 45px; height: 45px; font-size: 1.5rem;">
-                <i class="fab fa-js"></i>
-              </div>
-              <span class="fs-6 fs-md-5">Aplicaciones web y móviles con React, Node.js y Vue.js</span>
-            </li>
-
-            <!-- Java -->
-            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="600">
-              <div
-                class="icon-box bg-white text-danger rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-                style="width: 45px; height: 45px; font-size: 1.5rem;">
-                <i class="fab fa-java"></i>
-              </div>
-              <span class="fs-6 fs-md-5">Sistemas empresariales robustos con Java y Spring Boot</span>
-            </li>
-
-            <!-- .NET -->
-            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="800">
-              <div
-                class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-                style="width: 45px; height: 45px; font-size: 1.5rem;">
-                <i class="fab fa-microsoft"></i>
-              </div>
-              <span class="fs-6 fs-md-5">Aplicaciones escalables con .NET y C#</span>
-            </li>
-          </ul>
+<!-- ======================= ÁREAS DE ESPECIALIZACIÓN ======================= -->
+<section class="text-center py-5 bg-light position-relative overflow-hidden">
+  <div class="container">
+    <!-- Título con animación AOS -->
+    <h2 class="fw-bold display-4 mb-5" data-aos="zoom-in" data-aos-duration="800">
+      Áreas de Especialización
+    </h2>
+    <!-- Aquí iría el contenido de las áreas (puedes agregar tarjetas, íconos, etc.) -->
+      <!-- ======================= ESPECIALIZACIONES ======================= -->
+<div class="row g-5">
+  <!-- ========== 1. ERP y CRM ========== -->
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+    <div class="card border-0 shadow-lg h-100 hover-effect">
+      <div class="card-body text-center">
+        <!-- Ícono representativo -->
+        <div class="icon-circle bg-primary">
+          <i class="fas fa-cogs"></i>
         </div>
+        <!-- Título y descripción -->
+        <h5 class="fw-bold mb-3">Sistemas de Gestión (ERP, CRM)</h5>
+        <p class="text-muted">
+          Implementamos soluciones empresariales para optimizar la administración y productividad.
+        </p>
       </div>
     </div>
+  </div>
 
-    <!-- Elemento decorativo animado (solo en pantallas grandes) -->
-    <div class="decorative-circle position-absolute rounded-circle d-none d-md-block" style="
+  <!-- ========== 2. Aplicaciones móviles ========== -->
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+    <div class="card border-0 shadow-lg h-100 hover-effect">
+      <div class="card-body text-center">
+        <div class="icon-circle bg-danger">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h5 class="fw-bold mb-3">Aplicaciones Móviles</h5>
+        <p class="text-muted">
+          Diseñamos apps innovadoras para Android y iOS, garantizando experiencia y rendimiento.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 3. Plataformas web & e-commerce ========== -->
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
+    <div class="card border-0 shadow-lg h-100 hover-effect">
+      <div class="card-body text-center">
+        <div class="icon-circle bg-success">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <h5 class="fw-bold mb-3">Plataformas Web & E-commerce</h5>
+        <p class="text-muted">
+          Creamos plataformas escalables y seguras para potenciar negocios en línea.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 4. Automatización de procesos ========== -->
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="800">
+    <div class="card border-0 shadow-lg h-100 hover-effect">
+      <div class="card-body text-center">
+        <div class="icon-circle bg-warning">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h5 class="fw-bold mb-3">Automatización de Procesos</h5>
+        <p class="text-muted">
+          Optimizamos tareas repetitivas mediante IA, RPA y herramientas de automatización.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== Elemento decorativo flotante (puedes personalizarlo) ========== -->
+<div class="decorative-circle"></div>
+
+  <!-- ================= TECNOLOGÍAS QUE UTILIZAMOS ================= -->
+<section class="text-center text-white py-5 position-relative" style="
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  overflow: hidden;">
+  <div class="container">
+    <!-- Título animado -->
+    <h2 class="fw-bold mb-4 display-5" data-aos="fade-down" data-aos-duration="800">
+      Tecnologías que Utilizamos
+    </h2>
+
+    <!-- Lista de tecnologías -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <ul class="list-unstyled text-center text-md-start">
+          
+          <!-- Python -->
+          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="200">
+            <div class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
+              style="width: 45px; height: 45px; font-size: 1.5rem;">
+              <i class="fab fa-python"></i>
+            </div>
+            <span class="fs-6 fs-md-5">Desarrollo con Python para IA, Data Science y automatización</span>
+          </li>
+
+          <!-- JavaScript (React, Node.js, Vue.js) -->
+          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="400">
+            <div class="icon-box bg-white text-warning rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
+              style="width: 45px; height: 45px; font-size: 1.5rem;">
+              <i class="fab fa-js"></i>
+            </div>
+            <span class="fs-6 fs-md-5">Aplicaciones web y móviles con React, Node.js y Vue.js</span>
+          </li>
+
+          <!-- Java -->
+          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="600">
+            <div class="icon-box bg-white text-danger rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
+              style="width: 45px; height: 45px; font-size: 1.5rem;">
+              <i class="fab fa-java"></i>
+            </div>
+            <span class="fs-6 fs-md-5">Sistemas empresariales robustos con Java y Spring Boot</span>
+          </li>
+
+          <!-- .NET y C# -->
+          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="800">
+            <div class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
+              style="width: 45px; height: 45px; font-size: 1.5rem;">
+              <i class="fab fa-microsoft"></i>
+            </div>
+            <span class="fs-6 fs-md-5">Aplicaciones escalables con .NET y C#</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Círculo decorativo animado -->
+  <div class="decorative-circle position-absolute rounded-circle d-none d-md-block" style="
     width: 100px;
     height: 100px;
     background: rgba(255, 255, 255, 0.1);
     top: 10%;
     right: -30px;
     animation: float 6s ease-in-out infinite;">
-    </div>
-  </section>
-
-
-  <section class="text-center py-5 bg-white">
-    <div class="container">
-      <blockquote class="blockquote text-dark">
-        <p class="fw-bold display-6">
-          "Llevamos tus ideas a la realidad tecnológica"
-        </p>
-      </blockquote>
-    </div>
-  </section>
-
-  <footer class="bg-primary text-light py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Logo y Redes Sociales -->
-        <div class="col-md-3 text-center text-md-start">
-          <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png  "
-            alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
-          <div class="d-flex justify-content-center justify-content-md-start gap-2">
-            <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-            <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
-            <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank"
-              rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
-          </div>
-        </div>
-
-        <!-- Programas y Enlaces Directos -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Nuestros Servicios</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
-            </li>
-            <li>
-              <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la
-                Medida</a>
-            </li>
-            <li>
-              <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
-            </li>
-            <li>
-              <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en
-                Software</a>
-            </li>
-          </ul>
-          <h5 class="fw-bold mt-4">Enlaces Directos</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
-            </li>
-            <li>
-              <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
-                target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión
-                Académica</a>
-            </li>
-            <li>
-              <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">FAQs</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Normatividad -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Normatividad y Políticas</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Acceso a la Información Pública</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Estados Financieros</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Mapa y Contacto -->
-        <div class="col-md-3 text-center text-md-start">
-          <h5 class="fw-bold">Ubicación</h5>
-          <div class="map-container" style="
-              height: 150px;
-              border-radius: 10px;
-              overflow: hidden;
-              margin-bottom: 10px;
-            ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
-              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
-            #30-20 Bogotá D.C.
-          </p>
-          <p>
-            <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
-            6607, 6608
-          </p>
-          <p>
-            <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
-          </p>
+  </div>
+</section>
+    <!-- ================ FRASE DESTACADA ================= -->
+<section class="text-center py-5 bg-white">
+  <div class="container">
+    <blockquote class="blockquote text-dark">
+      <p class="fw-bold display-6">
+        "Llevamos tus ideas a la realidad tecnológica"
+      </p>
+    </blockquote>
+  </div>
+</section>
+  <!-- ======================= FOOTER ======================= -->
+<footer class="bg-primary text-light py-5">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Logo y Redes Sociales -->
+      <div class="col-md-3 text-center text-md-start mb-4 mb-md-0">
+        <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png"
+             alt="Uniempresarial Logo"
+             class="mb-3"
+             style="max-width: 250px;" />
+        <div class="d-flex justify-content-center justify-content-md-start gap-3">
+          <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreferrer noopener" class="text-light">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreferrer noopener" class="text-light">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreferrer noopener" class="text-light">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank" rel="noreferrer noopener" class="text-light">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
         </div>
       </div>
+
+      <!-- Servicios y Enlaces -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="fw-bold">Nuestros Servicios</h5>
+        <ul class="list-unstyled">
+          <li><a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoría en software</a></li>
+          <li><a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la Medida</a></li>
+          <li><a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a></li>
+          <li><a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitación en Software</a></li>
+        </ul>
+
+        <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a></li>
+          <li>
+            <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
+               target="_blank" rel="noreferrer noopener" class="text-light text-decoration-none">
+              Sistema de Gestión Académica
+            </a>
+          </li>
+          <li>
+            <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreferrer noopener"
+               class="text-light text-decoration-none">FAQs</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Normatividad -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h5 class="fw-bold">Normatividad y Políticas</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreferrer noopener"
+               class="text-light text-decoration-none">Acceso a la Información Pública</a>
+          </li>
+          <li>
+            <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreferrer noopener"
+               class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
+          </li>
+          <li>
+            <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreferrer noopener"
+               class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
+          </li>
+          <li>
+            <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreferrer noopener"
+               class="text-light text-decoration-none">Estados Financieros</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- (¿Quieres que incluya una cuarta columna con contacto, dirección o mapa?) -->
+      
     </div>
-  </footer>
+  </div>
+</footer>
+
+       <!-- ======================= Mapa y Contacto ======================= -->
+<div class="col-md-3 text-center text-md-start">
+  <h5 class="fw-bold">Ubicación</h5>
+  <div class="map-container" style="height: 150px; border-radius: 10px; overflow: hidden; margin-bottom: 10px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus" 
+            width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <p>
+    <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a #30-20 Bogotá D.C.
+  </p>
+  <p>
+    <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604, 6607, 6608
+  </p>
+  <p>
+    <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+  </p>
+</div>
+
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
