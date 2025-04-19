@@ -2,236 +2,393 @@
    General Styles
    ----------------------------------------------- */
 
-
+/* 
+   Establece la fuente general para el cuerpo del documento como Arial y, si no está disponible, usa sans-serif.
+*/
 body {
   font-family: Arial, sans-serif;
 }
 
-/* Navbar */
+/* 
+   Estilos para la barra de navegación.
+   - La barra está fijada en la parte superior de la página.
+   - Se utiliza un fondo blanco y un borde inferior para separar visualmente la barra del contenido.
+   - El espaciado interno (padding) asegura que los elementos de la barra no estén pegados a los bordes.
+*/
 .navbar {
-  position: fixed;
+  position: fixed; /* Fija la barra de navegación en la parte superior */
   top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #e9ecef;
-  padding: 10px 15px;
-  font-family: 'Arial', sans-serif;
+  width: 100%; /* La barra ocupa todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+  background-color: white; /* Color de fondo blanco */
+  border-bottom: 2px solid #e9ecef; /* Borde sutil para separar la barra del contenido */
+  padding: 10px 15px; /* Espaciado interno */
+  font-family: 'Arial', sans-serif; /* Fuente Arial para el texto */
 }
 
+/* 
+   Ajusta el espaciado superior del body para que el contenido no quede oculto detrás de la barra fija.
+   Este valor puede ajustarse si la barra es más alta.
+*/
 body {
   padding-top: 80px;
-  /* Ajusta este valor si el navbar es más alto */
 }
 
-/* Estilo del Logo */
+/* 
+   Estilo para el logo dentro de la barra de navegación.
+   - Se limita la altura máxima del logo a 50px para mantener su tamaño adecuado.
+*/
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Limita la altura máxima del logo */
 }
 
-/* Links del Navbar */
+/* 
+   Estilos para los enlaces de la barra de navegación.
+   - Los enlaces tienen un color negro, un tamaño de fuente de 16px y un peso en negrita.
+   - Se agrega un margen de 10px entre los enlaces para separarlos.
+   - La transición suave de color mejora la interacción al pasar el ratón.
+*/
 .navbar-nav .nav-link {
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  color: black; /* Color negro para los enlaces */
+  font-size: 16px; /* Tamaño de fuente de 16px */
+  font-weight: bold; /* Texto en negrita */
+  margin: 0 10px; /* Espaciado entre los enlaces */
+  transition: color 0.3s ease; /* Transición suave de color */
 }
 
+/* 
+   Efecto al pasar el ratón sobre los enlaces.
+   - Cambia el color de los enlaces a un tono rojo oscuro (#a4022c) al hacer hover.
+*/
 .navbar-nav .nav-link:hover {
-  color: #a4022c;
+  color: #a4022c; /* Color al pasar el ratón */
 }
 
-/* Dropdown */
+/* 
+   Estilos para el menú desplegable.
+   - Se aplica un borde redondeado, un borde sutil y una sombra para darle un efecto de profundidad.
+*/
 .dropdown-menu {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #ddd; /* Borde sutil */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
 }
 
+/* 
+   Estilos para los elementos dentro del menú desplegable.
+   - Color de texto negro, tamaño de fuente de 14px y espaciado interno adecuado.
+*/
 .dropdown-item {
-  color: black;
-  font-size: 14px;
-  padding: 10px 20px;
+  color: black; /* Color de texto negro */
+  font-size: 14px; /* Tamaño de fuente de 14px */
+  padding: 10px 20px; /* Espaciado interno */
 }
 
+/* 
+   Efecto al pasar el ratón sobre los elementos del menú desplegable.
+   - Cambia el fondo a rojo oscuro y el texto a blanco, con bordes redondeados adicionales.
+*/
 .dropdown-item:hover {
-  background-color: #a4022c;
-  color: white;
-  border-radius: 5px;
+  background-color: #a4022c; /* Fondo rojo oscuro al hacer hover */
+  color: white; /* Color de texto blanco */
+  border-radius: 5px; /* Bordes redondeados */
 }
 
-/* Botón Contáctanos */
+/* 
+   Estilos para el botón de "Contáctanos".
+   - El botón tiene un fondo rojo oscuro, texto en mayúsculas y un tamaño de fuente de 16px.
+   - Se aplica un efecto hover, aunque en este caso mantiene el mismo color de fondo.
+*/
 .btn-danger {
-  background-color: #a4022c;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
+  background-color: #a4022c; /* Fondo rojo oscuro */
+  border: none; /* Sin borde */
+  font-size: 16px; /* Tamaño de fuente de 16px */
+  font-weight: bold; /* Texto en negrita */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
 
+/* 
+   Efecto al pasar el ratón sobre el botón de "Contáctanos".
+   - Aunque en este caso el fondo se mantiene igual, generalmente se agregarían efectos visuales aquí.
+*/
 .btn-danger:hover {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Mantiene el mismo color al hacer hover */
 }
 
+/* 
+   Redundancia: Estilo para el logo (ya definido anteriormente, se repite aquí).
+   - Se limita la altura máxima del logo a 50px.
+*/
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Limita la altura máxima del logo */
 }
 
-@keyframes float {
+/* -----------------------------------------------
+   Animaciones y Estilos Generales
+   ----------------------------------------------- */
 
-  0%,
-  100% {
-    transform: translateY(0);
+/* 
+   Definición de la animación 'float'.
+   - La animación hace que el elemento se mueva verticalmente de arriba hacia abajo, simulando un movimiento flotante.
+   - En el 0% y el 100%, el elemento está en su posición original.
+   - En el 50%, el elemento se mueve hacia arriba 20px.
+*/
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0); /* Posición inicial y final del elemento */
   }
 
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-20px); /* Movimiento hacia arriba */
   }
 }
 
+/* 
+   Estilo para un sombreado grande aplicado a los elementos con la clase '.shadow-lg'.
+   - Se agrega una sombra difusa que proporciona un efecto de profundidad.
+*/
 .shadow-lg {
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important; /* Sombra grande */
 }
 
+/* 
+   Estilos generales para el cuerpo del documento.
+   - Se establece la fuente general como Arial y un fondo de color gris claro (#f8f9fa).
+*/
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif; /* Fuente general */
+  background-color: #f8f9fa; /* Fondo gris claro */
 }
 
-/* Hero Section */
+/* -----------------------------------------------
+   Hero Section (Sección principal)
+   ----------------------------------------------- */
+
+/* 
+   Estilos para la sección 'hero' (sección principal de la página).
+   - Se asegura de que la sección ocupe al menos el 100% de la altura de la ventana.
+   - Utiliza Flexbox para centrar el contenido tanto vertical como horizontalmente.
+   - El texto está alineado al centro y tiene un color específico (#273474).
+   - Se agrega un padding de 80px en la parte superior e inferior para crear espacio alrededor del contenido.
+*/
 .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #273474;
-  padding: 80px 20px;
+  min-height: 100vh; /* La sección ocupa al menos el 100% de la altura de la ventana */
+  display: flex; /* Utiliza Flexbox para la disposición de los elementos */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Alineación del texto al centro */
+  color: #273474; /* Color del texto */
+  padding: 80px 20px; /* Espaciado interno alrededor del contenido */
 }
 
+/* 
+   Estilos para el encabezado de la sección 'hero' (h1).
+   - Se establece un tamaño de fuente grande (3rem), en negrita y con un margen inferior de 20px.
+*/
 .hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 3rem; /* Tamaño de fuente grande */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 20px; /* Espaciado debajo del título */
 }
 
+/* 
+   Estilos para el párrafo de la sección 'hero' (p).
+   - El tamaño de la fuente se establece en 1.2rem y se agrega un margen inferior de 30px.
+*/
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.2rem; /* Tamaño de fuente moderado */
+  margin-bottom: 30px; /* Espaciado debajo del párrafo */
 }
 
-/* Formulario */
+/* -----------------------------------------------
+   Estilos para el Formulario de Contacto
+   ----------------------------------------------- */
+
+/* 
+   Estilos generales para el formulario de contacto.
+   - El formulario tiene un fondo blanco, bordes redondeados y una sombra sutil para darle un efecto de profundidad.
+   - Se asegura de que el formulario tenga un tamaño máximo de 600px de ancho.
+*/
 .contact-form {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  width: 100%;
+  background: white; /* Fondo blanco */
+  padding: 40px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  max-width: 600px; /* Ancho máximo del formulario */
+  width: 100%; /* El formulario ocupa todo el ancho disponible hasta el máximo */
 }
 
+/* 
+   Estilos para los campos de entrada del formulario (.form-control).
+   - Los campos tienen bordes redondeados, un tamaño de fuente de 1rem y un padding interno de 12px.
+   - Se agrega un margen inferior de 15px entre los campos para separarlos visualmente.
+*/
 .form-control {
-  border-radius: 8px;
-  font-size: 1rem;
-  padding: 12px;
-  margin-bottom: 15px;
+  border-radius: 8px; /* Bordes redondeados para los campos */
+  font-size: 1rem; /* Tamaño de fuente para los campos */
+  padding: 12px; /* Espaciado interno */
+  margin-bottom: 15px; /* Espaciado entre campos */
 }
 
+/* 
+   Estilos para el botón personalizado (.btn-custom).
+   - El botón tiene un fondo azul oscuro, texto blanco y bordes redondeados.
+   - Se agrega una transición para el cambio de color de fondo al pasar el ratón.
+   - El botón ocupa el 100% del ancho del formulario.
+*/
 .btn-custom {
-  background-color: #273474;
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px;
-  border-radius: 8px;
-  transition: 0.3s;
-  width: 100%;
+  background-color: #273474; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  padding: 12px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: 0.3s; /* Transición suave para el cambio de fondo */
+  width: 100%; /* El botón ocupa todo el ancho del formulario */
 }
 
+/* 
+   Efecto hover para el botón personalizado.
+   - Al pasar el ratón sobre el botón, el color de fondo cambia a rojo (#e4022c).
+*/
 .btn-custom:hover {
-  background-color: #e4022c;
+  background-color: #e4022c; /* Cambio a color rojo al pasar el ratón */
 }
 
-/* Imagen */
+/* -----------------------------------------------
+   Estilos para la Imagen de la Sección Hero
+   ----------------------------------------------- */
+
+/* 
+   Estilos para las imágenes dentro del contenedor '.hero-img'.
+   - La imagen ocupa el 100% del ancho disponible, pero no excede los 500px de ancho.
+   - Se aplican bordes redondeados (10px) para un efecto visual suave.
+   - Se agrega una sombra difusa para dar un efecto de profundidad.
+   - Se aplica la animación 'float' definida más abajo para crear un movimiento de flotación.
+*/
 .hero-img img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  animation: float 3s ease-in-out infinite;
+  width: 100%; /* La imagen ocupa todo el ancho disponible */
+  max-width: 500px; /* Limita el ancho máximo de la imagen a 500px */
+  border-radius: 10px; /* Bordes redondeados en la imagen */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra difusa para dar profundidad */
+  animation: float 3s ease-in-out infinite; /* Animación de flotación */
 }
 
+/* 
+   Definición de la animación 'float'.
+   - La animación hace que la imagen se mueva verticalmente hacia arriba y hacia abajo.
+   - En el 0% y el 100%, la imagen está en su posición original.
+   - En el 50%, la imagen se mueve hacia arriba 10px.
+*/
 @keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
+  0%, 100% {
+    transform: translateY(0); /* Posición inicial y final */
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Mueve la imagen hacia arriba */
   }
 }
 
+/* -----------------------------------------------
+   Media Query para dispositivos más pequeños
+   ----------------------------------------------- */
+
+/* 
+   Cambios de diseño cuando el ancho de la pantalla es menor a 992px (dispositivos móviles y tabletas).
+   - La sección '.hero' cambia su dirección de diseño a columna (de fila) para apilar los elementos verticalmente.
+   - Se agrega un margen superior a '.hero-img' para separar la imagen del contenido superior.
+*/
 @media (max-width: 992px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column; /* Cambia la dirección del Flexbox a columna */
   }
 
   .hero-img {
-    margin-top: 30px;
+    margin-top: 30px; /* Agrega un margen superior a la imagen */
   }
 }
 
+/* -----------------------------------------------
+   Estilos del Footer (Pie de Página)
+   ----------------------------------------------- */
 
-/* Añadir imagen de fondo y capa oscura */
-
-
-/* Overlay oscuro encima de la imagen de fondo */
-
+/* 
+   Estilos para el pie de página.
+   - Se agrega una imagen de fondo (fondo.webp) que cubre todo el pie de página.
+   - El texto dentro del footer es blanco.
+   - Se utiliza una capa oscura encima de la imagen para hacer el texto más legible.
+*/
 footer {
-  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
-  position: relative;
+  background: url("../assets/img/fondo.webp") no-repeat center center/cover; /* Imagen de fondo */
+  color: #fff; /* Color de texto blanco */
+  position: relative; /* Para permitir la superposición de elementos */
 }
 
-
+/* 
+   Se crea una capa oscura encima de la imagen de fondo usando el pseudo-elemento ::after.
+   - La capa tiene un fondo semitransparente (rgba(0, 0, 0, 0.8)) para oscurecer la imagen.
+   - Cubre todo el footer y se posiciona encima de la imagen.
+*/
 footer::after {
-  content: "";
-  position: absolute;
+  content: ""; /* Necesario para crear un pseudo-elemento vacío */
+  position: absolute; /* Posición absoluta para superponer */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  width: 100%; /* Cubre todo el ancho del footer */
+  height: 100%; /* Cubre toda la altura del footer */
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
 }
 
-/* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
+/* 
+   Se asegura de que los elementos dentro del footer (como el texto y los contenedores) estén por encima de la capa oscura.
+*/
 footer .container {
-  position: relative;
-  z-index: 2;
+  position: relative; /* Posición relativa para apilar el contenido encima de la capa oscura */
+  z-index: 2; /* Asegura que los elementos se muestren por encima de la capa oscura */
 }
 
+/* -----------------------------------------------
+   Estilos del Contenedor de Contacto
+   ----------------------------------------------- */
+
+/* 
+   Estilos para el contenedor del formulario de contacto.
+   - Se le da un fondo claro, bordes redondeados y una sombra difusa para que se vea elevado sobre el fondo.
+   - Se limita el ancho máximo del contenedor a 600px y se centra en la página.
+   - Se agrega padding para separar el contenido de los bordes.
+*/
 .contact-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Ancho máximo de 600px */
+  margin: auto; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Espaciado interno */
+  background: #f8f9fa; /* Fondo gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
 }
 
+/* 
+   Estilos para los campos de formulario (.form-control).
+   - Se establece una altura de 50px y un tamaño de fuente de 16px para los campos de entrada.
+*/
 .form-control {
-  height: 50px;
-  font-size: 16px;
+  height: 50px; /* Altura de los campos */
+  font-size: 16px; /* Tamaño de fuente */
 }
 
+/* 
+   Estilos específicos para los campos de texto (textarea).
+   - Se ajusta la altura para que el campo de texto sea más grande (120px).
+*/
 textarea.form-control {
-  height: 120px;
+  height: 120px; /* Altura de los campos de texto */
 }
 
+/* 
+   Estilos para el botón personalizado (.btn-custom).
+   - El botón ocupa el 100% del ancho, tiene una altura de 50px y un tamaño de fuente de 18px.
+*/
 .btn-custom {
-  width: 100%;
-  height: 50px;
-  font-size: 18px;
+  width: 100%; /* El botón ocupa todo el ancho */
+  height: 50px; /* Altura del botón */
+  font-size: 18px; /* Tamaño de fuente */
 }
