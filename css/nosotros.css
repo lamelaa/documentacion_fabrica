@@ -1,93 +1,100 @@
+/* -----------------------------------------------
+   Estilos Generales
+   ----------------------------------------------- */
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-/* Navbar */
+/* -----------------------------------------------
+   Navbar (Barra de Navegación)
+   ----------------------------------------------- */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: white;
-    border-bottom: 2px solid #e9ecef;
-    padding: 10px 15px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  body {
-    padding-top: 80px; /* Ajusta este valor si el navbar es más alto */
-  }
-  /* Estilo del Logo */
-  .navbar-brand img {
-    max-height: 50px;
-  }
-  
-  /* Links del Navbar */
-  .navbar-nav .nav-link {
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #a4022c;
-  }
-  
-  /* Dropdown */
-  .dropdown-menu {
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dropdown-item {
-    color: black;
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #a4022c;
-    color: white;
-    border-radius: 5px;
-  }
-  
-  /* Botón Contáctanos */
-  .btn-danger {
-    background-color: #a4022c;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .btn-danger:hover {
-    background-color: #a4022c;
-  }
-  .navbar-brand img {
-    max-height: 50px;
-  }
-/* Estilos necesarios */
-
-
-/*animacion como funciona*/
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  border-bottom: 2px solid #e9ecef;
+  padding: 10px 15px;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Añadir imagen de fondo y capa oscura */
+body {
+  padding-top: 80px; /* Ajuste para que el contenido no se oculte detrás del navbar */
+}
+
+/* Estilo del Logo en el Navbar */
+.navbar-brand img {
+  max-height: 50px;
+}
+
+/* -----------------------------------------------
+   Estilos de los Links en el Navbar
+   ----------------------------------------------- */
+.navbar-nav .nav-link {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s ease; /* Efecto de transición suave al cambiar el color */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #a4022c; /* Color al pasar el mouse */
+}
+
+/* -----------------------------------------------
+   Estilos del Dropdown (Menú desplegable)
+   ----------------------------------------------- */
+.dropdown-menu {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.dropdown-item {
+  color: black;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background-color: #a4022c;
+  color: white;
+  border-radius: 5px; /* Bordes redondeados al pasar el mouse */
+}
+
+/* -----------------------------------------------
+   Estilo del Botón Contáctanos
+   ----------------------------------------------- */
+.btn-danger {
+  background-color: #a4022c; /* Rojo institucional */
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.btn-danger:hover {
+  background-color: #a4022c; /* Mismo color en hover para mantener la coherencia */
+}
+
+/* -----------------------------------------------
+   Animación de Flotación (keyframes)
+   ----------------------------------------------- */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0); /* No se mueve */
+  }
+  50% {
+    transform: translateY(-20px); /* Se mueve hacia arriba */
+  }
+}
+/* -----------------------------------------------
+   Estilos del Footer (Pie de página)
+   ----------------------------------------------- */
 footer {
-  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
+  background: url("../assets/img/fondo.webp") no-repeat center center/cover; /* Fondo con imagen */
   color: #fff;
   position: relative;
 }
@@ -99,248 +106,243 @@ footer::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Capa oscura sobre la imagen */
 }
 
 /* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
 footer .container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2; /* Asegura que los contenidos se muestren encima */
 }
 
-
-
-
-/* Sección con fondo blanco */
+/* -----------------------------------------------
+   Sección de Misión y Visión
+   ----------------------------------------------- */
 .mission-vision {
-    background: #ffffff;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
+  background: #ffffff; /* Fondo blanco */
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Contenedor de imágenes */
+/* Contenedor de imágenes con efectos */
 .image-container img {
-    width: 80%;
-    max-width: 380px;
-    border-radius: 15px;
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 80%;
+  max-width: 380px;
+  border-radius: 15px; /* Bordes redondeados */
+  object-fit: cover; /* Mantener la proporción de la imagen */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición */
 }
 
 .image-container img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Aumento de sombra */
 }
 
-/* Caja de contenido */
+/* Caja de contenido con fondo translúcido */
 .content-box {
-    background: rgba(0, 0, 0, 0.05);
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 1;
+  background: rgba(0, 0, 0, 0.05); /* Fondo ligeramente oscuro */
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  transition: transform 0.3s ease; /* Efecto de transformación */
+  position: relative;
+  z-index: 1;
 }
 
 .content-box:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px); /* Efecto de elevarse al pasar el mouse */
 }
 
-/* Iconos llamativos */
+/* -----------------------------------------------
+   Estilos de los Iconos Llamativos
+   ----------------------------------------------- */
 .icon {
-    font-size: 50px;
-    color: #273474;
-    margin-bottom: 15px;
+  font-size: 50px;
+  color: #273474; /* Color azul oscuro */
+  margin-bottom: 15px;
 }
 
-/* Títulos */
+/* -----------------------------------------------
+   Estilos de Títulos
+   ----------------------------------------------- */
 .section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .highlight {
-    color: #273474;
+  color: #273474; /* Color de resaltar */
 }
 
-/* Descripción */
+/* -----------------------------------------------
+   Estilos de Descripción
+   ----------------------------------------------- */
 .description {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555; /* Color gris oscuro */
 }
 
-/* Ajustes en móviles */
+/* -----------------------------------------------
+   Estilos Responsivos (móviles)
+   ----------------------------------------------- */
 @media (max-width: 768px) {
-    .mission-vision {
-        padding: 60px 20px;
-    }
+  .mission-vision {
+    padding: 60px 20px; /* Menos relleno en pantallas pequeñas */
+  }
 
-    .image-container img {
-        width: 90%;
-    }
+  .image-container img {
+    width: 90%; /* Imagen más ancha en pantallas pequeñas */
+  }
 
-    .content-box {
-        padding: 30px;
-    }
+  .content-box {
+    padding: 30px; /* Menos relleno en pantallas pequeñas */
+  }
 
-    .polygon-shape {
-        display: none;
-        /* Se oculta la figura en pantallas pequeñas */
-    }
+  .polygon-shape {
+    display: none; /* Se oculta la figura en pantallas pequeñas */
+  }
 }
-
-/* Sección "¿Por Qué Elegirnos?" */
+/* -----------------------------------------------
+   Sección "¿Por Qué Elegirnos?"
+   ----------------------------------------------- */
 .feature-box {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto al pasar el mouse */
 }
 
 .feature-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px); /* Efecto de elevarse */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra suave */
 }
 
 .icon-feature {
-    font-size: 50px;
+  font-size: 50px; /* Tamaño de los iconos */
 }
 
-/* Elemento decorativo */
+/* Elemento decorativo flotante */
 .decorative-circle {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: rgba(0, 0, 0, 0.05);
-    top: -50px;
-    left: -50px;
-    border-radius: 50%;
-    animation: float 8s ease-in-out infinite;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.05); /* Fondo oscuro y translúcido */
+  top: -50px;
+  left: -50px;
+  border-radius: 50%; /* Forma circular */
+  animation: float 8s ease-in-out infinite; /* Animación flotante */
 }
 
-/* Animación */
+/* -----------------------------------------------
+   Animación flotante
+   ----------------------------------------------- */
 @keyframes float {
+  0%, 100% {
+    transform: translateY(0); /* Posición inicial y final */
+  }
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(20px);
-    }
+  50% {
+    transform: translateY(20px); /* Desplazamiento hacia abajo */
+  }
 }
 
-
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(15px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-
-/* Estilos generales */
+/* -----------------------------------------------
+   Estilos generales del cuerpo
+   ----------------------------------------------- */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4; /* Fondo gris claro */
 }
 
-/* Sección Sobre Nosotros */
+/* -----------------------------------------------
+   Sección "Sobre Nosotros"
+   ----------------------------------------------- */
 .sobre-nosotros {
-    position: relative;
-    background: url('../assets/img/fondo.webp') center/cover no-repeat;
-    height: 91vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    overflow: hidden;
+  position: relative;
+  background: url('../assets/img/fondo.webp') center/cover no-repeat; /* Imagen de fondo */
+  height: 91vh; /* Altura del 91% de la ventana */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  overflow: hidden;
 }
 
-/* Capa de difuminado para el fondo */
+/* Capa de difuminado sobre el fondo */
 .sobre-nosotros::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
+  backdrop-filter: blur(5px); /* Difumina el fondo */
+  z-index: 1;
 }
 
-/* Contenido */
+/* Contenido dentro de la sección */
 .contenido {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
-    animation: fadeInUp 1s ease-in-out;
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  animation: fadeInUp 1s ease-in-out; /* Animación de entrada */
 }
 
 /* Animación de entrada */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Estilo de los títulos */
+/* Estilos de los títulos */
 .contenido h2 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase; /* Títulos en mayúsculas */
 }
 
 .destacado {
-    color: #e4022c;
+  color: #e4022c; /* Color de texto destacado */
 }
 
+/* Estilos del párrafo */
 .contenido p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-bottom: 25px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
 }
 
-/* Botón elegante */
+/* Botón personalizado */
 .btn-custom {
-    background: linear-gradient(45deg, #273474, #e4022c);
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(255, 61, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    border: none;
+  background: linear-gradient(45deg, #273474, #e4022c); /* Gradiente de color */
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px; /* Bordes redondeados */
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 61, 0, 0.3); /* Sombra */
+  transition: all 0.3s ease-in-out;
+  border: none;
 }
 
 .btn-custom:hover {
-    background: linear-gradient(45deg, #e4022c, #273474);
-    box-shadow: 0 6px 20px rgba(255, 61, 0, 0.5);
-    transform: scale(1.05);
+  background: linear-gradient(45deg, #e4022c, #273474); /* Invertir gradiente al pasar el mouse */
+  box-shadow: 0 6px 20px rgba(255, 61, 0, 0.5); /* Sombra más intensa */
+  transform: scale(1.05); /* Efecto de escalado al pasar el mouse */
 }
