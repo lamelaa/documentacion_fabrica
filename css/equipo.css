@@ -1,112 +1,133 @@
 /* -----------------------------------------------
-   General Styles
+   Estilos Generales
    ----------------------------------------------- */
 
-
+/* Se aplican al <body> y <html> del documento */
 body,
 html {
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif; /* Fuente por defecto */
+  overflow-x: hidden;             /* Evita scroll horizontal por contenido desbordado */
 }
 
-/* Navbar */
+/* -----------------------------------------------
+   Navbar (barra de navegación superior)
+   ----------------------------------------------- */
+
 .navbar {
-  position: fixed;
+  position: fixed;           /* La navbar se mantiene fija en la parte superior al hacer scroll */
   top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #e9ecef;
-  padding: 10px 15px;
-  font-family: 'Arial', sans-serif;
+  width: 100%;               /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000;             /* Se asegura de que esté por encima de otros elementos */
+  background-color: white;   /* Fondo blanco */
+  border-bottom: 2px solid #e9ecef; /* Línea divisoria inferior */
+  padding: 10px 15px;        /* Espaciado interno */
+  font-family: 'Arial', sans-serif; /* Fuente específica para la navbar */
 }
 
+/* Agrega espacio superior al contenido para no quedar oculto debajo de la navbar */
 body {
-  padding-top: 80px;
-  /* Ajusta este valor si el navbar es más alto */
+  padding-top: 80px; /* Ajustable según la altura real de la navbar */
 }
 
-/* Estilo del Logo */
+/* -----------------------------------------------
+   Estilo del Logo dentro del navbar
+   ----------------------------------------------- */
+
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Limita la altura del logo */
 }
 
-/* Links del Navbar */
+/* -----------------------------------------------
+   Estilos de los enlaces del menú de navegación
+   ----------------------------------------------- */
+
 .navbar-nav .nav-link {
-  color: black;
+  color: black;            /* Color de texto normal */
   font-size: 16px;
-  font-weight: bold;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  font-weight: bold;       /* Negrita */
+  margin: 0 10px;          /* Separación horizontal entre enlaces */
+  transition: color 0.3s ease; /* Transición suave del color al hacer hover */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #a4022c;
+  color: #a4022c; /* Cambia a rojo oscuro al pasar el mouse */
 }
 
-/* Dropdown */
+/* -----------------------------------------------
+   Menú desplegable (dropdown)
+   ----------------------------------------------- */
+
 .dropdown-menu {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;                  /* Bordes redondeados */
+  border: 1px solid #ddd;             /* Borde claro */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
 }
 
 .dropdown-item {
   color: black;
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Espaciado interno */
 }
 
 .dropdown-item:hover {
-  background-color: #a4022c;
-  color: white;
-  border-radius: 5px;
+  background-color: #a4022c; /* Fondo rojo al hacer hover */
+  color: white;              /* Texto blanco al hacer hover */
+  border-radius: 5px;        /* Bordes redondeados al hacer hover */
 }
 
-/* Botón Contáctanos */
+/* -----------------------------------------------
+   Botón personalizado estilo Bootstrap `.btn-danger`
+   ----------------------------------------------- */
+
 .btn-danger {
-  background-color: #a4022c;
-  border: none;
+  background-color: #a4022c; /* Rojo personalizado */
+  border: none;              /* Sin borde */
   font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: uppercase; /* Convierte texto a mayúsculas */
 }
 
 .btn-danger:hover {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Mantiene el mismo color al hacer hover */
 }
 
+/* (Este selector está repetido, aunque no afecta negativamente) */
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Define nuevamente la altura máxima del logo */
 }
 
-/* Responsive: Centrar los logos en móvil */
+/* -----------------------------------------------
+   Responsive: Centrar logos y contenido en móvil
+   ----------------------------------------------- */
 
-
-/* Mejoras de responsividad */
+/* Media Query para dispositivos con ancho máximo de 768px */
 @media (max-width: 768px) {
   .hero .col-lg-6 {
-    text-align: center;
+    text-align: center; /* Centra el texto en columna */
   }
 
   .hero .rounded-circle {
-    width: 70%;
+    width: 70%; /* Ajusta el tamaño de imágenes circulares para pantallas pequeñas */
   }
 
   .quote-container {
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -30px; /* Ajusta la posición inferior */
+    left: 50%;     /* Centra horizontalmente */
+    transform: translateX(-50%); /* Asegura que esté realmente centrado */
   }
 }
 
+/* -----------------------------------------------
+   Estilo del footer con imagen de fondo y capa oscura
+   ----------------------------------------------- */
 
 footer {
   background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
-  position: relative;
+  color: #fff;          /* Texto blanco */
+  position: relative;   /* Necesario para posicionar la capa oscura sobre él */
 }
 
+/* Capa oscura semitransparente encima del fondo */
 footer::after {
   content: "";
   position: absolute;
@@ -114,65 +135,80 @@ footer::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Negro con 80% de opacidad */
 }
 
-/* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
+/* Contenedor del footer encima de la capa oscura */
 footer .container {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Eleva el contenido por encima de la capa oscura */
 }
+
+/* -----------------------------------------------
+   Sección principal (Hero)
+   ----------------------------------------------- */
 
 .hero-section {
-  background-color: #f8f9fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #f8f9fa; /* Fondo gris claro */
+  display: flex;             /* Activa Flexbox */
+  align-items: center;       /* Centra verticalmente */
+  justify-content: center;   /* Centra horizontalmente */
   position: relative;
-  overflow: hidden;
+  overflow: hidden;          /* Oculta contenido que sobresalga */
 }
 
+/* Título principal del Hero */
 .hero-text h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: #333; /* Gris oscuro */
 }
 
+/* Texto destacado */
 .highlight {
-  color: #a4022c;
+  color: #a4022c; /* Rojo oscuro personalizado */
 }
 
+/* Imagen principal del Hero */
 .hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;            /* Ocupa todo el ancho */
+  height: 100%;           /* Ocupa todo el alto */
+  object-fit: cover;      /* Escala la imagen sin deformarla */
 }
 
-/* --- Recorte de imagen solo en pantallas grandes --- */
+/* -----------------------------------------------
+   Estilo exclusivo para pantallas grandes (>= 992px)
+   ----------------------------------------------- */
 @media (min-width: 992px) {
   .hero-image img {
     clip-path: ellipse(70% 100% at 100% 50%);
+    /* Recorta la imagen en forma de elipse hacia la derecha */
   }
 }
 
-/* --- Ajustes en pantallas pequeñas (móviles) --- */
+/* -----------------------------------------------
+   Ajustes para pantallas pequeñas (<= 991px)
+   ----------------------------------------------- */
 @media (max-width: 991px) {
   .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 5%;
+    flex-direction: column; /* Cambia a disposición vertical */
+    text-align: center;     /* Centra todo el texto */
+    padding: 30px 5%;       /* Añade espacio alrededor */
   }
 
   .hero-text {
-    width: 100%;
+    width: 100%; /* Ocupa todo el ancho en móviles */
   }
 
   .hero-image {
-    width: 100%;
+    width: 100%; /* Imagen ocupa todo el ancho también */
   }
 }
 
-/* --- Cita inferior fija --- */
+
+/* -----------------------------------------------
+   Cita inferior fija en la pantalla
+   ----------------------------------------------- */
 .quote {
   width: 100%;
   background: black;
@@ -182,24 +218,27 @@ footer .container {
   font-size: 1rem;
 }
 
+/* -----------------------------------------------
+   Fondo flotante decorativo (usado en secciones)
+   ----------------------------------------------- */
 .floating-bg {
   position: absolute;
   width: 80%;
   height: 80%;
-  background: rgba(0, 123, 255, 0.1);
-  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.1); /* Azul claro con transparencia */
+  border-radius: 50%;                 /* Forma circular */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
-  filter: blur(50px);
+  z-index: -1;                        /* Detrás del contenido */
+  filter: blur(50px);                /* Efecto difuminado */
 }
 
-/* Animación de flotación */
+/* -----------------------------------------------
+   Animación suave de flotación vertical
+   ----------------------------------------------- */
 @keyframes floatAnimation {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
 
@@ -208,9 +247,11 @@ footer .container {
   }
 }
 
-/* Sección de encabezado con fondo degradado */
+/* -----------------------------------------------
+   Sección de encabezado del equipo
+   ----------------------------------------------- */
 .team-header {
-  background: linear-gradient(to right, #273474, #a4022c);
+  background: linear-gradient(to right, #273474, #a4022c); /* Degradado azul a rojo */
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -218,29 +259,31 @@ footer .container {
 
 .team-header p {
   font-size: 1rem;
-  opacity: 0.8;
+  opacity: 0.8; /* Texto más tenue */
 }
 
-/* Contenedor del perfil */
+/* -----------------------------------------------
+   Contenedor de perfil del equipo
+   ----------------------------------------------- */
 .team-profile {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap;       /* Permite saltar a siguiente línea en móvil */
   text-align: left;
   padding: 40px 10%;
 }
 
-/* Imagen #a4022conda */
+/* Imagen del perfil */
 .profile-img {
   width: 220px;
   height: 280px;
-  border-radius: 5%;
-  object-fit: cover;
+  border-radius: 5%;      /* Bordes suavemente redondeados */
+  object-fit: cover;      /* Imagen adaptada sin deformarse */
   margin-right: 30px;
 }
 
-/* Nombre y contenido */
+/* Contenido textual del perfil */
 .profile-content {
   max-width: 600px;
 }
@@ -251,27 +294,31 @@ footer .container {
   color: #2c2c2c;
 }
 
+/* Resaltado del nombre */
 .profile-content h2 .highlight {
   color: #a4022c;
   font-weight: bold;
 }
 
+/* Descripción del perfil */
 .profile-content p {
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
 }
 
-/* Estrella al lado del nombre */
+/* Estrella decorativa junto al nombre */
 .star {
   color: #a4022c;
   font-size: 1.5rem;
 }
 
-/* Diseño responsive */
+/* -----------------------------------------------
+   Diseño responsive para perfiles
+   ----------------------------------------------- */
 @media (max-width: 768px) {
   .team-profile {
-    flex-direction: column;
+    flex-direction: column; /* Coloca la imagen arriba y texto abajo */
     text-align: center;
   }
 
@@ -281,16 +328,21 @@ footer .container {
   }
 }
 
-/* Estilos generales */
+/* -----------------------------------------------
+   Estilos generales del fondo del sitio
+   ----------------------------------------------- */
 body {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Fondo gris claro */
 }
 
-/* Secciones */
+/* -----------------------------------------------
+   Espaciado para cada sección
+   ----------------------------------------------- */
 .section {
   padding: 50px 0;
 }
 
+/* Título de sección */
 .section-title {
   text-align: center;
   font-size: 1.8rem;
@@ -299,7 +351,9 @@ body {
   color: #273474;
 }
 
-/* Tarjetas */
+/* -----------------------------------------------
+   Tarjetas personalizadas con sombra y hover
+   ----------------------------------------------- */
 .card-custom {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -308,68 +362,79 @@ body {
 }
 
 .card-custom:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Eleva la tarjeta ligeramente */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el mouse */
 }
 
+/* Redondear la parte superior de la imagen en la tarjeta */
 .card img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
-/* Botón */
+/* -----------------------------------------------
+   Botón personalizado reutilizable
+   ----------------------------------------------- */
 .btn-custom {
-  background-color: #273474;
+  background-color: #273474; /* Azul oscuro */
   color: white;
   font-weight: bold;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.3s; /* Transición suave al hacer hover */
 }
 
 .btn-custom:hover {
-  background-color: #273474;
+  background-color: #273474; /* Sin cambio de color, pero mantiene la transición */
 }
 
-/* Línea divisoria */
+/* -----------------------------------------------
+   Línea decorativa divisoria
+   ----------------------------------------------- */
 .divider {
-  width: 50%;
-  height: 4px;
-  background: #273474;
-  margin: 20px auto;
-  border-radius: 5px;
+  width: 50%;                 /* Ocupa la mitad del contenedor */
+  height: 4px;                /* Grosor de la línea */
+  background: #273474;        /* Mismo azul oscuro */
+  margin: 20px auto;          /* Centrada con espacio vertical */
+  border-radius: 5px;         /* Bordes redondeados */
 }
 
-/* Estilos del Hero */
+/* -----------------------------------------------
+   Sección Hero de bienvenida / presentación
+   ----------------------------------------------- */
 .hero {
-  height: 90vh;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(3, 21, 48, 0.784)),
-    url('../assets/img/integrantes/Foto\ con\ todos.png') center/cover no-repeat;
+  height: 90vh; /* Casi toda la altura de la ventana */
+  background: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(3, 21, 48, 0.784)), /* Degradado oscuro */
+    url('../assets/img/integrantes/Foto con todos.png') center/cover no-repeat; /* Imagen de fondo */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #ffffff;
+  color: #ffffff; /* Texto blanco */
   padding: 20px;
 }
 
+/* Título principal */
 .hero h1 {
   font-size: 3rem;
   font-weight: bold;
-  color: #273474;
+  color: #273474; /* Azul institucional */
 }
 
+/* Parte del texto resaltada */
 .hero h1 span {
-  color: #a4022c;
+  color: #a4022c; /* Rojo destacado */
 }
 
+/* Subtítulo o descripción */
 .hero p {
   font-size: 1.3rem;
   opacity: 0.8;
   margin: 20px 0;
 }
 
+/* Botón principal en Hero */
 .hero .btn-primary {
-  background-color: #273474;
+  background-color: #273474; /* Mismo azul */
   border: none;
   font-size: 1.2rem;
   padding: 12px 30px;
@@ -377,7 +442,8 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+/* Efecto al pasar el mouse por el botón */
 .hero .btn-primary:hover {
-  background-color: #a4022c;
-  transform: scale(1.05);
+  background-color: #a4022c; /* Cambia a rojo */
+  transform: scale(1.05);    /* Aumenta ligeramente el tamaño */
 }
