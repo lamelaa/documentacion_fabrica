@@ -1,255 +1,245 @@
+/* Estilo general del cuerpo de la página */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Fuente base de la página */
+  padding-top: 80px; /* Espacio superior para que el contenido no quede oculto detrás del navbar */
+  /* Ajusta este valor si el navbar tiene otra altura */
 }
 
-/* Navbar */
+/* Estilos para la barra de navegación (navbar) */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #e9ecef;
-  padding: 10px 15px;
-  font-family: 'Arial', sans-serif;
+  position: fixed; /* Fija la navbar en la parte superior de la pantalla */
+  top: 0; /* Alinea la navbar al borde superior */
+  width: 100%; /* Ocupa todo el ancho de la ventana */
+  z-index: 1000; /* Se asegura de que esté por encima de otros elementos */
+  background-color: white; /* Fondo blanco */
+  border-bottom: 2px solid #e9ecef; /* Línea inferior para separar visualmente del contenido */
+  padding: 10px 15px; /* Espaciado interno */
+  font-family: 'Arial', sans-serif; /* Fuente específica para la navbar */
 }
 
-body {
-  padding-top: 80px;
-  /* Ajusta este valor si el navbar es más alto */
-}
-
-/* Estilo del Logo */
+/* Estilo del logo dentro del navbar */
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Limita la altura del logo */
 }
 
-/* Links del Navbar */
+/* Estilos para los enlaces de navegación dentro del navbar */
 .navbar-nav .nav-link {
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  color: black; /* Color de texto negro */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  margin: 0 10px; /* Separación horizontal entre los links */
+  transition: color 0.3s ease; /* Transición suave al cambiar de color */
 }
 
+/* Cambio de color al pasar el cursor por los links */
 .navbar-nav .nav-link:hover {
-  color: #a4022c;
+  color: #a4022c; /* Color vino al hacer hover */
 }
 
-/* Dropdown */
+/* Estilo para el menú desplegable (dropdown) */
 .dropdown-menu {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #ddd; /* Borde gris claro */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
 }
 
+/* Estilo para cada opción dentro del dropdown */
 .dropdown-item {
-  color: black;
-  font-size: 14px;
-  padding: 10px 20px;
+  color: black; /* Texto negro */
+  font-size: 14px; /* Tamaño de fuente */
+  padding: 10px 20px; /* Espaciado interno */
 }
 
+/* Estilo cuando el usuario pasa el cursor sobre un item del dropdown */
 .dropdown-item:hover {
-  background-color: #a4022c;
-  color: white;
-  border-radius: 5px;
+  background-color: #a4022c; /* Fondo color vino */
+  color: white; /* Texto blanco */
+  border-radius: 5px; /* Bordes ligeramente redondeados */
 }
 
-/* Botón Contáctanos */
+/* Estilo para el botón "Contáctanos" o similar */
 .btn-danger {
-  background-color: #a4022c;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
+  background-color: #a4022c; /* Color vino de fondo */
+  border: none; /* Sin borde */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
 }
 
+/* Estilo cuando se pasa el cursor sobre el botón */
 .btn-danger:hover {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Mantiene el mismo color (puedes cambiarlo si quieres efecto visual) */
 }
 
-.navbar-brand img {
-  max-height: 50px;
-}
-
-
+/* Animación para hacer flotar imágenes decorativas */
 .floating-img {
-  animation: floatAnimation 3s ease-in-out infinite;
+  animation: floatAnimation 3s ease-in-out infinite; /* Usa una animación definida abajo */
 }
 
-/* Fondo decorativo detrás de la imagen */
+/* Fondo decorativo circular y difuminado detrás de la imagen flotante */
 .floating-bg {
-  position: absolute;
-  width: 80%;
+  position: absolute; /* Posicionamiento absoluto */
+  width: 80%; /* Tamaño relativo al contenedor */
   height: 80%;
-  background: rgba(0, 123, 255, 0.1);
-  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.1); /* Azul claro translúcido */
+  border-radius: 50%; /* Forma circular */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  filter: blur(50px);
+  transform: translate(-50%, -50%); /* Centrado */
+  z-index: -1; /* Detrás de otros elementos */
+  filter: blur(50px); /* Efecto difuminado */
 }
 
-/* Animación de flotación */
+/* Definición de la animación de flotación */
 @keyframes floatAnimation {
-
-  0%,
-  100% {
-    transform: translateY(0);
+  0%, 100% {
+    transform: translateY(0); /* Posición inicial y final */
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Sube 10px en la mitad de la animación */
   }
 }
 
+/* --- Sección principal (hero) --- */
 .hero-section {
-  background-color: #f8f9fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+  background-color: #f8f9fa; /* Color de fondo claro */
+  display: flex; /* Usa flexbox para organizar el contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  position: relative; /* Permite posicionar elementos hijos absolutamente */
+  overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
 }
 
+/* --- Título dentro de la sección hero --- */
 .hero-text h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
+  font-size: 2.5rem; /* Tamaño grande del título */
+  font-weight: 700; /* Negrita fuerte */
+  color: #333; /* Gris oscuro */
 }
 
+/* --- Palabras o frases destacadas --- */
 .highlight {
-  color: red;
+  color: red; /* Texto en rojo */
 }
 
+/* --- Imagen dentro de la sección hero --- */
 .hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 100%; /* Ocupa toda la altura disponible */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
 }
 
-/* --- Recorte de imagen solo en pantallas grandes --- */
+/* --- Recorte de la imagen con forma elíptica (solo en pantallas grandes) --- */
 @media (min-width: 992px) {
   .hero-image img {
-    clip-path: ellipse(70% 100% at 100% 50%);
+    clip-path: ellipse(70% 100% at 100% 50%); /* Crea un recorte elíptico en la imagen */
   }
 }
 
-/* --- Ajustes en pantallas pequeñas (móviles) --- */
+/* --- Ajustes para pantallas pequeñas (móviles y tablets) --- */
 @media (max-width: 991px) {
   .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 5%;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    text-align: center; /* Centra el texto */
+    padding: 30px 5%; /* Espaciado interno más amplio */
   }
 
-  .hero-text {
-    width: 100%;
-  }
-
+  .hero-text,
   .hero-image {
-    width: 100%;
+    width: 100%; /* Ambos ocupan el 100% del ancho */
   }
 }
 
-/* --- Cita inferior fija --- */
+/* --- Cita o frase fija en la parte inferior --- */
 .quote {
-  width: 100%;
-  background: black;
-  color: white;
-  text-align: left;
-  padding: 15px 30px;
-  font-size: 1rem;
+  width: 100%; /* Ocupa todo el ancho */
+  background: black; /* Fondo negro */
+  color: white; /* Texto blanco */
+  text-align: left; /* Texto alineado a la izquierda */
+  padding: 15px 30px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de texto base */
 }
 
-
-/* Animación flotante */
+/* --- Animación de flotación para elementos decorativos --- */
 @keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
+  0%, 100% {
+    transform: translateY(0px); /* Posición original */
   }
 
   50% {
-    transform: translateY(20px);
+    transform: translateY(20px); /* Se eleva 20px en la mitad de la animación */
   }
 }
 
+/* --- Círculo decorativo flotante --- */
 .decorative-circle {
-  position: absolute;
+  position: absolute; /* Posición libre dentro del contenedor */
   width: 200px;
   height: 200px;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.05); /* Negro muy translúcido */
   top: -50px;
   left: -50px;
-  border-radius: 50%;
-  animation: float 8s ease-in-out infinite;
+  border-radius: 50%; /* Forma circular */
+  animation: float 8s ease-in-out infinite; /* Aplica animación infinita */
 }
 
-/* Tarjetas con efecto hover */
+/* --- Estilo para tarjetas con efecto al pasar el cursor --- */
 .hover-effect {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la animación al hacer hover */
 }
 
 .hover-effect:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px); /* Se eleva ligeramente */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15); /* Sombra para efecto de profundidad */
 }
 
-/* Iconos circulares */
+/* --- Iconos circulares (por ejemplo: para habilidades o tecnologías) --- */
 .icon-circle {
-  width: 80px;
+  width: 80px; /* Tamaño del círculo */
   height: 80px;
-  font-size: 2rem;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  margin: 0 auto 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 2rem; /* Tamaño del ícono */
+  color: white; /* Color del ícono */
+  border-radius: 50%; /* Forma circular */
+  display: flex; /* Flexbox para centrar el contenido */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  margin: 0 auto 20px; /* Centrado horizontal y espacio inferior */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
 }
 
-/* Efecto de vibración en los iconos al pasar el mouse */
+/* --- Efecto al hacer hover en tarjetas que contienen iconos --- */
 .hover-effect:hover .icon-circle {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1) rotate(5deg); /* Agranda y gira ligeramente el ícono */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
 }
 
-/* Colores personalizados */
+/* --- Colores personalizados para distintas tecnologías --- */
 .text-primary {
-  color: #306998;
+  color: #306998; /* Azul Python */
 }
 
-/* Python */
 .text-warning {
-  color: #f7df1e;
+  color: #f7df1e; /* Amarillo JavaScript */
 }
 
-/* JavaScript */
 .text-danger {
-  color: #f44336;
+  color: #f44336; /* Rojo Java */
 }
 
-/* Java */
 .text-purple {
-  color: #512bd4;
+  color: #512bd4; /* Morado .NET */
 }
 
-/* .NET */
-
-/* Añadir imagen de fondo y capa oscura */
-
+/* --- Footer con imagen de fondo y capa oscura encima --- */
 footer {
-  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
-  position: relative;
+  background: url("../assets/img/fondo.webp") no-repeat center center/cover; /* Imagen de fondo adaptada */
+  color: #fff; /* Texto blanco por defecto */
+  position: relative; /* Para posicionar la capa oscura encima */
 }
 
+/* --- Capa oscura encima del fondo del footer --- */
 footer::after {
   content: "";
   position: absolute;
@@ -257,30 +247,29 @@ footer::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
 }
 
-/* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
+/* --- Asegura que el contenido del footer esté encima de la capa oscura --- */
 footer .container {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Encima del ::after */
 }
 
-
-/* Estilos del Hero */
+/* --- Sección principal tipo Hero --- */
 .hero {
-  height: 91vh;
+  height: 91vh; /* Altura casi completa de la pantalla */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: rgb(0, 0, 0);
-  padding: 20px;
+  background: rgb(0, 0, 0); /* Fondo negro */
+  padding: 20px; /* Espaciado interno */
 }
 
-/* Animación del fondo con código */
+/* --- Imagen de fondo en el hero con animación fade-in --- */
 .hero::before {
   content: "";
   position: absolute;
@@ -288,37 +277,41 @@ footer .container {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../assets/img/fondo.webp') center/cover no-repeat;
-  opacity: 0.2;
-  animation: fadeIn 3s ease-in-out;
+  background: url('../assets/img/fondo.webp') center/cover no-repeat; /* Imagen de fondo */
+  opacity: 0.2; /* Transparencia */
+  animation: fadeIn 3s ease-in-out; /* Aparece suavemente */
 }
 
-/* Contenedor del contenido */
+/* --- Contenedor del contenido dentro del hero --- */
 .hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 700px;
-  color: #ffffff;
+  z-index: 2; /* Encima del fondo */
+  max-width: 700px; /* Ancho máximo del contenido */
+  color: #ffffff; /* Color de texto blanco */
 }
 
+/* --- Título principal en el hero --- */
 .hero h1 {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #273474;
+  color: #273474; /* Azul oscuro */
 }
 
+/* --- Palabra o sección destacada dentro del título --- */
 .hero h1 span {
-  color: #e4022c;
+  color: #e4022c; /* Rojo */
 }
 
+/* --- Párrafo descriptivo debajo del título --- */
 .hero p {
   font-size: 1.2rem;
   opacity: 0.8;
   margin: 20px 0;
 }
 
+/* --- Botón personalizado dentro del hero --- */
 .hero .btn-custom {
-  background-color: #273474;
+  background-color: #273474; /* Azul */
   border: none;
   font-size: 1.2rem;
   padding: 12px 30px;
@@ -329,9 +322,18 @@ footer .container {
   display: inline-block;
 }
 
+/* --- Efecto hover para el botón personalizado --- */
 .hero .btn-custom:hover {
-  background-color: #e4022c;
-  transform: scale(1.05);
+  background-color: #e4022c; /* Cambia a rojo */
+  transform: scale(1.05); /* Ligeramente más grande */
 }
 
-/* Efecto Fade-In */
+/* --- (Falta definición de la animación fadeIn) --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
