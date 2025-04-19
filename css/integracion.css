@@ -1,47 +1,58 @@
+/* -----------------------------------------------
+   Estilos generales del sitio
+   ----------------------------------------------- */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Fuente principal del sitio */
 }
 
-/* Navbar */
+/* -----------------------------------------------
+   Barra de navegación (Navbar)
+   ----------------------------------------------- */
 .navbar {
-  position: fixed;
+  position: fixed;            /* Fija la navbar en la parte superior */
   top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #e9ecef;
-  padding: 10px 15px;
+  width: 100%;               /* Ocupar todo el ancho de la pantalla */
+  z-index: 1000;             /* Asegura que esté por encima de otros elementos */
+  background-color: white;   /* Fondo blanco */
+  border-bottom: 2px solid #e9ecef; /* Línea inferior sutil */
+  padding: 10px 15px;        /* Espaciado interno */
   font-family: 'Arial', sans-serif;
 }
 
+/* Espacio extra para compensar la navbar fija */
 body {
-  padding-top: 80px;
-  /* Ajusta este valor si el navbar es más alto */
+  padding-top: 80px; /* Ajustar según altura real de la navbar */
 }
 
-/* Estilo del Logo */
+/* -----------------------------------------------
+   Logo dentro del Navbar
+   ----------------------------------------------- */
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Limita la altura del logo para que no sobrepase */
 }
 
-/* Links del Navbar */
+/* -----------------------------------------------
+   Enlaces dentro del Navbar
+   ----------------------------------------------- */
 .navbar-nav .nav-link {
-  color: black;
+  color: black;             /* Color inicial del texto */
   font-size: 16px;
   font-weight: bold;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  margin: 0 10px;           /* Espaciado horizontal entre enlaces */
+  transition: color 0.3s ease; /* Transición suave al pasar el mouse */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #a4022c;
+  color: #a4022c; /* Rojo institucional al hacer hover */
 }
 
-/* Dropdown */
+/* -----------------------------------------------
+   Menú desplegable (Dropdown)
+   ----------------------------------------------- */
 .dropdown-menu {
   border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd; /* Borde sutil */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .dropdown-item {
@@ -51,66 +62,76 @@ body {
 }
 
 .dropdown-item:hover {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Fondo rojo al hacer hover */
   color: white;
   border-radius: 5px;
 }
 
-/* Botón Contáctanos */
+/* -----------------------------------------------
+   Botón "Contáctanos" personalizado
+   ----------------------------------------------- */
 .btn-danger {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Rojo personalizado */
   border: none;
   font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: uppercase; /* Letras en mayúscula */
 }
 
 .btn-danger:hover {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Mismo color en hover para mantener coherencia */
 }
 
+/* Repetición del logo (posiblemente innecesaria si ya está arriba) */
 .navbar-brand img {
   max-height: 50px;
 }
 
+/* -----------------------------------------------
+   Comentario pendiente de implementación
+   ----------------------------------------------- */
 /* Estilos necesarios */
 
-
-/*animacion como funciona*/
+/* animación como funciona */  /* ← Aquí podrías agregar una animación específica si lo deseas */
+/* -----------------------------------------------
+   Animación de Flotación (usada en íconos, imágenes, etc.)
+   ----------------------------------------------- */
 @keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
+  0%, 100% {
+    transform: translateY(0);         /* Posición original */
   }
-
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-20px);     /* Se eleva ligeramente en la mitad del ciclo */
   }
 }
 
-/*animacion nuestro proceso*/
+/* -----------------------------------------------
+   Animación aplicada a íconos del proceso
+   ----------------------------------------------- */
 .icon-box {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para efecto de elevación */
 }
 
+/* Redefinición opcional de la animación (ya está definida arriba) */
 @keyframes float {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-20px);
   }
 }
 
+/* -----------------------------------------------
+   Sombra más pronunciada para elementos destacados
+   ----------------------------------------------- */
 .shadow-lg {
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important; /* Sombra más profunda */
 }
 
-/* Botón */
+/* -----------------------------------------------
+   Botón personalizado en rojo institucional
+   ----------------------------------------------- */
 .btn-danger {
   background-color: #a4022c;
   border-color: #a4022c;
@@ -121,14 +142,16 @@ body {
   border-color: #a4022c;
 }
 
-
+/* -----------------------------------------------
+   Footer con imagen de fondo y capa oscura encima
+   ----------------------------------------------- */
 footer {
   background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
+  color: #fff;                /* Texto blanco */
   position: relative;
 }
 
-
+/* Capa oscura superpuesta encima de la imagen del footer */
 footer::after {
   content: "";
   position: absolute;
@@ -136,38 +159,47 @@ footer::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
 }
 
-/* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
+/* Contenido del footer por encima de la capa oscura */
 footer .container {
   position: relative;
   z-index: 2;
 }
 
-/* Estilos del Hero */
+/* -----------------------------------------------
+   Sección Hero (encabezado principal)
+   ----------------------------------------------- */
 .hero {
-  height: 91vh;
+  height: 91vh; /* Ocupa casi toda la pantalla */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(to right, #000000e2, #000000c8),
-    url('../assets/img/fondo.webp') center/cover no-repeat;
+  color: white;
+
+  background: linear-gradient(to right, #000000e2, #000000c8), 
+              url('../assets/img/fondo.webp') center/cover no-repeat;
   position: relative;
   padding: 20px;
-  color: white;
 }
 
-/* Contenido */
+/* -----------------------------------------------
+   Contenido principal del Hero (centrado y limitado)
+   ----------------------------------------------- */
 .hero-content {
   max-width: 850px;
-  z-index: 2;
+  z-index: 2; /* Asegura que esté por encima de elementos decorativos */
 }
 
+/* -----------------------------------------------
+   Títulos y textos dentro del Hero
+   ----------------------------------------------- */
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;          /* Tamaño grande para encabezado */
   font-weight: bold;
+  color: #A4022C;             /* Color institucional */
 }
 
 .hero p {
@@ -176,15 +208,12 @@ footer .container {
   margin: 20px 0;
 }
 
-.hero h1 {
-  font-size: 3.2rem;
-  font-weight: bold;
-  color: #A4022C;
-}
-
+/* -----------------------------------------------
+   Botón personalizado del Hero
+   ----------------------------------------------- */
 .hero .btn-custom {
   background-color: white;
-  color: #273474;
+  color: #273474;             /* Azul institucional */
   font-size: 1.2rem;
   padding: 12px 30px;
   border-radius: 8px;
@@ -197,44 +226,48 @@ footer .container {
 .hero .btn-custom:hover {
   background-color: #a4022c;
   color: white;
-  transform: scale(1.05);
+  transform: scale(1.05);     /* Ligero agrandamiento al pasar el mouse */
 }
 
-/* Animación flotante */
+/* -----------------------------------------------
+   Animación flotante para elementos decorativos
+   ----------------------------------------------- */
 @keyframes float {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px);
   }
-
   50% {
-    transform: translateY(15px);
+    transform: translateY(15px); /* Subida y bajada suave */
   }
 }
 
+/* Círculo decorativo flotante (Hero) */
 .decorative-circle {
   position: absolute;
   width: 180px;
   height: 180px;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.05); /* Muy tenue */
   top: -50px;
   left: -50px;
   border-radius: 50%;
   animation: float 6s ease-in-out infinite;
 }
 
-/* Tarjetas con efecto hover */
+/* -----------------------------------------------
+   Tarjetas con efecto de elevación al pasar el mouse
+   ----------------------------------------------- */
 .hover-effect {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hover-effect:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* Se levanta ligeramente */
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Iconos circulares */
+/* -----------------------------------------------
+   Iconos en círculos con sombra
+   ----------------------------------------------- */
 .icon-circle {
   width: 80px;
   height: 80px;
@@ -249,8 +282,8 @@ footer .container {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto de vibración en los iconos al pasar el mouse */
+/* Efecto dinámico en el icono al hacer hover sobre la tarjeta */
 .hover-effect:hover .icon-circle {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) rotate(5deg); /* Ligeramente más grande y girado */
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
 }
