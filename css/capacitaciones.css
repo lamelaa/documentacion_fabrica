@@ -1,316 +1,323 @@
 /* -----------------------------------------------
-   General Styles
-   ----------------------------------------------- */
+     Estilos Generales
+----------------------------------------------- */
 
-
+/* Body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Establece la tipografía global de la página como Arial, con una alternativa sans-serif en caso de que no esté disponible */
 }
 
-/* Navbar */
+/* Navbar (Barra de navegación) */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #e9ecef;
-  padding: 10px 15px;
-  font-family: 'Arial', sans-serif;
+  position: fixed; /* Hace que la barra de navegación permanezca fija en la parte superior mientras el usuario hace scroll */
+  top: 0; /* Alinea la barra de navegación en la parte superior de la página */
+  width: 100%; /* Establece que la barra ocupe todo el ancho de la página */
+  z-index: 1000; /* Asegura que la barra de navegación quede por encima de otros elementos en la página */
+  background-color: white; /* Establece el fondo de la barra como blanco */
+  border-bottom: 2px solid #e9ecef; /* Agrega una línea de borde en la parte inferior de la barra */
+  padding: 10px 15px; /* Añade espaciado interno en los lados y arriba/abajo de la barra */
+  font-family: 'Arial', sans-serif; /* Establece la tipografía para la barra */
 }
 
+/* Ajusta el espacio superior del cuerpo para que no se solape con el navbar */
 body {
-  padding-top: 80px;
-  /* Ajusta este valor si el navbar es más alto */
+  padding-top: 80px; /* Asegura que el contenido de la página no quede cubierto por la barra de navegación */
 }
 
-/* Estilo del Logo */
+/* Estilo de las imágenes del Logo en la barra de navegación */
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Limita la altura máxima del logo a 50px */
 }
 
-/* Links del Navbar */
+/* Estilo de los enlaces dentro de la barra de navegación */
 .navbar-nav .nav-link {
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  color: black; /* Color del texto en negro */
+  font-size: 16px; /* Tamaño de la fuente de los enlaces */
+  font-weight: bold; /* Hace que el texto de los enlaces sea en negrita */
+  margin: 0 10px; /* Añade márgenes a los lados de los enlaces */
+  transition: color 0.3s ease; /* Agrega una transición suave al cambio de color cuando se pasa el cursor sobre el enlace */
 }
 
+/* Efecto hover para los enlaces de la barra de navegación */
 .navbar-nav .nav-link:hover {
-  color: #a4022c;
+  color: #a4022c; /* Cambia el color del texto a un tono rojo cuando el usuario pasa el cursor sobre el enlace */
 }
 
-/* Dropdown */
+/* Estilo del menú desplegable (dropdown) */
 .dropdown-menu {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Hace que las esquinas del menú desplegable sean redondeadas */
+  border: 1px solid #ddd; /* Agrega un borde de color gris claro */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Agrega sombra al menú para darle profundidad */
 }
 
+/* Estilo de los elementos dentro del menú desplegable */
 .dropdown-item {
-  color: black;
-  font-size: 14px;
-  padding: 10px 20px;
+  color: black; /* Color de los elementos del menú en negro */
+  font-size: 14px; /* Tamaño de fuente de los elementos del menú */
+  padding: 10px 20px; /* Espaciado dentro de cada elemento */
 }
 
+/* Efecto hover en los elementos del menú desplegable */
 .dropdown-item:hover {
-  background-color: #a4022c;
-  color: white;
-  border-radius: 5px;
+  background-color: #a4022c; /* Cambia el fondo a un color rojo cuando se pasa el cursor */
+  color: white; /* Cambia el color del texto a blanco */
+  border-radius: 5px; /* Redondea las esquinas de los elementos del menú al pasar el cursor */
 }
 
-/* Botón Contáctanos */
+/* Estilo del botón "Contactanos" */
 .btn-danger {
-  background-color: #a4022c;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
+  background-color: #a4022c; /* Fondo rojo para el botón */
+  border: none; /* Elimina el borde del botón */
+  font-size: 16px; /* Tamaño de la fuente en el botón */
+  font-weight: bold; /* Hace que el texto del botón sea en negrita */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
 
+/* Efecto hover en el botón "Contactanos" */
 .btn-danger:hover {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Mantiene el mismo color al pasar el cursor */
 }
 
-.navbar-brand img {
-  max-height: 50px;
-}
-
-/* Estilos necesarios */
-
-
-/*animacion como funciona*/
+/* Animaciones */
 @keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
+  0%, 100% {
+    transform: translateY(0); /* La animación comienza y termina sin mover el elemento */
   }
-
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-20px); /* El elemento se mueve hacia arriba a la mitad de la animación */
   }
 }
 
-/*animacion nuestro proceso*/
+/* Estilos adicionales */
 .icon-box {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave a los elementos con la clase .icon-box */
 }
 
+/* Hero Section (Sección Hero) */
+.hero {
+  height: 91vh; /* La sección ocupa el 91% de la altura de la pantalla */
+  display: flex; /* Utiliza Flexbox para el diseño */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro de la sección */
+  background: linear-gradient(to right, #000000f0, #000000b9), url('../assets/img/fondo.webp') center/cover no-repeat; /* Fondo con un degradado negro y una imagen de fondo */
+  position: relative; /* Posiciona la sección de forma relativa para aplicar el overlay */
+  padding: 20px; /* Añade un poco de espacio interno */
+  color: white; /* Establece el color del texto como blanco */
+}
+
+/* Contenedor del contenido dentro de la sección Hero */
+.hero-content {
+  max-width: 800px; /* Establece el ancho máximo del contenido */
+  z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+}
+
+/* Estilo del título en la sección Hero */
+.hero h1 {
+  font-size: 3.2rem; /* Tamaño de fuente grande para el título */
+  font-weight: bold; /* Establece el texto en negrita */
+  color: #a4022c; /* Color rojo para el título */
+}
+
+/* Estilo del texto en la sección Hero */
+.hero p {
+  font-size: 1.3rem; /* Tamaño de la fuente del texto */
+  opacity: 0.9; /* Hace que el texto sea ligeramente transparente */
+  margin: 20px 0; /* Añade márgenes en la parte superior e inferior */
+}
+
+/* Estilo del botón personalizado en la sección Hero */
+.hero .btn-custom {
+  background-color: white; /* Fondo blanco para el botón */
+  color: #273474; /* Color del texto en azul oscuro */
+  font-size: 1.2rem; /* Tamaño de la fuente */
+  padding: 12px 30px; /* Añade padding dentro del botón */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: all 0.3s ease-in-out; /* Transición suave para efectos de hover */
+  text-decoration: none; /* Elimina el subrayado */
+  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Efecto hover en el botón personalizado */
+.hero .btn-custom:hover {
+  background-color: #a4022c; /* Cambia el fondo a rojo */
+  color: white; /* Cambia el texto a blanco */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+/* Animación de flotación */
 @keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
+  0%, 100% {
+    transform: translateY(0px); /* El elemento comienza y termina sin movimiento */
   }
-
   50% {
-    transform: translateY(-20px);
+    transform: translateY(20px); /* El elemento se mueve hacia abajo a la mitad de la animación */
   }
-}
-
-
-
-/* Hero Section */
-
-
-/* Botón */
-.btn-danger {
-  background-color: #a4022c;
-  border-color: #a4022c;
-}
-
-.btn-danger:hover {
-  background-color: #a4022c;
-  border-color: #a4022c;
 }
 
 /* Mejoras de responsividad */
 @media (max-width: 768px) {
   .hero .col-lg-6 {
-    text-align: center;
+    text-align: center; /* Centra el texto en pantallas pequeñas */
   }
 
   .hero .rounded-circle {
-    width: 70%;
+    width: 70%; /* Hace que las imágenes redondas tengan un tamaño del 70% en pantallas pequeñas */
   }
 
   .quote-container {
-    bottom: -30px;
+    bottom: -30px; /* Ajusta la posición del contenedor de citas */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centra el contenedor de citas */
   }
 }
 
-
-
-/* Overlay oscuro encima de la imagen de fondo */
-
+/* Estilos del footer */
 footer {
-  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
-  position: relative;
+  background: url("../assets/img/fondo.webp") no-repeat center center/cover; /* Establece el fondo del pie de página con una imagen */
+  color: #fff; /* El texto dentro del pie es blanco */
+  position: relative; /* Posiciona el pie de página de forma relativa */
 }
 
 footer::after {
-  content: "";
+  content: ""; /* Crea un pseudo-elemento */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Aplica un fondo oscuro con algo de transparencia */
 }
-
-/* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
+/* Estilos de los elementos dentro del footer */
 footer .container {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Asegura que los elementos dentro del contenedor del pie de página estén por encima de la capa oscura */
 }
 
 .floating-bg {
   position: absolute;
-  width: 80%;
-  height: 80%;
-  background: rgba(0, 123, 255, 0.1);
-  border-radius: 50%;
+  width: 80%; /* Ancho del fondo flotante */
+  height: 80%; /* Altura del fondo flotante */
+  background: rgba(0, 123, 255, 0.1); /* Fondo con un color azul claro */
+  border-radius: 50%; /* Hace que el fondo flotante sea redondeado */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  filter: blur(50px);
+  transform: translate(-50%, -50%); /* Centra el fondo flotante */
+  z-index: -1; /* Coloca el fondo flotante detrás de otros elementos */
+  filter: blur(50px); /* Aplica un filtro de desenfoque al fondo flotante */
 }
+/* ============================================================
+   Estilos para elementos decorativos en la página.
+   Se definen clases para crear círculos decorativos, efectos en tarjetas,
+   y estilos para iconos circulares. A continuación se explica el propósito 
+   y las propiedades de cada una de estas clases.
+   ============================================================ */
 
-/* Animación de flotación */
-@keyframes floatAnimation {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* Estilos del Hero */
-.hero {
-  height: 91vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(to right, #000000f0, #000000b9),
-    url('../assets/img/fondo.webp') center/cover no-repeat;
-  position: relative;
-  padding: 20px;
-  color: white;
-}
-
-/* Contenedor del contenido */
-.hero-content {
-  max-width: 800px;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 3.2rem;
-  font-weight: bold;
-}
-
-.hero h1 {
-  font-size: 3.2rem;
-  font-weight: bold;
-  color: #a4022c;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  opacity: 0.9;
-  margin: 20px 0;
-}
-
-.hero .btn-custom {
-  background-color: white;
-  color: #273474;
-  font-size: 1.2rem;
-  padding: 12px 30px;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-}
-
-.hero .btn-custom:hover {
-  background-color: #a4022c;
-  color: white;
-  transform: scale(1.05);
-}
-
-/* Animaciones flotantes */
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(20px);
-  }
-}
-
+/* ------------------------------------------------------------
+   Círculos decorativos flotantes (fondo animado).
+   ------------------------------------------------------------ */
 .decorative-circle {
+  /* La propiedad 'position: absolute;' posiciona el círculo de manera
+     absoluta en relación al primer elemento posicionado (generalmente un contenedor o la ventana) */
   position: absolute;
+
+  /* El color de fondo del círculo es un azul con opacidad del 10% (rgba(0, 123, 255, 0.1)) */
   background: rgba(0, 123, 255, 0.1);
+  
+  /* 'border-radius: 50%' convierte el div en un círculo perfecto */
   border-radius: 50%;
+
+  /* 'animation: float 8s ease-in-out infinite alternate;' crea una animación llamada 'float',
+     que durará 8 segundos, será suave (ease-in-out), se repetirá indefinidamente y alternará 
+     entre ir hacia arriba y hacia abajo (lo que crea el efecto de "flotar"). */
   animation: float 8s ease-in-out infinite alternate;
 }
 
+/* ------------------------------------------------------------
+   Círculo decorativo en la parte superior izquierda de la pantalla.
+   ------------------------------------------------------------ */
 .top-left {
+  /* Ancho y alto del círculo (250px x 250px) */
   width: 250px;
   height: 250px;
+
+  /* Posiciona el círculo 100px por encima del borde superior y 100px a la izquierda del borde izquierdo */
   top: -100px;
   left: -100px;
 }
 
+/* ------------------------------------------------------------
+   Círculo decorativo en la parte inferior derecha de la pantalla.
+   ------------------------------------------------------------ */
 .bottom-right {
+  /* Ancho y alto del círculo (300px x 300px) */
   width: 300px;
   height: 300px;
+
+  /* Posiciona el círculo 50px por debajo del borde inferior y 50px a la derecha del borde derecho */
   bottom: -50px;
   right: -50px;
 }
 
-/* Efecto hover en tarjetas */
+/* ------------------------------------------------------------
+   Efecto hover en tarjetas (efecto visual cuando el usuario pasa el cursor sobre un elemento).
+   ------------------------------------------------------------ */
 .hover-effect {
+  /* 'transition: transform 0.3s ease, box-shadow 0.3s ease;' 
+     Esto asegura que el cambio de posición y la sombra del elemento sea suave en 0.3 segundos. */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Cuando el cursor se coloca sobre un elemento con la clase 'hover-effect' */
 .hover-effect:hover {
+  /* 'transform: translateY(-10px);' mueve el elemento hacia arriba 10px, creando el efecto de "flotar" */
   transform: translateY(-10px);
+
+  /* 'box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);' agrega una sombra con desplazamiento hacia abajo
+     y difusa para dar la sensación de profundidad. */
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Iconos circulares */
+/* ------------------------------------------------------------
+   Estilos para los iconos circulares.
+   ------------------------------------------------------------ */
 .icon-circle {
+  /* Tamaño del icono circular: 100px de ancho y 100px de alto */
   width: 100px;
   height: 100px;
+
+  /* Establece el tamaño de la fuente (el tamaño de los iconos) */
   font-size: 2.5rem;
+
+  /* Color blanco para el contenido del icono */
   color: white;
+
+  /* Hace que el contenedor del icono sea redondeado (un círculo) */
   border-radius: 50%;
+
+  /* Utiliza flexbox para alinear el contenido dentro del círculo (el icono en el centro) */
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* Aplica una sombra a los iconos para darles un efecto de profundidad */
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+
+  /* Margen para separar los iconos de los elementos que los rodean */
   margin: 0 auto 20px;
+
+  /* Transición suave para los cambios de transformaciones y sombras (como al hacer hover) */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* ------------------------------------------------------------
+   Efecto hover en iconos circulares (efecto visual cuando el usuario pasa el cursor sobre el icono).
+   ------------------------------------------------------------ */
 .hover-effect:hover .icon-circle {
+  /* Al pasar el cursor sobre el icono, este se agranda ligeramente y se rota un poco */
   transform: scale(1.1) rotate(5deg);
+
+  /* Aumenta la sombra para hacer que el icono parezca más grande y destacado */
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
 }
