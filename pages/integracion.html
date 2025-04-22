@@ -2,421 +2,598 @@
 <html lang="es">
 
 <head>
+  <!-- El tipo de documento HTML que estamos utilizando es HTML5. 
+  La declaración DOCTYPE le indica al navegador cómo procesar el archivo HTML.
+  -->
   <meta charset="UTF-8" />
+  <!-- Establece la codificación de caracteres a UTF-8 para asegurar que todos los caracteres especiales (acentos, símbolos) 
+  se visualicen correctamente en todos los navegadores. -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- El meta viewport es esencial para hacer que la página sea responsiva (adaptable a diferentes tamaños de pantalla, 
+  como móviles, tabletas y computadoras de escritorio). -->
+
   <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
+  <!-- Esta metaetiqueta es para verificar la propiedad del sitio en Google Search Console. Es necesaria para que Google 
+  pueda verificar que el sitio es legítimo y realizar acciones como el análisis de rendimiento. -->
+
   <title>Integración</title>
-  <!-- Bootstrap CSS -->
+  <!-- El título de la página que aparece en la pestaña del navegador. Es importante porque ayuda a los motores de búsqueda 
+  a identificar el contenido de la página. -->
+
+  <!-- Bootstrap CSS: Importa los estilos prediseñados de Bootstrap desde un CDN. 
+  Bootstrap es un framework de diseño que proporciona estilos predeterminados para una amplia variedad de componentes. -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
+
+  <!-- Font Awesome: Importa los íconos de Font Awesome, que son útiles para agregar íconos en la página (por ejemplo, 
+  íconos para botones, enlaces, etc.). -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- Custom CSS -->
+
+  <!-- CSS personalizado: Se vincula el archivo de estilos "integracion.css", que tiene reglas específicas para la página de 
+  integración. -->
   <link rel="stylesheet" href="../css/integracion.css" />
+
+  <!-- Ícono de la página: Define el icono que aparecerá en la pestaña del navegador (favicon). -->
   <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon">
+
 </head>
 
 <body>
-  <!-- Navbar -->
+  <!-- ==============================================================
+      NAVBAR (BARRA DE NAVEGACIÓN)
+      ============================================================== -->
   <section>
-    <!-- Navbar -->
+    <!-- Navbar (barra de navegación) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <!-- Contenedor principal de la barra de navegación -->
       <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logos juntos -->
+        
+        <!-- Logos de la empresa -->
         <div class="d-flex align-items-center">
+          <!-- Logo 1 -->
           <a class="navbar-brand me-2" href="#">
             <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+            <!-- Logo de la empresa "Fusoft", imagen con un tamaño de 50x50 píxeles -->
           </a>
+          <!-- Logo 2 -->
           <a class="navbar-brand" href="#">
-            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
-              height="50" />
+            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50" height="50" />
+            <!-- Logo de la empresa "Uniempresarial", imagen también de 50x50 píxeles -->
           </a>
         </div>
 
-        <!-- Botón Responsive -->
+        <!-- Botón de menú para dispositivos móviles (cuando la pantalla es pequeña) -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- El ícono del botón será el ícono de hamburguesa en dispositivos pequeños -->
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Links -->
+        <!-- Menú colapsable para dispositivos grandes (pantallas más grandes) -->
         <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Lista de enlaces en el menú de navegación -->
           <ul class="navbar-nav mx-auto">
             <a class="nav-link" href="../index.html">INICIO</a>
+            <!-- Enlace a la página de inicio -->
             <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+            <!-- Enlace a la página "Nosotros" -->
             <li class="nav-item dropdown">
+              <!-- Menú desplegable con la categoría "Servicios" -->
               <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+              <!-- Opciones del menú desplegable -->
               <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
                 <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+                <!-- Enlace a la página de consultoría -->
                 <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
+                <!-- Enlace a la página de desarrollo de software -->
                 <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
+                <!-- Enlace a la página de integración de sistemas -->
                 <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+                <!-- Enlace a la página de capacitación -->
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
+            <!-- Enlace a la página "Equipo" -->
             <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
+            <!-- Enlace a la página de "Proyectos" -->
             <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
                 rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
+            <!-- Enlace a la página externa de "Uniempresarial" -->
           </ul>
-          <!-- Botón Contáctanos -->
+          <!-- Botón "Contáctanos" alineado a la derecha -->
           <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
         </div>
       </div>
     </nav>
   </section>
+ <!-- ============================================================
+     SECCIÓN: HERO (Encabezado principal)
+     ============================================================
+  Esta es la primera sección de la página, conocida como "Hero", y se utiliza
+  para mostrar un mensaje atractivo de bienvenida con una llamada a la acción. 
+  Generalmente, se utiliza para captar la atención del usuario y darle una idea 
+  rápida de lo que ofrece la empresa.
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Soluciones Inteligentes en <span style="color:#2a449c
-        ;">Integración de Software</span></h1>
-      <p>Conectamos sistemas, automatizamos procesos y optimizamos tu infraestructura tecnológica.</p>
-      <a href="./contacto.html" class="btn-custom">Descubre más</a>
-    </div>
-  </section>
+  La animación AOS no se aplica aquí, pero la estructura está configurada
+  para ser clara y llamativa en dispositivos móviles y de escritorio.
+-->
+<section class="hero">
+  <!-- Contenido de la sección Hero -->
+  <div class="hero-content">
+    <!-- Título principal -->
+    <h1>
+      Soluciones Inteligentes en 
+      <!-- Destacar "Integración de Software" con un color diferente -->
+      <span style="color:#2a449c;">Integración de Software</span>
+    </h1>
+    <!-- Descripción breve -->
+    <p>Conectamos sistemas, automatizamos procesos y optimizamos tu infraestructura tecnológica.</p>
+    <!-- Enlace de llamada a la acción -->
+    <a href="./contacto.html" class="btn-custom">Descubre más</a>
+  </div>
+</section>
 
+<!-- ============================================================
+     SECCIÓN: DESCRIPCIÓN DE LOS SERVICIOS (Integración de Sistemas)
+     ============================================================
+  Esta sección está diseñada para describir de manera detallada los servicios
+  que ofrece la empresa relacionados con la integración de sistemas. La
+  estructura tiene un formato de dos columnas: una con texto y otra con una
+  imagen decorativa.
 
-  <section class="py-5 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <!-- Contenido con texto -->
-        <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
-          <h2 class="fw-bold text-dark display-5 mb-4">
-            <span class="text-danger">Integración</span> de Sistemas
-          </h2>
-          <p class="text-muted fs-5 mb-4">
-            Conecta todas tus
-            <span class="fw-bold text-dark">herramientas y plataformas</span>
-            para trabajar como un todo eficiente. Desde
-            <span class="text-primary">sistemas contables y de ventas</span>
-            hasta <span class="text-danger">CRM y recursos humanos</span>,
-            nosotros lo integramos todo para ti.
-          </p>
-          <ul class="list-unstyled text-muted fs-6">
-            <li class="mb-3">
-              <i class="fas fa-check-circle text-success me-2"></i> Sistemas
-              ERP y CRM totalmente sincronizados.
-            </li>
-            <li class="mb-3">
-              <i class="fas fa-check-circle text-success me-2"></i>
-              Automatización de procesos internos.
-            </li>
-            <li class="mb-3">
-              <i class="fas fa-check-circle text-success me-2"></i>
-              Experiencia de usuario optimizada.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Imagen decorativa -->
-        <div class="col-lg-6 mt-5 mt-lg-0 text-center" data-aos="fade-left" data-aos-duration="1200">
-          <div class="position-relative">
-            <img src="../assets/img/Integración de sistemas logos/Integración de sistemas degradado.png"
-              alt="Integración de Sistemas" class="img-fluid rounded floating-img w-50" />
-            <!-- Elemento decorativo detrás de la imagen -->
-            <div class="position-absolute bg-primary bg-opacity-25 rounded-circle" style="
-                  width: 300px;
-                  height: 300px;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  z-index: -1;
-                "></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elementos decorativos animados -->
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 150px;
-          height: 150px;
-          background: rgba(0, 0, 0, 0.05);
-          bottom: -30px;
-          right: -40px;
-          animation: float 8s ease-in-out infinite;
-        "></div>
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 300px;
-          height: 300px;
-          background: rgba(0, 0, 0, 0.05);
-          bottom: 100px;
-          left: 200px;
-          animation: float 8s ease-in-out infinite;
-        "></div>
-  </section>
-
-  <section class="py-5 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-4">
-        <div class="col-lg-8">
-          <h3 class="fw-bold display-6" data-aos="fade-up">
-            Beneficios de la Integración
-          </h3>
-          <p class="text-muted fs-5" data-aos="fade-up" data-aos-delay="200">
-            Descubre cómo la integración transforma la forma en que gestionas
-            tu negocio.
-          </p>
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <!-- Beneficio 1 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center py-4">
-              <div class="icon-circle bg-primary">
-                <i class="fas fa-database"></i>
-              </div>
-              <h5 class="fw-bold mt-3">Menor Duplicidad de Datos</h5>
-              <p class="text-muted">
-                Consolidamos la información para evitar redundancias y mejorar
-                la precisión.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Beneficio 2 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center py-4">
-              <div class="icon-circle bg-success">
-                <i class="fas fa-sync-alt"></i>
-              </div>
-              <h5 class="fw-bold mt-3">Procesos Ágiles y Automatizados</h5>
-              <p class="text-muted">
-                Optimizamos tus flujos de trabajo para ahorrar tiempo y aumentar la productividad.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Beneficio 3 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center py-4">
-              <div class="icon-circle bg-warning">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h5 class="fw-bold mt-3">Mejor Visibilidad y Control</h5>
-              <p class="text-muted">
-                Ofrecemos un panorama claro para tomar decisiones estratégicas informadas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elemento decorativo animado -->
-    <div class="decorative-circle"></div>
-  </section>
-  <section class="py-5 bg-dark text-white position-relative overflow-hidden">
-    <div class="container">
-      <!-- Título -->
-      <div class="text-center mb-5">
-        <h2 class="fw-bold display-4" data-aos="fade-down" data-aos-duration="800">
-          Proyectos de Integración Comunes
+  Se utiliza la librería AOS para animaciones de fade-in y para darle
+  una transición de efectos a medida que el usuario hace scroll por la página.
+-->
+<section class="py-5 bg-light position-relative overflow-hidden">
+  <!-- Contenedor de la sección -->
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      
+      <!-- Columna de contenido con texto -->
+      <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+        <!-- Título principal de la sección -->
+        <h2 class="fw-bold text-dark display-5 mb-4">
+          <!-- Destacar "Integración" con color rojo -->
+          <span class="text-danger">Integración</span> de Sistemas
         </h2>
-        <p class="text-muted fs-5" data-aos="fade-down" data-aos-delay="200">
-          Soluciones diseñadas para conectar y optimizar tus sistemas y
-          plataformas.
+        <!-- Descripción con énfasis en los beneficios del servicio -->
+        <p class="text-muted fs-5 mb-4">
+          Conecta todas tus
+          <!-- Resaltar "herramientas y plataformas" en negrita -->
+          <span class="fw-bold text-dark">herramientas y plataformas</span>
+          para trabajar como un todo eficiente. Desde
+          <!-- Resaltar con color el texto "sistemas contables y de ventas" -->
+          <span class="text-primary">sistemas contables y de ventas</span>
+          hasta <span class="text-danger">CRM y recursos humanos</span>,
+          nosotros lo integramos todo para ti.
+        </p>
+        
+        <!-- Lista de beneficios del servicio -->
+        <ul class="list-unstyled text-muted fs-6">
+          <!-- Cada item de la lista tiene un ícono y una breve descripción -->
+          <li class="mb-3">
+            <!-- Ícono de verificación -->
+            <i class="fas fa-check-circle text-success me-2"></i> 
+            Sistemas ERP y CRM totalmente sincronizados.
+          </li>
+          <li class="mb-3">
+            <!-- Ícono de verificación -->
+            <i class="fas fa-check-circle text-success me-2"></i> 
+            Automatización de procesos internos.
+          </li>
+          <li class="mb-3">
+            <!-- Ícono de verificación -->
+            <i class="fas fa-check-circle text-success me-2"></i> 
+            Experiencia de usuario optimizada.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna con imagen decorativa -->
+      <div class="col-lg-6 mt-5 mt-lg-0 text-center" data-aos="fade-left" data-aos-duration="1200">
+        <div class="position-relative">
+          <!-- Imagen decorativa del servicio -->
+          <img src="../assets/img/Integración de sistemas logos/Integración de sistemas degradado.png"
+            alt="Integración de Sistemas" class="img-fluid rounded floating-img w-50" />
+          <!-- Elemento decorativo adicional en el fondo -->
+          <div class="position-absolute bg-primary bg-opacity-25 rounded-circle" style="
+                width: 300px;
+                height: 300px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+              "></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   <!-- ============================================================
+     ELEMENTOS DECORATIVOS ANIMADOS
+     ============================================================
+  Se incluyen dos círculos decorativos que flotan de manera animada en la 
+  página. Estos elementos no afectan el contenido principal, sino que 
+  sirven como adornos visuales que mejoran la estética de la página.
+
+  Se usa la propiedad `position-absolute` para colocarlos de manera fija 
+  en la pantalla (fuera del flujo normal del documento), y la animación 
+  "float" para hacer que se muevan suavemente.
+
+  Cada círculo tiene un tamaño, posición y duración de animación específica.
+-->
+<!-- Primer círculo decorativo -->
+<div class="decorative-circle position-absolute rounded-circle" style="
+      width: 150px;
+      height: 150px;
+      background: rgba(0, 0, 0, 0.05); /* Color de fondo ligeramente transparente */
+      bottom: -30px; /* Posición desde el fondo de la sección */
+      right: -40px; /* Posición desde el lado derecho */
+      animation: float 8s ease-in-out infinite; /* Animación flotante que dura 8 segundos, repitiéndose infinitamente */
+    "></div>
+
+<!-- Segundo círculo decorativo -->
+<div class="decorative-circle position-absolute rounded-circle" style="
+      width: 300px;
+      height: 300px;
+      background: rgba(0, 0, 0, 0.05);
+      bottom: 100px; /* Posición desde el fondo de la sección */
+      left: 200px; /* Posición desde el lado izquierdo */
+      animation: float 8s ease-in-out infinite;
+    "></div>
+
+<!-- ============================================================
+     SECCIÓN: BENEFICIOS DE LA INTEGRACIÓN
+     ============================================================
+  Esta sección destaca los beneficios de la integración de sistemas 
+  para los usuarios. Cada beneficio tiene un ícono visual y una breve 
+  descripción. Los elementos están organizados en tarjetas, y cada 
+  tarjeta se anima cuando el usuario hace scroll hacia ella.
+
+  Además, se usan las animaciones de AOS para hacer que los elementos 
+  aparezcan con un efecto de desvanecimiento.
+-->
+<section class="py-5 bg-light position-relative overflow-hidden">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-lg-8">
+        <!-- Título de la sección -->
+        <h3 class="fw-bold display-6" data-aos="fade-up">
+          Beneficios de la Integración
+        </h3>
+        <!-- Descripción de la sección -->
+        <p class="text-muted fs-5" data-aos="fade-up" data-aos-delay="200">
+          Descubre cómo la integración transforma la forma en que gestionas tu negocio.
         </p>
       </div>
+    </div>
 
-      <!-- Lista de proyectos -->
-      <div class="row g-4 justify-content-center">
-        <!-- Proyecto 1 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="card border-0 shadow-lg h-100 bg-secondary text-white">
-            <div class="card-body text-center py-5">
-              <div
-                class="icon-circle bg-primary text-white mb-4 mx-auto d-flex align-items-center justify-content-center"
-                style="width: 70px; height: 70px; font-size: 2rem">
-                <i class="fas fa-store"></i>
-              </div>
-              <h5 class="fw-bold">Conexión de E-commerce</h5>
-              <p class="text-muted">
-                Integramos plataformas de venta en línea con sistemas de
-                inventario en tiempo real.
-              </p>
+    <!-- Fila con los beneficios -->
+    <div class="row g-4">
+      <!-- Beneficio 1: Menor Duplicidad de Datos -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card border-0 shadow-lg h-100 hover-effect">
+          <div class="card-body text-center py-4">
+            <div class="icon-circle bg-primary">
+              <i class="fas fa-database"></i>
             </div>
+            <h5 class="fw-bold mt-3">Menor Duplicidad de Datos</h5>
+            <p class="text-muted">
+              Consolidamos la información para evitar redundancias y mejorar la precisión.
+            </p>
           </div>
         </div>
-        <!-- Proyecto 2 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="card border-0 shadow-lg h-100 bg-secondary text-white">
-            <div class="card-body text-center py-5">
-              <div
-                class="icon-circle bg-success text-white mb-4 mx-auto d-flex align-items-center justify-content-center"
-                style="width: 70px; height: 70px; font-size: 2rem">
-                <i class="fas fa-link"></i>
-              </div>
-              <h5 class="fw-bold">Sincronización ERP y CRM</h5>
-              <p class="text-muted">
-                Unificamos herramientas clave para gestionar operaciones y
-                relaciones con clientes.
-              </p>
+      </div>
+
+      <!-- Beneficio 2: Procesos Ágiles y Automatizados -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card border-0 shadow-lg h-100 hover-effect">
+          <div class="card-body text-center py-4">
+            <div class="icon-circle bg-success">
+              <i class="fas fa-sync-alt"></i>
             </div>
+            <h5 class="fw-bold mt-3">Procesos Ágiles y Automatizados</h5>
+            <p class="text-muted">
+              Optimizamos tus flujos de trabajo para ahorrar tiempo y aumentar la productividad.
+            </p>
           </div>
         </div>
-        <!-- Proyecto 3 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-          <div class="card border-0 shadow-lg h-100 bg-secondary text-white">
-            <div class="card-body text-center py-5">
-              <div
-                class="icon-circle bg-warning text-white mb-4 mx-auto d-flex align-items-center justify-content-center"
-                style="width: 70px; height: 70px; font-size: 2rem">
-                <i class="fas fa-database"></i>
-              </div>
-              <h5 class="fw-bold">Migración y Consolidación</h5>
-              <p class="text-muted">
-                Movemos y unificamos tus datos desde diferentes sistemas hacia
-                una solución centralizada.
-              </p>
+      </div>
+
+      <!-- Beneficio 3: Mejor Visibilidad y Control -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="card border-0 shadow-lg h-100 hover-effect">
+          <div class="card-body text-center py-4">
+            <div class="icon-circle bg-warning">
+              <i class="fas fa-chart-line"></i>
             </div>
+            <h5 class="fw-bold mt-3">Mejor Visibilidad y Control</h5>
+            <p class="text-muted">
+              Ofrecemos un panorama claro para tomar decisiones estratégicas informadas.
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Elemento decorativo animado -->
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 200px;
-          height: 200px;
-          background: rgba(255, 255, 255, 0.1);
-          top: 20%;
-          right: -50px;
-          animation: float 6s ease-in-out infinite;
-        "></div>
-  </section>
-  <section class="text-center py-5 bg-white">
-    <div class="container">
-      <blockquote class="blockquote text-dark">
-        <p class="fw-bold display-6">
-          "Llevamos tus ideas a la realidad tecnológica"
+  <!-- Elemento decorativo animado al final de la sección -->
+  <div class="decorative-circle"></div>
+</section>
+
+<!-- ============================================================
+     SECCIÓN: PROYECTOS DE INTEGRACIÓN COMUNES
+     ============================================================
+  Esta sección presenta ejemplos de proyectos de integración comunes.
+  Se utiliza un fondo oscuro y texto blanco para resaltar el contenido.
+
+  Al igual que en otras secciones, se emplean las animaciones AOS para 
+  que los elementos se deslicen al hacer scroll.
+-->
+<section class="py-5 bg-dark text-white position-relative overflow-hidden">
+  <div class="container">
+    <!-- Título de la sección -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-4" data-aos="fade-down" data-aos-duration="800">
+        Proyectos de Integración Comunes
+      </h2>
+      <!-- Descripción de la sección -->
+      <p class="text-muted fs-5" data-aos="fade-down" data-aos-delay="200">
+        Soluciones diseñadas para conectar y optimizar tus sistemas y plataformas.
+      </p>
+    </div>
+  </div>
+</section>
+   <!-- ============================================================
+     SECCIÓN: LISTA DE PROYECTOS
+     ============================================================
+  Esta sección está diseñada para mostrar una serie de proyectos realizados o en los que la empresa ha trabajado. 
+  Cada proyecto está representado por una tarjeta (card) que incluye un icono, un título y una breve descripción.
+  Se utilizan animaciones con la librería AOS para hacer que los elementos se deslicen desde abajo cuando el usuario hace scroll.
+
+  Se incluye un elemento decorativo animado (un círculo flotante) que proporciona un toque visual a la página.
+
+  Las tarjetas son responsive, lo que significa que se adaptan a pantallas de diferentes tamaños (móviles, tabletas, escritorios).
+-->
+<div class="row g-4 justify-content-center">
+  
+  <!-- Proyecto 1 -->
+  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+    <div class="card border-0 shadow-lg h-100 bg-secondary text-white">
+      <div class="card-body text-center py-5">
+        <!-- Icono del Proyecto -->
+        <div class="icon-circle bg-primary text-white mb-4 mx-auto d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; font-size: 2rem">
+          <i class="fas fa-store"></i>
+        </div>
+        <!-- Título y Descripción del Proyecto -->
+        <h5 class="fw-bold">Conexión de E-commerce</h5>
+        <p class="text-muted">
+          Integramos plataformas de venta en línea con sistemas de inventario en tiempo real.
         </p>
-      </blockquote>
-    </div>
-  </section>
-
-  <footer class="bg-primary text-light py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Logo y Redes Sociales -->
-        <div class="col-md-3 text-center text-md-start">
-          <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png  "
-            alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
-          <div class="d-flex justify-content-center justify-content-md-start gap-2">
-            <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-            <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
-            <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank"
-              rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
-          </div>
-        </div>
-
-        <!-- Programas y Enlaces Directos -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Nuestros Servicios</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
-            </li>
-            <li>
-              <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la
-                Medida</a>
-            </li>
-            <li>
-              <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
-            </li>
-            <li>
-              <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en
-                Software</a>
-            </li>
-          </ul>
-          <h5 class="fw-bold mt-4">Enlaces Directos</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
-            </li>
-            <li>
-              <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
-                target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión
-                Académica</a>
-            </li>
-            <li>
-              <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">FAQs</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Normatividad -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Normatividad y Políticas</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Acceso a la Información Pública</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Estados Financieros</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Mapa y Contacto -->
-        <div class="col-md-3 text-center text-md-start">
-          <h5 class="fw-bold">Ubicación</h5>
-          <div class="map-container" style="
-              height: 150px;
-              border-radius: 10px;
-              overflow: hidden;
-              margin-bottom: 10px;
-            ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
-              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
-            #30-20 Bogotá D.C.
-          </p>
-          <p>
-            <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
-            6607, 6608
-          </p>
-          <p>
-            <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
-          </p>
-        </div>
       </div>
     </div>
-  </footer>
+  </div>
+  
+  <!-- Proyecto 2 -->
+  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+    <div class="card border-0 shadow-lg h-100 bg-secondary text-white">
+      <div class="card-body text-center py-5">
+        <!-- Icono del Proyecto -->
+        <div class="icon-circle bg-success text-white mb-4 mx-auto d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; font-size: 2rem">
+          <i class="fas fa-link"></i>
+        </div>
+        <!-- Título y Descripción del Proyecto -->
+        <h5 class="fw-bold">Sincronización ERP y CRM</h5>
+        <p class="text-muted">
+          Unificamos herramientas clave para gestionar operaciones y relaciones con clientes.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Proyecto 3 -->
+  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+    <div class="card border-0 shadow-lg h-100 bg-secondary text-white">
+      <div class="card-body text-center py-5">
+        <!-- Icono del Proyecto -->
+        <div class="icon-circle bg-warning text-white mb-4 mx-auto d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; font-size: 2rem">
+          <i class="fas fa-database"></i>
+        </div>
+        <!-- Título y Descripción del Proyecto -->
+        <h5 class="fw-bold">Migración y Consolidación</h5>
+        <p class="text-muted">
+          Movemos y unificamos tus datos desde diferentes sistemas hacia una solución centralizada.
+        </p>
+      </div>
+    </div>
+  </div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/app.js"></script>
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
+</div> <!-- Fin de la fila de proyectos -->
 
-</html>
+<!-- Elemento decorativo animado -->
+<div class="decorative-circle position-absolute rounded-circle" style="
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      top: 20%;
+      right: -50px;
+      animation: float 6s ease-in-out infinite;
+    "></div>
+</section>
+
+<!-- ============================================================
+     SECCIÓN DE CITA (blockquote)
+     ============================================================
+  Esta sección contiene una cita destacada que puede representar el lema o filosofía de la empresa. 
+  Se muestra en un estilo de bloque (blockquote), con una tipografía mayor y en el centro de la página.
+  La cita está contenida dentro de un contenedor con fondo blanco.
+-->
+<section class="text-center py-5 bg-white">
+  <div class="container">
+    <blockquote class="blockquote text-dark">
+      <p class="fw-bold display-6">
+        "Llevamos tus ideas a la realidad tecnológica"
+      </p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============================================================
+     PIE DE PÁGINA
+     ============================================================
+  El pie de página (footer) proporciona información adicional o enlaces a la página, 
+  y se presenta con un fondo de color primario (azul) y texto blanco.
+  Se utiliza una fila con columnas que probablemente contienen información de contacto, enlaces, o redes sociales.
+-->
+<footer class="bg-primary text-light py-5">
+  <div class="container">
+    <div class="row">
+     <!-- ============================================================
+     SECCIÓN: PIE DE PÁGINA (FOOTER)
+     ============================================================
+  Esta es la sección del pie de página (footer), que contiene la información 
+  de contacto, redes sociales, servicios y enlaces relacionados. Está dividida
+  en varias columnas para organizar los contenidos de manera clara.
+  
+  Las clases de Bootstrap se utilizan para la disposición en rejilla y para 
+  los estilos visuales, y AOS (Animate On Scroll) para las animaciones.
+  
+  Este pie de página también incluye la integración de Google Maps para mostrar
+  la ubicación física de la sede principal.
+-->
+
+<footer class="bg-dark text-light py-5">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Logo y Redes Sociales -->
+      <div class="col-md-3 text-center text-md-start">
+        <!-- Logo de Uniempresarial -->
+        <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png" 
+             alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
+        
+        <!-- Redes sociales -->
+        <div class="d-flex justify-content-center justify-content-md-start gap-2">
+          <!-- Enlace a Facebook -->
+          <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          
+          <!-- Enlace a YouTube -->
+          <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          
+          <!-- Enlace a Instagram -->
+          <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          
+          <!-- Enlace a Twitter -->
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Programas y Enlaces Directos -->
+      <div class="col-md-3">
+        <h5 class="fw-bold">Nuestros Servicios</h5>
+        <ul class="list-unstyled">
+          <!-- Enlace a Consultoría en software -->
+          <li>
+            <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
+          </li>
+          <!-- Enlace a Desarrollo de software a la medida -->
+          <li>
+            <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la Medida</a>
+          </li>
+          <!-- Enlace a Integración de Sistemas -->
+          <li>
+            <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
+          </li>
+          <!-- Enlace a Capacitación en software -->
+          <li>
+            <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitación en Software</a>
+          </li>
+        </ul>
+        
+        <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+        <ul class="list-unstyled">
+          <!-- Enlace a Uniempresarial en cifras -->
+          <li>
+            <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
+          </li>
+          <!-- Enlace al Sistema de Gestión Académica -->
+          <li>
+            <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">
+              Sistema de Gestión Académica
+            </a>
+          </li>
+          <!-- Enlace a la página de FAQs -->
+          <li>
+            <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">FAQs</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Normatividad -->
+      <div class="col-md-3">
+        <h5 class="fw-bold">Normatividad y Políticas</h5>
+        <ul class="list-unstyled">
+          <!-- Enlace a acceso a la información pública -->
+          <li>
+            <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Acceso a la Información Pública</a>
+          </li>
+          <!-- Enlace a derechos pecuniarios 2025 -->
+          <li>
+            <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
+          </li>
+          <!-- Enlace a derechos pecuniarios 2024 -->
+          <li>
+            <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
+          </li>
+          <!-- Enlace a estados financieros -->
+          <li>
+            <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Estados Financieros</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mapa y Contacto -->
+      <div class="col-md-3 text-center text-md-start">
+        <h5 class="fw-bold">Ubicación</h5>
+        
+        <!-- Contenedor del mapa -->
+        <div class="map-container" style="height: 150px; border-radius: 10px; overflow: hidden; margin-bottom: 10px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
+            width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        <!-- Información de contacto -->
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a #30-20 Bogotá D.C.
+        </p>
+        <p>
+          <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604, 6607, 6608
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts de la página -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/app.js"></script>
+
+<!-- AOS CSS y JS para animaciones -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
