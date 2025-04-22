@@ -1,877 +1,1284 @@
+<!-- ==========================================================
+     ESTRUCTURA GENERAL DEL DOCUMENTO Y CONFIGURACIÓN INICIAL
+     ==========================================================
+
+Este es el encabezado de la página de "Proyectos" del sitio web de Uniempresarial. Aquí se establecen todas las configuraciones básicas necesarias antes de cargar el contenido visible, como el título de la pestaña, los enlaces a hojas de estilo, íconos y los estilos específicos de esta página.
+
+Todo lo que está dentro de <head> se ejecuta antes de que se muestre el contenido en pantalla, y es crucial para asegurar que la página se vea y funcione correctamente.
+-->
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- Se declara que el documento está en HTML5 y en idioma español -->
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
-    <title>Proyectos Uniempresarial</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/proyectos.css" />
-    <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon" />
-    <!-- Font Awesome para los íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Se establece el conjunto de caracteres para que se puedan mostrar correctamente letras con tildes, eñes, etc. -->
+  <meta charset="UTF-8" />
 
-    <style>
-        /* 🌟 Estilos Generales */
-        body {
-            font-family: "Poppins", sans-serif;
-            background-color: #f4f7fc;
-            color: #333;
-        }
+  <!-- Esta línea permite que el diseño se adapte a distintos tamaños de pantalla, haciendo el sitio responsive. Es muy importante para móviles. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        /* ✨ Hero Section Mejorado */
-        .hero-section {
-            min-height: 89vh;
-            /* Ocupa toda la pantalla */
-            background: url("../assets/img/proyectos1.jpg") no-repeat center center/cover;
-            color: white;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
+  <!-- Código de verificación de Google, probablemente usado para Google Search Console u otro servicio de análisis -->
+  <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
 
-        /* Efecto de fondo oscuro */
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.55);
-            /* Oscurece la imagen */
-            backdrop-filter: blur(3px);
-            /* Efecto desenfoque */
-            z-index: 0;
-        }
+  <!-- El título que aparece en la pestaña del navegador -->
+  <title>Proyectos Uniempresarial</title>
 
-        .hero-section>.container {
-            position: relative;
-            z-index: 1;
-        }
+  <!-- Bootstrap 5: librería CSS que facilita el diseño responsivo y componentes como botones, grids, etc. Se carga desde un CDN. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-        /* Estilos del título */
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+  <!-- Archivo CSS propio con los estilos específicos para esta página de proyectos -->
+  <link rel="stylesheet" href="../css/proyectos.css" />
 
-        /* Estilos del texto */
-        .hero-text {
-            font-size: 1.4rem;
-            margin-top: 15px;
-            line-height: 1.7;
-            font-weight: 300;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+  <!-- Ícono que aparece en la pestaña del navegador, normalmente representa la marca o logo del sitio -->
+  <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon" />
 
-        /* 🎨 Botón Personalizado */
-        .btn-custom {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 14px 40px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(45deg, #a4022c, #273474);
-            border: none;
-            border-radius: 50px;
-            transition: all 0.3s ease-in-out;
-            text-decoration: none;
-        }
+  <!-- Font Awesome: biblioteca de íconos lista para usarse (por ejemplo, íconos de engranajes, personas, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-        /* Efecto Hover */
-        .btn-custom:hover {
-            background: linear-gradient(45deg, #273474, #a4022c);
-            transform: scale(1.1);
-            box-shadow: 0px 4px 10px rgba(255, 75, 75, 0.6);
-        }
+  <!-- ==========================================================
+       ESTILOS INTERNOS PERSONALIZADOS PARA ESTA PÁGINA
+       ==========================================================
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.8rem;
-            }
+Aunque generalmente se recomienda que los estilos estén en un archivo externo (como proyectos.css),
+aquí se han incluido directamente para facilitar su lectura o edición rápida.
+-->
 
-            .hero-text {
-                font-size: 1.2rem;
-            }
+  <style>
+    /* Estilos generales del body: se define la fuente principal, un fondo claro y un color base para el texto */
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f7fc;
+      color: #333;
+    }
 
-            .btn-custom {
-                font-size: 1.1rem;
-                padding: 12px 30px;
-            }
-        }
+    /* Hero Section: bloque visual grande con imagen de fondo que ocupa casi toda la pantalla inicial */
+    .hero-section {
+      min-height: 89vh; /* Casi el 100% del alto de la pantalla, lo que hace que sea lo primero que se vea al entrar */
+      background: url("../assets/img/proyectos1.jpg") no-repeat center center/cover;
+      color: white;
+      display: flex; /* Se usa flexbox para centrar el contenido vertical y horizontalmente */
+      align-items: center;
+      text-align: center;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .section-title {
-            font-size: 2rem;
-            font-weight: bold;
-        }
+    /* Capa oscura encima de la imagen de fondo para mejorar la legibilidad del texto */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55); /* Un tono negro semitransparente */
+      backdrop-filter: blur(3px); /* Se aplica un desenfoque leve al fondo para dar más énfasis al texto */
+      z-index: 0; /* Se coloca por debajo del contenido real */
+    }
 
-        .section-text {
-            font-size: 1.1rem;
-            margin-top: 10px;
-        }
+    /* Este contenedor lleva el contenido por encima de la capa oscura */
+    .hero-section > .container {
+      position: relative;
+      z-index: 1;
+    }
 
-        /* 🎯 Sección Características */
-        .features-section {
-            margin-top: 50px;
-            padding: 50px 0;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-item {
-            padding: 20px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            color: #273474;
-            margin-bottom: 10px;
-        }
-
-        /* 🌟 Animaciones */
-        [data-aos] {
-            transition: all 0.5s ease-in-out;
-        }
-
-        .text-red {
-            color: #a4022c;
-        }
-
-        .project-card {
-            padding: 35px;
-            border-radius: 12px;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .bg-green {
-            background-color: #00a676;
-        }
-
-        .bg-blue {
-            background-color: #273474;
-        }
-
-        .bg-red {
-            background-color: #a4022c;
-        }
-
-        .btn-light {
-            background-color: #fff;
-            color: #000;
-            border: none;
-            padding: 14px 28px;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background 0.3s ease-in-out, transform 0.2s;
-        }
-
-        .btn-light:hover {
-            background-color: #e9ecef;
-            transform: scale(1.05);
-        }
-
-        .image-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .image-container img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .logo-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40%;
-            max-width: 120px;
-        }
-
-        .section-divider {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-
-        /* 🎨 Estilos Generales */
-        /* 🎨 Estilos Generales */
-        body {
-            font-family: "Poppins", sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-title h2 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #a4022c;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        /* 📌 Diseño de proyectos */
-        .project {
-            display: flex;
-            align-items: center;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-bottom: 40px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .project:hover {
-            transform: translateY(-5px);
-        }
-
-        .project.reverse {
-            flex-direction: row-reverse;
-        }
-
-        .project-text {
-            flex: 1;
-            padding: 40px;
-            text-align: left;
-        }
-
-        .project-text h3 {
-            font-size: 1.8rem;
-            color: #273474;
-            margin-bottom: 15px;
-        }
-
-        .project-text p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        /* 🎬 Contenedor de Video */
-        .project-media {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-            border-radius: 0 12px 12px 0;
-        }
-
-        .project.reverse .project-media {
-            border-radius: 12px 0 0 12px;
-        }
-
-        .bg-video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .logo-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 35%;
-            max-width: 100px;
-            opacity: 0.9;
-        }
-
-        /* 🔵 Barra de Progreso */
-        .progress-container {
-            width: 100%;
-            height: 8px;
-            background: #ddd;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 15px;
-            position: relative;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #a4022c, #ff4d6d);
-            transition: width 0.5s ease-in-out;
-        }
-
-        .progress-text {
-            display: block;
-            font-size: 0.9rem;
-            margin-top: 8px;
-            text-align: center;
-            font-weight: bold;
-            color: #a4022c;
-        }
-
-        /* Animación de entrada con AOS */
-        [data-aos] {
-            opacity: 0;
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-        }
-
-        /* Efecto de elevación en tarjetas */
-        .project-card {
-            padding: 35px;
-            border-radius: 12px;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-        }
-
-        /* Animación en el texto */
-        h3 {
-            font-size: 1.8rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        h3::after {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            width: 100%;
-            height: 3px;
-            background: #273474;
-            transform: translateX(-50%) scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        h3:hover::after {
-            transform: translateX(-50%) scaleX(1);
-        }
-
-        /* Animación en videos */
-        .video-container {
-            position: relative;
-            width: 100%;
-            border-radius: 10px;
-            overflow: hidden;
-            transform: scale(0.95);
-            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-        }
-
-        .video-container:hover {
-            transform: scale(1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Animación de opacidad en videos */
-        .bg-video {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            opacity: 0.8;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .video-container:hover .bg-video {
-            opacity: 1;
-        }
-
-        /* Logo en video */
-        .logo-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40%;
-            max-width: 120px;
-            opacity: 0.9;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .video-container:hover .logo-overlay {
-            opacity: 1;
-        }
-
-        /* Separador de secciones animado */
-        .section-divider {
-            text-align: center;
-            margin: 50px 0;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-in-out forwards;
-        }
-
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    /* Estilo del título principal dentro del Hero: se hace grande, en mayúsculas y con separación entre letras */
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
+      /* ============================================================
+   ESTILOS PARA SECCIÓN HERO Y ELEMENTOS RELACIONADOS
+   ============================================================ */
 
-<body>
-    <!-- Navbar -->
-    <section>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-          <div class="container d-flex justify-content-between align-items-center">
-            <!-- Logos juntos -->
-            <div class="d-flex align-items-center">
-              <a class="navbar-brand me-2" href="#">
-                <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
-              </a>
-              <a class="navbar-brand" href="#">
-                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
-                  height="50" />
-              </a>
-            </div>
+/* Estilo del texto descriptivo debajo del título principal en la sección hero.
+   Se centra automáticamente y se adapta a pantallas más pequeñas. */
+.hero-text {
+    font-size: 1.4rem;
+    margin-top: 15px;
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para un botón personalizado que puede usarse en la sección hero
+   u otras partes destacadas del sitio. */
+.btn-custom {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #a4022c, #273474); /* Degradado rojo a azul */
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* Efecto hover para el botón personalizado.
+   Invierte el degradado y aplica una animación de escala con sombra. */
+.btn-custom:hover {
+    background: linear-gradient(45deg, #273474, #a4022c);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(255, 75, 75, 0.6);
+}
+
+/* ============================================================
+   RESPONSIVE: Ajustes para pantallas pequeñas
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Disminuye el tamaño del título principal en móviles */
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    /* Disminuye el tamaño del texto descriptivo */
+    .hero-text {
+        font-size: 1.2rem;
+    }
+
+    /* Ajusta el botón personalizado para mejor legibilidad en móviles */
+    .btn-custom {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+    }
+}
+
+/* ============================================================
+   ESTILOS PARA TÍTULOS Y TEXTOS GENERALES DE SECCIONES
+   ============================================================ */
+
+/* Título principal de secciones */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Párrafo descriptivo dentro de secciones */
+.section-text {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* ============================================================
+   SECCIÓN DE CARACTERÍSTICAS (FEATURES)
+   ============================================================ */
+
+/* Contenedor general de la sección de características.
+   Incluye espaciado, fondo blanco, bordes redondeados y sombra. */
+.features-section {
+    margin-top: 50px;
+    padding: 50px 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cada ítem individual dentro de la sección de características */
+.feature-item {
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover para dar una sensación de elevación al ítem */
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Icono representativo de cada característica */
+.feature-icon {
+    font-size: 2rem;
+    color: #273474;
+    margin-bottom: 10px;
+}
+
+/* ============================================================
+   ANIMACIONES CON AOS (Animate On Scroll)
+   ============================================================ */
+
+/* Transición general aplicada a todos los elementos con data-aos */
+[data-aos] {
+    transition: all 0.5s ease-in-out;
+}
+
+/* ============================================================
+   CLASES DE TEXTO Y FONDOS PERSONALIZADOS
+   ============================================================ */
+
+/* Color de texto personalizado en rojo institucional */
+.text-red {
+    color: #a4022c;
+}
+
+/* Tarjetas de proyectos con diseño uniforme, padding amplio y efecto hover */
+.project-card {
+    padding: 35px;
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Colores de fondo institucionales personalizados */
+.bg-green {
+    background-color: #00a676;
+}
+
+.bg-blue {
+    background-color: #273474;
+}
+
+.bg-red {
+    background-color: #a4022c;
+}
+
+/* ============================================================
+   BOTÓN ESTILO CLARO
+   ============================================================ */
+
+/* Botón blanco con texto negro, borde redondeado y efecto hover */
+.btn-light {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 14px 28px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+     /* ===========================================================================================
+   ESTILOS PERSONALIZADOS DEL SITIO WEB
+   ===========================================================================================
+   Esta hoja de estilos define la apariencia visual del sitio, incluyendo botones, secciones,
+   estructura de proyectos, animaciones al hacer hover, entre otros. Todos los estilos están
+   explicados para facilitar su personalización futura.
+*/
+
+/* -----------------------------------------
+   BOTÓN CLARO (ESTILO AL PASAR EL CURSOR)
+----------------------------------------- */
+.btn-light:hover {
+    background-color: #e9ecef;  /* Color de fondo más claro al pasar el cursor */
+    transform: scale(1.05);     /* Aumenta el tamaño ligeramente para dar efecto interactivo */
+}
+
+/* -----------------------------------------
+   CONTENEDOR DE IMÁGENES (GENERAL)
+----------------------------------------- */
+.image-container {
+    position: relative;     /* Permite posicionar otros elementos (como overlays) dentro */
+    overflow: hidden;       /* Oculta cualquier contenido que se salga del contenedor */
+    border-radius: 10px;    /* Esquinas redondeadas */
+}
+
+.image-container img {
+    width: 100%;            /* Imagen toma todo el ancho del contenedor */
+    border-radius: 10px;    /* Coincide con el borde del contenedor */
+}
+
+/* -----------------------------------------
+   LOGO SUPERPUESTO (CENTRADO EN LA IMAGEN)
+----------------------------------------- */
+.logo-overlay {
+    position: absolute;     /* Posición relativa a su contenedor con position: relative */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centra el logo exactamente en el medio */
+    width: 40%;             /* Ancho del logo superpuesto */
+    max-width: 120px;       /* Limita su tamaño máximo */
+}
+
+/* -----------------------------------------
+   DIVISOR DE SECCIÓN (TÍTULOS IMPORTANTES)
+----------------------------------------- */
+.section-divider {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* -----------------------------------------
+   ESTILOS GENERALES DEL SITIO
+----------------------------------------- */
+body {
+    font-family: "Poppins", sans-serif;  /* Tipografía moderna y legible */
+    background-color: #f8f9fa;           /* Fondo claro para buena lectura */
+    color: #333;                         /* Texto en tono oscuro para contraste */
+}
+
+/* -----------------------------------------
+   TÍTULOS DE SECCIÓN
+----------------------------------------- */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a4022c;              /* Color principal (rojo oscuro) */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;       /* Espaciado entre letras */
+}
+
+/* -----------------------------------------
+   DISEÑO DE CADA PROYECTO MOSTRADO
+----------------------------------------- */
+.project {
+    display: flex;                        /* Crea una fila con imagen y texto */
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* Sombra ligera para resaltar el bloque */
+    overflow: hidden;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease-in-out;    /* Efecto de elevación al pasar el mouse */
+}
+
+.project:hover {
+    transform: translateY(-5px);  /* Eleva el bloque al pasar el cursor */
+}
+
+.project.reverse {
+    flex-direction: row-reverse;  /* Invierte el orden: primero texto, luego imagen */
+}
+
+/* -----------------------------------------
+   TEXTO DEL PROYECTO
+----------------------------------------- */
+.project-text {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+}
+
+.project-text h3 {
+    font-size: 1.8rem;
+    color: #273474;      /* Azul oscuro para títulos */
+    margin-bottom: 15px;
+}
+
+.project-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;         /* Gris suave para el contenido */
+}
+
+/* -----------------------------------------
+   CONTENEDOR DE VIDEO O IMAGEN EN PROYECTOS
+----------------------------------------- */
+.project-media {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 12px 12px 0;  /* Bordes redondeados en el lado derecho */
+}
+
+.project.reverse .project-media {
+    border-radius: 12px 0 0 12px;  /* Bordes opuestos cuando se invierte el orden */
+}
+
+.bg-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* -----------------------------------------
+   LOGO SOBRE EL VIDEO O IMAGEN
+----------------------------------------- */
+.logo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    max-width: 100px;
+    opacity: 0.9;
+}
+
+/* -----------------------------------------
+   BARRA DE PROGRESO PERSONALIZADA
+----------------------------------------- */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ddd;             /* Fondo gris claro */
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 15px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #a4022c, #ff4d6d);  /* Degradado rojo */
+    transition: width 0.5s ease-in-out;  /* Animación suave de la barra */
+}
+
+.progress-text {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #a4022c;
+}
+       /* ============================================================================
+   ANIMACIONES Y EFECTOS VISUALES PERSONALIZADOS PARA EL SITIO WEB
+   ============================================================================
+
+   Esta hoja de estilos define animaciones y transiciones que mejoran la 
+   experiencia visual del usuario. Se aplica principalmente a tarjetas 
+   (cards), títulos, videos y separadores de sección.
+   Cada bloque está comentado para indicar su propósito y comportamiento.
+*/
+
+/* ----------------------------
+   Animación de entrada (usando AOS)
+   ----------------------------
+   Inicializa los elementos con opacidad cero y transiciones suaves de
+   opacidad y transformación. Estos estilos se activan cuando se usan
+   atributos `data-aos` en el HTML y se usa la librería AOS (Animate on Scroll).
+*/
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* ----------------------------
+   Tarjetas de proyectos (project-card)
+   ----------------------------
+   Estilo base para tarjetas de presentación de proyectos o servicios.
+   Incluye sombra, redondeado, alineación de texto y efecto al pasar el mouse.
+*/
+.project-card {
+  padding: 35px;
+  border-radius: 12px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto "hover": eleva la tarjeta y acentúa la sombra */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ----------------------------
+   Títulos con subrayado animado (h3)
+   ----------------------------
+   Aplica un subrayado animado al pasar el mouse sobre los títulos <h3>.
+*/
+h3 {
+  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: #273474; /* Color azul oscuro */
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Al pasar el mouse, el subrayado se expande */
+h3:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ----------------------------
+   Contenedor de video (video-container)
+   ----------------------------
+   Aplica borde redondeado y efecto de zoom suave al pasar el mouse.
+*/
+.video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Al hacer hover, el video se amplía y muestra sombra */
+.video-container:hover {
+  transform: scale(1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ----------------------------
+   Estilo para el video de fondo (bg-video)
+   ----------------------------
+   Controla la opacidad del video al pasar el mouse sobre su contenedor.
+*/
+.bg-video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video-container:hover .bg-video {
+  opacity: 1;
+}
+
+/* ----------------------------
+   Logo sobre el video (logo-overlay)
+   ----------------------------
+   Centra un logo encima del video. Aumenta la visibilidad al pasar el mouse.
+*/
+.logo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  max-width: 120px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video-container:hover .logo-overlay {
+  opacity: 1;
+}
+
+/* ----------------------------
+   Separador de sección animado (section-divider)
+   ----------------------------
+   Un separador visual con animación fadeInUp (aparece y sube suavemente).
+*/
+.section-divider {
+  text-align: center;
+  margin: 50px 0;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+/* Definición de la animación fadeInUp */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+   <!-- ============================================================================
+     SECCIÓN: NAVBAR + HERO + CARACTERÍSTICAS + PROYECTOS DESTACADOS
+     ============================================================================
+
+  Este bloque contiene múltiples secciones claves de la página de inicio de FUsoft:
+  - Barra de navegación (navbar) fija con enlaces internos y dropdown de servicios.
+  - Sección principal de bienvenida o "Hero".
+  - Sección de características destacadas.
+  - Inicio de la sección de proyectos destacados.
+
+  El diseño es responsive, usa Bootstrap, Font Awesome y animaciones AOS para efectos
+  visuales al hacer scroll.
+
+=============================================================================== -->
+
+<!-- ===============================
+     BARRA DE NAVEGACIÓN (NAVBAR)
+     =============================== -->
+<section>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <!-- LOGOS DE LA MARCA -->
+      <div class="d-flex align-items-center">
+        <!-- Logo FUsoft -->
+        <a class="navbar-brand me-2" href="#">
+          <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+        </a>
+        <!-- Logo Uniempresarial -->
+        <a class="navbar-brand" href="#">
+          <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50" height="50" />
+        </a>
+      </div>
+
+      <!-- BOTÓN PARA VERSIÓN MÓVIL (hamburguesa) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- ENLACES DE NAVEGACIÓN -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <!-- Enlace a inicio -->
+          <a class="nav-link" href="../index.html">INICIO</a>
+          <!-- Enlace a nosotros -->
+          <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+
+          <!-- Dropdown de servicios -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">SERVICIOS</a>
+            <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+              <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+              <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
+              <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
+              <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+            </ul>
+          </li>
+
+          <!-- Enlaces adicionales -->
+          <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
+              rel="noreferrer noopener">UNIEMPRESARIAL</a></li>
+        </ul>
+
+        <!-- BOTÓN DE CONTACTO -->
+        <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<!-- ===============================
+     SECCIÓN PRINCIPAL (HERO)
+     =============================== -->
+<section class="hero-section d-flex align-items-center justify-content-center text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <!-- Título central de bienvenida -->
+        <h1 class="hero-title">Innovación y Tecnología para tu Negocio</h1>
+
+        <!-- Descripción de la propuesta de valor -->
+        <p class="hero-text">
+          En <strong>FUsoft</strong>, llevamos tus ideas al siguiente nivel
+          con soluciones tecnológicas avanzadas. Diseñamos software a medida
+          para optimizar procesos, mejorar la eficiencia y potenciar el
+          crecimiento empresarial.
+        </p>
+
+        <!-- Botón que lleva a más información -->
+        <a href="#mas-informacion" class="btn btn-custom">Descubre más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     SECCIÓN DE CARACTERÍSTICAS (FEATURES)
+     =================================== -->
+<section class="features-section">
+  <div class="container text-center">
+    <div class="row">
+      <!-- Característica 1 -->
+      <div class="col-md-3 feature-item" data-aos="zoom-in">
+        <i class="fas fa-lightbulb feature-icon"></i>
+        <p>Soluciones basadas en innovación</p>
+      </div>
+
+      <!-- Característica 2 -->
+      <div class="col-md-3 feature-item" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-chart-line feature-icon"></i>
+        <p>Productos escalables para tu negocio</p>
+      </div>
+
+      <!-- Característica 3 -->
+      <div class="col-md-3 feature-item" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-handshake feature-icon"></i>
+        <p>Conexión perfecta y soporte continuo</p>
+      </div>
+
+      <!-- Característica 4 -->
+      <div class="col-md-3 feature-item" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-laptop-code feature-icon"></i>
+        <p>Interfaces intuitivas y eficientes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================
+     INICIO DE SECCIÓN DE PROYECTOS DESTACADOS
+     ==================================== -->
+<section class="container my-5" data-aos="fade-up">
+  <div class="section-title">
+    <h2>Proyectos Destacados</h2>
+  </div>
+  <!-- Aquí se agregarán tarjetas u otro contenido relacionado con los proyectos -->
+</section>
+
+        <!-- ============================================================
+     SECCIÓN: PROYECTOS DESTACADOS
+     ============================================================
+  Esta sección presenta una galería de proyectos realizados por la empresa o el equipo.
+  Cada proyecto incluye un nombre, descripción, barra de progreso (estado del proyecto),
+  y elementos multimedia (videos e imágenes).
+
+  Se utiliza la librería AOS (Animate On Scroll) para animar los elementos cuando el
+  usuario hace scroll.
+
+  Los proyectos están organizados en tarjetas alternas: algunas con texto a la izquierda
+  y otras con texto a la derecha. Esto mejora la experiencia visual del visitante.
+-->
+
+
+<!-- ============================================================
+     PROYECTO: ONCE 22
+     ============================================================
+  Este bloque corresponde a la presentación del proyecto "ONCE 22", 
+  el cual es una plataforma diseñada para facilitar la compra y el arriendo de apartamentos en Bogotá.
+  En esta sección se incluye una descripción del proyecto, una barra de progreso que indica su estado,
+  y un video junto con el logo que lo representa.
+-->
+<div class="project my-5" data-aos="fade-up">
+  
+  <!-- Texto del proyecto: Título, Descripción y Barra de Progreso -->
+  <div class="project-text" data-aos="fade-right" data-aos-delay="100">
+    <h3>Proyecto ONCE 22</h3>
+    <p>
+      Plataforma innovadora para facilitar la compra y arriendo de apartamentos en Bogotá,
+      mejorando la experiencia de propietarios y arrendatarios.
+    </p>
+
+    <!-- Barra de progreso: Indica el estado del proyecto -->
+    <div class="progress-container">
+      <div class="progress-bar" style="width: 100%"></div> <!-- Barra llena que indica que el proyecto está completo -->
+      <span class="progress-text">Terminado, publicado</span> <!-- Texto que indica que el proyecto ya está completado y publicado -->
+    </div>
+  </div>
+
+  <!-- Video y Logo del Proyecto: Presenta un video de fondo junto con el logo del proyecto -->
+  <div class="project-media" data-aos="fade-left" data-aos-delay="200">
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="../assets/video/22.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <img src="../assets/img/once22.png" alt="Logo Proyecto ONCE 22" class="logo-overlay" />
+  </div>
+</div>
+
+<!-- ============================================================
+     PROYECTO: INDUCARTON
+     ============================================================
+  En este bloque se muestra el proyecto "Inducarton", donde se presenta un video
+  del proyecto, el logo, una breve descripción y el estado actual del proyecto.
+-->
+<div class="project reverse" data-aos="fade-up">
+  
+  <!-- Video y Logo del Proyecto: Presenta un video de fondo junto con el logo del proyecto -->
+  <div class="project-media">
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="../assets/video/carton.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <img src="../assets/img/inducarton.png" alt="Logo Inducarton" class="logo-overlay" />
+  </div>
+
+  <!-- Texto del Proyecto: Título, Descripción y Barra de Progreso -->
+  <div class="project-text">
+    <h3>Inducarton</h3>
+    <p>
+      Se desarrolló la página web solicitada por la empresa.
+    </p>
+    <!-- Barra de progreso: Indica el estado del proyecto -->
+    <div class="progress-container">
+      <div class="progress-bar" style="width: 100%"></div> <!-- Barra llena que indica que el proyecto está completo -->
+      <span class="progress-text">Terminado, en revisión</span> <!-- Texto que indica que el proyecto está completado pero aún en revisión -->
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PROYECTO: PÁGINA RECTOR
+     ============================================================
+  En este bloque se presenta el proyecto "Página Rector", donde se muestra un video y 
+  el logo, junto con una descripción del proyecto y su progreso.
+-->
+<div class="project reverse" data-aos="fade-up">
+  
+  <!-- Video y Logo del Proyecto: Presenta un video de fondo junto con el logo del proyecto -->
+  <div class="project-media">
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="../assets/video/rector.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png"
+         alt="Logo Uniempresarial" class="logo-overlay" />
+  </div>
+
+  <!-- Texto del Proyecto: Título, Descripción y Barra de Progreso -->
+  <div class="project-text">
+    <h3>Página Rector</h3>
+    <p>
+      Creamos una plataforma personalizada con la información y funcionalidades
+      solicitadas por el rector de la universidad.
+    </p>
+    <!-- Barra de progreso: Indica el estado del proyecto -->
+    <div class="progress-container">
+      <div class="progress-bar" style="width: 100%"></div> <!-- Barra llena que indica que el proyecto está completo -->
+      <span class="progress-text">Terminado, en revisión</span> <!-- Texto que indica que el proyecto está completado pero aún en revisión -->
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     DIVISOR DE SECCIÓN: PROYECTOS UNIEMPRESARIAL
+     ============================================================
+  Esta parte introduce una nueva sección en la página, que es el encabezado 
+  para los proyectos relacionados con "Uniempresarial". Actúa como un 
+  divisor visual entre las distintas áreas o servicios de la página.
+-->
+<div class="section-divider">
+  <!-- Título de la sección, destacando "Proyectos Uniempresarial" -->
+  <h3>Proyectos <span class="text-red">Uniempresarial</span></h3>
+</div>
+
+<!-- ============================================================
+     PROYECTO: GENERAL UNIEMPRESARIAL
+     ============================================================
+  Aquí comienza el primer proyecto, que es el "Proyecto General Uniempresarial". 
+  La estructura contiene un video y una descripción del proyecto, así como 
+  una barra de progreso que muestra su estado actual.
+-->
+<div class="project reverse my-5" data-aos="fade-up">
+  
+  <!-- Media del proyecto: Video y logo del proyecto -->
+  <div class="project-media">
+    <!-- Video del proyecto que se reproduce automáticamente y en bucle -->
+    <video autoplay loop muted playsinline class="bg-video">
+      <!-- Fuente del video -->
+      <source src="../assets/video/proyectoGeneral.mp4" type="video/mp4" />
+      <!-- Mensaje de reemplazo si el navegador no soporta videos HTML5 -->
+      Tu navegador no soporta videos HTML5.
+    </video>
     
-            <!-- Botón Responsive -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Logo que se superpone sobre el video -->
+    <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png"
+         alt="Logo Uniempresarial" class="logo-overlay" />
+  </div>
+
+  <!-- Texto descriptivo del proyecto -->
+  <div class="project-text">
+    <!-- Título del proyecto -->
+    <h3>Proyecto General</h3>
+    <!-- Descripción breve del proyecto -->
+    <p>
+      Unificamos en una sola plataforma todos los proyectos en ejecución, 
+      brindando acceso centralizado para los encargados de distintas áreas.
+    </p>
     
-            <!-- Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav mx-auto">
-                <a class="nav-link" href="../index.html">INICIO</a>
-                <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
-                  <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-                    <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
-                    <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
-                    <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
-                    <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
-                <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                    rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
-              </ul>
-              <!-- Botón Contáctanos -->
-              <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
-            </div>
-          </div>
-        </nav>
-      </section>
+    <!-- Contenedor de la barra de progreso -->
+    <div class="progress-container">
+      <!-- Barra de progreso con ancho del 100%, indicando que el proyecto está completo -->
+      <div class="progress-bar" style="width: 100%"></div>
+      <!-- Texto que indica el estado actual del proyecto -->
+      <span class="progress-text">Terminado, en revisión</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PROYECTO: GENERADOR DE CERTIFICADOS
+     ============================================================
+  Aquí se presenta otro proyecto, el "Generador de Certificados". 
+  Similar al proyecto anterior, incluye un video, logo y descripción, 
+  así como el estado del proyecto con una barra de progreso.
+-->
+<div class="project reverse" data-aos="fade-up">
+  
+  <!-- Media del proyecto: Video y logo -->
+  <div class="project-media">
+    <!-- Video del proyecto que se reproduce automáticamente y en bucle -->
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="../assets/video/certificados.mp4" type="video/mp4" />
+      <!-- Mensaje si el navegador no soporta el video -->
+      Tu navegador no soporta videos HTML5.
+    </video>
     
+    <!-- Logo que se superpone sobre el video -->
+    <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png"
+         alt="Logo Uniempresarial" class="logo-overlay" />
+  </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center justify-content-center text-center">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8" data-aos="fade-up">
-                    <h1 class="hero-title">Innovación y Tecnología para tu Negocio</h1>
-                    <p class="hero-text">
-                        En <strong>FUsoft</strong>, llevamos tus ideas al siguiente nivel
-                        con soluciones tecnológicas avanzadas. Diseñamos software a medida
-                        para optimizar procesos, mejorar la eficiencia y potenciar el
-                        crecimiento empresarial.
-                    </p>
-                    <a href="#mas-informacion" class="btn btn-custom">Descubre más</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="features-section">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-3 feature-item" data-aos="zoom-in">
-                    <i class="fas fa-lightbulb feature-icon"></i>
-                    <p>Soluciones basadas en innovación</p>
-                </div>
-                <div class="col-md-3 feature-item" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-chart-line feature-icon"></i>
-                    <p>Productos escalables para tu negocio</p>
-                </div>
-                <div class="col-md-3 feature-item" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-handshake feature-icon"></i>
-                    <p>Conexión perfecta y soporte continuo</p>
-                </div>
-                <div class="col-md-3 feature-item" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-laptop-code feature-icon"></i>
-                    <p>Interfaces intuitivas y eficientes</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container my-5" data-aos="fade-up">
-        <div class="section-title">
-            <h2>Proyectos Destacados</h2>
-        </div>
-
-        <!-- Proyecto ONCE 22 -->
-        <div class="project my-5" data-aos="fade-up">
-            <div class="project-text" data-aos="fade-right" data-aos-delay="100">
-                <h3>Proyecto ONCE 22</h3>
-                <p>
-                    Plataforma innovadora para facilitar la compra y arriendo de
-                    apartamentos en Bogotá, mejorando la experiencia de propietarios y
-                    arrendatarios.
-                </p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
-                    <span class="progress-text">Terminado, publicado</span>
-                </div>
-            </div>
-            <div class="project-media" data-aos="fade-left" data-aos-delay="200">
-                <video autoplay loop muted playsinline class="bg-video">
-                    <source src="../assets/video/22.mp4" type="video/mp4" />
-                    Tu navegador no soporta videos HTML5.
-                </video>
-                <img src="../assets/img/once22.png" alt="Logo Proyecto ONCE 22" class="logo-overlay" />
-            </div>
-        </div>
-
-        <!-- Inducarton -->
-        <div class="project reverse"data-aos="fade-up">
-            <div class="project-media">
-                <video autoplay loop muted playsinline class="bg-video">
-                    <source src="../assets/video/carton.mp4" type="video/mp4" />
-                    Tu navegador no soporta videos HTML5.
-                </video>
-                <img src="../assets/img/inducarton.png" alt="Logo Inducarton" class="logo-overlay" />
-            </div>
-            <div class="project-text">
-                <h3>Inducarton</h3>
-                <p>Se desarrolló la página web solicitada por la empresa.</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
-                    <span class="progress-text">Terminado, en revisión</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="project reverse"data-aos="fade-up">
-            <div class="project-media">
-                <video autoplay loop muted playsinline class="bg-video">
-                    <source src="../assets/video/rector.mp4" type="video/mp4" />
-                    Tu navegador no soporta videos HTML5.
-                </video>
-                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
-                    class="logo-overlay" />
-            </div>
-            <div class="project-text">
-                <h3>Pagina Rector</h3>
-                <p>
-                    Creamos una plataforma personalizada con la información y
-                    funcionalidades solicitadas por el rector de la universidad.
-                </p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
-                    <span class="progress-text">Terminado, en revisión</span>
-                </div>
-            </div>
-        </div>
-        <div class="section-divider">
-            <h3>Proyectos <span class="text-red">Uniempresarial</span></h3>
-        </div>
-
-        <div class="project reverse my-5"data-aos="fade-up">
-            <div class="project-media">
-                <video autoplay loop muted playsinline class="bg-video">
-                    <source src="../assets/video/proyectoGeneral.mp4" type="video/mp4" />
-                    Tu navegador no soporta videos HTML5.
-                </video>
-                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
-                    class="logo-overlay" />
-            </div>
-            <div class="project-text">
-                <h3>Proyecto General</h3>
-                <p>
-                    Unificamos en una sola plataforma todos los proyectos en ejecución,
-                    brindando acceso centralizado para los encargados de distintas
-                    áreas.
-                </p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
-                    <span class="progress-text">Terminado, en revisión</span>
-                </div>
-            </div>
-        </div>
-        <div class="project reverse"data-aos="fade-up">
-            <div class="project-media">
-                <video autoplay loop muted playsinline class="bg-video">
-                    <source src="../assets/video/certificados.mp4" type="video/mp4" />
-                    Tu navegador no soporta videos HTML5.
-                </video>
-                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
-                    class="logo-overlay" />
-            </div>
-            <div class="project-text">
-                <h3>Generador de Certificados</h3>
-                <p>
-                    Desarrollamos una herramienta para validar certificados de manera
-                    segura y eficiente, tanto para empresas externas como para nuestra
-                    universidad.
-                </p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
-                    <span class="progress-text">Terminado, en revisión</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="project reverse"data-aos="fade-up">
-            <div class="project-media">
-                <video autoplay loop muted playsinline class="bg-video">
-                    <source src="../assets/video/biblioteca.mp4" type="video/mp4" />
-                    Tu navegador no soporta videos HTML5.
-                </video>
-                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
-                    class="logo-overlay" />
-            </div>
-            <div class="project-text">
-                <h3>Agendamiento de biblioteca.</h3>
-                <p>
-                    Optimizamos el uso de espacios con una plataforma de reserva de
-                    salas, permitiendo a los estudiantes verificar disponibilidad y
-                    gestionar su tiempo con mayor facilidad.
-                </p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
-                    <span class="progress-text">Terminado, en revisión</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="project reverse"data-aos="fade-up">
-            <div class="project-media">
-                <video autoplay loop muted playsinline class="bg-video">
-                    <source src="../assets/video/bienestar.mp4" type="video/mp4" />
-                    Tu navegador no soporta videos HTML5.
-                </video>
-                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
-                    class="logo-overlay" />
-            </div>
-            <div class="project-text">
-                <h3>Bienestar Universitario.</h3>
-                <p>
-                    Facilitamos la planificación y gestión de actividades del área de
-                    bienestar, asegurando una mejor experiencia para toda la comunidad
-                    universitaria.
-                </p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
-                    <span class="progress-text">Terminado, en revisión</span>
-                </div>
-            </div>
-        </div>
-        <div class="section-divider">
-            <h3>Proyectos en <span class="text-red">Desarrollo</span></h3>
-        </div>
-
-        <div class="project reverse my-5"data-aos="fade-up">
-            <div class="project-media">
-                <video autoplay loop muted playsinline class="bg-video">
-                    <source src="../assets/video/costos.mp4" type="video/mp4" />
-                    Tu navegador no soporta videos HTML5.
-                </video>
-                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
-                    class="logo-overlay" />
-            </div>
-            <div class="project-text">
-                <h3>Estructura de Costos.</h3>
-                <p>
-                    Implementamos un sistema para administrar y consultar información
-                    histórica de costos universitarios, mejorando la toma de decisiones
-                    estratégicas.
-                </p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 10%"></div>
-                    <span class="progress-text">Terminado, en revisión</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="project reverse"data-aos="fade-up">
-            <div class="project-media">
-                <video autoplay loop muted playsinline class="bg-video">
-                    <source src="../assets/video/gestion.mp4" type="video/mp4" />
-                    Tu navegador no soporta videos HTML5.
-                </video>
-                <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
-                    class="logo-overlay" />
-            </div>
-            <div class="project-text">
-                <h3>Proyecto Coformacion.</h3>
-                <p>
-                    Facilitamos el proceso de coformación entre estudiantes y empresas,
-                    permitiendo una integración más efectiva en el mundo laboral.
-                </p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 30%"></div>
-                    <span class="progress-text">Terminado, en revisión</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Más proyectos aquí... -->
-    </section>
-    <footer class="bg-primary text-light py-5">
-        <div class="container">
-          <div class="row">
-            <!-- Logo y Redes Sociales -->
-            <div class="col-md-3 text-center text-md-start">
-              <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png  "
-                alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
-                <img src="../assets/img/Nuevos logos/Fusoft complete.png"
-                alt="Uniempresarial Logo" class="mb-3" style="max-width: 150px" />
-              <div class="d-flex justify-content-center justify-content-md-start gap-2">
-                <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener"
-                  class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-                <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener"
-                  class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
-                <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener"
-                  class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank"
-                  rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
-              </div>
-            </div>
+  <!-- Texto descriptivo del proyecto -->
+  <div class="project-text">
+    <!-- Título del proyecto -->
+    <h3>Generador de Certificados</h3>
+    <!-- Descripción breve -->
+    <p>
+      Desarrollamos una herramienta para validar certificados de manera segura y eficiente, 
+      tanto para empresas externas como para nuestra universidad.
+    </p>
     
-            <!-- Programas y Enlaces Directos -->
-            <div class="col-md-3">
-              <h5 class="fw-bold">Nuestros Servicios</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
-                </li>
-                <li>
-                  <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la
-                    Medida</a>
-                </li>
-                <li>
-                  <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
-                </li>
-                <li>
-                  <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en Software</a>
-                </li>
-              </ul>
-              <h5 class="fw-bold mt-4">Enlaces Directos</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
-                </li>
-                <li>
-                  <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
-                    target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión
-                    Académica</a>
-                </li>
-                <li>
-                  <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
-                    class="text-light text-decoration-none">FAQs</a>
-                </li>
-              </ul>
-            </div>
-    
-            <!-- Normatividad -->
-            <div class="col-md-3">
-              <h5 class="fw-bold">Normatividad y Políticas</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
-                    class="text-light text-decoration-none">Acceso a la Información Pública</a>
-                </li>
-                <li>
-                  <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
-                    class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
-                </li>
-                <li>
-                  <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
-                    class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
-                </li>
-                <li>
-                  <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
-                    class="text-light text-decoration-none">Estados Financieros</a>
-                </li>
-              </ul>
-            </div>
-    
-            <!-- Mapa y Contacto -->
-            <div class="col-md-3 text-center text-md-start">
-              <h5 class="fw-bold">Ubicación</h5>
-              <div class="map-container" style="
-                  height: 150px;
-                  border-radius: 10px;
-                  overflow: hidden;
-                  margin-bottom: 10px;
-                ">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
-                  width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-              </div>
-              <p>
-                <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
-                #30-20 Bogotá D.C.
-              </p>
-              <p>
-                <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
-                6607, 6608
-              </p>
-              <p>
-                <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+    <!-- Contenedor de la barra de progreso -->
+    <div class="progress-container">
+      <!-- Barra de progreso que indica que el proyecto está completo -->
+      <div class="progress-bar" style="width: 100%"></div>
+      <!-- Estado del proyecto -->
+      <span class="progress-text">Terminado, en revisión</span>
+    </div>
+  </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/proyectos.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+<!-- ============================================================
+     PROYECTO: AGENDAMIENTO DE BIBLIOTECA
+     ============================================================
+  Este proyecto, "Agendamiento de Biblioteca", es otro de los proyectos que se presentan. 
+  También contiene un video, logo y una breve descripción con el estado actual del proyecto.
+-->
+<div class="project reverse" data-aos="fade-up">
+  <!-- Media del proyecto: Video y logo -->
+  <div class="project-media">
+    <!-- Video del proyecto -->
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="../assets/video/biblioteca.mp4" type="video/mp4" />
+      <!-- Mensaje si el navegador no soporta el video -->
+      Tu navegador no soporta videos HTML5.
+    </video>
+    
+    <!-- Logo del proyecto que se superpone sobre el video -->
+    <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton"
+         class="logo-overlay" />
+  </div>
+
+  <!-- Texto descriptivo del proyecto -->
+  <div class="project-text">
+    <!-- Título del proyecto -->
+    <h3>Agendamiento de biblioteca.</h3>
+    <!-- Descripción -->
+    <p>
+      Optimizamos el uso de espacios con una plataforma de reserva de salas, 
+      permitiendo a los estudiantes verificar disponibilidad y gestionar su tiempo con mayor facilidad.
+    </p>
+    
+    <!-- Barra de progreso -->
+    <div class="progress-container">
+      <!-- Barra de progreso al 100% -->
+      <div class="progress-bar" style="width: 100%"></div>
+      <!-- Estado del proyecto -->
+      <span class="progress-text">Terminado, en revisión</span>
+    </div>
+  </div>
+</div>
+       !-- ============================================================
+     SECCIÓN DE PROYECTOS
+     ============================================================
+  Esta sección se utiliza para mostrar diferentes proyectos que están en 
+  distintas etapas de desarrollo. Cada proyecto está representado con un 
+  video, una imagen superpuesta con el logo y una barra de progreso que 
+  indica el estado actual del proyecto. El propósito es dar una vista 
+  rápida de los proyectos que se están manejando, su descripción y su avance.
+-->
+
+<!-- Proyecto: Bienestar Universitario -->
+<div class="project reverse" data-aos="fade-up">
+  
+  <!-- Contenido multimedia del proyecto -->
+  <div class="project-media">
+    
+    <!-- Video del proyecto -->
+    <video autoplay loop muted playsinline class="bg-video">
+      <!-- Fuente del video -->
+      <source src="../assets/video/bienestar.mp4" type="video/mp4" />
+      <!-- Mensaje de respaldo en caso de que el navegador no soporte videos -->
+      Tu navegador no soporta videos HTML5.
+    </video>
+    
+    <!-- Logo que se superpone al video -->
+    <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton" class="logo-overlay" />
+  </div>
+  
+  <!-- Texto descriptivo del proyecto -->
+  <div class="project-text">
+    <!-- Título del proyecto -->
+    <h3>Bienestar Universitario.</h3>
+    
+    <!-- Descripción del proyecto -->
+    <p>
+      Facilitamos la planificación y gestión de actividades del área de
+      bienestar, asegurando una mejor experiencia para toda la comunidad
+      universitaria.
+    </p>
+    
+    <!-- Barra de progreso del proyecto -->
+    <div class="progress-container">
+      <!-- Barra de progreso que muestra el avance del proyecto -->
+      <div class="progress-bar" style="width: 100%"></div>
+      
+      <!-- Texto que describe el estado del proyecto -->
+      <span class="progress-text">Terminado, en revisión</span>
+    </div>
+  </div>
+</div>
+
+<!-- Separador entre proyectos -->
+<div class="section-divider">
+  <h3>Proyectos en <span class="text-red">Desarrollo</span></h3>
+</div>
+
+<!-- Proyecto: Estructura de Costos -->
+<div class="project reverse my-5" data-aos="fade-up">
+  
+  <!-- Contenido multimedia del proyecto -->
+  <div class="project-media">
+    
+    <!-- Video del proyecto -->
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="../assets/video/costos.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    
+    <!-- Logo que se superpone al video -->
+    <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton" class="logo-overlay" />
+  </div>
+  
+  <!-- Texto descriptivo del proyecto -->
+  <div class="project-text">
+    <!-- Título del proyecto -->
+    <h3>Estructura de Costos.</h3>
+    
+    <!-- Descripción del proyecto -->
+    <p>
+      Implementamos un sistema para administrar y consultar información
+      histórica de costos universitarios, mejorando la toma de decisiones
+      estratégicas.
+    </p>
+    
+    <!-- Barra de progreso del proyecto -->
+    <div class="progress-container">
+      <!-- Barra de progreso que muestra el avance del proyecto -->
+      <div class="progress-bar" style="width: 10%"></div>
+      
+      <!-- Texto que describe el estado del proyecto -->
+      <span class="progress-text">Terminado, en revisión</span>
+    </div>
+  </div>
+</div>
+
+<!-- Proyecto: Proyecto Coformación -->
+<div class="project reverse" data-aos="fade-up">
+  
+  <!-- Contenido multimedia del proyecto -->
+  <div class="project-media">
+    
+    <!-- Video del proyecto -->
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="../assets/video/gestion.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    
+    <!-- Logo que se superpone al video -->
+    <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo Inducarton" class="logo-overlay" />
+  </div>
+  
+  <!-- Texto descriptivo del proyecto -->
+  <div class="project-text">
+    <!-- Título del proyecto -->
+    <h3>Proyecto Coformacion.</h3>
+    
+    <!-- Descripción del proyecto -->
+    <p>
+      Facilitamos el proceso de coformación entre estudiantes y empresas,
+      permitiendo una integración más efectiva en el mundo laboral.
+    </p>
+    
+    <!-- Barra de progreso del proyecto -->
+    <div class="progress-container">
+      <!-- Barra de progreso que muestra el avance del proyecto -->
+      <div class="progress-bar" style="width: 30%"></div>
+      
+      <!-- Texto que describe el estado del proyecto -->
+      <span class="progress-text">Terminado, en revisión</span>
+    </div>
+  </div>
+</div>
+<!-- ============================================================
+     SECCIÓN DE PIE DE PÁGINA (FOOTER)
+     ============================================================
+  El pie de página contiene información importante como logos, redes sociales, 
+  enlaces rápidos a servicios, normatividad y la ubicación física de la institución. 
+  Esta sección también incluye los scripts necesarios para la funcionalidad del sitio.
+-->
+
+<!-- Sección Footer -->
+<footer class="bg-primary text-light py-5">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Logo y Redes Sociales -->
+      <div class="col-md-3 text-center text-md-start">
+        
+        <!-- Logos de la institución -->
+        <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png" 
+             alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
+        <img src="../assets/img/Nuevos logos/Fusoft complete.png" 
+             alt="Uniempresarial Logo" class="mb-3" style="max-width: 150px" />
+        
+        <!-- Enlaces a redes sociales -->
+        <div class="d-flex justify-content-center justify-content-md-start gap-2">
+          <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Programas y Enlaces Directos -->
+      <div class="col-md-3">
+        <!-- Título de la sección de servicios -->
+        <h5 class="fw-bold">Nuestros Servicios</h5>
+        
+        <!-- Lista de enlaces a los servicios -->
+        <ul class="list-unstyled">
+          <li>
+            <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
+          </li>
+          <li>
+            <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la Medida</a>
+          </li>
+          <li>
+            <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
+          </li>
+          <li>
+            <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitación en Software</a>
+          </li>
+        </ul>
+
+        <!-- Título de la sección de enlaces directos -->
+        <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+
+        <!-- Lista de enlaces directos -->
+        <ul class="list-unstyled">
+          <li>
+            <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
+          </li>
+          <li>
+            <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1" 
+               target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">
+              Sistema de Gestión Académica
+            </a>
+          </li>
+          <li>
+            <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">
+              FAQs
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Normatividad -->
+      <div class="col-md-3">
+        <!-- Título de la sección de normatividad -->
+        <h5 class="fw-bold">Normatividad y Políticas</h5>
+        
+        <!-- Lista de enlaces a normatividad y políticas -->
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">
+              Acceso a la Información Pública
+            </a>
+          </li>
+          <li>
+            <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">
+              Derechos Pecuniarios 2025
+            </a>
+          </li>
+          <li>
+            <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">
+              Derechos Pecuniarios 2024
+            </a>
+          </li>
+          <li>
+            <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">
+              Estados Financieros
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mapa y Contacto -->
+      <div class="col-md-3 text-center text-md-start">
+        <!-- Título de la sección de ubicación -->
+        <h5 class="fw-bold">Ubicación</h5>
+
+        <!-- Mapa embebido de Google Maps -->
+        <div class="map-container" style="height: 150px; border-radius: 10px; overflow: hidden; margin-bottom: 10px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus" width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <!-- Dirección, teléfono y correo de contacto -->
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a #30-20 Bogotá D.C.
+        </p>
+        <p>
+          <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604, 6607, 6608
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS Y ENLACES PARA FUNCIONALIDAD Y ANIMACIONES
+     ============================================================
+  Se incluyen los scripts necesarios para la funcionalidad de la página, 
+  como el funcionamiento de Bootstrap y la librería de animaciones AOS 
+  (Animation On Scroll).
+-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/proyectos.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init(); <!-- Inicializa las animaciones AOS -->
+</script>
+
 </body>
-
 </html>
