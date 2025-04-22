@@ -1,183 +1,183 @@
+/* ============================================================
+     ESTILOS GENERALES
+     ============================================================ */
+
+/* Definir la fuente predeterminada para todo el sitio */
 body {
   font-family: Arial, sans-serif;
 }
 
-/* Navbar */
+/* ============================================================
+     NAVBAR (barra de navegación)
+     ============================================================ */
+
+/* Estilo general para la barra de navegación */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #e9ecef;
-  padding: 10px 15px;
-  font-family: 'Arial', sans-serif;
+  position: fixed; /* Hace que la barra de navegación permanezca fija en la parte superior */
+  top: 0; /* Coloca la barra en la parte superior */
+  width: 100%; /* Hace que la barra ocupe todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que la barra de navegación esté siempre por encima de otros elementos */
+  background-color: white; /* Color de fondo blanco */
+  border-bottom: 2px solid #e9ecef; /* Añade una línea de separación en la parte inferior de la barra */
+  padding: 10px 15px; /* Espaciado interno en la barra */
+  font-family: 'Arial', sans-serif; /* Establece la fuente para el navbar */
 }
 
+/* Agrega un padding superior al body para evitar que el contenido quede cubierto por el navbar */
 body {
-  padding-top: 80px;
-  /* Ajusta este valor si el navbar es más alto */
+  padding-top: 80px; /* Ajusta este valor si el navbar es más alto */
 }
 
-/* Estilo del Logo */
+/* Estilo de las imágenes dentro del navbar (logos) */
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Limita la altura máxima de los logos dentro del navbar */
 }
 
-/* Links del Navbar */
+/* Estilo de los links dentro del navbar */
 .navbar-nav .nav-link {
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  color: black; /* Color negro para los links */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Hace que los links sean negritas */
+  margin: 0 10px; /* Espaciado a la izquierda y derecha de los links */
+  transition: color 0.3s ease; /* Transición suave cuando se cambia el color */
 }
 
+/* Efecto al pasar el mouse sobre los links */
 .navbar-nav .nav-link:hover {
-  color: #a4022c;
+  color: #a4022c; /* Cambia el color del texto a rojo oscuro cuando se pasa el mouse */
 }
 
-/* Dropdown */
+/* Estilo de los menús desplegables (dropdown) */
 .dropdown-menu {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Bordes redondeados en el menú */
+  border: 1px solid #ddd; /* Borde sutil */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave debajo del menú */
 }
 
+/* Estilo de los items dentro del menú desplegable */
 .dropdown-item {
-  color: black;
-  font-size: 14px;
-  padding: 10px 20px;
+  color: black; /* Color de texto negro */
+  font-size: 14px; /* Tamaño de fuente */
+  padding: 10px 20px; /* Espaciado interno de los elementos */
 }
 
+/* Efecto al pasar el mouse sobre los elementos del menú desplegable */
 .dropdown-item:hover {
-  background-color: #a4022c;
-  color: white;
-  border-radius: 5px;
+  background-color: #a4022c; /* Fondo rojo al pasar el mouse */
+  color: white; /* Color blanco del texto */
+  border-radius: 5px; /* Bordes redondeados */
 }
 
-/* Botón Contáctanos */
+/* Estilo de los botones de la clase btn-danger */
 .btn-danger {
-  background-color: #a4022c;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
+  background-color: #a4022c; /* Fondo rojo */
+  border: none; /* Elimina el borde del botón */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Hace el texto en negritas */
+  text-transform: uppercase; /* Transforma el texto a mayúsculas */
 }
 
+/* Efecto al pasar el mouse sobre los botones */
 .btn-danger:hover {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Mantiene el mismo color rojo en hover */
 }
 
-.navbar-brand img {
-  max-height: 50px;
+/* ============================================================
+     HERO SECTION (sección destacada o hero)
+     ============================================================ */
+
+/* Estilos generales para la sección de héroe */
+.hero-section {
+  background-color: #f8f9fa; /* Fondo gris claro */
+  display: flex; /* Utiliza Flexbox para alinear los elementos */
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  position: relative; /* Para posicionar otros elementos de forma absoluta */
+  overflow: hidden; /* Evita que el contenido se desborde */
 }
 
-
-.floating-img {
-  animation: floatAnimation 3s ease-in-out infinite;
+/* Estilo del texto en el héroe */
+.hero-text h1 {
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  font-weight: 700; /* Negrita */
+  color: #333; /* Color gris oscuro */
 }
 
-/* Fondo decorativo detrás de la imagen */
+/* Resaltar una parte del texto en rojo */
+.highlight {
+  color: red;
+}
+
+/* Estilo de la imagen en la sección hero */
+.hero-image img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+  height: 100%; /* Hace que la imagen ocupe toda la altura disponible */
+  object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
+}
+
+/* Recorte de la imagen solo en pantallas grandes */
+@media (min-width: 992px) {
+  .hero-image img {
+    clip-path: ellipse(70% 100% at 100% 50%); /* Recorta la imagen en forma de elipse */
+  }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 991px) {
+  .hero-section {
+    flex-direction: column; /* Coloca los elementos en columna */
+    text-align: center; /* Centra el texto */
+    padding: 30px 5%; /* Añade padding alrededor del contenido */
+  }
+
+  .hero-text {
+    width: 100%; /* Hace que el texto ocupe todo el ancho */
+  }
+
+  .hero-image {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho */
+  }
+}
+
+/* ============================================================
+     CITAS Y FONDO DEL FOOTER
+     ============================================================ */
+
+/* Cita fija en la parte inferior */
+.quote {
+  width: 100%;
+  background: black; /* Fondo negro */
+  color: white; /* Color de texto blanco */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding: 15px 30px; /* Padding alrededor del contenido */
+  font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Fondo decorativo animado detrás de la imagen */
 .floating-bg {
   position: absolute;
   width: 80%;
   height: 80%;
-  background: rgba(0, 123, 255, 0.1);
-  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.1); /* Fondo azul semitransparente */
+  border-radius: 50%; /* Hace que el fondo sea circular */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  filter: blur(50px);
+  transform: translate(-50%, -50%); /* Centra el fondo */
+  z-index: -1; /* Coloca el fondo detrás del contenido */
+  filter: blur(50px); /* Aplica un desenfoque */
 }
 
 /* Animación de flotación */
 @keyframes floatAnimation {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
 }
 
-.hero-section {
-  background-color: #f8f9fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-}
-
-.highlight {
-  color: red;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* --- Recorte de imagen solo en pantallas grandes --- */
-@media (min-width: 992px) {
-  .hero-image img {
-    clip-path: ellipse(70% 100% at 100% 50%);
-  }
-}
-
-/* --- Ajustes en pantallas pequeñas (móviles) --- */
-@media (max-width: 991px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 5%;
-  }
-
-  .hero-text {
-    width: 100%;
-  }
-
-  .hero-image {
-    width: 100%;
-  }
-}
-
-/* --- Cita inferior fija --- */
-.quote {
-  width: 100%;
-  background: black;
-  color: white;
-  text-align: left;
-  padding: 15px 30px;
-  font-size: 1rem;
-}
-
-
-/* Animación flotante */
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(20px);
-  }
-}
-
+/* Estilo para los círculos decorativos flotantes */
 .decorative-circle {
   position: absolute;
   width: 200px;
@@ -189,17 +189,22 @@ body {
   animation: float 8s ease-in-out infinite;
 }
 
-/* Tarjetas con efecto hover */
+/* ============================================================
+     ESTILOS PARA TARJETAS Y EFECTOS DE HOVER
+     ============================================================ */
+
+/* Efecto de hover en las tarjetas */
 .hover-effect {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto hover */
 }
 
+/* Efecto al pasar el mouse sobre las tarjetas */
 .hover-effect:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15); /* Añade sombra para darle profundidad */
 }
 
-/* Iconos circulares */
+/* Efectos en los iconos dentro de las tarjetas */
 .icon-circle {
   width: 80px;
   height: 80px;
@@ -216,40 +221,43 @@ body {
 
 /* Efecto de vibración en los iconos al pasar el mouse */
 .hover-effect:hover .icon-circle {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1) rotate(5deg); /* Aumenta el tamaño y rota ligeramente */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); /* Añade sombra más pronunciada */
 }
 
-/* Colores personalizados */
+/* ============================================================
+     COLORES PERSONALIZADOS PARA TEXTOS
+     ============================================================ */
+
+/* Colores para lenguajes de programación */
 .text-primary {
-  color: #306998;
+  color: #306998; /* Color personalizado para Python */
 }
 
-/* Python */
 .text-warning {
-  color: #f7df1e;
+  color: #f7df1e; /* Color amarillo para advertencias */
 }
 
-/* JavaScript */
 .text-danger {
-  color: #f44336;
+  color: #f44336; /* Color rojo para errores */
 }
 
-/* Java */
 .text-purple {
-  color: #512bd4;
+  color: #512bd4; /* Color púrpura para Java */
 }
 
-/* .NET */
+/* ============================================================
+     FOOTER (pie de página)
+     ============================================================ */
 
-/* Añadir imagen de fondo y capa oscura */
-
+/* Estilo del pie de página */
 footer {
-  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
+  background: url("../assets/img/fondo.webp") no-repeat center center/cover; /* Fondo con imagen */
+  color: #fff; /* Color de texto blanco */
   position: relative;
 }
 
+/* Capa oscura sobre el fondo del footer */
 footer::after {
   content: "";
   position: absolute;
@@ -257,19 +265,22 @@ footer::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Fondo negro semi-transparente */
 }
 
-/* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
+/* Asegura que el contenido dentro del footer esté por encima de la capa oscura */
 footer .container {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Pone el contenido por encima de la capa oscura */
 }
 
+/* ============================================================
+     ESTILOS DEL HERO CON ANIMACIÓN
+     ============================================================ */
 
-/* Estilos del Hero */
+/* Estilo general de la sección hero */
 .hero {
-  height: 91vh;
+  height: 91vh; /* Altura del hero */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,7 +291,7 @@ footer .container {
   padding: 20px;
 }
 
-/* Animación del fondo con código */
+/* Animación de desvanecimiento en el fondo del hero */
 .hero::before {
   content: "";
   position: absolute;
@@ -289,49 +300,88 @@ footer .container {
   width: 100%;
   height: 100%;
   background: url('../assets/img/fondo.webp') center/cover no-repeat;
-  opacity: 0.2;
+  opacity: 0.2; /* Opacidad baja para que el fondo no opaque el contenido */
   animation: fadeIn 3s ease-in-out;
 }
 
-/* Contenedor del contenido */
+/* Contenedor de contenido del hero */
 .hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 700px;
+  z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+  max-width: 700px; /* Establece un tamaño máximo para el contenido */
   color: #ffffff;
 }
 
+/* Estilo del título en el hero */
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.5rem; /* Tamaño grande para el título */
   font-weight: bold;
-  color: #273474;
+  color: #273474; /* Color azul oscuro */
 }
 
+/* Resaltar una parte del texto en rojo dentro del h1 */
 .hero h1 span {
   color: #e4022c;
 }
 
+/* Estilo del párrafo en el hero */
 .hero p {
-  font-size: 1.2rem;
-  opacity: 0.8;
-  margin: 20px 0;
+  font-size: 1.2rem; /* Tamaño de fuente del párrafo */
+  opacity: 0.8; /* Opacidad ligeramente reducida */
+  margin: 20px 0; /* Espaciado alrededor del párrafo */
 }
 
+/* Estilo de los botones en el hero */
 .hero .btn-custom {
-  background-color: #273474;
+  background-color: #273474; /* Fondo azul oscuro */
   border: none;
-  font-size: 1.2rem;
-  padding: 12px 30px;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
+  font-size: 1.2rem; /* Tamaño de fuente */
+  padding: 12px 30px; /* Padding alrededor del botón */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+  color: white; /* Color blanco para el texto */
+  text-decoration: none; /* Elimina el subrayado del texto */
+  display: inline-block; /* Hace que el botón se ajuste en línea */
 }
+
+/* ============================================================
+   ESTILO PARA EL HOVER DEL BOTÓN PERSONALIZADO EN LA SECCIÓN HERO
+   ============================================================
+   Este fragmento de código define los estilos para el estado "hover" 
+   (cuando el usuario pasa el mouse sobre el elemento) de los botones 
+   personalizados en la sección de "Hero" de la página. La clase 
+   `.btn-custom` es utilizada para definir la apariencia de los botones 
+   dentro de la sección de bienvenida o héroe.
+*/
 
 .hero .btn-custom:hover {
-  background-color: #e4022c;
-  transform: scale(1.05);
+  background-color: #e4022c; /* Cambia el color de fondo del botón a un rojo específico al pasar el mouse */
+  transform: scale(1.05);    /* Aumenta ligeramente el tamaño del botón al 105% de su tamaño original */
 }
 
-/* Efecto Fade-In */
+/* ============================================================
+   EFECTO FADE-IN (Desvanecimiento)
+   ============================================================
+   Este fragmento se refiere a un efecto de animación llamado "Fade-In", 
+   que consiste en hacer que los elementos en la página aparezcan gradualmente 
+   a medida que se cargan o a medida que el usuario los ve. Este efecto 
+   suele ser utilizado para mejorar la experiencia del usuario al hacer 
+   que la carga de contenido sea más fluida.
+
+   Aunque no está completado, generalmente se usaría algo como lo siguiente:
+*/
+
+.fade-in {
+  opacity: 0;               /* Inicialmente, el elemento es completamente transparente */
+  animation: fadeInAnimation 1s forwards; /* Aplica una animación llamada "fadeInAnimation" de 1 segundo de duración */
+}
+
+/* Definición de la animación "fadeInAnimation" */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0; /* Al inicio de la animación, el elemento es invisible */
+  }
+  100% {
+    opacity: 1; /* Al final de la animación, el elemento es completamente visible */
+  }
+}
