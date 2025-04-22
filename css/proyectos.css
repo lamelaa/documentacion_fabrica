@@ -1,202 +1,242 @@
+/* ============================================================
+     Estilos Generales
+     ============================================================
+
+  Estos estilos afectan principalmente a la apariencia global del sitio web. 
+  Se incluye la definición de la fuente, el fondo, el comportamiento del navbar y otros componentes visuales.
+
+*/
+
+/* Establecer la fuente base para todo el cuerpo del documento */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Define que la fuente por defecto para todo el texto es Arial o sans-serif */
 }
 
-/* Navbar */
+/* ============================================================
+     Navbar (Barra de Navegación)
+     ============================================================
+  La barra de navegación está fija en la parte superior y permanece visible mientras se hace scroll.
+  Se ajusta para ofrecer un diseño limpio y con buena visibilidad de los enlaces de navegación.
+
+*/
+
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: white;
-    border-bottom: 2px solid #e9ecef;
-    padding: 10px 15px;
-    font-family: 'Arial', sans-serif;
+    position: fixed; /* La barra de navegación está fija en la parte superior de la página */
+    top: 0; /* Coloca la barra de navegación en la parte superior */
+    width: 100%; /* Hace que la barra de navegación ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que la barra de navegación esté siempre por encima de otros elementos */
+    background-color: white; /* Fondo blanco para la barra de navegación */
+    border-bottom: 2px solid #e9ecef; /* Línea de borde gris claro en la parte inferior */
+    padding: 10px 15px; /* Espaciado interior de la barra de navegación */
+    font-family: 'Arial', sans-serif; /* Define la fuente para los textos de la barra */
 }
 
+/* Ajusta el padding superior del body para que no quede tapado por el navbar fijo */
 body {
-    padding-top: 80px;
-    /* Ajusta este valor si el navbar es más alto */
+    padding-top: 80px; /* Deja espacio suficiente para que no se sobreponga el contenido al navbar */
 }
 
-/* Estilo del Logo */
+/* Estilo del Logo en el Navbar */
 .navbar-brand img {
-    max-height: 50px;
+    max-height: 50px; /* Limita la altura máxima del logo a 50px */
 }
 
-/* Links del Navbar */
+/* Estilo de los enlaces en el navbar */
 .navbar-nav .nav-link {
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    color: black; /* Color negro para los enlaces */
+    font-size: 16px; /* Tamaño de fuente de 16px */
+    font-weight: bold; /* Enfatiza el texto con negritas */
+    margin: 0 10px; /* Margen de 10px entre los enlaces */
+    transition: color 0.3s ease; /* Transición suave cuando el color del enlace cambia */
 }
 
+/* Efecto al pasar el ratón sobre los enlaces del navbar */
 .navbar-nav .nav-link:hover {
-    color: #a4022c;
+    color: #a4022c; /* Cambia el color a rojo cuando el ratón pasa sobre el enlace */
 }
 
-/* Dropdown */
+/* Estilos para el menú desplegable en el navbar */
 .dropdown-menu {
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordes redondeados para el menú */
+    border: 1px solid #ddd; /* Borde gris claro */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
 }
 
 .dropdown-item {
-    color: black;
-    font-size: 14px;
-    padding: 10px 20px;
+    color: black; /* Color de texto negro para los elementos del menú */
+    font-size: 14px; /* Tamaño de fuente de 14px */
+    padding: 10px 20px; /* Relleno interior de 10px en el eje vertical y 20px en el eje horizontal */
 }
 
+/* Efecto al pasar el ratón sobre los elementos del menú desplegable */
 .dropdown-item:hover {
-    background-color: #a4022c;
-    color: white;
-    border-radius: 5px;
+    background-color: #a4022c; /* Cambia el fondo a rojo */
+    color: white; /* Cambia el texto a blanco */
+    border-radius: 5px; /* Bordes redondeados cuando se pasa el ratón */
 }
 
-/* Botón Contáctanos */
+/* ============================================================
+     Estilos del Botón "Contáctanos"
+     ============================================================
+  Aquí se define el aspecto del botón "Contáctanos" que aparece en la barra de navegación, 
+  proporcionando un color llamativo y una interacción atractiva al pasar el ratón.
+
+*/
+
 .btn-danger {
-    background-color: #a4022c;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+    background-color: #a4022c; /* Fondo rojo para el botón */
+    border: none; /* Elimina el borde del botón */
+    font-size: 16px; /* Tamaño de fuente de 16px */
+    font-weight: bold; /* Aplica negritas al texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
 
+/* Efecto al pasar el ratón sobre el botón "Contáctanos" */
 .btn-danger:hover {
-    background-color: #a4022c;
+    background-color: #a4022c; /* Mantiene el fondo rojo sin cambios */
 }
 
-.navbar-brand img {
-    max-height: 50px;
-}
+/* ============================================================
+     Animación: Efecto de Flotación
+     ============================================================
+  Se define una animación para crear un movimiento de flotación (desplazamiento vertical) 
+  en algunos elementos cuando se carga la página o cuando se visualiza un componente en particular.
 
-/*animacion como funciona*/
+*/
+
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
+    0%, 100% {
+        transform: translateY(0); /* Elemento en su posición inicial */
     }
 
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-20px); /* Desplazamiento hacia arriba */
     }
 }
 
-/* Añadir imagen de fondo y capa oscura */
+/* ============================================================
+     Estilo del Footer
+     ============================================================
+  Aquí se define un fondo de imagen para el pie de página y se aplica una capa oscura 
+  para asegurar que el texto sea legible sobre cualquier tipo de imagen.
+
+*/
+
 footer {
-    background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-    color: #fff;
-    position: relative;
+    background: url("../assets/img/fondo.webp") no-repeat center center/cover; /* Fondo de imagen que cubre toda el área del footer */
+    color: #fff; /* Color de texto blanco */
+    position: relative; /* Para gestionar la posición de los elementos dentro del footer */
 }
 
+/* Capa oscura para el fondo */
 footer::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    content: ""; /* Inserta un pseudo-elemento vacío */
+    position: absolute; /* Posición absoluta para cubrir todo el footer */
+    top: 0; /* Alineación superior */
+    left: 0; /* Alineación izquierda */
+    width: 100%; /* Ocupa el 100% del ancho */
+    height: 100%; /* Ocupa el 100% de la altura */
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro con 80% de opacidad */
 }
 
-/* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
+/* Asegurarse de que los elementos dentro del footer estén por encima de la capa oscura */
 footer .container {
-    position: relative;
-    z-index: 2;
+    position: relative; /* Hace que los elementos dentro del footer estén por encima de la capa oscura */
+    z-index: 2; /* Z-index para poner los elementos por encima */
 }
 
-/* Estilos generales */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-}
+/* ============================================================
+     Sección "Sobre Nosotros"
+     ============================================================
+  Esta sección tiene una imagen de fondo, una capa oscura encima, y un contenido centrado
+  que presenta información sobre la empresa.
 
-/* Sección Sobre Nosotros */
+*/
+
 .sobre-nosotros {
     position: relative;
-    background: url('../assets/img/fondo.webp') center/cover no-repeat;
-    height: 91vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    overflow: hidden;
+    background: url('../assets/img/fondo.webp') center/cover no-repeat; /* Imagen de fondo que cubre todo el área */
+    height: 91vh; /* Altura de la sección de 91% de la pantalla */
+    display: flex; /* Usamos Flexbox para alinear el contenido */
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto dentro de la sección */
+    color: white; /* Establece el color blanco para el texto */
+    padding: 20px; /* Añade un poco de espacio interno */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
 }
 
-/* Capa de difuminado para el fondo */
+/* Capa oscura encima del fondo */
 .sobre-nosotros::before {
-    content: "";
-    position: absolute;
+    content: ""; /* Pseudo-elemento para la capa oscura */
+    position: absolute; /* Alineación absoluta */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.6); /* Capa oscura con 60% de opacidad */
+    backdrop-filter: blur(5px); /* Aplica un desenfoque al fondo */
+    z-index: 1; /* Asegura que la capa esté por encima de la imagen de fondo */
 }
 
-/* Contenido */
+/* Contenido que aparece sobre la capa oscura */
 .contenido {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
-    animation: fadeInUp 1s ease-in-out;
+    position: relative; /* Alineación dentro de la sección */
+    z-index: 2; /* Coloca el contenido por encima de la capa oscura */
+    max-width: 700px; /* Define un ancho máximo para el contenido */
+    animation: fadeInUp 1s ease-in-out; /* Animación de entrada */
 }
 
-/* Animación de entrada */
+/* Animación de desvanecimiento y desplazamiento hacia arriba */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(30px); /* Empieza desfasado hacia abajo */
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0); /* Termina en su posición original */
     }
 }
 
-/* Estilo de los títulos */
+/* Estilo de los títulos en la sección "Sobre Nosotros" */
 .contenido h2 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-transform: uppercase;
+    font-size: 2.8rem; /* Tamaño grande para los títulos */
+    font-weight: bold; /* Negritas para los títulos */
+    margin-bottom: 15px; /* Espaciado debajo del título */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
 
+/* Resaltar una palabra clave en los títulos */
 .destacado {
-    color: #e4022c;
+    color: #e4022c; /* Color rojo destacado */
 }
 
+/* Estilo del texto en la sección "Sobre Nosotros" */
 .contenido p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-bottom: 25px;
+    font-size: 1.2rem; /* Tamaño moderado para los párrafos */
+    opacity: 0.9; /* Ligera opacidad para darle un toque más sutil */
+    margin-bottom: 25px; /* Margen inferior de 25px */
 }
 
-/* Botón elegante */
+/* Estilo de los botones personalizados */
 .btn-custom {
-    background: linear-gradient(45deg, #273474, #e4022c);
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(255, 61, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    border: none;
+    background: linear-gradient(45deg, #273474, #e4022c); /* Fondo en gradiente */
+    color: white; /* Texto en blanco */
+    padding: 12px 25px; /* Relleno interior */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    border-radius: 30px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    display: inline-block; /* Hace que el enlace se comporte como un bloque */
+    box-shadow: 0 4px 15px rgba(255, 61, 0, 0.3); /* Sombra suave */
+    transition: all 0.3s ease-in-out; /* Transición suave al pasar el ratón */
+    border: none; /* Elimina el borde del botón */
 }
 
+/* Efecto al pasar el ratón sobre el botón personalizado */
 .btn-custom:hover {
-    background: linear-gradient(45deg, #e4022c, #273474);
-    box-shadow: 0 6px 20px rgba(255, 61, 0, 0.5);
-    transform: scale(1.05);
+    background: linear-gradient(45deg, #e4022c, #273474); /* Invierte el gradiente del fondo */
+    box-shadow: 0 6px 20px rgba(255, 61, 0, 0.5); /* Aumenta el tamaño de la sombra */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
 }
