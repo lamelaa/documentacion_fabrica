@@ -2,236 +2,227 @@
    General Styles
    ----------------------------------------------- */
 
-
+/* Definición de la fuente global para el cuerpo del sitio */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Establece Arial como la fuente predeterminada para el cuerpo */
 }
 
 /* Navbar */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #e9ecef;
-  padding: 10px 15px;
-  font-family: 'Arial', sans-serif;
+  position: fixed; /* La barra de navegación se mantiene fija en la parte superior */
+  top: 0; /* Alinea la barra de navegación al principio de la página */
+  width: 100%; /* Asegura que la barra ocupe todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que la barra de navegación quede por encima de otros elementos */
+  background-color: white; /* Color de fondo blanco para la barra */
+  border-bottom: 2px solid #e9ecef; /* Añade una línea gris clara en la parte inferior de la barra */
+  padding: 10px 15px; /* Añade espacio dentro de la barra de navegación */
+  font-family: 'Arial', sans-serif; /* Establece Arial como la fuente dentro del navbar */
 }
 
+/* Ajuste para asegurar que el contenido no quede cubierto por la barra de navegación fija */
 body {
-  padding-top: 80px;
-  /* Ajusta este valor si el navbar es más alto */
+  padding-top: 80px; /* El contenido tiene un padding en la parte superior para no quedar debajo del navbar */
 }
 
-/* Estilo del Logo */
+/* Estilo de las imágenes del logo dentro de la barra de navegación */
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Limita la altura máxima del logo */
 }
 
-/* Links del Navbar */
+/* Estilo de los links de la barra de navegación */
 .navbar-nav .nav-link {
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  color: black; /* Color negro para los enlaces */
+  font-size: 16px; /* Tamaño de fuente para los enlaces */
+  font-weight: bold; /* Hace los enlaces en negrita */
+  margin: 0 10px; /* Añade margen entre los enlaces */
+  transition: color 0.3s ease; /* Transición suave del color al hacer hover */
 }
 
+/* Estilo para los enlaces cuando el usuario pasa el mouse por encima (hover) */
 .navbar-nav .nav-link:hover {
-  color: #a4022c;
+  color: #a4022c; /* Cambia el color del enlace a rojo oscuro cuando se pasa el mouse */
 }
 
-/* Dropdown */
+/* Estilo para los elementos del dropdown (menú desplegable) */
 .dropdown-menu {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Bordes redondeados para el menú */
+  border: 1px solid #ddd; /* Borde gris claro */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave para el menú */
 }
 
+/* Estilo de los ítems dentro del dropdown */
 .dropdown-item {
-  color: black;
-  font-size: 14px;
-  padding: 10px 20px;
+  color: black; /* Color negro para los ítems */
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  padding: 10px 20px; /* Añade espacio dentro de cada ítem */
 }
 
+/* Estilo de los ítems cuando se pasa el mouse por encima (hover) */
 .dropdown-item:hover {
-  background-color: #a4022c;
-  color: white;
-  border-radius: 5px;
+  background-color: #a4022c; /* Cambia el fondo a rojo oscuro */
+  color: white; /* Cambia el color del texto a blanco */
+  border-radius: 5px; /* Bordes redondeados */
 }
 
-/* Botón Contáctanos */
+/* Estilo personalizado para el botón "Contáctanos" */
 .btn-danger {
-  background-color: #a4022c;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
+  background-color: #a4022c; /* Establece el color de fondo rojo para el botón */
+  border: none; /* Elimina el borde del botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Hace que el texto sea negrita */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
 
+/* Estilo para el botón "Contáctanos" cuando se pasa el mouse por encima (hover) */
 .btn-danger:hover {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Mantiene el mismo color rojo al hacer hover */
 }
 
-.navbar-brand img {
-  max-height: 50px;
-}
-
+/* Animación de flotado */
 @keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
+  0%, 100% {
+    transform: translateY(0); /* En los inicios y finales de la animación, no hay movimiento */
   }
-
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-20px); /* En el punto medio, mueve el objeto hacia arriba */
   }
 }
 
+/* Estilo de sombra más pronunciada */
 .shadow-lg {
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important; /* Sombra más profunda para los elementos */
 }
 
+/* Fondo general de la página */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Color de fondo gris claro para toda la página */
 }
 
-/* Hero Section */
+/* Hero Section (sección de bienvenida principal) */
 .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #273474;
-  padding: 80px 20px;
+  min-height: 100vh; /* La sección tiene una altura mínima de la altura completa de la pantalla */
+  display: flex; /* Utiliza Flexbox para alinear el contenido */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto */
+  color: #273474; /* Color de texto azul oscuro */
+  padding: 80px 20px; /* Espacio alrededor del contenido dentro de la sección */
 }
 
+/* Estilo del título dentro de la Hero Section */
 .hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 3rem; /* Tamaño grande para el título */
+  font-weight: bold; /* Hace el título en negrita */
+  margin-bottom: 20px; /* Añade espacio debajo del título */
 }
 
+/* Estilo del párrafo dentro de la Hero Section */
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.2rem; /* Tamaño de fuente ligeramente mayor para el texto */
+  margin-bottom: 30px; /* Añade espacio debajo del párrafo */
 }
 
-/* Formulario */
+/* Estilos del formulario de contacto */
 .contact-form {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  width: 100%;
+  background: white; /* Fondo blanco para el formulario */
+  padding: 40px; /* Espacio dentro del formulario */
+  border-radius: 15px; /* Bordes redondeados para el formulario */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para el formulario */
+  max-width: 600px; /* El formulario no puede ser más ancho de 600px */
+  width: 100%; /* El formulario ocupa todo el ancho disponible hasta el máximo de 600px */
 }
 
+/* Estilo de los campos de formulario */
 .form-control {
-  border-radius: 8px;
-  font-size: 1rem;
-  padding: 12px;
-  margin-bottom: 15px;
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente estándar */
+  padding: 12px; /* Espacio dentro de los campos */
+  margin-bottom: 15px; /* Espacio entre los campos */
 }
 
+/* Estilo para los botones personalizados dentro del formulario */
 .btn-custom {
-  background-color: #273474;
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px;
-  border-radius: 8px;
-  transition: 0.3s;
-  width: 100%;
+  background-color: #273474; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor */
+  padding: 12px; /* Espacio dentro del botón */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: 0.3s; /* Transición suave al hacer hover */
+  width: 100%; /* El botón ocupa todo el ancho disponible */
 }
 
+/* Estilo del botón al pasar el mouse por encima (hover) */
 .btn-custom:hover {
-  background-color: #e4022c;
+  background-color: #e4022c; /* Cambia el color de fondo a rojo al hacer hover */
 }
 
-/* Imagen */
+/* Imagen en la Hero Section */
 .hero-img img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  animation: float 3s ease-in-out infinite;
+  width: 100%; /* La imagen ocupa todo el ancho disponible */
+  max-width: 500px; /* Limita el ancho máximo de la imagen */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra suave a la imagen */
+  animation: float 3s ease-in-out infinite; /* Aplica la animación de flotado */
 }
 
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
+/* Media Query para pantallas de menos de 992px de ancho */
 @media (max-width: 992px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column; /* Cambia la disposición de los elementos a una columna */
   }
-
   .hero-img {
-    margin-top: 30px;
+    margin-top: 30px; /* Añade un margen superior a la imagen para mayor separación */
   }
 }
 
-
-/* Añadir imagen de fondo y capa oscura */
-
-
-/* Overlay oscuro encima de la imagen de fondo */
-
+/* Footer */
 footer {
-  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
-  position: relative;
+  background: url("../assets/img/fondo.webp") no-repeat center center/cover; /* Imagen de fondo en el footer */
+  color: #fff; /* Texto blanco */
+  position: relative; /* Posición relativa para poder superponer elementos */
 }
-
 
 footer::after {
-  content: "";
+  content: ""; /* Crea un pseudo-elemento para añadir la capa oscura */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Capa oscura para darle contraste al texto */
 }
 
-/* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
+/* Asegura que los elementos dentro del footer se vean por encima de la capa oscura */
 footer .container {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
 }
 
+/* Estilo del contenedor de contacto */
 .contact-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Limita el ancho máximo del contenedor de contacto */
+  margin: auto; /* Centra el contenedor */
+  padding: 20px; /* Añade padding alrededor del contenido */
+  background: #f8f9fa; /* Fondo gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+/* Estilo de los campos del formulario de contacto */
 .form-control {
-  height: 50px;
-  font-size: 16px;
+  height: 50px; /* Aumenta la altura de los campos */
+  font-size: 16px; /* Tamaño de la fuente de los campos */
 }
 
+/* Estilo del área de texto dentro del formulario */
 textarea.form-control {
-  height: 120px;
+  height: 120px; /* Aumenta la altura del área de texto */
 }
 
+/* Estilo del botón dentro del formulario de contacto */
 .btn-custom {
-  width: 100%;
-  height: 50px;
-  font-size: 18px;
+  width: 100%; /* El botón ocupa todo el ancho disponible */
+  height: 50px; /* Asegura que el botón tenga una altura definida */
+  font-size: 18px; /* Aumenta el tamaño de la fuente */
 }
