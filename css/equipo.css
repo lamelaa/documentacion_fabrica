@@ -1,110 +1,102 @@
 /* -----------------------------------------------
-   General Styles
+   ESTILOS GENERALES
    ----------------------------------------------- */
 
-
+/* Configuración básica para el body y el html */
 body,
 html {
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif; /* Fuente principal para todo el sitio */
+  overflow-x: hidden; /* Elimina el desbordamiento horizontal */
 }
 
-/* Navbar */
+/* Estilos del Navbar (barra de navegación superior) */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #e9ecef;
-  padding: 10px 15px;
-  font-family: 'Arial', sans-serif;
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  top: 0; /* Se sitúa en la parte superior */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+  background-color: white; /* Fondo blanco para el navbar */
+  border-bottom: 2px solid #e9ecef; /* Línea de borde debajo del navbar */
+  padding: 10px 15px; /* Espaciado interior del navbar */
+  font-family: 'Arial', sans-serif; /* Fuente del navbar */
 }
 
 body {
-  padding-top: 80px;
-  /* Ajusta este valor si el navbar es más alto */
+  padding-top: 80px; /* Ajuste para no ocultar el contenido debajo del navbar fijo */
 }
 
-/* Estilo del Logo */
+/* Estilos del Logo en el Navbar */
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 50px; /* Limita la altura máxima del logo */
 }
 
-/* Links del Navbar */
+/* Estilos para los links dentro del Navbar */
 .navbar-nav .nav-link {
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  color: black; /* Color de los links */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Hace que el texto sea en negrita */
+  margin: 0 10px; /* Espaciado entre los links */
+  transition: color 0.3s ease; /* Transición de color cuando se pasa el cursor */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #a4022c;
+  color: #a4022c; /* Cambia el color cuando el cursor pasa por encima */
 }
 
-/* Dropdown */
+/* Estilos del menú desplegable (Dropdown) */
 .dropdown-menu {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Bordes redondeados para el menú */
+  border: 1px solid #ddd; /* Borde gris claro */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .dropdown-item {
-  color: black;
-  font-size: 14px;
-  padding: 10px 20px;
+  color: black; /* Color de los items del dropdown */
+  font-size: 14px; /* Tamaño de la fuente */
+  padding: 10px 20px; /* Espaciado interior de los items */
 }
 
 .dropdown-item:hover {
-  background-color: #a4022c;
-  color: white;
-  border-radius: 5px;
+  background-color: #a4022c; /* Cambia el fondo al pasar el cursor */
+  color: white; /* Cambia el color del texto */
+  border-radius: 5px; /* Bordes redondeados al pasar el cursor */
 }
 
-/* Botón Contáctanos */
+/* Estilos del botón "Contáctanos" */
 .btn-danger {
-  background-color: #a4022c;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
+  background-color: #a4022c; /* Color de fondo rojo para el botón */
+  border: none; /* Sin borde */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
 
 .btn-danger:hover {
-  background-color: #a4022c;
+  background-color: #a4022c; /* Sin cambio de color al pasar el cursor */
 }
 
-.navbar-brand img {
-  max-height: 50px;
-}
-
-/* Responsive: Centrar los logos en móvil */
-
-
-/* Mejoras de responsividad */
+/* Mejoras de responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
   .hero .col-lg-6 {
-    text-align: center;
+    text-align: center; /* Centra el texto en pantallas pequeñas */
   }
 
   .hero .rounded-circle {
-    width: 70%;
+    width: 70%; /* Ajusta el tamaño de la imagen */
   }
 
   .quote-container {
     bottom: -30px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centra la cita en la pantalla */
   }
 }
 
-
+/* Estilos del footer */
 footer {
-  background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-  color: #fff;
-  position: relative;
+  background: url("../assets/img/fondo.webp") no-repeat center center/cover; /* Imagen de fondo */
+  color: #fff; /* Texto blanco */
+  position: relative; /* Posiciona el footer sobre la página */
 }
 
 footer::after {
@@ -114,114 +106,110 @@ footer::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Capa oscura encima del fondo */
 }
 
-/* Asegurarse de que los elementos dentro del footer están por encima de la capa oscura */
 footer .container {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
 }
 
+/* Estilos del Hero Section (sección destacada de la página) */
 .hero-section {
-  background-color: #f8f9fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #f8f9fa; /* Fondo gris claro */
+  display: flex; /* Utiliza Flexbox */
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* El contenido que sobresalga será oculto */
 }
 
+/* Estilos para el texto del Hero */
 .hero-text h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  font-weight: 700; /* Negrita */
+  color: #333; /* Color gris oscuro */
 }
 
 .highlight {
-  color: #a4022c;
+  color: #a4022c; /* Color rojo para resaltar partes del texto */
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor sin deformarse */
 }
 
-/* --- Recorte de imagen solo en pantallas grandes --- */
+/* Recorte de la imagen solo en pantallas grandes */
 @media (min-width: 992px) {
   .hero-image img {
-    clip-path: ellipse(70% 100% at 100% 50%);
+    clip-path: ellipse(70% 100% at 100% 50%); /* Recorta la imagen en forma de elipse */
   }
 }
 
-/* --- Ajustes en pantallas pequeñas (móviles) --- */
+/* Ajustes en pantallas pequeñas (móviles) */
 @media (max-width: 991px) {
   .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 5%;
+    flex-direction: column; /* Cambia la dirección del Flexbox a columna */
+    text-align: center; /* Centra el texto */
+    padding: 30px 5%; /* Ajusta el padding */
   }
 
   .hero-text {
-    width: 100%;
+    width: 100%; /* Hace que el texto ocupe el 100% del contenedor */
   }
 
   .hero-image {
-    width: 100%;
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
   }
 }
 
-/* --- Cita inferior fija --- */
+/* Estilos para la cita inferior fija */
 .quote {
   width: 100%;
-  background: black;
-  color: white;
-  text-align: left;
-  padding: 15px 30px;
-  font-size: 1rem;
+  background: black; /* Fondo negro */
+  color: white; /* Texto blanco */
+  text-align: left; /* Alineación del texto a la izquierda */
+  padding: 15px 30px; /* Espaciado interior */
+  font-size: 1rem; /* Tamaño de la fuente */
 }
 
+/* Fondo flotante para el Hero */
 .floating-bg {
   position: absolute;
   width: 80%;
   height: 80%;
-  background: rgba(0, 123, 255, 0.1);
-  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.1); /* Fondo de color azul con opacidad */
+  border-radius: 50%; /* Hace que el fondo sea circular */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Centra el fondo */
   z-index: -1;
-  filter: blur(50px);
+  filter: blur(50px); /* Aplica un desenfoque */
 }
 
 /* Animación de flotación */
 @keyframes floatAnimation {
-
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0); /* Posición inicial */
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Movimiento hacia arriba */
   }
 }
 
-/* Sección de encabezado con fondo degradado */
+/* Estilos para la cabecera de la sección de equipo */
 .team-header {
-  background: linear-gradient(to right, #273474, #a4022c);
-  color: white;
+  background: linear-gradient(to right, #273474, #a4022c); /* Fondo degradado */
+  color: white; /* Texto blanco */
   text-align: center;
   padding: 40px 20px;
 }
 
-.team-header p {
-  font-size: 1rem;
-  opacity: 0.8;
-}
-
-/* Contenedor del perfil */
+/* Estilos para los perfiles de equipo */
 .team-profile {
   display: flex;
   align-items: center;
@@ -231,153 +219,148 @@ footer .container {
   padding: 40px 10%;
 }
 
-/* Imagen #a4022conda */
+/* Imagen de perfil */
 .profile-img {
   width: 220px;
   height: 280px;
-  border-radius: 5%;
-  object-fit: cover;
-  margin-right: 30px;
+  border-radius: 5%; /* Bordes redondeados */
+  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+  margin-right: 30px; /* Espaciado a la derecha */
 }
 
-/* Nombre y contenido */
+/* Estilos para el contenido del perfil */
 .profile-content {
-  max-width: 600px;
+  max-width: 600px; /* Limita el ancho del contenido */
 }
 
 .profile-content h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #2c2c2c;
+  font-size: 1.8rem; /* Tamaño de fuente para el nombre */
+  font-weight: bold; /* Negrita */
+  color: #2c2c2c; /* Color gris oscuro */
 }
 
 .profile-content h2 .highlight {
-  color: #a4022c;
-  font-weight: bold;
+  color: #a4022c; /* Resalta el nombre */
+  font-weight: bold; /* Negrita */
 }
 
 .profile-content p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
+  font-size: 1rem; /* Tamaño de fuente para la descripción */
+  color: #555; /* Color gris */
+  line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
 }
 
-/* Estrella al lado del nombre */
+/* Estrella junto al nombre */
 .star {
-  color: #a4022c;
-  font-size: 1.5rem;
+  color: #a4022c; /* Color rojo para la estrella */
+  font-size: 1.5rem; /* Tamaño de la estrella */
 }
 
-/* Diseño responsive */
+/* Diseño responsive para dispositivos móviles */
 @media (max-width: 768px) {
   .team-profile {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Cambia la disposición a columna */
+    text-align: center; /* Centra el texto */
   }
 
   .profile-img {
-    margin-bottom: 20px;
-    margin-right: 0;
+    margin-bottom: 20px; /* Espaciado inferior */
+    margin-right: 0; /* Elimina el margen derecho */
   }
 }
 
-/* Estilos generales */
-body {
-  background-color: #f8f9fa;
-}
-
-/* Secciones */
+/* Estilos para las secciones generales */
 .section {
-  padding: 50px 0;
+  padding: 50px 0; /* Espaciado arriba y abajo */
 }
 
 .section-title {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #273474;
+  text-align: center; /* Centra el título */
+  font-size: 1.8rem; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  margin-bottom: 30px; /* Espaciado debajo del título */
+  color: #273474; /* Color de texto */
 }
 
-/* Tarjetas */
+/* Estilos para las tarjetas */
 .card-custom {
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  border: 1px solid #ddd;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s ease-in-out; /* Transición para el hover */
+  border: 1px solid #ddd; /* Borde gris claro */
 }
 
 .card-custom:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Mueve la tarjeta hacia arriba al pasar el cursor */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
 }
 
+/* Estilo para las imágenes dentro de las tarjetas */
 .card img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 10px; /* Bordes redondeados en la parte superior */
+  border-top-right-radius: 10px; /* Bordes redondeados en la parte superior */
 }
 
-/* Botón */
+/* Estilos para los botones personalizados */
 .btn-custom {
-  background-color: #273474;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: 0.3s;
+  background-color: #273474; /* Color de fondo */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Texto en negrita */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: 0.3s; /* Transición suave */
 }
 
 .btn-custom:hover {
-  background-color: #273474;
+  background-color: #273474; /* Mantiene el color en hover */
 }
 
 /* Línea divisoria */
 .divider {
-  width: 50%;
-  height: 4px;
-  background: #273474;
-  margin: 20px auto;
-  border-radius: 5px;
+  width: 50%; /* Ancho de la línea */
+  height: 4px; /* Alto de la línea */
+  background: #273474; /* Color de la línea */
+  margin: 20px auto; /* Margen automático para centrarla */
+  border-radius: 5px; /* Bordes redondeados */
 }
 
-/* Estilos del Hero */
+/* Estilos para la sección Hero */
 .hero {
-  height: 90vh;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(3, 21, 48, 0.784)),
-    url('../assets/img/integrantes/Foto\ con\ todos.png') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #ffffff;
-  padding: 20px;
+  height: 90vh; /* Altura del hero section */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(3, 21, 48, 0.784)), url('../assets/img/integrantes/Foto\ con\ todos.png') center/cover no-repeat;
+  display: flex; /* Utiliza Flexbox */
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Centra el texto */
+  color: #ffffff; /* Texto blanco */
+  padding: 20px; /* Padding interior */
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #273474;
+  font-size: 3rem; /* Tamaño de fuente para el título */
+  font-weight: bold; /* Texto en negrita */
+  color: #273474; /* Color del título */
 }
 
 .hero h1 span {
-  color: #a4022c;
+  color: #a4022c; /* Resalta una parte del título */
 }
 
 .hero p {
-  font-size: 1.3rem;
-  opacity: 0.8;
-  margin: 20px 0;
+  font-size: 1.3rem; /* Tamaño de fuente para la descripción */
+  opacity: 0.8; /* Opacidad */
+  margin: 20px 0; /* Espaciado superior e inferior */
 }
 
 .hero .btn-primary {
-  background-color: #273474;
-  border: none;
-  font-size: 1.2rem;
-  padding: 12px 30px;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  background-color: #273474; /* Fondo azul oscuro */
+  border: none; /* Sin borde */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  padding: 12px 30px; /* Espaciado interior */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: all 0.3s ease-in-out; /* Transición para el hover */
 }
 
 .hero .btn-primary:hover {
-  background-color: #a4022c;
-  transform: scale(1.05);
+  background-color: #a4022c; /* Cambia el color a rojo en hover */
+  transform: scale(1.05); /* Efecto de aumento */
 }
