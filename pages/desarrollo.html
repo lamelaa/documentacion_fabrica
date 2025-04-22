@@ -2,399 +2,663 @@
 <html lang="es">
 
 <head>
+  <!-- ============================================================
+       META ETIQUETAS
+       ============================================================
+    Las siguientes etiquetas <meta> son cruciales para la configuración básica 
+    del sitio web, tanto en términos de accesibilidad como de SEO.
+  -->
   <meta charset="UTF-8" />
+  <!-- Define la codificación de caracteres como UTF-8, que soporta una amplia 
+       gama de caracteres internacionales. Es esencial para asegurar que 
+       los caracteres especiales, como los acentos en español, se muestren correctamente. -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Asegura que el sitio web sea responsive (adaptable a diferentes tamaños de pantalla).
+       'width=device-width' ajusta el contenido al ancho de la pantalla del dispositivo.
+       'initial-scale=1.0' establece el zoom inicial a un nivel normal. -->
+
   <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
+  <!-- Verificación para Google Search Console. Este código es necesario para 
+       demostrar que eres el propietario del sitio web a Google. -->
+
   <title>Desarrollo</title>
+  <!-- Título de la página web, que aparece en la pestaña del navegador. 
+       El título debe ser relevante para el contenido de la página. -->
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Enlace a la hoja de estilos de Bootstrap, que incluye los estilos predeterminados 
+       para muchos componentes como botones, tablas, formularios, etc. Bootstrap es una 
+       librería popular que facilita el desarrollo de interfaces responsive y modernas. -->
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Enlace a la librería de iconos Font Awesome, que proporciona una gran cantidad de iconos vectoriales 
+       que se pueden usar en el sitio web, como íconos para botones, menús, etc. -->
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/desarrollo.css" />
+  <!-- Enlace a la hoja de estilos personalizada 'desarrollo.css', que contiene reglas específicas 
+       para el diseño de esta página en particular. Asegúrate de agregar estilos adicionales aquí 
+       si necesitas modificar el diseño predeterminado o agregar nuevos componentes. -->
+
+  <!-- Icono de la página -->
   <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon">
+  <!-- Establece el icono (favicon) que aparece en la pestaña del navegador. Aquí se usa 
+       el logo de la empresa en formato PNG como icono. -->
 </head>
 
 <body>
-  <!-- Navbar -->
+  <!-- ============================================================
+       NAVBAR (Barra de navegación)
+       ============================================================
+    Esta sección contiene el menú de navegación de la página web.
+    Incluye los logos y un botón de menú responsive que se muestra solo en pantallas pequeñas.
+  -->
   <section>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <!-- La clase 'navbar' activa el componente de barra de navegación de Bootstrap.
+           'navbar-expand-lg' hace que la barra de navegación se expanda en pantallas grandes.
+           'navbar-light' aplica un esquema de colores claros para la barra. 'bg-light' aplica 
+           un fondo claro. 'fixed-top' asegura que la barra se quede fija en la parte superior al hacer scroll. -->
+
       <div class="container d-flex justify-content-between align-items-center">
+        <!-- Contenedor principal que envuelve todo el contenido de la barra de navegación. 
+             'd-flex' hace que el contenido dentro de este contenedor se distribuya con flexbox.
+             'justify-content-between' distribuye los elementos de forma que haya espacio entre ellos.
+             'align-items-center' alinea verticalmente los elementos del contenedor al centro. -->
+        
         <!-- Logos juntos -->
         <div class="d-flex align-items-center">
+          <!-- Este div contiene los dos logos. 'd-flex' asegura que se alineen de forma horizontal 
+               y 'align-items-center' los alinea verticalmente en el centro. -->
+          
+          <!-- Primer Logo -->
           <a class="navbar-brand me-2" href="#">
             <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+            <!-- 'navbar-brand' es la clase de Bootstrap para los elementos de marca (como los logos).
+                 'me-2' aplica un margen de 2 unidades a la derecha. -->
           </a>
+
+          <!-- Segundo Logo -->
           <a class="navbar-brand" href="#">
-            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
-              height="50" />
+            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50" height="50" />
+            <!-- El segundo logo tiene las mismas propiedades, con solo el logo de 'Uniempresarial'. -->
           </a>
         </div>
 
         <!-- Botón Responsive -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Este botón aparece solo en pantallas pequeñas. Permite expandir y contraer el menú de navegación
+               en dispositivos móviles. 'navbar-toggler' es la clase de Bootstrap que lo hace funcional. -->
           <span class="navbar-toggler-icon"></span>
+          <!-- El ícono del botón se muestra como una hamburguesa (tres barras horizontales) 
+               para indicar que el menú está colapsado en dispositivos pequeños. -->
         </button>
+       <!-- ============================================================
+     SECCIÓN DE NAVEGACIÓN Y SECCIÓN HERO
+     ============================================================
+  Esta parte del código contiene dos secciones clave de la página web: 
+  - El menú de navegación, que permite al usuario navegar por las diferentes 
+    secciones de la web.
+  - La sección "Hero", que es una sección destacada que suele utilizarse 
+    para captar la atención del usuario y resaltar los servicios o el propósito 
+    principal de la empresa.
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <a class="nav-link" href="../index.html">INICIO</a>
-            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
-              <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-                <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
-                <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
-                <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
-                <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
-          </ul>
-          <!-- Botón Contáctanos -->
-          <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
-        </div>
-      </div>
-    </nav>
-  </section>
+  Ambas secciones están construidas utilizando Bootstrap y otras herramientas 
+  para asegurar que la web sea moderna, interactiva y fácil de usar.
 
+-->
+<!-- ============================================================
+     MENÚ DE NAVEGACIÓN (Navbar)
+     ============================================================
+  La barra de navegación permite al usuario desplazarse entre las diferentes 
+  páginas de la web. Incluye los enlaces principales y un botón para 
+  contactar con la empresa.
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Innovamos con <span>software</span> de alto impacto</h1>
-      <p>Creamos soluciones digitales a medida que transforman negocios y potencian el futuro.</p>
-      <a href="./contacto.html" class="btn-custom">Descubre nuestras soluciones</a>
-    </div>
-  </section>
+  La estructura está hecha utilizando el sistema de rejilla de Bootstrap y 
+  incluye un comportamiento responsive que cambia su disposición según el tamaño 
+  de la pantalla (por ejemplo, en móviles se convierte en un menú desplegable).
+-->
 
+<!-- Barra de navegación (Navbar) -->
+<div class="collapse navbar-collapse" id="navbarNav">
+  <!-- Lista de enlaces de navegación -->
+  <ul class="navbar-nav mx-auto">
+    <!-- Enlace a la página principal (Inicio) -->
+    <a class="nav-link" href="../index.html">INICIO</a>
+    
+    <!-- Enlace a la página "Nosotros" -->
+    <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+    
+    <!-- Menú desplegable para servicios -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+        data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+      <!-- Elementos del menú desplegable -->
+      <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+        <!-- Enlace a la página de Consultoría -->
+        <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+        
+        <!-- Enlace a la página de Desarrollo de Software -->
+        <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
+        
+        <!-- Enlace a la página de Integración de Sistemas -->
+        <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
+        
+        <!-- Enlace a la página de Capacitación -->
+        <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+      </ul>
+    </li>
+    
+    <!-- Enlace a la página "Equipo" -->
+    <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
+    
+    <!-- Enlace a la página "Proyectos" -->
+    <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
+    
+    <!-- Enlace externo a la página de Uniempresarial -->
+    <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
+        rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
+  </ul>
 
-  <section
-    class="d-flex align-items-center justify-content-center text-center vh-100 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <!-- Contenido centrado -->
-        <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
-          <h2 class="fw-bold display-5 text-dark mb-4">
-            Desarrollo de <span class="text-danger">Software a la Medida</span>
-          </h2>
-          <p class="text-muted fs-5">
-            Creamos soluciones <span class="fw-bold text-dark">personalizadas</span> que evolucionan contigo. Desde
-            <span class="text-danger">sistemas internos</span> hasta <span class="text-danger">plataformas en la
-              nube</span>,
-            garantizamos que se adapten a las necesidades de tu negocio.
-          </p>
-          <p class="text-muted fs-5">
-            Diseñamos software que <span class="fw-bold text-dark">trabaja como tú lo necesitas.</span>
-          </p>
+  <!-- Botón de "Contáctanos" -->
+  <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+</div>
 
-        </div>
+<!-- ============================================================
+     SECCIÓN HERO
+     ============================================================
+  La sección Hero generalmente se usa para resaltar la propuesta de valor de la 
+  empresa y captar la atención del usuario al entrar en el sitio web. Es una 
+  sección visualmente destacada, que suele incluir una llamada a la acción.
 
-        <!-- Imagen centrada con efecto flotante -->
-        <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="1200">
-          <div class="position-relative d-flex justify-content-center">
-            <img src="../assets/img/Software a la medida iconos/software degradado.png" alt="Desarrollo de software"
-              class="img-fluid w-50 rounded floating-img" />
-            <div class="floating-bg"></div> <!-- Elemento decorativo -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 150px;
-          height: 150px;
-          background: rgba(0, 0, 0, 0.05);
-          bottom: -30px;
-          right: -40px;
-          animation: float 8s ease-in-out infinite;
-        "></div>
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 300px;
-          height: 300px;
-          background: rgba(0, 0, 0, 0.05);
-          bottom: 100px;
-          left: 200px;
-          animation: float 8s ease-in-out infinite;
-        "></div>
-  </section>
+  Esta sección utiliza una imagen o un color de fondo atractivo junto con un 
+  mensaje clave, a menudo seguido de un enlace a otra sección o página de contacto.
 
-  <section class="text-center py-5 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold display-4 mb-5" data-aos="zoom-in" data-aos-duration="800">
-        Áreas de Especialización
-      </h2>
+  El propósito de esta sección es atraer la atención del usuario y motivarlo 
+  a interactuar con el sitio web.
+-->
+<section class="hero">
+  <div class="hero-content">
+    <!-- Título de la sección Hero -->
+    <h1>Innovamos con <span>software</span> de alto impacto</h1>
+    <!-- Descripción breve de la propuesta -->
+    <p>Creamos soluciones digitales a medida que transforman negocios y potencian el futuro.</p>
+    <!-- Botón de llamada a la acción que dirige al usuario a la página de contacto -->
+    <a href="./contacto.html" class="btn-custom">Descubre nuestras soluciones</a>
+  </div>
+</section>
 
-      <!-- Especializaciones -->
-      <div class="row g-5">
-        <!-- ERP y CRM -->
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center">
-              <div class="icon-circle bg-primary">
-                <i class="fas fa-cogs"></i>
-              </div>
-              <h5 class="fw-bold mb-3">Sistemas de Gestión (ERP, CRM)</h5>
-              <p class="text-muted">
-                Implementamos soluciones empresariales para optimizar la administración y productividad.
-              </p>
-            </div>
-          </div>
-        </div>
+<!-- ============================================================
+     SECCIÓN DE DESCRIPCIÓN DE SERVICIO (Desarrollo de Software)
+     ============================================================
+  Esta sección se utiliza para mostrar información más detallada sobre 
+  un servicio en particular que ofrece la empresa. En este caso, habla sobre 
+  el servicio de desarrollo de software a la medida.
 
-        <!-- Aplicaciones móviles -->
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center">
-              <div class="icon-circle bg-danger">
-                <i class="fas fa-mobile-alt"></i>
-              </div>
-              <h5 class="fw-bold mb-3">Aplicaciones Móviles</h5>
-              <p class="text-muted">
-                Diseñamos apps innovadoras para Android y iOS, garantizando experiencia y rendimiento.
-              </p>
-            </div>
-          </div>
-        </div>
+  Está diseñada para proporcionar al usuario una visión clara de lo que se ofrece 
+  y cómo se puede beneficiar. También incluye un botón que invita al usuario a 
+  obtener más información o contactar a la empresa.
 
-        <!-- Plataformas web y e-commerce -->
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center">
-              <div class="icon-circle bg-success">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <h5 class="fw-bold mb-3">Plataformas Web & E-commerce</h5>
-              <p class="text-muted">
-                Creamos plataformas escalables y seguras para potenciar negocios en línea.
-              </p>
-            </div>
-          </div>
-        </div>
+  Es importante que el contenido de la sección sea claro, conciso y atractivo.
+-->
 
-        <!-- Automatización de procesos -->
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="800">
-          <div class="card border-0 shadow-lg h-100 hover-effect">
-            <div class="card-body text-center">
-              <div class="icon-circle bg-warning">
-                <i class="fas fa-robot"></i>
-              </div>
-              <h5 class="fw-bold mb-3">Automatización de Procesos</h5>
-              <p class="text-muted">
-                Optimizamos tareas repetitivas mediante IA, RPA y herramientas de automatización.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elemento decorativo animado -->
-    <div class="decorative-circle"></div>
-  </section>
-
-  <section class="text-center text-white py-5 position-relative" style="
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    overflow: hidden;">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold mb-4 display-5" data-aos="fade-down" data-aos-duration="800">
-        Tecnologías que Utilizamos
-      </h2>
-
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
-          <ul class="list-unstyled text-center text-md-start">
-            <!-- Python -->
-            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="200">
-              <div
-                class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-                style="width: 45px; height: 45px; font-size: 1.5rem;">
-                <i class="fab fa-python"></i>
-              </div>
-              <span class="fs-6 fs-md-5">Desarrollo con Python para IA, Data Science y automatización</span>
-            </li>
-
-            <!-- JavaScript (React, Node.js) -->
-            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="400">
-              <div
-                class="icon-box bg-white text-warning rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-                style="width: 45px; height: 45px; font-size: 1.5rem;">
-                <i class="fab fa-js"></i>
-              </div>
-              <span class="fs-6 fs-md-5">Aplicaciones web y móviles con React, Node.js y Vue.js</span>
-            </li>
-
-            <!-- Java -->
-            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="600">
-              <div
-                class="icon-box bg-white text-danger rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-                style="width: 45px; height: 45px; font-size: 1.5rem;">
-                <i class="fab fa-java"></i>
-              </div>
-              <span class="fs-6 fs-md-5">Sistemas empresariales robustos con Java y Spring Boot</span>
-            </li>
-
-            <!-- .NET -->
-            <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="800">
-              <div
-                class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
-                style="width: 45px; height: 45px; font-size: 1.5rem;">
-                <i class="fab fa-microsoft"></i>
-              </div>
-              <span class="fs-6 fs-md-5">Aplicaciones escalables con .NET y C#</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elemento decorativo animado (solo en pantallas grandes) -->
-    <div class="decorative-circle position-absolute rounded-circle d-none d-md-block" style="
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.1);
-    top: 10%;
-    right: -30px;
-    animation: float 6s ease-in-out infinite;">
-    </div>
-  </section>
-
-
-  <section class="text-center py-5 bg-white">
-    <div class="container">
-      <blockquote class="blockquote text-dark">
-        <p class="fw-bold display-6">
-          "Llevamos tus ideas a la realidad tecnológica"
+<section
+  class="d-flex align-items-center justify-content-center text-center vh-100 bg-light position-relative overflow-hidden">
+  <!-- Contenedor general con la información del servicio -->
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <!-- Columna con la información del servicio -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Título de la sección de servicio -->
+        <h2 class="fw-bold display-5 text-dark mb-4">
+          Desarrollo de <span class="text-danger">Software a la Medida</span>
+        </h2>
+        <!-- Descripción de lo que implica el servicio -->
+        <p class="text-muted fs-5">
+          Creamos soluciones <span class="fw-bold text-dark">personalizadas</span> que evolucionan contigo. Desde
+          <span class="text-danger">sistemas internos</span> hasta <span class="text-danger">plataformas en la
+            nube</span>,
+          garantizamos que se adapten a las necesidades de tu negocio.
         </p>
-      </blockquote>
+        <!-- Descripción adicional sobre la flexibilidad del servicio -->
+        <p class="text-muted fs-5">
+          Diseñamos software que <span class="fw-bold text-dark">trabaja como tú lo necesitas.</span>
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+       <!-- ============================================================
+     SECCIÓN: IMAGEN FLOTEANTE Y ÁREAS DE ESPECIALIZACIÓN
+     ============================================================
+  Esta sección contiene dos partes principales:
+  1. Una imagen centrada con un efecto flotante que tiene un fondo decorativo.
+  2. Un bloque que describe las "Áreas de Especialización" que se presenta con animaciones, mostrando tarjetas con información.
 
+  El contenido se muestra de manera responsive para adaptarse a diferentes tamaños de pantalla, y la animación se maneja con la librería AOS.
+
+  También se incluyen círculos decorativos flotantes que se mueven en un ciclo infinito, añadiendo dinamismo visual.
+
+-->
+<!-- Imagen centrada con efecto flotante -->
+<div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="1200">
+  <!-- Contenedor relativo para la imagen y el fondo decorativo -->
+  <div class="position-relative d-flex justify-content-center">
+    <!-- Imagen de software a la medida con un efecto de flotación -->
+    <img src="../assets/img/Software a la medida iconos/software degradado.png" alt="Desarrollo de software"
+      class="img-fluid w-50 rounded floating-img" />
+    <!-- Elemento decorativo que aparece detrás de la imagen -->
+    <div class="floating-bg"></div> <!-- Este div está diseñado para aplicar un fondo decorativo detrás de la imagen -->
+  </div>
+</div>
+
+<!-- Círculos decorativos flotantes -->
+<!-- Círculo decorativo que se mueve en la pantalla -->
+<div class="decorative-circle position-absolute rounded-circle" style="
+      width: 150px;
+      height: 150px;
+      background: rgba(0, 0, 0, 0.05);
+      bottom: -30px;
+      right: -40px;
+      animation: float 8s ease-in-out infinite;
+    "></div>
+<!-- Segundo círculo decorativo con un tamaño más grande y diferente ubicación -->
+<div class="decorative-circle position-absolute rounded-circle" style="
+      width: 300px;
+      height: 300px;
+      background: rgba(0, 0, 0, 0.05);
+      bottom: 100px;
+      left: 200px;
+      animation: float 8s ease-in-out infinite;
+    "></div>
+</section>
+
+<!-- ============================================================
+     SECCIÓN: ÁREAS DE ESPECIALIZACIÓN
+     ============================================================
+  Esta sección muestra un título con animación y un conjunto de tarjetas que describen áreas de especialización de la empresa.
+  Cada tarjeta tiene un icono, un título y una breve descripción. Además, la animación de la aparición de los elementos es controlada por AOS.
+-->
+<section class="text-center py-5 bg-light position-relative overflow-hidden">
+  <!-- Contenedor principal para la sección -->
+  <div class="container">
+    <!-- Título de la sección "Áreas de Especialización" con animación -->
+    <h2 class="fw-bold display-4 mb-5" data-aos="zoom-in" data-aos-duration="800">
+      Áreas de Especialización
+    </h2>
+
+    <!-- Filas que contienen las especializaciones -->
+    <div class="row g-5">
+      <!-- Card para el área "Sistemas de Gestión (ERP, CRM)" -->
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="card border-0 shadow-lg h-100 hover-effect">
+          <div class="card-body text-center">
+            <!-- Icono del área en un círculo de fondo -->
+            <div class="icon-circle bg-primary">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <!-- Título y descripción de la especialización -->
+            <h5 class="fw-bold mb-3">Sistemas de Gestión (ERP, CRM)</h5>
+            <p class="text-muted">
+              Implementamos soluciones empresariales para optimizar la administración y productividad.
+            </p>
+          </div>
+        </div>
+      </div>
+       <!-- ============================================================
+     SECCIÓN DE SERVICIOS Y TECNOLOGÍAS
+     ============================================================
+  Esta sección está dividida en dos partes:
+  1. Los "Servicios" ofrecidos por la empresa, representados en tarjetas con iconos y descripciones breves.
+  2. "Tecnologías que utilizamos", donde se enumeran las tecnologías clave utilizadas en el desarrollo de productos.
+
+  Ambas partes están estilizadas con animaciones usando AOS para dar un efecto visual atractivo cuando el usuario hace scroll.
+-->
+
+<!-- Sección de Servicios -->
+<div class="row">
+  <!-- Aplicaciones móviles -->
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+    <div class="card border-0 shadow-lg h-100 hover-effect">
+      <!-- Cuerpo de la tarjeta para aplicaciones móviles -->
+      <div class="card-body text-center">
+        <!-- Icono dentro de un círculo de fondo rojo -->
+        <div class="icon-circle bg-danger">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <!-- Título de la tarjeta -->
+        <h5 class="fw-bold mb-3">Aplicaciones Móviles</h5>
+        <!-- Descripción de la tarjeta -->
+        <p class="text-muted">
+          Diseñamos apps innovadoras para Android y iOS, garantizando experiencia y rendimiento.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plataformas web y e-commerce -->
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
+    <div class="card border-0 shadow-lg h-100 hover-effect">
+      <!-- Cuerpo de la tarjeta para plataformas web -->
+      <div class="card-body text-center">
+        <!-- Icono dentro de un círculo de fondo verde -->
+        <div class="icon-circle bg-success">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <!-- Título de la tarjeta -->
+        <h5 class="fw-bold mb-3">Plataformas Web & E-commerce</h5>
+        <!-- Descripción de la tarjeta -->
+        <p class="text-muted">
+          Creamos plataformas escalables y seguras para potenciar negocios en línea.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Automatización de procesos -->
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="800">
+    <div class="card border-0 shadow-lg h-100 hover-effect">
+      <!-- Cuerpo de la tarjeta para automatización -->
+      <div class="card-body text-center">
+        <!-- Icono dentro de un círculo de fondo amarillo -->
+        <div class="icon-circle bg-warning">
+          <i class="fas fa-robot"></i>
+        </div>
+        <!-- Título de la tarjeta -->
+        <h5 class="fw-bold mb-3">Automatización de Procesos</h5>
+        <!-- Descripción de la tarjeta -->
+        <p class="text-muted">
+          Optimizamos tareas repetitivas mediante IA, RPA y herramientas de automatización.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Elemento decorativo animado -->
+<div class="decorative-circle"></div>
+
+<!-- ============================================================
+     SECCIÓN DE TECNOLOGÍAS UTILIZADAS
+     ============================================================
+  Esta sección describe algunas de las tecnologías más utilizadas en el desarrollo de los productos de la empresa.
+  Se incluye una lista con iconos representativos de cada tecnología, junto con una pequeña descripción.
+-->
+
+<section class="text-center text-white py-5 position-relative" style="background: linear-gradient(to right, #1e3c72, #2a5298); overflow: hidden;">
+  <!-- Contenedor para el contenido de tecnologías -->
+  <div class="container">
+    <!-- Título de la sección con animación -->
+    <h2 class="fw-bold mb-4 display-5" data-aos="fade-down" data-aos-duration="800">
+      Tecnologías que Utilizamos
+    </h2>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <!-- Lista de tecnologías -->
+        <ul class="list-unstyled text-center text-md-start">
+          
+          <!-- Python -->
+          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="200">
+            <!-- Icono de Python en círculo blanco -->
+            <div class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.5rem;">
+              <i class="fab fa-python"></i>
+            </div>
+            <!-- Descripción de la tecnología Python -->
+            <span class="fs-6 fs-md-5">Desarrollo con Python para IA, Data Science y automatización</span>
+          </li>
+
+          <!-- JavaScript (React, Node.js) -->
+          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="400">
+            <!-- Icono de JavaScript en círculo blanco -->
+            <div class="icon-box bg-white text-warning rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.5rem;">
+              <i class="fab fa-js"></i>
+            </div>
+            <!-- Descripción de la tecnología JavaScript -->
+            <span class="fs-6 fs-md-5">Aplicaciones web y móviles con React, Node.js y Vue.js</span>
+          </li>
+
+          <!-- Java -->
+          <li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="600">
+            <!-- Icono de Java en círculo blanco -->
+            <div class="icon-box bg-white text-danger rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.5rem;">
+              <i class="fab fa-java"></i>
+            </div>
+            <!-- Descripción de la tecnología Java -->
+            <span class="fs-6 fs-md-5">Sistemas empresariales robustos con Java y Spring Boot</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+           <!-- ============================================================
+     SECCIÓN .NET: Lista de Tecnologías
+     ============================================================
+  En esta parte del código se muestra un ítem de lista sobre el uso de .NET
+  para aplicaciones escalables. El objetivo es destacar una de las tecnologías
+  utilizadas en los servicios que ofrece la empresa. 
+  Cada ítem está animado y tiene un ícono representativo.
+
+  Los elementos de la lista están dentro de un contenedor con animación AOS
+  y diseño responsive.
+-->
+
+<!-- .NET -->
+<li class="d-flex align-items-center mb-3" data-aos="fade-right" data-aos-delay="800">
+  <!-- Contenedor del ícono -->
+  <div
+    class="icon-box bg-white text-primary rounded-circle me-2 me-md-3 d-flex align-items-center justify-content-center"
+    style="width: 45px; height: 45px; font-size: 1.5rem;">
+    <!-- Ícono de Microsoft (representando .NET) -->
+    <i class="fab fa-microsoft"></i>
+  </div>
+  <!-- Descripción del servicio relacionado con .NET -->
+  <span class="fs-6 fs-md-5">Aplicaciones escalables con .NET y C#</span>
+</li>
+
+<!-- Fin del contenedor de la lista -->
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Elemento decorativo animado -->
+<div class="decorative-circle position-absolute rounded-circle d-none d-md-block" style="
+width: 100px;
+height: 100px;
+background: rgba(255, 255, 255, 0.1);
+top: 10%;
+right: -30px;
+animation: float 6s ease-in-out infinite;">
+</div>
+</section>
+  <!-- Elemento decorativo animado (solo en pantallas grandes) -->
+<div class="decorative-circle position-absolute rounded-circle d-none d-md-block" style="
+width: 100px;
+height: 100px;
+background: rgba(255, 255, 255, 0.1);
+top: 10%;
+right: -30px;
+animation: float 6s ease-in-out infinite;">
+</div>
+  <section class="text-center py-5 bg-white">
+  <div class="container">
+    <blockquote class="blockquote text-dark">
+      <p class="fw-bold display-6">
+        "Llevamos tus ideas a la realidad tecnológica"
+      </p>
+    </blockquote>
+  </div>
+</section>
   <footer class="bg-primary text-light py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Logo y Redes Sociales -->
-        <div class="col-md-3 text-center text-md-start">
-          <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png  "
-            alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
-          <div class="d-flex justify-content-center justify-content-md-start gap-2">
-            <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-            <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
-            <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank"
-              rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
-          </div>
-        </div>
-
-        <!-- Programas y Enlaces Directos -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Nuestros Servicios</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
-            </li>
-            <li>
-              <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la
-                Medida</a>
-            </li>
-            <li>
-              <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
-            </li>
-            <li>
-              <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en
-                Software</a>
-            </li>
-          </ul>
-          <h5 class="fw-bold mt-4">Enlaces Directos</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
-            </li>
-            <li>
-              <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
-                target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión
-                Académica</a>
-            </li>
-            <li>
-              <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">FAQs</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Normatividad -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Normatividad y Políticas</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Acceso a la Información Pública</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Estados Financieros</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Mapa y Contacto -->
-        <div class="col-md-3 text-center text-md-start">
-          <h5 class="fw-bold">Ubicación</h5>
-          <div class="map-container" style="
-              height: 150px;
-              border-radius: 10px;
-              overflow: hidden;
-              margin-bottom: 10px;
-            ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
-              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
-            #30-20 Bogotá D.C.
-          </p>
-          <p>
-            <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
-            6607, 6608
-          </p>
-          <p>
-            <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
-          </p>
+  <div class="container">
+    <div class="row">
+      <!-- Logo y Redes Sociales -->
+      <div class="col-md-3 text-center text-md-start">
+        <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png" alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
+        <div class="d-flex justify-content-center justify-content-md-start gap-2">
+          <!-- Enlaces a redes sociales -->
+          <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener" class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener" class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank" rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/app.js"></script>
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+       <!-- ============================================================
+     SECCIÓN: PROGRAMAS Y ENLACES DIRECTOS, NORMATIVIDAD, MAPA Y CONTACTO
+     ============================================================
+  Esta sección está dividida en tres columnas y tiene como objetivo proporcionar
+  enlaces a los servicios de la empresa, enlaces a normatividad y políticas, 
+  y finalmente, una sección con un mapa interactivo de la ubicación y datos de contacto.
+
+  Cada columna está bien definida y tiene un propósito específico:
+  - La primera columna contiene los servicios.
+  - La segunda columna proporciona enlaces de normatividad y documentos.
+  - La tercera columna contiene el mapa interactivo y los detalles de contacto.
+
+  Además, la sección incluye la inicialización de AOS (Animate On Scroll), 
+  lo que proporciona animaciones en la interfaz.
+-->
+<div class="row">
+  
+  <!-- Columna de "Nuestros Servicios" -->
+  <div class="col-md-3">
+    <!-- Título para la lista de servicios -->
+    <h5 class="fw-bold">Nuestros Servicios</h5>
+    <!-- Lista de servicios como enlaces -->
+    <ul class="list-unstyled">
+      <!-- Enlace a Consultoría en Software -->
+      <li>
+        <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
+      </li>
+      <!-- Enlace a Desarrollo de Software -->
+      <li>
+        <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la Medida</a>
+      </li>
+      <!-- Enlace a Integración de Sistemas -->
+      <li>
+        <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
+      </li>
+      <!-- Enlace a Capacitación en Software -->
+      <li>
+        <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en Software</a>
+      </li>
+    </ul>
+    <!-- Título para la sección de Enlaces Directos -->
+    <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+    <!-- Lista de enlaces directos -->
+    <ul class="list-unstyled">
+      <!-- Enlace a Uniempresarial en Cifras -->
+      <li>
+        <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
+      </li>
+      <!-- Enlace al Sistema de Gestión Académica -->
+      <li>
+        <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
+          target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión Académica</a>
+      </li>
+      <!-- Enlace a FAQs -->
+      <li>
+        <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
+          class="text-light text-decoration-none">FAQs</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Columna de "Normatividad y Políticas" -->
+  <div class="col-md-3">
+    <!-- Título para la lista de normatividad -->
+    <h5 class="fw-bold">Normatividad y Políticas</h5>
+    <!-- Lista de enlaces a normatividad y documentos -->
+    <ul class="list-unstyled">
+      <!-- Enlace a Acceso a la Información Pública -->
+      <li>
+        <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
+          class="text-light text-decoration-none">Acceso a la Información Pública</a>
+      </li>
+      <!-- Enlace al documento Derechos Pecuniarios 2025 -->
+      <li>
+        <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
+          class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
+      </li>
+      <!-- Enlace al documento Derechos Pecuniarios 2024 -->
+      <li>
+        <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
+          class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
+      </li>
+      <!-- Enlace a Estados Financieros -->
+      <li>
+        <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
+          class="text-light text-decoration-none">Estados Financieros</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Columna de "Ubicación y Contacto" -->
+  <div class="col-md-3 text-center text-md-start">
+    <!-- Título para la sección de ubicación -->
+    <h5 class="fw-bold">Ubicación</h5>
+    <!-- Contenedor para el mapa interactivo -->
+    <div class="map-container" style="
+        height: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      ">
+      <!-- Iframe para mostrar el mapa de Google Maps -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
+        width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <!-- Dirección física de la sede -->
+    <p>
+      <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
+      #30-20 Bogotá D.C.
+    </p>
+    <!-- Teléfonos de contacto -->
+    <p>
+      <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
+      6607, 6608
+    </p>
+    <!-- Correo electrónico de contacto -->
+    <p>
+      <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+    </p>
+  </div>
+</div>
+
+<!-- ============================================================
+     CIERRE DEL FOOTER Y CARGA DE SCRIPTS
+     ============================================================
+  Aquí se cierran las secciones del pie de página y se cargan los scripts 
+  necesarios para el funcionamiento de la página, incluyendo la librería Bootstrap,
+  el script principal de la aplicación y la inicialización de AOS para las animaciones.
+-->
+</div> <!-- Fin de la fila (row) -->
+
+<!-- Scripts -->
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Script personalizado -->
+<script src="./js/app.js"></script>
+<!-- CSS de AOS (Animate on Scroll) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<!-- JS de AOS (Animate on Scroll) -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); <!-- Inicializa AOS para las animaciones en scroll -->
+</script>
+
+<!-- Cierre de la etiqueta body -->
 </body>
 
 </html>
