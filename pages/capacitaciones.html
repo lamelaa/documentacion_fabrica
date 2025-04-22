@@ -1,435 +1,966 @@
+<!-- ===========================================
+     ESTRUCTURA BÁSICA DEL DOCUMENTO HTML
+     ===========================================
+
+  Este bloque representa la cabecera del archivo HTML para la página de 
+  "Capacitaciones". Aquí se definen los metadatos y los enlaces a hojas 
+  de estilo externas necesarias para que la página funcione correctamente 
+  y tenga el estilo deseado.
+-->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- Define el tipo de documento y el idioma del contenido como Español -->
 
 <head>
+  <!-- Define el conjunto de caracteres como UTF-8 para soportar caracteres especiales como tildes y ñ -->
   <meta charset="UTF-8" />
+
+  <!-- Hace que la página sea responsive, es decir, que se adapte automáticamente a diferentes tamaños de pantalla como móviles, tablets y escritorio -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Etiqueta utilizada para la verificación de propiedad del sitio con Google Search Console -->
   <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
+
+  <!-- Título que aparecerá en la pestaña del navegador cuando el usuario abra esta página -->
   <title>Capacitaciones</title>
-  <!-- Bootstrap Icons -->
+
+  <!-- Enlace al paquete de íconos de Bootstrap (Bootstrap Icons), que se puede usar con clases como <i class="bi bi-algo"></i> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-  <!-- Bootstrap CSS -->
+
+  <!-- Enlace al CSS de Bootstrap (versión 5.3.0-alpha3), una biblioteca para diseño responsive con componentes ya diseñados como botones, navbars, etc. -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
+
+  <!-- Enlace al paquete de íconos de Font Awesome, muy usado para íconos sociales, flechas, engranajes, etc.
+       Se pueden usar con clases como <i class="fa fa-icono"></i> o <i class="fas fa-cog"></i> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- Custom CSS -->
+
+  <!-- Enlace al archivo de estilos personalizados (CSS) específicos para esta página de capacitaciones.
+       Aquí puedes modificar colores, márgenes, tamaños, etc., para personalizar el diseño más allá de Bootstrap -->
   <link rel="stylesheet" href="../css/capacitaciones.css" />
+
+  <!-- Ícono pequeño que aparece en la pestaña del navegador (favicon).
+       Asegúrate de que la ruta sea correcta y que la imagen esté disponible -->
   <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon">
 </head>
 
 <body>
-  <!-- Navbar -->
+  <!-- ============================================================
+       SECCIÓN: BARRA DE NAVEGACIÓN (NAVBAR)
+       ============================================================
+     Esta sección contiene la barra de navegación fija en la parte superior de la página.
+     Es un elemento esencial para que el usuario pueda moverse por las distintas secciones
+     o páginas del sitio.
+
+     Se utiliza Bootstrap para facilitar el diseño responsive (adaptativo) y darle estilos 
+     consistentes. El navbar está contenido dentro de una <section> por organización visual, 
+     aunque no es obligatorio.
+  -->
   <section>
-    <!-- Navbar -->
+    <!-- Elemento principal del navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <!-- 
+        Contenedor principal:
+        - Usa 'container' para centrar y limitar el ancho del contenido.
+        - Se aplica 'd-flex', 'justify-content-between' y 'align-items-center' para asegurar
+          que los elementos dentro del navbar estén bien alineados horizontal y verticalmente.
+      -->
       <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logos juntos -->
+
+        <!-- =============================================
+             SECCIÓN: LOGOS
+             =============================================
+           Aquí se encuentran los logotipos colocados juntos a la izquierda del navbar.
+           Ambos logos están envueltos dentro de un contenedor flex para que se alineen 
+           horizontalmente uno al lado del otro.
+        -->
         <div class="d-flex align-items-center">
+          <!-- Primer logo (empresa Fusoft) -->
           <a class="navbar-brand me-2" href="#">
+            <!--
+              'src' es la ruta a la imagen del logo.
+              'alt' describe la imagen para accesibilidad.
+              'width' y 'height' fijan el tamaño exacto del logo.
+              'me-2' añade un pequeño margen a la derecha para separar los logos.
+            -->
             <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
           </a>
+
+          <!-- Segundo logo (Uniempresarial) -->
           <a class="navbar-brand" href="#">
-            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
-              height="50" />
+            <!--
+              Mismo formato que el anterior, pero con el logo de Uniempresarial.
+              Al no tener 'me-2', no se le aplica margen adicional.
+            -->
+            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50" height="50" />
           </a>
         </div>
+<!-- ============================================================================
+     BOTÓN RESPONSIVE PARA MENÚ DE NAVEGACIÓN (NAVBAR TOGGLER)
+     ============================================================================
 
-        <!-- Botón Responsive -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  Este botón es fundamental para que la barra de navegación funcione correctamente 
+  en dispositivos móviles o con pantallas pequeñas.
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <a class="nav-link" href="../index.html">INICIO</a>
-            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
-              <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-                <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
-                <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
-                <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
-                <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
-          </ul>
-          <!-- Botón Contáctanos -->
-          <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+  ¿Cuál es su función?
+  - Permite "plegar" (ocultar) o "desplegar" (mostrar) el menú de navegación principal
+    cuando el ancho de pantalla es reducido.
+  - Esto mejora la experiencia del usuario en celulares o tablets, donde el espacio
+    en pantalla es limitado.
+
+  ¿Cómo funciona?
+  - Bootstrap lo reconoce automáticamente por la clase `navbar-toggler`.
+  - Al hacer clic en el botón, se activa una animación que muestra u oculta 
+    el contenido del menú que está relacionado con el `id="navbarNav"`.
+-->
+<button 
+  class="navbar-toggler"         <!-- Clase de Bootstrap para darle estilos al botón -->
+  type="button"                  <!-- Define el tipo como botón (necesario para que funcione correctamente en formularios) -->
+  data-bs-toggle="collapse"      <!-- Indica que este botón va a activar una función de "colapso" (mostrar/ocultar) -->
+  data-bs-target="#navbarNav"    <!-- Especifica el ID del elemento que se va a colapsar o expandir (en este caso, el menú con ID "navbarNav") -->
+  aria-controls="navbarNav"      <!-- Atributo de accesibilidad: indica qué elemento controla este botón -->
+  aria-expanded="false"          <!-- Estado inicial del botón: "false" porque el menú empieza colapsado -->
+  aria-label="Toggle navigation" <!-- Etiqueta accesible que explica la función del botón para lectores de pantalla -->
+>
+  <!-- Ícono representativo del botón -->
+  <span class="navbar-toggler-icon"></span> <!-- Esta clase de Bootstrap dibuja el típico ícono de "tres rayitas" -->
+</button>
+        <!-- ============================================================
+     SECCIÓN: ENLACES DEL MENÚ DE NAVEGACIÓN (NAVBAR)
+     ============================================================
+  Este bloque contiene los enlaces principales del menú de navegación.
+  Se encuentra dentro de un contenedor colapsable que se activa 
+  al hacer clic en el botón responsive (toggler) en dispositivos móviles.
+
+  Aquí se definen enlaces a otras páginas del sitio como Inicio, Nosotros,
+  Equipo, Proyectos, Uniempresarial y un menú desplegable para los servicios.
+-->
+<div class="collapse navbar-collapse" id="navbarNav">
+  <!-- Lista de navegación centrada horizontalmente con Bootstrap -->
+  <ul class="navbar-nav mx-auto">
+    
+    <!-- Enlace al inicio del sitio -->
+    <a class="nav-link" href="../index.html">INICIO</a>
+
+    <!-- Enlace a la sección 'Nosotros' -->
+    <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+
+    <!-- ITEM: Servicios con submenú desplegable -->
+    <li class="nav-item dropdown">
+      <!-- Elemento principal del dropdown (Servicios) -->
+      <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+         data-bs-toggle="dropdown" aria-expanded="false">
+        SERVICIOS
+      </a>
+
+      <!-- Submenú desplegable con enlaces a distintas secciones de servicios -->
+      <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+        <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+        <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
+        <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
+        <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+      </ul>
+    </li>
+
+    <!-- Enlace a la sección del equipo -->
+    <li class="nav-item">
+      <a class="nav-link" href="../pages/equipo.html">EQUIPO</a>
+    </li>
+
+    <!-- Enlace a la sección de proyectos -->
+    <li class="nav-item">
+      <a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a>
+    </li>
+
+    <!-- Enlace externo que abre una nueva pestaña con la web de Uniempresarial -->
+    <li class="nav-item">
+      <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank" rel="noreferrer noopener">
+        UNIEMPRESARIAL
+      </a>
+    </li>
+  </ul>
+</div>
+         <!-- ============================================================
+     BOTÓN: CONTACTANOS
+     ============================================================
+  Este botón se encuentra dentro del `navbar` y está alineado a la derecha 
+  del menú de navegación. Su propósito es ofrecer un acceso rápido a la 
+  página de contacto, permitiendo que los usuarios interesados se comuniquen 
+  directamente con nosotros.
+
+  A continuación, te explico parte por parte lo que hace este bloque:
+-->
+<!-- Envoltura del botón en un contenedor que aplica margen a la izquierda en pantallas grandes -->
+<a href="./contacto.html" class="btn btn-danger px-4 ms-3">
+  <!-- Texto visible dentro del botón -->
+  CONTACTANOS
+</a>
+
+<!-- Explicación de las clases utilizadas:
+  - `href="./contacto.html"`: Esta es la ruta hacia la página de contacto. 
+    Si en el futuro cambias el nombre del archivo o la carpeta, deberás 
+    actualizar este enlace también.
+
+  - `btn`: Clase base de Bootstrap que indica que esto es un botón estilizado.
+
+  - `btn-danger`: Aplica el estilo "peligro" de Bootstrap, que por defecto es 
+    un botón de color rojo. En este caso se usa para llamar la atención y 
+    destacar la acción de contacto.
+
+  - `px-4`: Aplica padding horizontal (izquierda y derecha) de nivel 4. Esto 
+    hace que el botón tenga un poco más de espacio en los costados y se vea 
+    más ancho y limpio.
+
+  - `ms-3`: "Margin Start 3" en Bootstrap. Aplica un margen hacia la izquierda 
+    del botón (en el sentido de inicio del texto, que en español es izquierda). 
+    Esto separa visualmente el botón del resto del contenido que lo rodea.
+
+  Este botón se encuentra al final de la estructura del `navbar`, así que si 
+  en el futuro deseas agregar más botones similares o cambiar el orden, 
+  simplemente puedes copiar este bloque y adaptarlo a tus necesidades.
+-->
+  <!-- ============================================================
+     SECCIÓN DESTACADA DE CAPACITACIÓN (HERO SECTION + CONTENIDO)
+     ============================================================
+
+  Esta parte del sitio corresponde a una sección destacada (hero section)
+  y a una subsección de contenido relacionada con la capacitación en software.
+  El objetivo es captar la atención del usuario desde el primer momento, 
+  animarlo a inscribirse y reforzar visualmente la propuesta de valor con una imagen decorativa.
+-->
+<!-- Hero Section: Encabezado con mensaje principal y llamado a la acción -->
+<section class="hero">
+  <div class="hero-content">
+    <!-- Título principal: Incluye una palabra destacada en color azul oscuro -->
+    <h1>Capacítate en <span style="color:#273474;">Software</span> con expertos</h1>
+
+    <!-- Texto de apoyo que explica brevemente el beneficio de la capacitación -->
+    <p>
+      Aprende las últimas tecnologías y herramientas con programas diseñados
+      para tu crecimiento profesional.
+    </p>
+
+    <!-- Botón personalizado que lleva a un enlace de inscripción -->
+    <!-- Por ahora es un enlace vacío (href="#") que deberías reemplazar con la ruta real -->
+    <a href="#" class="btn-custom">Inscríbete ahora</a>
+  </div>
+</section>
+
+<!-- Sección informativa con diseño centrado y visual atractivo -->
+<section class="text-center py-5 bg-light position-relative overflow-hidden">
+  <!-- Contenedor de Bootstrap para alinear el contenido de manera responsiva -->
+  <div class="container">
+    <div class="row align-items-center g-5">
+      
+      <!-- Columna para la imagen decorativa -->
+      <div class="col-lg-6 text-center" data-aos="zoom-in" data-aos-duration="1200">
+        <!-- Contenedor de posición relativa para controlar elementos flotantes -->
+        <div class="position-relative">
+          <!-- Imagen principal de la sección: relacionada con las capacitaciones -->
+          <img
+            src="../assets/img/Capacitaciones iconos/Capacitaciones degradado.png"
+            alt="Capacitación en Software"
+            class="img-fluid w-50 rounded"
+          />
+
+          <!-- Círculo decorativo animado detrás de la imagen (z-index: -1 para quedar al fondo) -->
+          <div
+            class="position-absolute top-50 start-50 translate-middle rounded-circle"
+            style="
+              width: 220px;
+              height: 220px;
+              background: linear-gradient(
+                135deg,
+                rgba(0, 123, 255, 0.1),
+                rgba(0, 123, 255, 0)
+              );
+              z-index: -1;
+            "
+          ></div>
         </div>
       </div>
-    </nav>
-  </section>
+       <!-- ============================================================
+     SECCIÓN DE CONTENIDO TEXTUAL: CAPACITACIÓN EN SOFTWARE
+     ============================================================
+  Este bloque complementa visualmente la sección de "Sobre Nosotros" o puede 
+  estar asociado a los servicios. Está diseñado para mostrar un texto informativo
+  acompañado de una lista de beneficios o características clave. 
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Capacítate en <span style="color:#273474;">Software</span> con expertos</h1>
-      <p>Aprende las últimas tecnologías y herramientas con programas diseñados para tu crecimiento profesional.</p>
-      <a href="#" class="btn-custom">Inscríbete ahora</a>
-    </div>
-  </section>
-  <section class="text-center py-5 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <!-- Imagen decorativa -->
-        <div class="col-lg-6 text-center" data-aos="zoom-in" data-aos-duration="1200">
-          <div class="position-relative">
-            <img src="../assets/img/Capacitaciones iconos/Capacitaciones degradado.png" alt="Capacitación en Software"
-              class="img-fluid w-50 rounded" />
-            <div class="position-absolute top-50 start-50 translate-middle rounded-circle" style="
-                  width: 220px;
-                  height: 220px;
-                  background: linear-gradient(
-                    135deg,
-                    rgba(0, 123, 255, 0.1),
-                    rgba(0, 123, 255, 0)
-                  );
-                  z-index: -1;
-                "></div>
-          </div>
-        </div>
-        <!-- Contenido optimizado -->
-        <div class="col-lg-6 text-start" data-aos="fade-up" data-aos-delay="400">
-          <h2 class="fw-bold display-5 text-danger mb-4">
-            Capacitación en Software
-          </h2>
-          <p class="text-muted fs-5">
-            Empodera a tu equipo. Una solución tecnológica es tan efectiva
-            como el equipo que la utiliza. Ofrecemos capacitaciones adaptadas
-            a los niveles de experiencia de tus colaboradores, desde
-            principiantes hasta expertos.
-          </p>
-          <!-- Lista estilizada -->
-          <ul class="list-unstyled">
-            <li class="d-flex align-items-center mb-3">
-              <div class="icon-container me-3">
-                <i class="bi bi-check-circle-fill text-success fs-4"></i>
-              </div>
-              <span class="text-dark fs-5">Capacitación básica para nuevos usuarios.</span>
-            </li>
-            <li class="d-flex align-items-center mb-3">
-              <div class="icon-container me-3">
-                <i class="bi bi-check-circle-fill text-success fs-4"></i>
-              </div>
-              <span class="text-dark fs-5">Programas avanzados para maximizar el potencial del
-                software.</span>
-            </li>
-            <li class="d-flex align-items-center mb-3">
-              <div class="icon-container me-3">
-                <i class="bi bi-check-circle-fill text-success fs-4"></i>
-              </div>
-              <span class="text-dark fs-5">Entrenamiento especializado para roles clave.</span>
-            </li>
-          </ul>
-        </div>
+  Su diseño se basa en una columna Bootstrap que ocupa la mitad del ancho en 
+  pantallas grandes (col-lg-6), y está alineado a la izquierda. También tiene 
+  animación con AOS (Animate on Scroll).
+
+  Es ideal si quieres destacar un servicio específico o describir más a fondo 
+  lo que se muestra al lado de una imagen.
+-->
+<div class="col-lg-6 text-start" data-aos="fade-up" data-aos-delay="400">
+
+  <!-- Título principal destacado -->
+  <h2 class="fw-bold display-5 text-danger mb-4">
+    Capacitación en Software
+  </h2>
+
+  <!-- Párrafo descriptivo -->
+  <p class="text-muted fs-5">
+    Empodera a tu equipo. Una solución tecnológica es tan efectiva como el equipo
+    que la utiliza. Ofrecemos capacitaciones adaptadas a los niveles de experiencia
+    de tus colaboradores, desde principiantes hasta expertos.
+  </p>
+
+  <!-- Lista sin viñetas, pero con íconos y diseño personalizado -->
+  <ul class="list-unstyled">
+    
+    <!-- Item 1 -->
+    <li class="d-flex align-items-center mb-3">
+      <!-- Ícono a la izquierda del texto -->
+      <div class="icon-container me-3">
+        <i class="bi bi-check-circle-fill text-success fs-4"></i>
       </div>
-    </div>
-    <!-- Elementos decorativos animados -->
-    <div class="position-absolute top-0 start-0 translate-middle" style="
-          width: 300px;
-          height: 300px;
-          background: radial-gradient(
-            circle,
-            rgba(0, 123, 255, 0.1),
-            rgba(0, 123, 255, 0)
-          );
-          border-radius: 50%;
-          z-index: -1;
-          animation: float 6s ease-in-out infinite alternate;
-        "></div>
-    <div class="position-absolute bottom-0 end-0 translate-middle" style="
-          width: 400px;
-          height: 400px;
-          background: radial-gradient(
-            circle,
-            rgba(0, 123, 255, 0.1),
-            rgba(0, 123, 255, 0)
-          );
-          border-radius: 50%;
-          z-index: -1;
-          animation: float 8s ease-in-out infinite alternate-reverse;
-        "></div>
-  </section>
-  <section class="text-center py-5 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold display-4 mb-5 text-danger" data-aos="fade-down" data-aos-duration="800">
-        Lo que ofrecemos
-      </h2>
+      <!-- Descripción del ítem -->
+      <span class="text-dark fs-5">Capacitación básica para nuevos usuarios.</span>
+    </li>
 
-      <!-- Pasos -->
-      <div class="row g-5 justify-content-center">
-        <!-- Paso 1: Cursos prácticos -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-effect">
-            <div class="card-body text-center p-5">
-              <div class="icon-circle bg-success">
-                <i class="bi bi-laptop"></i>
-              </div>
-              <h5 class="fw-bold mb-3 text-dark">
-                Cursos prácticos sobre el uso de software
-              </h5>
-              <p class="text-muted fs-5 mb-4">
-                Formación práctica y accesible para que tu equipo se sienta cómodo utilizando el software implementado.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Paso 2: Talleres de automatización -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-effect">
-            <div class="card-body text-center p-5">
-              <div class="icon-circle bg-primary">
-                <i class="bi bi-gear-fill"></i>
-              </div>
-              <h5 class="fw-bold mb-3 text-dark">
-                Talleres de automatización de procesos
-              </h5>
-              <p class="text-muted fs-5 mb-4">
-                Enseñamos a tu equipo cómo automatizar procesos clave mediante herramientas tecnológicas avanzadas.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Paso 3: Capacitación en lenguajes de programación -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-          <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-effect">
-            <div class="card-body text-center p-5">
-              <div class="icon-circle bg-warning">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <h5 class="fw-bold mb-3 text-dark">
-                Capacitación en lenguajes de programación
-              </h5>
-              <p class="text-muted fs-5 mb-4">
-                Ofrecemos capacitación avanzada en lenguajes de programación y frameworks específicos para tu equipo de
-                desarrollo.
-              </p>
-            </div>
-          </div>
-        </div>
+    <!-- Item 2 -->
+    <li class="d-flex align-items-center mb-3">
+      <div class="icon-container me-3">
+        <i class="bi bi-check-circle-fill text-success fs-4"></i>
       </div>
-    </div>
+      <span class="text-dark fs-5">
+        Programas avanzados para maximizar el potencial del software.
+      </span>
+    </li>
 
-    <!-- Elementos decorativos animados -->
-    <div class="decorative-circle top-left"></div>
-    <div class="decorative-circle bottom-right"></div>
-  </section>
-
-  <section class="text-center text-white py-5 position-relative" style="
-        background: linear-gradient(to right, #419aff, #592bff);
-        overflow: hidden;
-      ">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold mb-5 display-3" data-aos="fade-down" data-aos-duration="1000" style="letter-spacing: 2px">
-        Modalidades de Capacitación
-      </h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <ul class="list-unstyled text-start">
-            <!-- Elemento 1: Modalidad Presencial -->
-            <li class="d-flex align-items-center mb-5" data-aos="fade-up" data-aos-delay="200">
-              <div
-                class="icon-box bg-white text-primary rounded-circle me-4 d-flex align-items-center justify-content-center shadow-lg p-3"
-                style="
-                    width: 80px;
-                    height: 80px;
-                    font-size: 2.5rem;
-                    transition: transform 0.3s ease;
-                  ">
-                <i class="fas fa-location-arrow"></i>
-              </div>
-              <span class="fs-4 fw-semibold" style="line-height: 1.5">Sesión presencial en tus oficinas</span>
-            </li>
-            <!-- Elemento 2: Modalidad Virtual -->
-            <li class="d-flex align-items-center mb-5" data-aos="fade-up" data-aos-delay="400">
-              <div
-                class="icon-box bg-white text-primary rounded-circle me-4 d-flex align-items-center justify-content-center shadow-lg p-3"
-                style="
-                    width: 80px;
-                    height: 80px;
-                    font-size: 2.5rem;
-                    transition: transform 0.3s ease;
-                  ">
-                <i class="fas fa-desktop"></i>
-              </div>
-              <span class="fs-4 fw-semibold" style="line-height: 1.5">Sesión virtual, con acceso a materiales
-                descargables</span>
-            </li>
-            <!-- Elemento 3: Modalidad Híbrida -->
-            <li class="d-flex align-items-center mb-5" data-aos="fade-up" data-aos-delay="600">
-              <div
-                class="icon-box bg-white text-primary rounded-circle me-4 d-flex align-items-center justify-content-center shadow-lg p-3"
-                style="
-                    width: 80px;
-                    height: 80px;
-                    font-size: 2.5rem;
-                    transition: transform 0.3s ease;
-                  ">
-                <i class="fas fa-sync-alt"></i>
-              </div>
-              <span class="fs-4 fw-semibold" style="line-height: 1.5">Sesiones híbridas (presencial + virtual)</span>
-            </li>
-          </ul>
-        </div>
+    <!-- Item 3 -->
+    <li class="d-flex align-items-center mb-3">
+      <div class="icon-container me-3">
+        <i class="bi bi-check-circle-fill text-success fs-4"></i>
       </div>
-    </div>
-    <!-- Elemento decorativo animado -->
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 150px;
-          height: 150px;
-          background: rgba(255, 255, 255, 0.15);
-          top: 10%;
-          right: -60px;
-          animation: float 6s ease-in-out infinite;
-        "></div>
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 120px;
-          height: 120px;
-          background: rgba(255, 255, 255, 0.15);
-          bottom: 10%;
-          left: -50px;
-          animation: float 6s ease-in-out infinite alternate;
-        "></div>
-  </section>
+      <span class="text-dark fs-5">Entrenamiento especializado para roles clave.</span>
+    </li>
 
-  <section class="text-center py-5 bg-white">
-    <div class="container">
-      <blockquote class="blockquote text-dark">
-        <p class="fw-bold display-6">
-          "Llevamos tus ideas a la realidad tecnológica"
+  </ul>
+</div>
+    <!-- ==========================================================================
+     ELEMENTOS DECORATIVOS ANIMADOS (BURBUJAS FLOTANTES CON GRADIENTE)
+     ==========================================================================
+
+  Esta sección incluye dos <div> que funcionan como elementos puramente visuales
+  y decorativos. No tienen interacción directa con el usuario ni contenido textual.
+  Su propósito es aportar dinamismo y un toque moderno a la interfaz mediante 
+  animaciones suaves de movimiento (efecto de flotación).
+
+  Ambos elementos se colocan en posiciones opuestas (una arriba a la izquierda 
+  y otra abajo a la derecha), y tienen forma circular con un degradado radial 
+  (de más opaco al centro a más transparente en el borde).
+
+  Se usa la propiedad CSS `animation` junto con una animación personalizada llamada `float`.
+  Esta animación debe estar definida en el archivo CSS (por ejemplo en `stilos.css`) y 
+  genera el efecto de que el elemento "flota" suavemente de un lado a otro.
+
+  Nota: Al estar posicionados con `z-index: -1`, estas burbujas siempre se 
+  mantendrán detrás del contenido principal.
+-->
+
+<!-- Burbuja decorativa (esquina superior izquierda) -->
+<div class="position-absolute top-0 start-0 translate-middle" style="
+      width: 300px;                      /* Ancho de la burbuja */
+      height: 300px;                     /* Alto de la burbuja */
+      background: radial-gradient(       /* Fondo con gradiente radial */
+        circle,
+        rgba(0, 123, 255, 0.1),          /* Color inicial (azul claro semitransparente) */
+        rgba(0, 123, 255, 0)             /* Color final (totalmente transparente) */
+      );
+      border-radius: 50%;               /* Convierte el cuadrado en un círculo */
+      z-index: -1;                      /* Coloca este elemento detrás de todo */
+      animation: float 6s ease-in-out infinite alternate; /* Animación de flotación */
+    "></div>
+
+<!-- Burbuja decorativa (esquina inferior derecha) -->
+<div class="position-absolute bottom-0 end-0 translate-middle" style="
+      width: 400px;                      /* Ancho más grande que la primera */
+      height: 400px;                     /* Alto más grande que la primera */
+      background: radial-gradient(
+        circle,
+        rgba(0, 123, 255, 0.1),
+        rgba(0, 123, 255, 0)
+      );
+      border-radius: 50%;               /* Forma de círculo */
+      z-index: -1;                      /* Siempre detrás del contenido */
+      animation: float 8s ease-in-out infinite alternate-reverse; 
+      /* Misma animación de flotación, pero en sentido inverso 
+         y con duración más lenta (8s en lugar de 6s) */
+    "></div>
+ <!-- =========================================================================
+     SECCIÓN: LO QUE OFRECEMOS
+     =========================================================================
+  Esta sección está diseñada para mostrar un título llamativo que introduce
+  los servicios, productos o beneficios que ofrece la empresa.
+
+  El enfoque principal está en el diseño visual, centrando el contenido, 
+  dándole espacio y usando animaciones suaves para captar la atención del usuario.
+
+  Es completamente responsiva y adaptada tanto para móviles como para pantallas grandes.
+-->
+<section class="text-center py-5 bg-light position-relative overflow-hidden">
+  <!-- 
+    class="text-center"        → Centra todo el texto de la sección horizontalmente.
+    class="py-5"               → Aplica un padding vertical (arriba y abajo) de 5 unidades, para darle espacio.
+    class="bg-light"           → Asigna un fondo claro (gris suave por defecto) a esta sección.
+    class="position-relative"  → Permite posicionar elementos dentro de este contenedor de forma absoluta si se desea.
+    class="overflow-hidden"    → Oculta cualquier contenido que se salga visualmente del contenedor (útil si hay animaciones).
+  -->
+
+  <div class="container">
+    <!-- 
+      Contenedor principal con clase "container" de Bootstrap.
+      Limita el ancho máximo del contenido y lo centra automáticamente.
+    -->
+
+    <!-- ================================================================
+         TÍTULO PRINCIPAL DE LA SECCIÓN
+         ================================================================
+      Este es el encabezado de la sección que dice "Lo que ofrecemos".
+      Tiene estilos que lo hacen visualmente grande, destacado y atractivo.
+    -->
+    <h2 class="fw-bold display-4 mb-5 text-danger" data-aos="fade-down" data-aos-duration="800">
+      Lo que ofrecemos
+    </h2>
+    <!-- 
+      class="fw-bold"       → Hace que el texto sea negrita.
+      class="display-4"     → Aplica un tamaño de fuente muy grande (ideal para títulos principales).
+      class="mb-5"          → Aplica un margen inferior grande para separar el título del contenido que vendrá después.
+      class="text-danger"   → Cambia el color del texto a rojo (utiliza el color de Bootstrap para "peligro" o énfasis).
+      
+      data-aos="fade-down"       → Hace que el título aparezca con una animación desde arriba.
+      data-aos-duration="800"    → La animación dura 800 milisegundos.
+    -->
+      <!-- ============================================================
+     SECCIÓN: PASO 1 - Cursos prácticos sobre el uso de software
+     ============================================================
+  Esta parte del código pertenece a una sección que presenta los "pasos" o
+  características destacadas de un servicio, en este caso, cursos prácticos.
+
+  Cada paso está dentro de una tarjeta (card) y organizado dentro de una
+  fila con varias columnas. Se está usando el sistema de rejilla de Bootstrap
+  para que el diseño sea responsive (se adapte bien a distintos tamaños de pantalla).
+-->
+<div class="row g-5 justify-content-center">
+  <!-- g-5: Aplica un espacio uniforme entre las columnas y filas.
+       justify-content-center: Centra horizontalmente las columnas dentro de la fila. -->
+
+  <!-- ============================================================
+       COLUMNA: Paso 1 - Cursos prácticos
+       ============================================================
+    Esta es la primera columna de la fila. En pantallas grandes (lg) ocupa
+    4 de las 12 columnas disponibles (1/3 del ancho), y en medianas (md) ocupa 6 (la mitad).
+    Contiene una tarjeta con contenido centrado que incluye ícono, título y descripción.
+  -->
+  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+    <!-- data-aos="fade-up": Aplica una animación tipo desvanecimiento hacia arriba.
+         data-aos-delay="200": La animación comienza después de 200 ms. -->
+
+    <!-- Tarjeta con estilos: sin borde, con sombra, bordes redondeados, y efecto hover -->
+    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-effect">
+      <!-- h-100: Hace que la tarjeta ocupe toda la altura disponible
+           overflow-hidden: Oculta cualquier contenido que sobresalga de la tarjeta -->
+
+      <div class="card-body text-center p-5">
+        <!-- p-5: Aplica bastante relleno interior en todos los lados de la tarjeta -->
+
+        <!-- Círculo que contiene un ícono -->
+        <div class="icon-circle bg-success">
+          <!-- bg-success: Fondo verde (color de éxito de Bootstrap) -->
+          <i class="bi bi-laptop"></i>
+          <!-- bi bi-laptop: Ícono de laptop de Bootstrap Icons -->
+        </div>
+
+        <!-- Título del paso -->
+        <h5 class="fw-bold mb-3 text-dark">
+          Cursos prácticos sobre el uso de software
+        </h5>
+        <!-- fw-bold: Texto en negrita
+             mb-3: Margen inferior
+             text-dark: Color de texto oscuro -->
+
+        <!-- Descripción del paso -->
+        <p class="text-muted fs-5 mb-4">
+          Formación práctica y accesible para que tu equipo se sienta cómodo
+          utilizando el software implementado.
         </p>
-      </blockquote>
+        <!-- text-muted: Color gris claro para texto secundario
+             fs-5: Tamaño de fuente un poco más grande
+             mb-4: Margen inferior -->
+      </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <footer class="bg-primary text-light py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Logo y Redes Sociales -->
-        <div class="col-md-3 text-center text-md-start">
-          <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png  "
-            alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
-          <div class="d-flex justify-content-center justify-content-md-start gap-2">
-            <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-            <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
-            <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank"
-              rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
+       <!-- ============================================================
+         PASO 2: TALLERES DE AUTOMATIZACIÓN DE PROCESOS
+         ============================================================
+    Esta sección representa uno de los pasos de un proceso (probablemente una serie de servicios o fases del trabajo),
+    específicamente el "Paso 2", que está enfocado en la automatización de procesos dentro de una empresa.
+
+    Lo que se muestra aquí es una tarjeta (card) de Bootstrap personalizada que contiene un ícono, un título y una
+    breve descripción. Toda esta tarjeta está animada con la librería AOS (Animate On Scroll), para hacerla visualmente más atractiva.
+
+    A continuación, se detalla cada parte del código:
+    -->
+
+    <!-- Columna que contiene la tarjeta (Responsive con Bootstrap) -->
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+      <!-- col-lg-4: ocupa un tercio del ancho en pantallas grandes.
+           col-md-6: ocupa la mitad del ancho en pantallas medianas.
+           Esto permite que la tarjeta se adapte al tamaño del dispositivo.
+
+           data-aos="fade-up": Aplica una animación que hace que el elemento aparezca desvaneciéndose hacia arriba cuando
+           se hace scroll hacia él.
+
+           data-aos-delay="400": Esta tarjeta aparecerá 400ms después de que la sección comience a animarse.
+      -->
+
+      <!-- Tarjeta con sombra, bordes redondeados, y efecto hover -->
+      <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-effect">
+        <!-- border-0: sin bordes visibles.
+             shadow-lg: sombra grande alrededor de la tarjeta.
+             rounded-4: bordes muy redondeados.
+             overflow-hidden: evita que contenido sobresalga de los bordes redondeados.
+             h-100: hace que la tarjeta tenga siempre la misma altura que otras (ideal para columnas iguales).
+             hover-effect: clase personalizada (probablemente definida en CSS) que da un efecto visual al pasar el mouse.
+        -->
+
+        <!-- Cuerpo del contenido de la tarjeta -->
+        <div class="card-body text-center p-5">
+          <!-- text-center: centra horizontalmente el contenido.
+               p-5: aplica padding (espaciado interno) de 5 unidades en todos los lados.
+          -->
+
+          <!-- Ícono dentro de un círculo con fondo azul -->
+          <div class="icon-circle bg-primary">
+            <!-- icon-circle: clase personalizada para dar forma circular al ícono.
+                 bg-primary: color de fondo azul Bootstrap.
+            -->
+            <i class="bi bi-gear-fill"></i>
+            <!-- Ícono de engranaje (relleno), usando Bootstrap Icons.
+                 Representa visualmente la idea de "automatización" o "tecnología".
+            -->
           </div>
-        </div>
 
-        <!-- Programas y Enlaces Directos -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Nuestros Servicios</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
-            </li>
-            <li>
-              <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la
-                Medida</a>
-            </li>
-            <li>
-              <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
-            </li>
-            <li>
-              <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en
-                Software</a>
-            </li>
-          </ul>
-          <h5 class="fw-bold mt-4">Enlaces Directos</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
-            </li>
-            <li>
-              <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
-                target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión
-                Académica</a>
-            </li>
-            <li>
-              <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">FAQs</a>
-            </li>
-          </ul>
-        </div>
+          <!-- Título de la tarjeta -->
+          <h5 class="fw-bold mb-3 text-dark">
+            Talleres de automatización de procesos
+          </h5>
+          <!-- fw-bold: fuente en negrita.
+               mb-3: margen inferior de 3 unidades.
+               text-dark: texto en color oscuro.
+          -->
 
-        <!-- Normatividad -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Normatividad y Políticas</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Acceso a la Información Pública</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
-            </li>
-            <li>
-              <a href="./assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Estados Financieros</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Mapa y Contacto -->
-        <div class="col-md-3 text-center text-md-start">
-          <h5 class="fw-bold">Ubicación</h5>
-          <div class="map-container" style="
-              height: 150px;
-              border-radius: 10px;
-              overflow: hidden;
-              margin-bottom: 10px;
-            ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
-              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
-            #30-20 Bogotá D.C.
+          <!-- Texto descriptivo -->
+          <p class="text-muted fs-5 mb-4">
+            Enseñamos a tu equipo cómo automatizar procesos clave mediante herramientas tecnológicas avanzadas.
           </p>
-          <p>
-            <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
-            6607, 6608
-          </p>
-          <p>
-            <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
-          </p>
+          <!-- text-muted: texto en gris, para darle un aspecto más suave y profesional.
+               fs-5: tamaño de fuente moderadamente grande.
+               mb-4: margen inferior para separación visual.
+          -->
         </div>
       </div>
     </div>
-  </footer>
+       <!-- ============================================================
+     PASO 3: CAPACITACIÓN EN LENGUAJES DE PROGRAMACIÓN
+     ============================================================
+     Este bloque representa uno de los pasos o servicios ofrecidos por la empresa.
+     En concreto, se enfoca en la capacitación en lenguajes de programación, como parte 
+     de una serie de tarjetas visuales (posiblemente junto a otros pasos como consultoría o desarrollo).
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/app.js"></script>
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
+     Está diseñado con Bootstrap para asegurar una disposición responsiva
+     (se adapta a pantallas grandes y medianas) y utiliza clases visuales 
+     como sombras, bordes redondeados y animaciones para hacer la tarjeta llamativa.
 
-</html>
+     También incluye la librería AOS (Animate On Scroll), la cual hace que este 
+     bloque se desplace suavemente desde la parte inferior al entrar en vista.
+-->
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+  <!-- Este div define la columna en la grilla de Bootstrap.
+       - En pantallas grandes (lg), ocupa 4 columnas de las 12 posibles.
+       - En pantallas medianas (md), ocupa 6 columnas, es decir, la mitad del ancho.
+       - 'data-aos' activa la animación al hacer scroll (fade-up), con 600ms de retraso para que aparezca después de los anteriores. -->
+
+  <!-- Tarjeta contenedora del contenido -->
+  <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 hover-effect">
+    <!-- 'card': clase principal de Bootstrap para tarjetas.
+         'border-0': elimina el borde por defecto.
+         'shadow-lg': agrega una sombra grande, mejora la apariencia visual.
+         'rounded-4': bordes redondeados de tamaño 4 (más suaves).
+         'overflow-hidden': asegura que ningún contenido sobresalga fuera del contorno de la tarjeta.
+         'h-100': fuerza a la tarjeta a ocupar el 100% de la altura disponible.
+         'hover-effect': posiblemente definida en un CSS personalizado para añadir efectos al pasar el cursor. -->
+
+    <!-- Cuerpo de la tarjeta -->
+    <div class="card-body text-center p-5">
+      <!-- 'card-body': contenedor del contenido textual/visual.
+           'text-center': alinea el contenido al centro.
+           'p-5': padding interno de 5 unidades para espaciar bien el contenido. -->
+
+      <!-- Icono representativo -->
+      <div class="icon-circle bg-warning">
+        <!-- Este div probablemente esté estilizado con CSS para formar un círculo alrededor del ícono.
+             'bg-warning': color de fondo amarillo (por defecto en Bootstrap). -->
+        <i class="bi bi-code-slash"></i>
+        <!-- Ícono de Bootstrap Icons, específicamente uno que representa "código".
+             Útil para dar una idea visual inmediata del servicio ofrecido (programación). -->
+      </div>
+
+      <!-- Título del servicio -->
+      <h5 class="fw-bold mb-3 text-dark">
+        Capacitación en lenguajes de programación
+      </h5>
+      <!-- 'fw-bold': fuente en negrita.
+           'mb-3': margen inferior para separar del párrafo.
+           'text-dark': color de texto oscuro. -->
+
+      <!-- Descripción del servicio -->
+      <p class="text-muted fs-5 mb-4">
+        Ofrecemos capacitación avanzada en lenguajes de programación y frameworks específicos para tu equipo de desarrollo.
+      </p>
+      <!-- 'text-muted': color gris claro, usado para descripciones.
+           'fs-5': tamaño de fuente ligeramente mayor al estándar (útil para destacar).
+           'mb-4': margen inferior que probablemente separa este texto de botones o elementos que podrían añadirse. -->
+
+    </div> <!-- Fin del cuerpo de la tarjeta -->
+  </div> <!-- Fin de la tarjeta -->
+</div> <!-- Fin de la columna -->
+   <!-- =============================================================
+     ELEMENTOS DECORATIVOS FINALES DE LA SECCIÓN ANTERIOR
+     =============================================================
+
+Estos dos <div> representan círculos decorativos colocados en la esquina superior izquierda 
+y la esquina inferior derecha. Son elementos puramente estéticos que no tienen función interactiva,
+pero ayudan a darle un diseño más dinámico y moderno a la página.
+
+Las clases 'top-left' y 'bottom-right' seguramente están definidas en el CSS y posicionan 
+estos círculos en los lugares deseados.
+-->
+<div class="decorative-circle top-left"></div>
+<div class="decorative-circle bottom-right"></div>
+</section>
+
+<!-- =============================================================
+     SECCIÓN: MODALIDADES DE CAPACITACIÓN
+     =============================================================
+
+Esta sección es bastante visual y comunica al usuario qué tipos de modalidades de capacitación ofrece la empresa.
+Tiene un fondo con un degradado azul-morado que se extiende horizontalmente y resalta mucho respecto al resto 
+del sitio. El texto es blanco, centrado y de tamaño considerable para llamar la atención.
+
+A lo largo de la sección se utilizan animaciones gracias a la librería AOS (Animate On Scroll), 
+por lo que el contenido se va revelando suavemente mientras se hace scroll hacia abajo.
+-->
+<section class="text-center text-white py-5 position-relative"
+  style="background: linear-gradient(to right, #419aff, #592bff); overflow: hidden;">
+
+  <!-- Contenedor principal de Bootstrap para alinear todo el contenido -->
+  <div class="container">
+
+    <!-- Título de la sección -->
+    <h2 class="fw-bold mb-5 display-3" 
+        data-aos="fade-down" 
+        data-aos-duration="1000" 
+        style="letter-spacing: 2px">
+      Modalidades de Capacitación
+    </h2>
+
+    <!-- Contenedor centrado para los ítems -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <!-- =====================================================
+             ELEMENTO 1: SESIÓN PRESENCIAL
+             =====================================================
+        Cada ítem representa una modalidad. Este primero es para sesiones presenciales.
+        Está compuesto por un ícono dentro de un círculo blanco y un texto explicativo a la derecha.
+        El ícono tiene estilos para verse bien en diferentes tamaños y pantallas.
+        -->
+        <ul class="list-unstyled text-start">
+          <li class="d-flex align-items-center mb-5" data-aos="fade-up" data-aos-delay="200">
+            <!-- Ícono de ubicación (presencial) -->
+            <div class="icon-box bg-white text-primary rounded-circle me-4 d-flex align-items-center justify-content-center shadow-lg p-3"
+              style="width: 80px; height: 80px; font-size: 2.5rem; transition: transform 0.3s ease;">
+              <i class="fas fa-location-arrow"></i>
+            </div>
+            <!-- Texto explicativo -->
+            <span class="fs-4 fw-semibold" style="line-height: 1.5">
+              Sesión presencial en tus oficinas
+            </span>
+          </li>
+
+          <!-- =====================================================
+               ELEMENTO 2: SESIÓN VIRTUAL
+               =====================================================
+          Segunda modalidad: capacitación remota. Muy útil para clientes que están en otras ciudades 
+          o simplemente prefieren la comodidad del formato online.
+          -->
+          <li class="d-flex align-items-center mb-5" data-aos="fade-up" data-aos-delay="400">
+            <!-- Ícono de computador (virtual) -->
+            <div class="icon-box bg-white text-primary rounded-circle me-4 d-flex align-items-center justify-content-center shadow-lg p-3"
+              style="width: 80px; height: 80px; font-size: 2.5rem; transition: transform 0.3s ease;">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <!-- Texto explicativo -->
+            <span class="fs-4 fw-semibold" style="line-height: 1.5">
+              Sesión virtual, con acceso a materiales descargables
+            </span>
+          </li>
+            <!-- ============================================================
+     ELEMENTO DESTACADO: MODALIDAD HÍBRIDA + DECORATIVOS + FRASE FINAL + FOOTER
+     ============================================================ -->
+
+<!-- ========================================
+     ELEMENTO 3: MODALIDAD HÍBRIDA (ITEM DE LISTA)
+     ======================================== -->
+<!-- 
+  Este elemento es parte de una lista con características o beneficios.
+  En este caso, se describe que las sesiones son híbridas (presencial + virtual).
+-->
+<li class="d-flex align-items-center mb-5" data-aos="fade-up" data-aos-delay="600">
+  <!-- Ícono dentro de un círculo decorado -->
+  <div class="icon-box bg-white text-primary rounded-circle me-4 d-flex align-items-center justify-content-center shadow-lg p-3"
+    style="
+      width: 80px;           /* Tamaño del círculo */
+      height: 80px;
+      font-size: 2.5rem;     /* Tamaño del ícono */
+      transition: transform 0.3s ease; /* Transición para animaciones */
+    ">
+    <i class="fas fa-sync-alt"></i> <!-- Ícono FontAwesome de sincronización -->
+  </div>
+
+  <!-- Texto descriptivo de la característica -->
+  <span class="fs-4 fw-semibold" style="line-height: 1.5">
+    Sesiones híbridas (presencial + virtual)
+  </span>
+</li>
+
+<!-- ========================================
+     ELEMENTOS DECORATIVOS CIRCULARES
+     ======================================== -->
+<!-- 
+  Estos círculos animados son elementos decorativos que flotan en la pantalla.
+  Se colocan con `position-absolute` y se animan mediante la clase `float` en CSS.
+-->
+<div class="decorative-circle position-absolute rounded-circle" style="
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.15); /* Color blanco semi-transparente */
+      top: 10%;
+      right: -60px;
+      animation: float 6s ease-in-out infinite; /* Animación suave y continua */
+    ">
+</div>
+
+<div class="decorative-circle position-absolute rounded-circle" style="
+      width: 120px;
+      height: 120px;
+      background: rgba(255, 255, 255, 0.15);
+      bottom: 10%;
+      left: -50px;
+      animation: float 6s ease-in-out infinite alternate; /* Alterna dirección de animación */
+    ">
+</div>
+
+<!-- ========================================
+     SECCIÓN DE FRASE DESTACADA (BLOCKQUOTE)
+     ======================================== -->
+<!-- 
+  Esta sección contiene una frase que representa el propósito de la empresa.
+  Se utiliza un blockquote estilizado para dar énfasis al mensaje.
+-->
+<section class="text-center py-5 bg-white">
+  <div class="container">
+    <blockquote class="blockquote text-dark">
+      <p class="fw-bold display-6">
+        "Llevamos tus ideas a la realidad tecnológica"
+      </p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ========================================
+     PIE DE PÁGINA (FOOTER)
+     ======================================== -->
+<!-- 
+  El footer contiene el logotipo institucional y los enlaces a redes sociales.
+  Se adapta a diferentes dispositivos usando clases de Bootstrap.
+-->
+<footer class="bg-primary text-light py-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- ========================================
+           COLUMNA 1: LOGO + REDES SOCIALES
+           ======================================== -->
+      <div class="col-md-3 text-center text-md-start">
+        
+        <!-- Logo de Uniempresarial -->
+        <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png"
+          alt="Uniempresarial Logo"
+          class="mb-3"
+          style="max-width: 250px" />
+
+        <!-- Íconos de redes sociales con enlaces -->
+        <div class="d-flex justify-content-center justify-content-md-start gap-2">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/uniempresarial/" 
+             target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg"
+             target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/uniempresarial/?hl=en"
+             target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+
+          <!-- Twitter (X) -->
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial"
+             target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+      </div>
+
+       <!-- ============================================================
+     SECCIÓN: PIE DE PÁGINA (FOOTER)
+     ============================================================
+  Esta sección corresponde al pie de página del sitio web. 
+  Está dividida en tres bloques principales:
+  1. Nuestros Servicios y Enlaces Directos
+  2. Normatividad y Políticas
+  3. Mapa de Ubicación y Datos de Contacto
+
+  Todos los enlaces están estilizados para tener texto claro 
+  y sin subrayado, usando Bootstrap. Incluye también un iframe 
+  con un mapa de Google Maps para la ubicación física.
+-->
+<div class="col-md-3">
+  <!-- ====== BLOQUE 1: SERVICIOS Y ENLACES DIRECTOS ====== -->
+  <h5 class="fw-bold">Nuestros Servicios</h5>
+  <ul class="list-unstyled">
+    <!-- Cada ítem del listado representa una categoría de servicio -->
+    <li>
+      <a href="../pages/consultoria.html" class="text-light text-decoration-none">
+        Consultoría en software
+      </a>
+    </li>
+    <li>
+      <a href="../pages/desarrollo.html" class="text-light text-decoration-none">
+        Desarrollo de Software a la Medida
+      </a>
+    </li>
+    <li>
+      <a href="../pages/integracion.html" class="text-light text-decoration-none">
+        Integración de Sistemas
+      </a>
+    </li>
+    <li>
+      <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">
+        Capacitación en Software
+      </a>
+    </li>
+  </ul>
+
+  <!-- Segunda parte del mismo bloque: enlaces útiles externos -->
+  <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+  <ul class="list-unstyled">
+    <li>
+      <a href="#" class="text-light text-decoration-none">
+        Uniempresarial en Cifras
+      </a>
+    </li>
+    <li>
+      <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
+         target="_blank" rel="noreterrer noopener"
+         class="text-light text-decoration-none">
+        Sistema de Gestión Académica
+      </a>
+    </li>
+    <li>
+      <a href="https://uniempresarial.edu.co/faqs/"
+         target="_blank" rel="noreterrer noopener"
+         class="text-light text-decoration-none">
+        FAQs
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- ====== BLOQUE 2: NORMATIVIDAD Y POLÍTICAS ====== -->
+<div class="col-md-3">
+  <h5 class="fw-bold">Normatividad y Políticas</h5>
+  <ul class="list-unstyled">
+    <li>
+      <a href="https://uniempresarial.edu.co/sobre-nosotros/"
+         target="_blank" rel="noreterrer noopener"
+         class="text-light text-decoration-none">
+        Acceso a la Información Pública
+      </a>
+    </li>
+    <li>
+      <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf"
+         target="_blank" rel="noreterrer noopener"
+         class="text-light text-decoration-none">
+        Derechos Pecuniarios 2025
+      </a>
+    </li>
+    <li>
+      <a href="../assets/pdf/derechos-pecuniarios-2024.pdf"
+         target="_blank" rel="noreterrer noopener"
+         class="text-light text-decoration-none">
+        Derechos Pecuniarios 2024
+      </a>
+    </li>
+    <li>
+      <a href="./assets/pdf/Estados-Financieros-Uniempresarial.pdf"
+         target="_blank" rel="noreterrer noopener"
+         class="text-light text-decoration-none">
+        Estados Financieros
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- ====== BLOQUE 3: UBICACIÓN Y CONTACTO ====== -->
+<div class="col-md-3 text-center text-md-start">
+  <h5 class="fw-bold">Ubicación</h5>
+
+  <!-- Contenedor con estilo para el mapa -->
+  <div class="map-container" style="height: 150px; border-radius: 10px; overflow: hidden; margin-bottom: 10px;">
+    <!-- IFRAME de Google Maps con la ubicación de la institución -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
+      width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Información de contacto -->
+  <p><i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a #30-20 Bogotá D.C.</p>
+  <p><i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604, 6607, 6608</p>
+  <p><i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co</p>
+</div>
+<!-- ========== SCRIPTS NECESARIOS PARA FUNCIONALIDAD ========== -->
+
+<!-- Bootstrap Bundle: Incluye Popper + JS de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script personalizado del sitio -->
+<script src="./js/app.js"></script>
+
+<!-- AOS (Animate on Scroll) para animaciones al hacer scroll -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); // Inicializa AOS con la configuración por defecto
+</script>
