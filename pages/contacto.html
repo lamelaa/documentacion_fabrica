@@ -1,242 +1,381 @@
+<!-- ============================================================
+     DOCUMENTO HTML
+     ============================================================
+  Este es un archivo HTML que incluye el formulario de contacto 
+  y una barra de navegación (navbar). Se utilizan varias librerías 
+  externas, como Bootstrap para los estilos y funcionalidad responsive, 
+  Font Awesome para los íconos, y el archivo CSS de contacto.css para personalizar 
+  los estilos de la página.
+
+  Además, el código incluye el uso de imágenes para los logos y un enlace 
+  a la verificación de Google.
+
+  Las etiquetas del código HTML están organizadas de manera estructurada 
+  para facilitar la navegación y la personalización futura.
+-->
+
 <!DOCTYPE html>
 <html lang="es">
+  <!-- El atributo "lang" especifica el idioma del contenido en la página (español en este caso). -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
-  <title>Formulario Uniemprarial</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/contacto.css">
-  <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon">
-</head>
+  <head>
+    <!-- Métadatos que definen cómo se comporta la página en términos de codificación, visualización y verificación. -->
 
-<body>
-  <!-- Navbar -->
-  <section>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logos juntos -->
-        <div class="d-flex align-items-center">
-          <a class="navbar-brand me-2" href="#">
-            <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
-          </a>
-          <a class="navbar-brand" href="#">
-            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
-              height="50" />
-          </a>
-        </div>
+    <!-- Charset que especifica la codificación de caracteres que usa la página, en este caso UTF-8 (caracteres especiales como acentos). -->
+    <meta charset="UTF-8">
 
-        <!-- Botón Responsive -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Define cómo se comporta la página en diferentes tamaños de pantalla (dispositivos móviles y de escritorio). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <a class="nav-link" href="../index.html">INICIO</a>
-            <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
-              <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-                <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
-                <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
-                <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
-                <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
-          </ul>
-          <!-- Botón Contáctanos -->
-          <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
-        </div>
-      </div>
-    </nav>
-  </section>
+    <!-- Metaetiqueta para la verificación de Google Search Console, usada para confirmar la propiedad del sitio. -->
+    <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
 
-  <section class="hero container-fluid">
-    <div class="container mt-5">
-      <div class="contact-container">
-        <h2 class="text-center mb-4">Contacto</h2>
-        <form id="contactForm" action="https://formsubmit.co/cr59828@gmail.com" method="POST" novalidate>
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://tusitio.com/gracias.html"> <!-- URL opcional de redirección tras enviar -->
-          
-          <div class="mb-3">
-            <input type="text" class="form-control" name="Nombre" id="nombre" placeholder="Nombre" required>
-            <div class="invalid-feedback">Solo se permiten letras y espacios.</div>
+    <!-- Título de la página que se mostrará en la pestaña del navegador -->
+    <title>Formulario Uniemprarial</title>
+
+    <!-- Enlace a la hoja de estilos de Bootstrap 5 desde un CDN. Esto proporciona un diseño y componentes predefinidos. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Enlace al archivo de JavaScript de Bootstrap que maneja la interactividad, como el menú desplegable. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Enlace a Font Awesome desde un CDN para incluir iconos. -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al archivo CSS local que personaliza los estilos específicos de esta página, en este caso "contacto.css". -->
+    <link rel="stylesheet" href="../css/contacto.css">
+
+    <!-- Icono que aparece en la pestaña del navegador (favicon). -->
+    <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <!-- Aquí comienza el contenido visible de la página, justo después de los metadatos en el "head". -->
+
+    <!-- Sección para la barra de navegación (Navbar) -->
+    <section>
+      <!-- Navbar de Bootstrap que se usa para crear una barra de navegación fija en la parte superior de la página -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <!-- Contenedor que contiene los elementos del navbar. "d-flex" hace que los elementos dentro se alineen en una fila y "justify-content-between" separa los elementos a los extremos. -->
+        <div class="container d-flex justify-content-between align-items-center">
+
+          <!-- Contenedor de los logos -->
+          <div class="d-flex align-items-center">
+            <!-- Primer logo de la navbar -->
+            <a class="navbar-brand me-2" href="#">
+              <!-- La imagen del logo de la empresa (con el archivo local de logo). "width" y "height" definen el tamaño de la imagen. -->
+              <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+            </a>
+            <!-- Segundo logo de la navbar -->
+            <a class="navbar-brand" href="#">
+              <!-- Imagen de un segundo logo de la empresa (también con tamaño definido). -->
+              <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50" height="50" />
+            </a>
           </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" name="Apellido" id="apellido" placeholder="Apellido" required>
-            <div class="invalid-feedback">Solo se permiten letras y espacios.</div>
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control" name="Email" id="email" placeholder="Correo Electrónico" required>
-            <div class="invalid-feedback">Introduce un correo válido.</div>
-          </div>
-          <div class="mb-3">
-            <input type="tel" class="form-control" name="Teléfono" id="telefono" placeholder="Teléfono" required>
-            <div class="invalid-feedback">Debe contener entre 8 y 15 dígitos numéricos.</div>
-          </div>
-          <div class="mb-3">
-            <select class="form-control" name="Servicio" id="servicio" required>
-              <option value="" disabled selected>Servicio de Interés</option>
-              <option value="consultoria">Consultoría</option>
-              <option value="integracion">Integración</option>
-              <option value="capacitacion">Capacitación</option>
-              <option value="desarrollo">Desarrollo de Software</option>
-            </select>
-            <div class="invalid-feedback">Selecciona un servicio.</div>
-          </div>
-          <div class="mb-3">
-            <textarea class="form-control" name="Mensaje" id="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
-            <div class="invalid-feedback">Debe contener al menos 10 caracteres.</div>
-          </div>
-          <button type="submit" class="btn btn-danger btn-custom" id="submitButton">Enviar Mensaje</button>
-        </form>
+
+          <!-- Botón de menú responsive para dispositivos móviles -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Icono que aparece en dispositivos pequeños para mostrar u ocultar el menú -->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+       <!-- ============================================================
+     SECCIÓN: NAVEGACIÓN Y FORMULARIO DE CONTACTO
+     ============================================================
+  Esta sección incluye dos partes principales: la barra de navegación (Navbar) y el formulario de contacto.
+  
+  1. **Barra de navegación (Navbar)**: Es un menú de navegación que se despliega en la parte superior de la página web, adaptándose a dispositivos móviles mediante un "toggle" que permite abrir o cerrar los elementos del menú. 
+  2. **Formulario de contacto**: Permite a los usuarios enviar un mensaje de contacto a través de un formulario.
+
+  La estructura de la sección utiliza clases de Bootstrap para la disposición del contenido y los estilos, además de la validación de formulario y las animaciones con AOS.
+-->
+
+<!-- ============================================================
+     NAVEGACIÓN (Navbar)
+     ============================================================ -->
+<div class="collapse navbar-collapse" id="navbarNav">
+  <!-- Lista de elementos de navegación (links) -->
+  <ul class="navbar-nav mx-auto">
+    <!-- Enlace de Inicio -->
+    <a class="nav-link" href="../index.html">INICIO</a>
+    
+    <!-- Enlace de Nosotros -->
+    <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+    
+    <!-- Menú desplegable de Servicios -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+        data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+      <!-- Opciones del menú desplegable -->
+      <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+        <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+        <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
+        <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
+        <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+      </ul>
+    </li>
+
+    <!-- Enlace de Equipo -->
+    <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
+    
+    <!-- Enlace de Proyectos -->
+    <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
+    
+    <!-- Enlace a la página de Uniempresarial -->
+    <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
+        rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
+  </ul>
+
+  <!-- Botón de Contáctanos (alineado a la derecha) -->
+  <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+</div>
+
+<!-- ============================================================
+     FORMULARIO DE CONTACTO
+     ============================================================ -->
+<section class="hero container-fluid">
+  <div class="container mt-5">
+    <!-- Contenedor principal del formulario -->
+    <div class="contact-container">
+      <!-- Título de la sección de contacto -->
+      <h2 class="text-center mb-4">Contacto</h2>
+
+      <!-- Formulario de contacto -->
+      <form id="contactForm" action="https://formsubmit.co/cr59828@gmail.com" method="POST" novalidate>
+        <!-- Campo oculto para deshabilitar el CAPTCHA -->
+        <input type="hidden" name="_captcha" value="false">
         
+        <!-- Campo oculto para la URL de redirección tras enviar el formulario -->
+        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
 
-        <div id="formResponse" class="mt-3 text-center"></div>
-      </div>
-    </div>
-
-    <div class="col-lg-6 text-center hero-img">
-      <img src="../assets/img/integrantes/CESAR AUGUSTO GUERRERO MATEUS.png" alt="Hablemos de tu proyecto">
-    </div>
-    </div>
-  </section>
-
-  <footer class="bg-primary text-light py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Logo y Redes Sociales -->
-        <div class="col-md-3 text-center text-md-start">
-          <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png  "
-            alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
-          <div class="d-flex justify-content-center justify-content-md-start gap-2">
-            <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-            <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
-            <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank"
-              rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
-          </div>
+        <!-- Campo de nombre -->
+        <div class="mb-3">
+          <input type="text" class="form-control" name="Nombre" id="nombre" placeholder="Nombre" required>
+          <!-- Mensaje de error si el campo no es válido -->
+          <div class="invalid-feedback">Solo se permiten letras y espacios.</div>
         </div>
-
-        <!-- Programas y Enlaces Directos -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Nuestros Servicios</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
-            </li>
-            <li>
-              <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la
-                Medida</a>
-            </li>
-            <li>
-              <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
-            </li>
-            <li>
-              <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en
-                Software</a>
-            </li>
-          </ul>
-          <h5 class="fw-bold mt-4">Enlaces Directos</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
-            </li>
-            <li>
-              <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
-                target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión
-                Académica</a>
-            </li>
-            <li>
-              <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">FAQs</a>
-            </li>
-          </ul>
+        
+        <!-- Campo de apellido -->
+        <div class="mb-3">
+          <input type="text" class="form-control" name="Apellido" id="apellido" placeholder="Apellido" required>
+          <div class="invalid-feedback">Solo se permiten letras y espacios.</div>
         </div>
-
-        <!-- Normatividad -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Normatividad y Políticas</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Acceso a la Información Pública</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Estados Financieros</a>
-            </li>
-          </ul>
+        
+        <!-- Campo de correo electrónico -->
+        <div class="mb-3">
+          <input type="email" class="form-control" name="Email" id="email" placeholder="Correo Electrónico" required>
+          <div class="invalid-feedback">Introduce un correo válido.</div>
         </div>
+        
+        <!-- Campo de teléfono -->
+        <div class="mb-3">
+          <input type="tel" class="form-control" name="Teléfono" id="telefono" placeholder="Teléfono" required>
+          <div class="invalid-feedback">Debe contener entre 8 y 15 dígitos numéricos.</div>
+        </div>
+        
+        <!-- Menú desplegable para seleccionar el servicio de interés -->
+        <div class="mb-3">
+          <select class="form-control" name="Servicio" id="servicio" required>
+            <option value="" disabled selected>Servicio de Interés</option>
+            <option value="consultoria">Consultoría</option>
+            <option value="integracion">Integración</option>
+            <option value="capacitacion">Capacitación</option>
+            <option value="desarrollo">Desarrollo de Software</option>
+          </select>
+          <div class="invalid-feedback">Selecciona un servicio.</div>
+        </div>
+        
+        <!-- Campo de mensaje -->
+        <div class="mb-3">
+          <textarea class="form-control" name="Mensaje" id="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+          <div class="invalid-feedback">Debe contener al menos 10 caracteres.</div>
+        </div>
+        
+        <!-- Botón para enviar el formulario -->
+        <button type="submit" class="btn btn-danger btn-custom" id="submitButton">Enviar Mensaje</button>
+      </form>
 
-        <!-- Mapa y Contacto -->
-        <div class="col-md-3 text-center text-md-start">
-          <h5 class="fw-bold">Ubicación</h5>
-          <div class="map-container" style="
-                height: 150px;
-                border-radius: 10px;
-                overflow: hidden;
-                margin-bottom: 10px;
-              ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
-              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
-            #30-20 Bogotá D.C.
-          </p>
-          <p>
-            <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
-            6607, 6608
-          </p>
-          <p>
-            <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
-          </p>
+      <!-- Contenedor de respuesta tras enviar el formulario -->
+      <div id="formResponse" class="mt-3 text-center"></div>
+    </div>
+  </div>
+
+  <!-- Imagen que acompaña la sección de contacto -->
+  <div class="col-lg-6 text-center hero-img">
+    <img src="../assets/img/integrantes/CESAR AUGUSTO GUERRERO MATEUS.png" alt="Hablemos de tu proyecto">
+  </div>
+</section>
+ <!-- ============================================================
+     SECCIÓN: PIE DE PÁGINA (FOOTER)
+     ============================================================
+  El pie de página es una parte fundamental de la página web que proporciona información adicional 
+  y enlaces a diferentes secciones del sitio web, así como accesos directos a redes sociales.
+  
+  Esta sección está dividida en dos partes principales: los enlaces a redes sociales y la información 
+  de los servicios de la empresa y enlaces directos.
+-->
+<footer class="bg-primary text-light py-5">
+  <!-- Contenedor principal para el pie de página -->
+  <div class="container">
+    <div class="row">
+      
+      <!-- Logo y Redes Sociales -->
+      <div class="col-md-3 text-center text-md-start">
+        <!-- Logo de Uniempresarial -->
+        <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png" 
+             alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
+        <!-- Contenedor de íconos de redes sociales -->
+        <div class="d-flex justify-content-center justify-content-md-start gap-2">
+          <!-- Enlace a Facebook -->
+          <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <!-- Enlace a YouTube -->
+          <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <!-- Enlace a Instagram -->
+          <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <!-- Enlace a Twitter -->
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
         </div>
       </div>
+
+      <!-- Programas y Enlaces Directos -->
+      <div class="col-md-3">
+        <!-- Título de la sección de servicios -->
+        <h5 class="fw-bold">Nuestros Servicios</h5>
+        <!-- Lista de servicios con enlaces -->
+        <ul class="list-unstyled">
+          <!-- Enlace a la página de consultoría -->
+          <li>
+            <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoría en software</a>
+          </li>
+          <!-- Enlace a la página de desarrollo de software -->
+          <li>
+            <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la Medida</a>
+          </li>
+          <!-- Enlace a la página de integración de sistemas -->
+          <li>
+            <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
+          </li>
+          <!-- Enlace a la página de capacitaciones -->
+          <li>
+            <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitación en Software</a>
+          </li>
+        </ul>
+        
+        <!-- Título de la sección de enlaces directos -->
+        <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+        <!-- Lista de enlaces directos -->
+        <ul class="list-unstyled">
+          <!-- Enlace a Uniempresarial en Cifras (puede no tener URL definida) -->
+          <li>
+            <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
+          </li>
+          <!-- Enlace a Sistema de Gestión Académica -->
+          <li>
+            <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1" 
+               target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión Académica</a>
+          </li>
+          <!-- Enlace a la página de preguntas frecuentes -->
+          <li>
+            <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">FAQs</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
+       <!-- ============================================================
+     SECCIÓN: NORMATIVIDAD Y POLÍTICAS / MAPA Y CONTACTO
+     ============================================================
+  Esta parte del código contiene dos secciones importantes:
+  1. Normatividad y Políticas: Aquí se incluyen enlaces a documentos importantes y 
+     normativas que el usuario puede consultar.
+  2. Mapa y Contacto: Esta parte proporciona la ubicación física de la empresa,
+     junto con información de contacto y un mapa interactivo de Google.
+     
+  Ambas secciones están en columnas dentro de un contenedor que se adapta 
+  automáticamente a diferentes tamaños de pantalla utilizando el sistema de rejillas 
+  de Bootstrap.
+-->
 
+<!-- Normatividad y Políticas -->
+<div class="col-md-3">
+  <!-- Título de la sección Normatividad y Políticas -->
+  <h5 class="fw-bold">Normatividad y Políticas</h5>
+  
+  <!-- Lista de documentos y enlaces relacionados con la normatividad -->
+  <ul class="list-unstyled">
+    <!-- Enlace a la página de Acceso a la Información Pública -->
+    <li>
+      <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">
+        Acceso a la Información Pública
+      </a>
+    </li>
+    <!-- Enlace a un documento PDF sobre Derechos Pecuniarios 2025 -->
+    <li>
+      <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">
+        Derechos Pecuniarios 2025
+      </a>
+    </li>
+    <!-- Enlace a un documento PDF sobre Derechos Pecuniarios 2024 -->
+    <li>
+      <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">
+        Derechos Pecuniarios 2024
+      </a>
+    </li>
+    <!-- Enlace a un documento PDF sobre los Estados Financieros -->
+    <li>
+      <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">
+        Estados Financieros
+      </a>
+    </li>
+  </ul>
+</div>
 
-  <!-- Scripts -->
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap JS (asegúrate de que está antes del cierre de </body>) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/"></script>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
-
-</html>
+<!-- Mapa y Contacto -->
+<div class="col-md-3 text-center text-md-start">
+  <!-- Título de la sección Mapa y Contacto -->
+  <h5 class="fw-bold">Ubicación</h5>
+  
+  <!-- Contenedor para mostrar el mapa -->
+  <div class="map-container" style="
+        height: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      ">
+    <!-- Mapa de Google embebido que muestra la ubicación de la empresa -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
+      width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  
+  <!-- Información adicional de contacto -->
+  <p>
+    <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
+    #30-20 Bogotá D.C.
+  </p>
+  <p>
+    <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
+    6607, 6608
+  </p>
+  <p>
+    <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+  </p>
+</div>
+<!-- Inicialización de AOS (Animate On Scroll) -->
+<script>
+  AOS.init();  <!-- Activa las animaciones configuradas con AOS -->
+</script>
