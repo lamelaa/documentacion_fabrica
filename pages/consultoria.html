@@ -1,370 +1,577 @@
+<!-- ============================================================
+     ESTRUCTURA DEL DOCUMENTO HTML - Página: Consultoría
+     ============================================================
+  Este archivo define la estructura principal de la página "Consultoría".
+  Incluye configuración inicial, enlaces a librerías externas (Bootstrap, Font Awesome),
+  y la barra de navegación que se muestra en la parte superior del sitio.
+-->
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- Idioma principal del documento (español) -->
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8" /> <!-- Define el conjunto de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Para que sea responsive -->
+  <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" /> <!-- Verificación para Google Search Console -->
+
+  <!-- Título que aparece en la pestaña del navegador -->
   <title>Consultoria</title>
-  <!-- Bootstrap CSS -->
+
+  <!-- Bootstrap CSS (versión 5.3.0-alpha3) para estilos responsivos y componentes modernos -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
+
+  <!-- Font Awesome para iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- Custom CSS -->
+
+  <!-- CSS personalizado para la página de Consultoría -->
   <link rel="stylesheet" href="../css/consultoria.css" />
+
+  <!-- Favicon (ícono que aparece en la pestaña del navegador) -->
   <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon" />
 </head>
 
 <body>
-  <!-- Navbar -->
+  <!-- ============================================================
+       SECCIÓN: NAVBAR (Barra de navegación superior)
+       ============================================================
+    Esta sección se muestra fija en la parte superior de la página (fixed-top)
+    y contiene:
+    - Logotipos de la empresa y universidad.
+    - Menú de navegación con enlaces a otras secciones.
+    - Dropdown para mostrar submenús dentro de "SERVICIOS".
+    - Estilo responsive gracias a Bootstrap.
+  -->
   <section>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <!-- Contenedor para centrar y distribuir el contenido del navbar -->
       <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logos juntos -->
+
+        <!-- ==============================================
+             LOGOS
+             ==============================================
+          Se muestran uno al lado del otro (alineados horizontalmente).
+          Se usan imágenes con tamaños definidos manualmente.
+        -->
         <div class="d-flex align-items-center">
+          <!-- Logo de FUSOFT -->
           <a class="navbar-brand me-2" href="#">
             <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
           </a>
+
+          <!-- Logo de Uniempresarial -->
           <a class="navbar-brand" href="#">
-            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
-              height="50" />
+            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50" height="50" />
           </a>
         </div>
 
-        <!-- Botón Responsive -->
+        <!-- ==============================================
+             BOTÓN RESPONSIVE (Hamburguesa)
+             ==============================================
+          Este botón aparece en pantallas pequeñas.
+          Permite desplegar o colapsar el menú de navegación.
+        -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span> <!-- Ícono de hamburguesa -->
         </button>
 
-        <!-- Links -->
+        <!-- ==============================================
+             ENLACES DE NAVEGACIÓN (Menú Principal)
+             ==============================================
+          Agrupados en una lista centrada usando Bootstrap.
+          Incluye enlace con dropdown para mostrar subservicios.
+        -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
+            <!-- Enlace a INICIO -->
             <a class="nav-link" href="../index.html">INICIO</a>
+
+            <!-- Enlace a NOSOTROS -->
             <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+
+            <!-- Dropdown de SERVICIOS -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
               <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-                <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
+                <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORÍA EN SOFTWARE</a></li>
                 <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
-                <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
-                <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+                <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACIÓN DE SISTEMAS</a></li>
+                <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACIÓN EN SOFTWARE</a></li>
               </ul>
             </li>
+
+            <!-- Enlace a EQUIPO -->
             <li class="nav-item"><a class="nav-link" href="../pages/equipo.html">EQUIPO</a></li>
+
+            <!-- Enlace a PROYECTOS -->
             <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
+
+            <!-- Enlace externo a UNIEMPRESARIAL -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank" rel="noreterrer noopener">
+                UNIEMPRESARIAL
+              </a>
+            </li>
           </ul>
-          <!-- Botón Contáctanos -->
-          <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+         <!-- ============================================================
+     SECCIÓN: HERO + CONSULTORÍA EN SOFTWARE + PROCESO
+     ============================================================
+     Este fragmento incluye:
+     - Botón "CONTÁCTANOS" en la navbar
+     - Sección principal Hero con mensaje central
+     - Sección "Consultoría en Software" con imagen + texto
+     - Sección "Nuestro Proceso"
+-->
+
+
+<!-- ========================
+     Botón de Contáctanos
+     ========================
+     Este botón se encuentra al final de la barra de navegación (navbar).
+     Redirige a la página de contacto. Tiene estilos de Bootstrap:
+     - 'btn btn-danger': Estilo rojo de botón
+     - 'px-4': Padding horizontal amplio
+     - 'ms-3': Margen izquierdo para separarlo del contenido anterior
+-->
+<a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
+</div>
+</div>
+</nav>
+</section>
+
+
+<!-- ========================
+     HERO SECTION
+     ========================
+     Esta sección es la introducción principal del sitio. Se centra en
+     captar la atención del visitante con un mensaje impactante, destacando
+     el servicio de consultoría tecnológica. Incluye:
+     - Título con palabra destacada en <span>
+     - Subtítulo (párrafo)
+     - Botón de llamada a la acción (CTA)
+-->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Consultoría en <span>tecnología</span> para el éxito</h1>
+    <p>
+      Guiamos a las empresas en su transformación digital con estrategias
+      innovadoras y personalizadas.
+    </p>
+    <a href="./contacto.html" class="btn-custom">Habla con un experto</a>
+  </div>
+</section>
+
+
+<!-- ========================
+     SECCIÓN: Consultoría en Software
+     ========================
+     Esta sección describe el servicio de consultoría con:
+     - Título central animado
+     - Imagen representativa con fondo decorativo animado
+     - Texto explicativo con preguntas y propuesta de valor
+
+     Las clases AOS se usan para aplicar animaciones al hacer scroll.
+-->
+<section class="text-center py-5 bg-light position-relative overflow-hidden">
+  <div class="container">
+
+    <!-- Título principal con animación -->
+    <h2 class="fw-bold display-4 mb-5" data-aos="fade-down" data-aos-duration="800">
+      Consultoría en Software
+    </h2>
+
+    <!-- Fila con imagen y texto -->
+    <div class="row align-items-center">
+
+      <!-- Imagen ilustrativa del servicio -->
+      <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-duration="1200">
+        <div class="image-container position-relative">
+          <img src="../assets/img/Consultoria iconos/consultoria degradado.png"
+               alt="Imagen de detalles"
+               class="img-fluid w-50 rounded"
+               style="animation: zoomIn 1.5s" />
+          <!-- Fondo decorativo animado detrás de la imagen -->
+          <div class="floating-bg"></div>
         </div>
       </div>
-    </nav>
-  </section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Consultoría en <span>tecnología</span> para el éxito</h1>
-      <p>
-        Guiamos a las empresas en su transformación digital con estrategias
-        innovadoras y personalizadas.
+      <!-- Contenido textual con animación -->
+      <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+        <h5 class="fw-bold mb-3">¿No sabes por dónde empezar?</h5>
+        <p class="text-muted fs-5 mb-4">
+          Nuestro equipo de consultores evalúa tus procesos, identifica
+          oportunidades de mejora y te propone soluciones tecnológicas
+          concretas. Te asesoramos en la selección, diseño y planificación
+          de soluciones tecnológicas que se adapten a las necesidades
+          específicas de tu negocio.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Elementos decorativos en movimiento (circulares) -->
+  <div class="decorative-circle position-absolute rounded-circle" style="
+        width: 150px;
+        height: 150px;
+        background: rgba(0, 0, 0, 0.05);
+        bottom: -30px;
+        right: -40px;
+        animation: float 8s ease-in-out infinite;">
+  </div>
+
+  <div class="decorative-circle position-absolute rounded-circle" style="
+        width: 300px;
+        height: 300px;
+        background: rgba(0, 0, 0, 0.05);
+        bottom: 100px;
+        left: 200px;
+        animation: float 8s ease-in-out infinite;">
+  </div>
+</section>
+
+
+<!-- ========================
+     SECCIÓN: Nuestro Proceso
+     ========================
+     Esta sección presentará visualmente los pasos del proceso que sigue la
+     empresa para brindar su servicio. Se encuentra al final del fragmento
+     actual. El elemento '.process-line' sirve como una línea gráfica
+     decorativa que probablemente conecta los pasos (puedes ver su diseño en CSS).
+-->
+<section class="text-center py-5 bg-light position-relative overflow-hidden">
+  <div class="container">
+
+  <!-- ============================================================
+     SECCIÓN: PROCESO Y CÓMO FUNCIONA
+     ============================================================
+  Esta sección describe el proceso que sigue la empresa para trabajar con sus clientes.
+  Está dividida en dos partes principales:
+  1. Una lista de pasos numerados (Nuestro Proceso).
+  2. Una sección explicativa de cómo funciona el proceso con iconos representativos.
+
+  Se utiliza la librería AOS para animar los elementos de la página cuando el usuario hace scroll.
+
+  La estructura de la sección está diseñada para ser visualmente atractiva y fácil de entender.
+  Se emplea un fondo degradado y una línea de conexión decorativa para mejorar la apariencia.
+-->
+<!-- ============================================================
+     SECCIÓN: NUESTRO PROCESO
+     ============================================================
+  Esta sección describe los pasos que forman parte del proceso de trabajo 
+  que la empresa sigue para ofrecer sus servicios a los clientes. 
+  El objetivo es visualizar de manera clara y organizada el flujo de trabajo 
+  o la metodología de la empresa en cuanto a la entrega de soluciones, mostrando 
+  cada fase del proceso con una animación que se activa al hacer scroll.
+
+  Se utiliza la librería AOS para animar los elementos de la sección cuando 
+  el usuario hace scroll, con animaciones como "zoom-in", "fade-up", entre otras.
+
+  La estructura se adapta tanto a dispositivos móviles como a pantallas grandes.
+-->
+<h2 class="fw-bold display-4 mb-5" data-aos="zoom-in" data-aos-duration="800">
+  <!-- Título de la sección "Nuestro Proceso" -->
+  Nuestro Proceso
+</h2>
+
+<!-- Contenedor para la línea de conexión y los pasos -->
+<div class="position-relative">
+  <!-- Línea decorativa de conexión para pasos del proceso -->
+  <div class="process-line"></div>
+
+  <!-- Fila que contiene los pasos -->
+  <div class="row g-5">
+    
+    <!-- Paso 1: Analizar tus necesidades -->
+    <div class="col-md-4 position-relative" data-aos="fade-up" data-aos-delay="200">
+      <!-- Tarjeta de Paso 1 -->
+      <div class="card border-0 shadow-lg h-100 process-card">
+        <div class="card-body text-center">
+          <!-- Círculo que representa el número del paso -->
+          <div class="step-circle bg-danger">1</div>
+          <!-- Título del paso -->
+          <h5 class="fw-bold mb-3">Analizar tus necesidades</h5>
+          <!-- Descripción del paso -->
+          <p class="text-muted">
+            Estudiamos tus necesidades específicas para encontrar la
+            mejor solución.
+          </p>
+        </div>
+      </div>
+    </div>
+
+   <!-- ============================================================
+     SECCIÓN: PASOS DEL PROCESO
+     ============================================================
+  Esta sección describe los diferentes pasos de un proceso o flujo de trabajo. 
+  En este caso, se muestra cómo la empresa o servicio lleva a cabo la creación 
+  de soluciones tecnológicas, presentando cada paso de manera visual y organizada.
+
+  La animación y la disposición de los elementos están controladas por la librería 
+  AOS, que se encarga de animar los elementos a medida que el usuario hace scroll 
+  en la página.
+
+  Cada paso está representado por una tarjeta que contiene un número, un título y 
+  una breve descripción del paso correspondiente. Las tarjetas tienen sombras y 
+  están alineadas horizontalmente.
+-->
+
+<!-- Paso 2 -->
+<div class="col-md-4 position-relative" data-aos="fade-up" data-aos-delay="400">
+  <!-- Tarjeta para el Paso 2 -->
+  <div class="card border-0 shadow-lg h-100 process-card">
+    <div class="card-body text-center">
+      <!-- Círculo con el número del paso, color azul -->
+      <div class="step-circle bg-primary">2</div>
+      <!-- Título del paso -->
+      <h5 class="fw-bold mb-3">Diseño de estrategias</h5>
+      <!-- Descripción del paso -->
+      <p class="text-muted">
+        Creamos una estrategia tecnológica alineada con tus objetivos.
       </p>
-      <a href="./contacto.html" class="btn-custom">Habla con un experto</a>
     </div>
-  </section>
+  </div>
+</div>
 
-  <section class="text-center py-5 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold display-4 mb-5" data-aos="fade-down" data-aos-duration="800">
-        Consultoría en Software
-      </h2>
+<!-- Paso 3 -->
+<div class="col-md-4 position-relative" data-aos="fade-up" data-aos-delay="600">
+  <!-- Tarjeta para el Paso 3 -->
+  <div class="card border-0 shadow-lg h-100 process-card">
+    <div class="card-body text-center">
+      <!-- Círculo con el número del paso, color rojo -->
+      <div class="step-circle bg-danger">3</div>
+      <!-- Título del paso -->
+      <h5 class="fw-bold mb-3">Definición del roadmap</h5>
+      <!-- Descripción del paso -->
+      <p class="text-muted">
+        Definimos los pasos y herramientas necesarias para la implementación.
+      </p>
+    </div>
+  </div>
+</div>
 
-      <div class="row align-items-center">
-        <!-- Imagen libre -->
-        <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-duration="1200">
-          <div class="image-container position-relative">
-            <img src="../assets/img/Consultoria iconos/consultoria degradado.png" alt="Imagen de detalles"
-              class="img-fluid w-50 rounded" style="animation: zoomIn 1.5s" />
-            <div class="floating-bg"></div>
-          </div>
-        </div>
+<!-- ============================================================
+     SECCIÓN: ELEMENTOS DECORATIVOS Y LISTA DE ELEMENTOS
+     ============================================================
+  Esta parte del código incluye dos elementos de lista (`<li>`) con iconos que representan 
+  acciones o características dentro de un proceso o servicio. También incluye un 
+  círculo decorativo animado. Los elementos tienen animación, lo que mejora la experiencia 
+  visual del usuario cuando hace scroll en la página. Los iconos proporcionan un toque 
+  visual que ayuda a identificar rápidamente las acciones asociadas a cada ítem.
 
-        <!-- Contenido de texto -->
-        <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-          <h5 class="fw-bold mb-3">¿No sabes por dónde empezar?</h5>
-          <p class="text-muted fs-5 mb-4">
-            Nuestro equipo de consultores evalúa tus procesos, identifica
-            oportunidades de mejora y te propone soluciones tecnológicas
-            concretas. Te asesoramos en la selección, diseño y planificación
-            de soluciones tecnológicas que se adapten a las necesidades
-            específicas de tu negocio.
-          </p>
+  La librería AOS se utiliza para animar los elementos cuando aparecen en la pantalla.
+-->
+
+<!-- Elemento decorativo animado -->
+<div class="decorative-circle"></div>
+
+<!-- Elemento 2 -->
+<li class="d-flex flex-column flex-md-row align-items-center gap-3 mb-4" data-aos="fade-right"
+  data-aos-delay="400">
+  
+  <!-- Contenedor del icono -->
+  <div class="icon-box bg-white text-danger rounded-circle d-flex align-items-center justify-content-center"
+    style="width: 60px; height: 60px; font-size: 2rem">
+    <!-- Icono de "Análisis de procesos" -->
+    <i class="fas fa-chart-line"></i>
+  </div>
+  
+  <!-- Descripción del elemento -->
+  <span class="fs-5 text-center text-md-start">Análisis de procesos y tecnologías iniciales</span>
+</li>
+
+<!-- Elemento 3 -->
+<li class="d-flex flex-column flex-md-row align-items-center gap-3 mb-4" data-aos="fade-right"
+  data-aos-delay="400">
+  
+  <!-- Contenedor del icono -->
+  <div class="icon-box bg-white text-danger rounded-circle d-flex align-items-center justify-content-center"
+    style="width: 60px; height: 60px; font-size: 2rem">
+    <!-- Icono de "Propuesta personalizada" -->
+    <i class="fas fa-file-alt"></i>
+  </div>
+  
+  <!-- Descripción del elemento -->
+  <span class="fs-5 text-center text-md-start">
+    Presentación de una propuesta personalizada con opciones de software y estrategias
+  </span>
+</li>
+  <!-- ============================================================
+     ELEMENTO DECORATIVO ANIMADO Y PIE DE PÁGINA (FOOTER)
+     ============================================================
+  
+  1. **Elemento Decorativo Animado (Círculo flotante):**
+  Este es un círculo decorativo animado que se mueve de manera flotante en la pantalla.
+  Está diseñado para mejorar la apariencia visual de la página sin agregar contenido funcional.
+  Utiliza la propiedad CSS `@keyframes` para crear un movimiento continuo.
+
+  2. **Pie de Página (Footer):**
+  El pie de página contiene información clave como el logo, redes sociales y enlaces directos 
+  relacionados con los servicios de la empresa. Se utiliza principalmente para mejorar la navegación 
+  del sitio, proporcionando acceso a contenido adicional y enlaces importantes.
+-->
+<!-- ============================================================
+     ELEMENTO DECORATIVO ANIMADO (CÍRCULO FLOTANTE)
+     ============================================================ -->
+<div class="decorative-circle position-absolute rounded-circle d-none d-md-block" style="
+      width: 120px;
+      height: 120px;
+      background: rgba(255, 255, 255, 0.1); /* Fondo translúcido blanco */
+      top: 10%; /* Coloca el círculo en la parte superior del contenedor */
+      right: 10px; /* Lo posiciona a la derecha */
+      animation: float 6s ease-in-out infinite; /* Aplica la animación que hace flotar el círculo */
+    "></div>
+    <!-- ============================================================
+     PIE DE PÁGINA
+     ============================================================
+-->
+<footer class="bg-primary text-light py-5">
+  <!-- Contenedor principal para el pie de página -->
+  <div class="container">
+    <div class="row">
+      
+      <!-- Logo y Redes Sociales -->
+      <div class="col-md-3 text-center text-md-start">
+        <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png" 
+          alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
+        <div class="d-flex justify-content-center justify-content-md-start gap-2">
+          <!-- Enlaces a las redes sociales de Uniempresarial -->
+          <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank" rel="noreterrer noopener" class="text-light">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
         </div>
       </div>
-    </div>
 
-    <!-- Elementos decorativos animados (en las esquinas inferiores) -->
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 150px;
+      <!-- Programas y Enlaces Directos -->
+      <div class="col-md-3">
+        <h5 class="fw-bold">Nuestros Servicios</h5>
+        <ul class="list-unstyled">
+          <li><a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a></li>
+          <li><a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la Medida</a></li>
+          <li><a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a></li>
+          <li><a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitación en Software</a></li>
+        </ul>
+        <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a></li>
+          <li><a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1" 
+                target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión Académica</a></li>
+          <li><a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener" 
+                class="text-light text-decoration-none">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+       <!-- ============================================================
+     SECCIÓN: NORMATIVIDAD Y POLÍTICAS
+     ============================================================
+  Esta sección contiene los enlaces relacionados con la normatividad y políticas de la empresa o institución.
+  Los enlaces proporcionan acceso a documentos y páginas web que contienen información importante, como 
+  los derechos pecuniarios, los estados financieros y la accesibilidad a la información pública.
+-->
+
+<div class="col-md-3">
+  <h5 class="fw-bold">Normatividad y Políticas</h5>
+  <!-- Lista sin estilo (no numerada) para los enlaces a documentos -->
+  <ul class="list-unstyled">
+    <li>
+      <!-- Enlace a la página de "Acceso a la Información Pública" -->
+      <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">Acceso a la Información Pública</a>
+    </li>
+    <li>
+      <!-- Enlace a los derechos pecuniarios de 2025 en formato PDF -->
+      <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
+    </li>
+    <li>
+      <!-- Enlace a los derechos pecuniarios de 2024 en formato PDF -->
+      <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
+    </li>
+    <li>
+      <!-- Enlace a los estados financieros de la institución en formato PDF -->
+      <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">Estados Financieros</a>
+    </li>
+  </ul>
+</div>
+
+<!-- ============================================================
+     SECCIÓN: UBICACIÓN Y CONTACTO
+     ============================================================
+  En esta sección, se muestra el mapa de ubicación de la sede principal de la institución, 
+  junto con los detalles de contacto, como dirección, teléfono y correo electrónico.
+-->
+
+<!-- Mapa y detalles de contacto -->
+<div class="col-md-3 text-center text-md-start">
+  <h5 class="fw-bold">Ubicación</h5>
+  
+  <!-- Contenedor para el mapa de Google Maps -->
+  <div class="map-container" style="
           height: 150px;
-          background: rgba(0, 0, 0, 0.05);
-          bottom: -30px;
-          right: -40px;
-          animation: float 8s ease-in-out infinite;
-        "></div>
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 300px;
-          height: 300px;
-          background: rgba(0, 0, 0, 0.05);
-          bottom: 100px;
-          left: 200px;
-          animation: float 8s ease-in-out infinite;
-        "></div>
-  </section>
+          border-radius: 10px;
+          overflow: hidden;
+          margin-bottom: 10px;
+        ">
+    <!-- Mapa incrustado de Google Maps -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
+      width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  
+  <!-- Dirección de la sede -->
+  <p>
+    <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
+    #30-20 Bogotá D.C.
+  </p>
+  
+  <!-- Número de teléfono -->
+  <p>
+    <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
+    6607, 6608
+  </p>
+  
+  <!-- Correo electrónico de contacto -->
+  <p>
+    <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+  </p>
+</div>
 
-  <section class="text-center py-5 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold display-4 mb-5" data-aos="zoom-in" data-aos-duration="800">
-        Nuestro Proceso
-      </h2>
+<!-- ============================================================
+     SECCIÓN: CIERRE DE LA PÁGINA Y CARGA DE SCRIPTS
+     ============================================================
+  Esta sección contiene los scripts necesarios para el funcionamiento de la página, 
+  como los scripts de Bootstrap, la inicialización de AOS (animaciones al hacer scroll), 
+  y otros scripts adicionales. Además, se cierra la etiqueta del <footer> y el <body>.
+-->
 
-      <div class="position-relative">
-        <!-- Línea animada de conexión -->
-        <div class="process-line"></div>
+<!-- Carga del script de Bootstrap (funciones interactivas, como el menú desplegable) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <div class="row g-5">
-          <!-- Paso 1 -->
-          <div class="col-md-4 position-relative" data-aos="fade-up" data-aos-delay="200">
-            <div class="card border-0 shadow-lg h-100 process-card">
-              <div class="card-body text-center">
-                <div class="step-circle bg-danger">1</div>
-                <h5 class="fw-bold mb-3">Analizar tus necesidades</h5>
-                <p class="text-muted">
-                  Estudiamos tus necesidades específicas para encontrar la
-                  mejor solución.
-                </p>
-              </div>
-            </div>
-          </div>
+<!-- Carga de un script personalizado (app.js) para funcionalidades específicas del sitio -->
+<script src="./js/app.js"></script>
 
-          <!-- Paso 2 -->
-          <div class="col-md-4 position-relative" data-aos="fade-up" data-aos-delay="400">
-            <div class="card border-0 shadow-lg h-100 process-card">
-              <div class="card-body text-center">
-                <div class="step-circle bg-primary">2</div>
-                <h5 class="fw-bold mb-3">Diseño de estrategias</h5>
-                <p class="text-muted">
-                  Creamos una estrategia tecnológica alineada con tus
-                  objetivos.
-                </p>
-              </div>
-            </div>
-          </div>
+<!-- Carga del CSS para las animaciones AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-          <!-- Paso 3 -->
-          <div class="col-md-4 position-relative" data-aos="fade-up" data-aos-delay="600">
-            <div class="card border-0 shadow-lg h-100 process-card">
-              <div class="card-body text-center">
-                <div class="step-circle bg-danger">3</div>
-                <h5 class="fw-bold mb-3">Definición del roadmap</h5>
-                <p class="text-muted">
-                  Definimos los pasos y herramientas necesarias para la
-                  implementación.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- Carga del script AOS para animaciones al hacer scroll -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <!-- Elemento decorativo animado -->
-    <div class="decorative-circle"></div>
-  </section>
-
-  <section class="text-center text-white py-5 position-relative" style="
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        overflow: hidden;
-      ">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold mb-5 display-4" data-aos="fade-down" data-aos-duration="800">
-        ¿Cómo funciona?
-      </h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10 col-12">
-          <ul class="list-unstyled text-start">
-            <!-- Elemento 1 -->
-            <li class="d-flex flex-column flex-md-row align-items-center gap-3 mb-4" data-aos="fade-right"
-              data-aos-delay="200">
-              <div class="icon-box bg-white text-danger rounded-circle d-flex align-items-center justify-content-center"
-                style="width: 60px; height: 60px; font-size: 2rem">
-                <i class="fas fa-handshake"></i>
-              </div>
-              <span class="fs-5 text-center text-md-start">Reunión inicial para entender su negocio</span>
-            </li>
-
-            <!-- Elemento 2 -->
-            <li class="d-flex flex-column flex-md-row align-items-center gap-3 mb-4" data-aos="fade-right"
-              data-aos-delay="400">
-              <div class="icon-box bg-white text-danger rounded-circle d-flex align-items-center justify-content-center"
-                style="width: 60px; height: 60px; font-size: 2rem">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <span class="fs-5 text-center text-md-start">Análisis de procesos y tecnologías iniciales</span>
-            </li>
-
-            <!-- Elemento 3 -->
-            <li class="d-flex flex-column flex-md-row align-items-center gap-3 mb-4" data-aos="fade-right"
-              data-aos-delay="400">
-              <div class="icon-box bg-white text-danger rounded-circle d-flex align-items-center justify-content-center"
-                style="width: 60px; height: 60px; font-size: 2rem">
-                <i class="fas fa-file-alt"></i>
-              </div>
-              <span class="fs-5 text-center text-md-start">
-                Presentación de una propuesta personalizada con opciones de
-                software y estrategias
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elemento decorativo animado -->
-    <div class="decorative-circle position-absolute rounded-circle d-none d-md-block" style="
-          width: 120px;
-          height: 120px;
-          background: rgba(255, 255, 255, 0.1);
-          top: 10%;
-          right: 10px;
-          animation: float 6s ease-in-out infinite;
-        "></div>
-  </section>
-
-  <footer class="bg-primary text-light py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Logo y Redes Sociales -->
-        <div class="col-md-3 text-center text-md-start">
-          <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png  "
-            alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
-          <div class="d-flex justify-content-center justify-content-md-start gap-2">
-            <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-            <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
-            <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank"
-              rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
-          </div>
-        </div>
-
-        <!-- Programas y Enlaces Directos -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Nuestros Servicios</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
-            </li>
-            <li>
-              <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la
-                Medida</a>
-            </li>
-            <li>
-              <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
-            </li>
-            <li>
-              <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en
-                Software</a>
-            </li>
-          </ul>
-          <h5 class="fw-bold mt-4">Enlaces Directos</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
-            </li>
-            <li>
-              <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
-                target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión
-                Académica</a>
-            </li>
-            <li>
-              <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">FAQs</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Normatividad -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Normatividad y Políticas</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Acceso a la Información Pública</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Estados Financieros</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Mapa y Contacto -->
-        <div class="col-md-3 text-center text-md-start">
-          <h5 class="fw-bold">Ubicación</h5>
-          <div class="map-container" style="
-                height: 150px;
-                border-radius: 10px;
-                overflow: hidden;
-                margin-bottom: 10px;
-              ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
-              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
-            #30-20 Bogotá D.C.
-          </p>
-          <p>
-            <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
-            6607, 6608
-          </p>
-          <p>
-            <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/app.js"></script>
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
-
-</html>
+<!-- Inicialización de AOS para activar las animaciones en la página -->
+<script>
+  AOS.init();
+</script>
