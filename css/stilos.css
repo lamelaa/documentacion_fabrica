@@ -1,637 +1,744 @@
-  /* -----------------------------------------------
-    General Styles
-    ----------------------------------------------- */
-    body {
-      font-family: Arial, sans-serif;
-      padding-top: 72px; /* Ajusta este valor según la altura exacta de tu navbar */
-    }
-
-  header {
-    position: sticky;
-    top: 0px;
-    animation-timeline: scroll();
-    animation-range: 0 200px;
-  }
-
-  .hero-section,
-  .stats-section,
-  footer {
-    background: url("../assets/img/fondo.webp") no-repeat center center/cover;
-    color: #fff;
-    position: relative;
-  }
-
-  .hero-section::after,
-  .stats-section::after,
-  footer::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-  }
-
-  .hero-section {
-    position: relative;
-    height: 89vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-  }
-
-  /* Capa de opacidad */
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    /* Opacidad */
-  }
-
-  /* Contenido sobre la imagen */
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 20px;
-  }
-
-  /* Texto destacado */
-  .highlight {
-    color: #e4022c;
-    font-weight: bold;
-  }
-
-  /* Botón */
-  .hero-button {
-    background-color: #273474;
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 15px;
-  }
-
-  .hero-button:hover {
-    background-color: dark#273474;
-  }
-
-  /* Ícono de engranaje */
-  .gear-icon {
-    font-size: 50px;
-    position: absolute;
-    top: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .hero-section .container,
-  .stats-section .container,
-  footer .container {
-    position: relative;
-    z-index: 1;
-  }
-
-  #redess {
-    color: #273474;
-  }
-
-  /* -----------------------------------------------
-      Navbar Styles
-      ----------------------------------------------- */
-  /* Navbar */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: white;
-    border-bottom: 2px solid #e9ecef;
-    padding: 10px 15px;
-    font-family: 'Arial', sans-serif;
-    box-sizing: border-box;
-    height: 72px;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-    padding-top: 72px !important; /* Fuerza este valor */
-    margin: 0 !important; /* Elimina márgenes por defecto */
-  }
-
-  /* Espaciado para el Hero */
-  .hero {
-    margin-top: 80px;
-    /* Esto asegura que el contenido del hero no quede oculto */
-  }
-
-  /* Estilo del Logo */
-  .navbar-brand img {
-    margin-right: 10px;
-  }
-
-  /* Links del Navbar */
-  .navbar-nav .nav-link {
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-
-    margin: 0 10px;
-    transition: color 0.3s ease;
-  }
-
-  .navbar-nav .nav-link:hover {
-    color: #e4022c;
-  }
-
-  /* Dropdown */
-  .dropdown-menu {
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .dropdown-item {
-    color: black;
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .dropdown-item:hover {
-    background-color: #e4022c;
-    color: white;
-    border-radius: 5px;
-  }
-
-  /* Botón Contáctanos */
-  .btn-danger {
-    background-color: #e4022c;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  .btn-danger:hover {
-    background-color: #e4022c;
-  }
-
-
-  /* Estilo general para la sección */
-
-
-  .about-us {
-    background-color: #f8f9fa;
-    /* Color de fondo suave */
-    padding: 60px 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-
-
-  /* Estilo del título */
-  .section-title {
-    color: #e4022c;
-    /* Rojo intenso */
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #e4022c;
-    display: inline-block;
-  }
-
-
-  .image-container::before {
-    content: '';
-    position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 120%;
-    height: 120%;
-    background: rgba(0, 0, 0, 0.05);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    z-index: 0;
-  }
-
-
-
-
-  /* -----------------------------------------------
-      Responsive Styles (Mobile & Tablet)
-      ----------------------------------------------- */
-  @media (max-width: 768px) {
-    .navbar-nav .nav-item {
-      padding: 10px 0;
-    }
-
-    .navbar-toggler {
-      padding: 0.5rem 1rem;
-      font-size: 1.5rem;
-      border: none;
-      background-color: transparent;
-    }
-
-    .navbar-nav {
-      font-size: 1.1rem;
-      text-align: center;
-    }
-
-    .navbar-collapse {
-      padding-top: 10px;
-    }
-
-    .navbar-dark .navbar-nav {
-      background-color: #000000;
-    }
-  }
-
-  /* -----------------------------------------------
-    Servicios Section - Estilos Generales
-    ----------------------------------------------- */
-
-
-
-  .card-img-top {
-    height: 200px;
-    object-fit: contain;
-    border-radius: 8px;
-  }
-
-  /* -----------------------------------------------
-      Responsive Design
-      ----------------------------------------------- */
-  @media (max-width: 768px) {
-    #servicios h2 {
-      font-size: 2rem;
-    }
-
-    .card-body {
-      padding: 15px;
-    }
-
-    .card-title {
-      font-size: 1.2rem;
-    }
-
-    .card-text {
-      font-size: 0.9rem;
-    }
-  }
-
-  /* Estilo General del Navbar */
-
-  /* Animación para las tarjetas del equipo */
-
-  .team-member {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .team-member:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-
-
-  .social-icons a {
-    display: inline-block;
-    color: #273474;
-    margin: 0 5px;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-
-  .social-icons a:hover {
-    transform: scale(1.2);
-    color: #e4022c;
-  }
-
-  /* Estilos para las flechas del carrusel */
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    /* Tamaño fijo para evitar solapamientos */
-    height: 50px;
-    background-color: rgba(228, 2, 43, 0.375);
-    /* Color de fondo */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    /* Asegura que las flechas estén por encima del contenido */
-  }
-
-  .carousel-control-prev {
-    left: -60px;
-    /* Ajustar posición para que no toque las tarjetas */
-  }
-
-  .carousel-control-next {
-    right: -60px;
-  }
-
-
-  .stat-item img {
-    max-width: 60px;
-    /* Limita el ancho máximo */
-    height: auto;
-    /* Mantiene la proporción original */
-    transition: transform 0.3s ease;
-    /* Efecto de transición para el hover */
-  }
-
-  .stat-item img:hover {
-    transform: scale(1.1);
-    /* Amplía la imagen un poco al pasar el ratón */
-  }
-
-  /* Animación en hover para las tarjetas */
-  .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Icono de servicio */
-  .service-icon {
-    width: 100px;
-    height: 100px;
-    margin: -50px auto 10px;
-    background: #f8f9fa;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .service-card:hover .service-icon {
-    transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  .service-icon img {
-    width: 60px;
-  }
-
-  .stat-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .stat-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
-  }
-
-  .stat-icon-container {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8f9fa;
-    border-radius: 50%;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .stat-icon {
-    width: 60px;
-    height: auto;
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #dc3545;
-  }
-
-  /* Estilos generales del portafolio */
-  .portfolio-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-  }
-
-  .portfolio-video {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  }
-
-  /* Efecto de hover en los videos */
-  .portfolio-item:hover .portfolio-video {
-    transform: scale(1.05);
-    opacity: 0.9;
-  }
-
-  /* Superposición de descripción */
-  .portfolio-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  /* Mostrar la superposición al pasar el mouse */
-  .portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-  }
-
-
-  /* Hacer que las imágenes mantengan su proporción sin cortar las caras */
-  .team-member img {
-    width: 100%;
-    height: auto;
-    /* Evita cortes */
-    max-height: 300px;
-    /* Mantiene proporción sin deformar */
-    object-fit: contain;
-    /* Muestra toda la imagen sin recortes */
-  }
-
-  /* Ajustes específicos para móviles */
-  @media (max-width: 768px) {
-    .carousel-inner {
-      display: flex;
-      overflow-x: auto;
-      /* Permite desplazamiento táctil */
-      scroll-snap-type: x mandatory;
-      /* Se desliza por secciones */
-    }
-
-    .carousel-item {
-      flex: 0 0 100%;
-      scroll-snap-align: center;
-      /* Centra cada elemento */
-    }
-
-    /* Hacer las flechas del carrusel más pequeñas y sutiles */
-    .carousel-control-prev,
-    .carousel-control-next {
-      width: 30px;
-      height: 30px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-    }
-
-    /* Mejor separación entre elementos */
-    .team-member {
-      padding: 15px;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      /* Reduce el tamaño del título en móvil */
-    }
-  }
-
-  .team-card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .img-container {
-    width: 170px;
-    height: 220px;
-    margin: 0 auto;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .btn-custom {
-    background: #e4022c;
-    color: white;
-    border-radius: 50px;
-    padding: 8px 15px;
-    transition: background 0.3s ease;
-    font-size: 14px;
-  }
-
-  .btn-custom:hover {
-    background: #273474;
-  }
-
-  @media (max-width: 768px) {
-    .team-card {
-      max-width: 320px;
-    }
-  }
-  .testimonials-section {
-    background: url('../assets/img/fondo.webp') center/cover no-repeat;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Capa oscura semi-transparente */
-  .testimonials-section .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Opacidad ajustable */
-    z-index: 0;
-  }
-
-  .testimonials-section .container {
-    position: relative;
-    z-index: 2;
-  }
-
-  /* ===============================================
-   NAVBAR MOBILE - Menú Hamburguesa corregido
-   =============================================== */
+/* -----------------------------------------------
+    ESTILOS GENERALES
+----------------------------------------------- */
+
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Establece la fuente a Arial para todo el texto en la página */
+  padding-top: 72px; /* Aumenta el espacio superior para evitar que el contenido se solape con la barra de navegación fija */
+}
+
+/* Estilos para el encabezado (header) */
+header {
+  position: sticky; /* Hace que el encabezado se quede en la parte superior al hacer scroll */
+  top: 0px; /* Fija el encabezado en la parte superior de la ventana */
+  animation-timeline: scroll(); /* Establece una animación al hacer scroll */
+  animation-range: 0 200px; /* Rango de la animación */
+}
+
+/* Estilos para las secciones Hero, Stats y footer */
+.hero-section,
+.stats-section,
+footer {
+  background: url("../assets/img/fondo.webp") no-repeat center center/cover; /* Establece una imagen de fondo que se ajusta al contenedor */
+  color: #fff; /* El texto en blanco para contrastar con el fondo oscuro */
+  position: relative; /* Posiciona los elementos de la sección con respecto a su contenedor */
+}
+
+/* Capa adicional para opacidad en Hero, Stats y footer */
+.hero-section::after,
+.stats-section::after,
+footer::after {
+  content: ""; /* Crea un contenido vacío para aplicar estilos */
+  position: absolute; /* Hace que el contenido se posicione absolutamente dentro del contenedor */
+  top: 0; /* Posiciona el contenido en la parte superior */
+  left: 0; /* Posiciona el contenido a la izquierda */
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+  height: 100%; /* Ocupa el 100% de la altura del contenedor */
+  background: rgba(0, 0, 0, 0.8); /* Aplica un fondo oscuro con opacidad para oscurecer el área detrás del contenido */
+}
+
+/* Sección Hero: Diseño y altura */
+.hero-section {
+  position: relative; /* Posiciona el contenido de la sección en relación con su contenedor */
+  height: 89vh; /* Establece la altura de la sección al 89% de la altura de la ventana */
+  display: flex; /* Utiliza Flexbox para alinear los elementos */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  justify-content: center; /* Alinea los elementos horizontalmente al centro */
+  text-align: center; /* Alinea el texto en el centro */
+  color: white; /* Color del texto en blanco */
+}
+
+/* Capa con opacidad para la sección Hero */
+.hero-overlay {
+  position: absolute; /* Posiciona la capa encima del contenido */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Funda el fondo con opacidad */
+}
+
+/* Contenido sobre la imagen en la sección Hero */
+.hero-content {
+  position: relative; /* Coloca el contenido por encima de la capa de opacidad */
+  z-index: 2; /* Asegura que el contenido quede por encima de la capa de opacidad */
+  max-width: 800px; /* Limita el ancho máximo del contenido */
+  padding: 20px; /* Agrega un relleno al contenido */
+}
+
+/* Resaltar texto específico */
+.highlight {
+  color: #e4022c; /* Resalta el texto con color rojo */
+  font-weight: bold; /* Hace el texto en negrita */
+}
+
+/* Estilo del botón en la sección Hero */
+.hero-button {
+  background-color: #273474; /* Establece un color de fondo azul oscuro */
+  color: white; /* El texto del botón en blanco */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado dentro del botón */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  display: inline-block; /* Hace que el enlace se comporte como un bloque en línea */
+  margin-top: 15px; /* Espacio encima del botón */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.hero-button:hover {
+  background-color: dark#273474; /* Oscurece el color de fondo cuando el cursor pasa sobre el botón */
+}
+
+/* Estilo del ícono de engranaje */
+.gear-icon {
+  font-size: 50px; /* Aumenta el tamaño del ícono */
+  position: absolute; /* Posiciona el ícono sobre el contenido */
+  top: -35px; /* Mueve el ícono hacia arriba */
+  left: 50%; /* Centra el ícono horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición del ícono para centrarlo completamente */
+}
+
+/* Estilos para los contenedores dentro de las secciones Hero, Stats y footer */
+.hero-section .container,
+.stats-section .container,
+footer .container {
+  position: relative; /* Asegura que el contenido dentro del contenedor esté posicionado correctamente */
+  z-index: 1; /* Coloca el contenedor por encima de otras capas de fondo */
+}
+
+/* Color para el enlace de redes sociales */
+#redess {
+  color: #273474; /* Cambia el color del texto a azul oscuro */
+}
+
+/* -----------------------------------------------
+     ESTILOS DE LA NAVEGACIÓN (Navbar)
+----------------------------------------------- */
+
+/* Estilos para la barra de navegación */
+.navbar {
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  top: 0; /* Coloca la barra en la parte superior de la página */
+  width: 100%; /* Ocupa todo el ancho de la ventana */
+  z-index: 1000; /* Asegura que la barra se quede por encima de otros elementos */
+  background-color: white; /* Color de fondo blanco */
+  border-bottom: 2px solid #e9ecef; /* Línea de separación inferior */
+  padding: 10px 15px; /* Relleno interno de la barra */
+  font-family: 'Arial', sans-serif; /* Fuente de la barra */
+  box-sizing: border-box; /* Asegura que los márgenes y rellenos se sumen en el ancho total */
+  height: 72px; /* Establece la altura de la barra de navegación */
+}
+
+/* Estilo adicional para el cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 72px !important; /* Fuerza el espacio superior para compensar la altura de la barra fija */
+  margin: 0 !important; /* Elimina márgenes predeterminados */
+}
+
+/* Estilo de la sección Hero para evitar que se solape con la barra */
+.hero {
+  margin-top: 80px;
+}
+
+/* Estilo para el logo de la barra de navegación */
+.navbar-brand img {
+  margin-right: 10px; /* Agrega un margen a la derecha del logo */
+}
+
+/* Estilos para los enlaces dentro de la barra de navegación */
+.navbar-nav .nav-link {
+  color: black; /* Color de texto de los enlaces */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Hace el texto en negrita */
+  margin: 0 10px; /* Espaciado entre los enlaces */
+  transition: color 0.3s ease; /* Efecto de transición al cambiar el color */
+}
+
+/* Efecto cuando el cursor pasa sobre los enlaces */
+.navbar-nav .nav-link:hover {
+  color: #e4022c; /* Cambia el color a rojo cuando el cursor pasa sobre el enlace */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+  border-radius: 8px; /* Bordes redondeados para el menú */
+  border: 1px solid #ddd; /* Establece un borde gris claro */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad al menú */
+}
+
+/* Estilo de los elementos dentro del menú desplegable */
+.dropdown-item {
+  color: black; /* Texto negro para los elementos del menú */
+  font-size: 14px; /* Tamaño de la fuente */
+  padding: 10px 20px; /* Espaciado dentro de los elementos */
+}
+
+/* Estilo cuando el cursor pasa sobre un elemento del menú */
+.dropdown-item:hover {
+  background-color: #e4022c; /* Fondo rojo al pasar el cursor */
+  color: white; /* Texto blanco */
+  border-radius: 5px; /* Bordes redondeados al pasar el cursor */
+}
+
+/* Estilo del botón Contáctanos */
+.btn-danger {
+  background-color: #e4022c; /* Fondo rojo para el botón */
+  border: none; /* Elimina el borde del botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+/* Estilo cuando el cursor pasa sobre el botón */
+.btn-danger:hover {
+  background-color: #e4022c; /* Mantiene el color rojo sin cambios al pasar el cursor */
+}
+
+ /* ============================================================
+   Estilos Generales de la Sección "About Us"
+   ============================================================
+   Esta sección se aplica a un área general llamada ".about-us". Aquí se define el estilo básico 
+   para la presentación, fondo y espaciado de la sección "Sobre Nosotros" o una sección similar.
+*/
+.about-us {
+  background-color: #f8f9fa;  /* Color de fondo suave y claro */
+  padding: 60px 20px;  /* Espaciado interno (padding) de 60px en la parte superior e inferior, 20px a los lados */
+  position: relative;  /* Posición relativa para permitir el uso de posicionamiento absoluto dentro de la sección */
+  overflow: hidden;  /* Evita que los elementos se salgan del área de la sección */
+}
+
+/* ============================================================
+   Estilo del Título de la Sección
+   ============================================================
+   Esta clase se aplica al título principal de la sección para que tenga un color, tamaño y estilo específico.
+*/
+.section-title {
+  color: #e4022c;  /* Color rojo intenso para el texto */
+  font-size: 2.5rem;  /* Tamaño de fuente grande (2.5 veces el tamaño base) */
+  font-weight: bold;  /* Pone el texto en negrita */
+  margin-bottom: 20px;  /* Espaciado debajo del título */
+  border-bottom: 3px solid #e4022c;  /* Línea debajo del título de color rojo */
+  display: inline-block;  /* Hace que el título se comporte como un elemento en línea pero con propiedades de bloque */
+}
+
+/* ============================================================
+   Estilos para el Contenedor de Imagen con Efecto de Fondo
+   ============================================================
+   Esta clase aplica efectos de decoración a las imágenes o elementos dentro de la sección.
+*/
+.image-container::before {
+  content: '';  /* Contenido vacío para crear un pseudo-elemento */
+  position: absolute;  /* Posicionamiento absoluto para colocar el elemento de fondo */
+  top: -10%;  /* Coloca el pseudo-elemento un 10% arriba del contenedor */
+  left: -10%;  /* Coloca el pseudo-elemento un 10% a la izquierda */
+  width: 120%;  /* Hace que el pseudo-elemento sea un 120% más grande que el contenedor */
+  height: 120%;  /* Hace que el pseudo-elemento sea un 120% más alto que el contenedor */
+  background: rgba(0, 0, 0, 0.05);  /* Fondo semitransparente en negro */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);  /* Forma de polígono para crear bordes estilizados */
+  z-index: 0;  /* Asegura que este fondo se quede detrás del contenido */
+}
+
+/* ============================================================
+   Estilos Responsivos para Pantallas Móviles y Tabletas
+   ============================================================
+   Las siguientes reglas ajustan los estilos para pantallas pequeñas (menos de 768px).
+*/
 @media (max-width: 768px) {
-  .navbar-collapse {
-    position: fixed;
-    top: 72px; /* Altura de tu navbar */
-    left: 0;
-    width: 100%;
-    background-color: white !important; /* Fondo blanco */
-    padding: 20px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    max-height: calc(100vh - 72px);
-    overflow-y: auto;
-  }
-
-  .navbar-nav {
-    background-color: white !important; /* Doble seguro para el fondo */
-    margin-top: 15px;
-  }
-
+  /* Estilos para los elementos de la barra de navegación */
   .navbar-nav .nav-item {
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 0;  /* Añade espaciado superior e inferior a los ítems de la barra de navegación */
   }
 
-  .navbar-nav .nav-item:last-child {
-    border-bottom: none;
+  /* Ajuste de tamaño del botón de la barra de navegación para dispositivos pequeños */
+  .navbar-toggler {
+    padding: 0.5rem 1rem;  /* Reduce el espaciado del botón de la barra de navegación */
+    font-size: 1.5rem;  /* Aumenta el tamaño de la fuente del botón */
+    border: none;  /* Elimina el borde del botón */
+    background-color: transparent;  /* Hace el fondo del botón transparente */
   }
 
-  .navbar-nav .nav-link {
-    color: #273474 !important; /* Color oscuro para mejor contraste */
-    font-size: 1.1rem;
-    padding: 10px 15px;
-    display: block;
+  /* Ajustes para los elementos dentro de la barra de navegación */
+  .navbar-nav {
+    font-size: 1.1rem;  /* Aumenta el tamaño de la fuente */
+    text-align: center;  /* Centra el texto en la barra de navegación */
   }
 
-  .navbar-nav .nav-link:hover {
-    color: #e4022c !important;
-    background-color: #f8f8f8;
-    border-radius: 5px;
+  /* Espaciado adicional en la barra de navegación */
+  .navbar-collapse {
+    padding-top: 10px;  /* Añade espaciado adicional arriba de los elementos colapsados de la barra */
   }
 
-  .dropdown-menu {
-    background-color: #f9f9f9 !important;
-    border: none;
-    box-shadow: none;
-    margin-left: 15px;
-    width: calc(100% - 30px);
-  }
-
-  .dropdown-item {
-    padding: 10px 25px;
+  /* Barra de navegación oscura */
+  .navbar-dark .navbar-nav {
+    background-color: #000000;  /* Cambia el fondo a negro cuando está en modo oscuro */
   }
 }
 
+/* ============================================================
+   Estilo General para las Imágenes en las Tarjetas de Servicios
+   ============================================================
+   Define la altura y la forma de las imágenes en las tarjetas de los servicios.
+*/
+.card-img-top {
+  height: 200px;  /* Establece una altura fija para las imágenes */
+  object-fit: contain;  /* Hace que la imagen se ajuste dentro de su contenedor sin distorsionarse */
+  border-radius: 8px;  /* Aplica bordes redondeados a las imágenes */
+}
+
+/* ============================================================
+   Estilos Responsivos para el Diseño de los Servicios
+   ============================================================
+   Ajustes específicos para las tarjetas de servicios en pantallas más pequeñas.
+*/
+@media (max-width: 768px) {
+  /* Estilo para el encabezado en la sección de servicios */
+  #servicios h2 {
+    font-size: 2rem;  /* Reduce el tamaño de la fuente del encabezado */
+  }
+
+  /* Ajustes en los estilos de las tarjetas de servicios */
+  .card-body {
+    padding: 15px;  /* Añade un espaciado adecuado dentro de las tarjetas */
+  }
+
+  .card-title {
+    font-size: 1.2rem;  /* Ajusta el tamaño de la fuente del título de la tarjeta */
+  }
+
+  .card-text {
+    font-size: 0.9rem;  /* Ajusta el tamaño de la fuente del texto de la tarjeta */
+  }
+}
+
+/* ============================================================
+   Estilos para las Tarjetas del Equipo (Con Efectos Hover)
+   ============================================================
+   Estilos para las tarjetas que representan a los miembros del equipo.
+*/
+.team-member {
+  background: #fff;  /* Fondo blanco para las tarjetas */
+  border-radius: 15px;  /* Bordes redondeados para un diseño más suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave alrededor de las tarjetas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Transición suave al interactuar con la tarjeta */
+}
+
+/* Efecto de hover en las tarjetas del equipo */
+.team-member:hover {
+  transform: translateY(-8px);  /* Mueve la tarjeta hacia arriba al hacer hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  /* Aumenta la sombra al hacer hover */
+}
+
+/* ============================================================
+   Estilos para los Íconos Sociales (Con Efectos Hover)
+   ============================================================
+   Estilos para los enlaces de redes sociales.
+*/
+.social-icons a {
+  display: inline-block;  /* Los íconos se muestran en línea */
+  color: #273474;  /* Color de los íconos */
+  margin: 0 5px;  /* Espaciado entre los íconos */
+  font-size: 1.2rem;  /* Tamaño de los íconos */
+  transition: transform 0.3s ease, color 0.3s ease;  /* Transición suave para cambios de tamaño y color */
+}
+
+/* Efecto de hover en los íconos sociales */
+.social-icons a:hover {
+  transform: scale(1.2);  /* Aumenta el tamaño del ícono al hacer hover */
+  color: #e4022c;  /* Cambia el color a rojo intenso al hacer hover */
+}
+
+/* ============================================================
+   Estilos para las Flechas de Control del Carrusel
+   ============================================================
+   Estilos para las flechas de navegación del carrusel.
+*/
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;  /* Posicionamiento absoluto para que las flechas estén sobre el carrusel */
+  top: 50%;  /* Posiciona las flechas en el centro vertical del carrusel */
+  transform: translateY(-50%);  /* Ajusta la posición para centrar las flechas */
+  width: 50px;  /* Tamaño fijo de las flechas */
+  height: 50px;  /* Tamaño fijo de las flechas */
+  background-color: rgba(228, 2, 43, 0.375);  /* Color de fondo semitransparente para las flechas */
+  border-radius: 50%;  /* Hace las flechas redondas */
+  display: flex;  /* Utiliza flexbox para centrar el contenido de las flechas */
+  align-items: center;  /* Alinea verticalmente el contenido de las flechas */
+  justify-content: center;  /* Alinea horizontalmente el contenido de las flechas */
+  z-index: 10;  /* Asegura que las flechas estén por encima del contenido */
+}
+
+.carousel-control-prev {
+  left: -60px;  /* Posiciona la flecha anterior a la izquierda */
+}
+
+.carousel-control-next {
+  right: -60px;  /* Posiciona la flecha siguiente a la derecha */
+}
+
+/* ============================================================
+   Estilo para las Imágenes de las Estadísticas (Con Efectos Hover)
+   ============================================================
+   Estilos para las imágenes de las estadísticas, con efecto de zoom al hacer hover.
+*/
+.stat-item img {
+  max-width: 60px;  /* Limita el tamaño máximo de las imágenes */
+  height: auto;  /* Mantiene la proporción de las imágenes */
+  transition: transform 0.3s ease;  /* Transición suave para el efecto hover */
+}
+
+/* Efecto de hover en las imágenes de estadísticas */
+.stat-item img:hover {
+  transform: scale(1.1);  /* Amplía la imagen al hacer hover */
+}
+ /* ============================================================
+     ANIMACIÓN EN HOVER PARA LAS TARJETAS (Servicios)
+     ============================================================
+  Las tarjetas de servicio tienen una animación en hover que mejora la interacción con el usuario. 
+  Se agrega un efecto de elevación (transformación en el eje Y) y una sombra al pasar el mouse sobre ellas.
+*/
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Se aplica una transición suave cuando la tarjeta cambia de posición o cuando cambia su sombra */
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  /* La tarjeta se desplaza hacia arriba cuando el mouse está sobre ella */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  /* Se aplica una sombra grande para dar el efecto de que la tarjeta está flotando */
+}
+
+/* ============================================================
+     ESTILOS PARA EL ÍCONO DE SERVICIO
+     ============================================================
+  Estilos que definen el tamaño, forma y sombra de los íconos dentro de las tarjetas de servicio.
+*/
+.service-icon {
+  width: 100px;
+  height: 100px;
+  margin: -50px auto 10px;
+  background: #f8f9fa;
+  /* Fondo gris claro */
+  border-radius: 50%;
+  /* Hace que el fondo del ícono tenga forma circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Centra el ícono dentro del círculo */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil alrededor del ícono */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Agrega una transición suave para cambios en la sombra o tamaño */
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  /* Al pasar el mouse sobre la tarjeta, el ícono aumenta de tamaño */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  /* Aumenta la sombra alrededor del ícono para darle un efecto de profundidad */
+}
+
+.service-icon img {
+  width: 60px;
+  /* Se establece el tamaño del ícono dentro del círculo */
+}
+
+/* ============================================================
+     ESTILOS PARA LOS ESTADÍSTICOS (Íconos de estadísticas)
+     ============================================================
+  Estos estilos son aplicados a los elementos estadísticos, tales como iconos de números de equipo o proyectos.
+*/
+.stat-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  /* Al pasar el mouse, los íconos se desplazan hacia arriba */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  /* Se aplica una sombra alrededor de los íconos */
+}
+
+.stat-icon-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  background: #f8f9fa;
+  /* Fondo gris claro */
+  border-radius: 50%;
+  /* Hace que el contenedor del ícono sea redondo */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  /* Sombra alrededor del ícono */
+}
+
+.stat-icon {
+  width: 60px;
+  height: auto;
+  /* Asegura que los iconos mantengan su proporción */
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #dc3545;
+  /* Número en color rojo */
+}
+
+/* ============================================================
+     ESTILOS GENERALES PARA EL PORTAFOLIO
+     ============================================================
+  Aquí se definen los estilos para los elementos del portafolio, 
+  como las tarjetas de los proyectos y sus videos.
+*/
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  /* Border-radius para darle esquinas redondeadas a las tarjetas */
+}
+
+.portfolio-video {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  /* Se agrega un efecto de transición para la escala y la opacidad del video */
+}
+
+.portfolio-item:hover .portfolio-video {
+  transform: scale(1.05);
+  /* Al pasar el mouse sobre la tarjeta, el video aumenta ligeramente de tamaño */
+  opacity: 0.9;
+  /* El video se vuelve un poco más translúcido */
+}
+
+/* Superposición de descripción en las tarjetas del portafolio */
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Fondo semi-transparente oscuro */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+  /* Al pasar el mouse, la superposición de la descripción se hace visible */
+}
+
+/* ============================================================
+     ESTILOS PARA LAS IMÁGENES DE LOS MIEMBROS DEL EQUIPO
+     ============================================================
+  Se asegura de que las imágenes de los miembros del equipo se ajusten sin recortar, manteniendo su proporción.
+*/
+.team-member img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  /* Se establece una altura máxima para evitar que las imágenes se deformen */
+  object-fit: contain;
+  /* Hace que la imagen mantenga su proporción sin ser recortada */
+}
+
+/* ============================================================
+     ESTILOS ESPECÍFICOS PARA MÓVILES (Pantallas de 768px o menos)
+     ============================================================
+  Ajustes para asegurar que el sitio se vea bien en dispositivos móviles y pequeños.
+*/
+@media (max-width: 768px) {
+  .carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    /* Permite que los elementos del carrusel se deslicen horizontalmente */
+  }
+
+  .carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    /* Alinea los elementos del carrusel al centro */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    /* Hace las flechas del carrusel más pequeñas y discretas */
+  }
+
+  .team-member {
+    padding: 15px;
+    /* Mejora el espaciado de los elementos del equipo */
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    /* Se reduce el tamaño del título en pantallas pequeñas */
+  }
+}
+
+/* ============================================================
+     ESTILOS PARA LAS TARJETAS DE LOS MIEMBROS DEL EQUIPO
+     ============================================================
+  Estilos para las tarjetas de presentación de los miembros del equipo.
+*/
+.team-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  /* Se aplica un efecto de elevación cuando el mouse pasa sobre la tarjeta */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  /* Se intensifica la sombra para dar un efecto de profundidad */
+}
+
+.img-container {
+  width: 170px;
+  height: 220px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Se añade una sombra discreta alrededor del contenedor de la imagen */
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+}
+
+/* ============================================================
+     BOTONES PERSONALIZADOS
+     ============================================================
+  Estilos para los botones personalizados, como los botones de "contacto".
+*/
+.btn-custom {
+  background: #e4022c;
+  color: white;
+  border-radius: 50px;
+  padding: 8px 15px;
+  transition: background 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-custom:hover {
+  background: #273474;
+  /* Cambia el color de fondo cuando el mouse pasa sobre el botón */
+}
+
+/* ============================================================
+     SECCIÓN DE TESTIMONIOS
+     ============================================================
+  Estilos para la sección de testimonios, incluyendo la superposición y el fondo.
+*/
+.testimonials-section {
+  background: url('../assets/img/fondo.webp') center/cover no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Fondo oscuro semi-transparente */
+  z-index: 0;
+}
+
+.testimonials-section .container {
+  position: relative;
+  z-index: 2;
+  /* Asegura que el contenido de la sección esté por encima de la superposición */
+}
+ /* ===============================================
+   NAVBAR MOBILE - Menú Hamburguesa Corregido
+   ===============================================
+   Este bloque de código CSS está diseñado para personalizar el menú de navegación (navbar) en dispositivos móviles, 
+   específicamente cuando la pantalla tiene un ancho máximo de 768px (lo que corresponde a tablets y smartphones). 
+   Se usa una media query para aplicar estos estilos solo cuando el ancho de la pantalla es pequeño, de modo que no afecte 
+   al diseño en pantallas más grandes. Además, se incluyen estilos para asegurar que el menú de navegación sea funcional, 
+   fácil de usar y se vea bien en pantallas pequeñas.
+   
+   Los estilos dentro de esta media query personalizan el comportamiento del navbar (barra de navegación), 
+   el menú desplegable (dropdown) y los enlaces dentro del navbar en dispositivos móviles.
+*/
+
+@media (max-width: 768px) {
+  /* Navbar colapsado y fijo en la parte superior */
+  .navbar-collapse {
+    position: fixed;  /* Fija el menú en la parte superior */
+    top: 72px;        /* Coloca el menú justo debajo de la barra de navegación (navbar) */
+    left: 0;          /* Alinea el menú con el borde izquierdo de la pantalla */
+    width: 100%;      /* Hace que el menú ocupe todo el ancho de la pantalla */
+    background-color: white !important;  /* Establece el fondo blanco para el menú */
+    padding: 20px;    /* Agrega un poco de espacio interno alrededor del menú */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil debajo del menú para dar profundidad */
+    z-index: 999;     /* Asegura que el menú esté por encima de otros elementos (como imágenes o texto) */
+    max-height: calc(100vh - 72px); /* Limita la altura máxima del menú para que no se desborde de la pantalla */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido del menú es demasiado largo */
+  }
+
+  /* Estilo del menú de navegación (navbar-nav) */
+  .navbar-nav {
+    background-color: white !important; /* Fondo blanco para asegurar que el color de fondo no se sobrescriba */
+    margin-top: 15px; /* Añade un margen superior para separar el menú de los elementos superiores */
+  }
+
+  /* Estilo de cada ítem de navegación */
+  .navbar-nav .nav-item {
+    padding: 10px 0; /* Añade espacio arriba y abajo de cada ítem del menú */
+    border-bottom: 1px solid #f0f0f0; /* Añade una línea sutil debajo de cada ítem para separarlos visualmente */
+  }
+
+  /* Elimina el borde inferior del último ítem del menú */
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none; /* Elimina la línea del último ítem */
+  }
+
+  /* Estilo de los enlaces de navegación (nav-link) */
+  .navbar-nav .nav-link {
+    color: #273474 !important; /* Color oscuro para los enlaces para mayor contraste con el fondo blanco */
+    font-size: 1.1rem; /* Aumenta ligeramente el tamaño de fuente para hacerlo más legible en móviles */
+    padding: 10px 15px; /* Añade espacio alrededor del texto para que los enlaces sean más fáciles de tocar */
+    display: block; /* Hace que el enlace ocupe toda la línea para facilitar el clic en móviles */
+  }
+
+  /* Estilo de los enlaces cuando el usuario pasa el mouse o toca sobre ellos */
+  .navbar-nav .nav-link:hover {
+    color: #e4022c !important; /* Cambia el color del texto a rojo cuando el enlace es tocado o hover */
+    background-color: #f8f8f8; /* Añade un color de fondo gris claro para indicar que el enlace es interactivo */
+    border-radius: 5px; /* Redondea las esquinas del fondo cuando el enlace es hover */
+  }
+
+  /* Estilo del menú desplegable (dropdown-menu) */
+  .dropdown-menu {
+    background-color: #f9f9f9 !important; /* Fondo gris claro para el menú desplegable */
+    border: none; /* Elimina el borde del menú desplegable */
+    box-shadow: none; /* Elimina cualquier sombra que pueda aparecer en el menú desplegable */
+    margin-left: 15px; /* Añade un margen a la izquierda para separar los ítems del menú */
+    width: calc(100% - 30px); /* Hace que el menú desplegable ocupe todo el ancho disponible, menos 30px por el margen */
+  }
+
+  /* Estilo de los ítems del menú desplegable */
+  .dropdown-item {
+    padding: 10px 25px; /* Añade espacio dentro de cada ítem para facilitar la selección */
+  }
+}
