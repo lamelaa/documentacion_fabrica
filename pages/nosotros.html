@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+  <!-- La etiqueta <html> indica el inicio del documento HTML. El atributo lang="es" 
+       especifica que el idioma principal del contenido de la página es español. -->
 
 <head>
+  <!-- El <head> contiene metadatos y enlaces a recursos externos necesarios para el documento. -->
+  
   <meta charset="UTF-8" />
+  <!-- <meta charset="UTF-8"> especifica que la codificación de caracteres para el documento es UTF-8, 
+       lo que permite el uso de caracteres especiales y acentos correctamente. -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <meta name="viewport"> define cómo se debe mostrar la página en dispositivos móviles. 
+       Aquí, se establece que el ancho de la página debe coincidir con el ancho del dispositivo y 
+       el nivel de zoom inicial debe ser 1. -->
+
   <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
+  <!-- Esta metaetiqueta se usa para verificar el sitio en Google, por ejemplo, para la verificación de 
+       Google Search Console. -->
+
   <title>Consultoria</title>
+  <!-- <title>Establece el título de la página que aparece en la pestaña del navegador. En este caso, 
+       "Consultoria". -->
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Esta línea importa la hoja de estilo de Bootstrap desde un CDN. Bootstrap es un marco de diseño 
+       que ayuda a crear sitios web responsivos y con un diseño atractivo de forma rápida. -->
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Font Awesome se utiliza para incluir iconos fácilmente en el sitio web. Este enlace importa la 
+       versión más reciente de Font Awesome desde un CDN. -->
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/nosotros.css" />
+  <!-- Este enlace importa una hoja de estilo personalizada para la página, ubicada en la carpeta css. -->
+  
   <link rel="icon" href="../assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon">
+  <!-- Esta línea establece un icono personalizado para la pestaña del navegador. -->
 </head>
 
 <body>
-  <!-- Navbar -->
+  <!-- <body> contiene todo el contenido visible de la página web. -->
+
+  <!-- Sección Navbar (barra de navegación) -->
   <section>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <!-- <nav> define la barra de navegación. "navbar" es una clase de Bootstrap que crea una barra de navegación
+           con un diseño específico. La clase "fixed-top" la mantiene fija en la parte superior de la página. -->
       <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logos juntos -->
+        <!-- El contenedor centraliza los elementos dentro de la barra de navegación, "d-flex" y "justify-content-between"
+             aseguran que los elementos estén distribuidos correctamente. -->
+
+        <!-- Logos -->
         <div class="d-flex align-items-center">
           <a class="navbar-brand me-2" href="#">
             <img src="../assets/img/Nuevos logos/fusoft simplificado.png" alt="Logo" width="50" height="50" />
+            <!-- Este enlace contiene el logo de la empresa. -->
           </a>
           <a class="navbar-brand" href="#">
-            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50"
-              height="50" />
+            <img src="../assets/img/Official Uniempresarial bussines material/logo ue.png" alt="Logo" width="50" height="50" />
+            <!-- Aquí se encuentra el segundo logo de Uniempresarial. -->
           </a>
         </div>
 
-        <!-- Botón Responsive -->
+        <!-- Botón para la visualización en dispositivos móviles -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Links -->
+        <!-- Enlaces de la barra de navegación -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <a class="nav-link" href="../index.html">INICIO</a>
@@ -58,288 +91,330 @@
             <li class="nav-item"><a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
                 rel="noreterrer noopener">UNIEMPRESARIAL</a></li>
           </ul>
-          <!-- Botón Contáctanos -->
+          <!-- Botón para ir a la página de contacto -->
           <a href="./contacto.html" class="btn btn-danger px-4 ms-3">CONTACTANOS</a>
         </div>
       </div>
     </nav>
   </section>
 
-
   <!-- Hero Section -->
   <section class="sobre-nosotros">
     <div class="contenido">
+      <!-- Contenido principal de la sección Hero -->
       <h2>Sobre <span class="destacado">Nosotros</span></h2>
+      <!-- Título de la sección "Sobre Nosotros". El texto destacado resalta la palabra "Nosotros". -->
       <p>Somos un equipo apasionado por la tecnología y la innovación, creando soluciones digitales que transforman
         negocios.</p>
+      <!-- Breve descripción de la empresa. -->
       <a href="../pages/contacto.html" class="btn btn-custom">Quiero más información</a>
+      <!-- Un botón que redirige a la página de contacto con un estilo personalizado. -->
     </div>
   </section>
+ <!-- ============================================================
+     SECCIÓN: MISIÓN Y VISIÓN
+     ============================================================
+  Esta sección describe la Misión y Visión de la empresa. La misión detalla el 
+  propósito y los valores fundamentales de la organización, mientras que la visión 
+  define los objetivos a largo plazo.
 
-  <section class="mission-vision py-5 position-relative">
-    <div class="polygon-shape"></div> <!-- Figura poligonal decorativa -->
-    <div class="container position-relative">
-      <!-- Sección Misión -->
-      <div class="row align-items-center mb-5">
-        <!-- Imagen Misión -->
-        <div class="col-md-6 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="800">
-          <div class="image-container">
-            <img src="../assets/img/mision.jpg" alt="Nuestra Misión" class="img-fluid">
-          </div>
-        </div>
+  La estructura está dividida en dos partes:
+  - Misión: Se presenta junto a una imagen representativa.
+  - Visión: También se presenta junto a otra imagen representativa.
 
-        <!-- Texto Misión -->
-        <div class="col-md-6 text-dark" data-aos="fade-left" data-aos-duration="800">
-          <div class="content-box">
-            <div class="icon"><i class="fas fa-bullseye"></i></div>
-            <h2 class="section-title">Nuestra <span class="highlight">Misión</span></h2>
-            <p class="description">
-              Ser la primera fábrica de software dedicada a la formación integral de estudiantes,
-              proporcionando entrenamiento y desarrollo práctico basado en problemas reales del sector.
-              Impulsamos el crecimiento profesional y fomentamos la innovación con experiencias aplicadas.
-            </p>
-          </div>
+  Adicionalmente, se usan elementos decorativos como figuras poligonales y círculos animados 
+  para darle un toque visual atractivo.
+
+  Se utiliza la librería AOS para animaciones y efectos visuales en el scroll de la página.
+
+-->
+<section class="mission-vision py-5 position-relative">
+  <!-- Figura poligonal decorativa -->
+  <div class="polygon-shape"></div> 
+
+  <!-- Contenedor principal de la sección -->
+  <div class="container position-relative">
+    
+    <!-- Sección Misión -->
+    <div class="row align-items-center mb-5">
+      
+      <!-- Imagen Misión -->
+      <div class="col-md-6 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="800">
+        <!-- Contenedor de la imagen -->
+        <div class="image-container">
+          <img src="../assets/img/mision.jpg" alt="Nuestra Misión" class="img-fluid">
         </div>
       </div>
 
-      <!-- Sección Visión -->
-      <div class="row align-items-center flex-md-row-reverse">
-        <!-- Imagen Visión -->
-        <div class="col-md-6 text-center mb-4 mb-md-0" data-aos="fade-left" data-aos-duration="800">
-          <div class="image-container">
-            <img src="../assets/img/vision.jpg" alt="Nuestra Visión" class="img-fluid">
-          </div>
-        </div>
-
-        <!-- Texto Visión -->
-        <div class="col-md-6 text-dark" data-aos="fade-right" data-aos-duration="800">
-          <div class="content-box">
-            <div class="icon"><i class="fas fa-lightbulb"></i></div>
-            <h2 class="section-title">Nuestra <span class="highlight">Visión</span></h2>
-            <p class="description">
-              En tres años, nos consolidaremos como una unidad de servicios especializada, brindando soluciones
-              a empresas del sector real con desarrollo de software a la medida. Seremos un referente en
-              innovación y formación, impulsando el crecimiento tecnológico y profesional de nuestros colaboradores y
-              clientes.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="decorative-circle position-absolute rounded-circle" style="
-          width: 200px;
-          height: 200px;
-          background: rgba(0, 0, 0, 0.05);
-          top: -50px;
-          left: -50px;
-          animation: float 8s ease-in-out infinite;
-        "></div>
-    <div class="decorative-circle position-absolute rounded-circle" style="
-        width: 200px;
-        height: 200px;
-        background: rgba(245, 0, 0, 0.05);
-        top: 800px;
-        left: 1300px;
-        animation: float 8s ease-in-out infinite;
-      "></div>
-  </section>
-
-
-  <section class="text-center py-5 bg-light position-relative overflow-hidden">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold display-4 mb-5" data-aos="fade-down" data-aos-duration="800">
-        ¿Por Qué Elegirnos?
-      </h2>
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-box shadow-lg">
-            <i class="fas fa-code icon-feature text-danger"></i>
-            <h5 class="fw-bold mt-3">Expertos en tecnología</h5>
-            <p class="text-muted">Contamos con un equipo multidisciplinario que entiende tus desafíos y los convierte en
-              oportunidades.</p>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="feature-box shadow-lg">
-            <i class="fas fa-cogs icon-feature text-primary"></i>
-            <h5 class="fw-bold mt-3">Soluciones personalizadas</h5>
-            <p class="text-muted">Cada proyecto es único, y nos aseguramos de entregarte herramientas que realmente
-              impulsen tu negocio.</p>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="feature-box shadow-lg">
-            <i class="fas fa-handshake icon-feature text-danger"></i>
-            <h5 class="fw-bold mt-3">Soporte continuo</h5>
-            <p class="text-muted">Estamos contigo en cada etapa del proceso y después de la implementación, para
-              garantizar el éxito de tu proyecto.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Elemento decorativo animado -->
-    <div class="decorative-circle"></div>
-  </section>
-
-
-  <section class="text-center py-5 position-relative" style="
-    background: linear-gradient(to right, #ffffff, #f8f9fa);
-    overflow: hidden;">
-    <div class="container">
-      <!-- Título con animación -->
-      <h2 class="fw-bold display-4 mb-4 text-dark position-relative" data-aos="fade-up"
-        style="font-weight: 800; letter-spacing: 1px;">
-        Llevamos tus ideas a la realidad tecnológica
-      </h2>
-      <!-- Separador decorativo -->
-      <div class="mx-auto mb-4" style="width: 80px; height: 4px; background: #273474; border-radius: 2px;"></div>
-
-      <!-- Texto descriptivo -->
-      <p class="text-muted fs-5 mx-auto" data-aos="fade-up" data-aos-delay="200"
-        style="max-width: 700px; line-height: 1.7; font-size: 1.2rem;">
-        Déjanos acompañarte en cada etapa del camino, desde el análisis hasta la implementación y más allá.
-        <strong class="text-dark">Haz que la tecnología sea un aliado para tu negocio.</strong>
-      </p>
-
-      <!-- Botón de acción -->
-      <a href="../pages/contacto.html" class="btn btn-primary mt-4 px-4 py-2 shadow-sm" data-aos="zoom-in"
-        data-aos-delay="400"
-        style="font-size: 1.2rem; font-weight: 600; border-radius: 30px; background-color: #273474; border: none;">
-        Contáctanos
-      </a>
-    </div>
-
-    <!-- Elementos decorativos -->
-    <div class="position-absolute" style="
-        width: 120px; height: 120px; background: rgba(39, 52, 116, 0.1);
-        top: -20px; left: -30px; border-radius: 50%;
-        animation: float 6s ease-in-out infinite;"></div>
-
-    <div class="position-absolute" style="
-        width: 80px; height: 80px; background: rgba(39, 52, 116, 0.1);
-        bottom: -20px; right: -30px; border-radius: 50%;
-        animation: float 6s ease-in-out infinite;"></div>
-  </section>
-  <footer class="bg-primary text-light py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Logo y Redes Sociales -->
-        <div class="col-md-3 text-center text-md-start">
-          <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png  "
-            alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
-          <div class="d-flex justify-content-center justify-content-md-start gap-2">
-            <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-            <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
-            <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener"
-              class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank"
-              rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
-          </div>
-        </div>
-
-        <!-- Programas y Enlaces Directos -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Nuestros Servicios</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
-            </li>
-            <li>
-              <a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la
-                Medida</a>
-            </li>
-            <li>
-              <a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
-            </li>
-            <li>
-              <a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en
-                Software</a>
-            </li>
-          </ul>
-          <h5 class="fw-bold mt-4">Enlaces Directos</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
-            </li>
-            <li>
-              <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
-                target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión
-                Académica</a>
-            </li>
-            <li>
-              <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">FAQs</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Normatividad -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Normatividad y Políticas</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Acceso a la Información Pública</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
-            </li>
-            <li>
-              <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Estados Financieros</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Mapa y Contacto -->
-        <div class="col-md-3 text-center text-md-start">
-          <h5 class="fw-bold">Ubicación</h5>
-          <div class="map-container" style="
-              height: 150px;
-              border-radius: 10px;
-              overflow: hidden;
-              margin-bottom: 10px;
-            ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
-              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
-            #30-20 Bogotá D.C.
-          </p>
-          <p>
-            <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
-            6607, 6608
-          </p>
-          <p>
-            <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+      <!-- Texto Misión -->
+      <div class="col-md-6 text-dark" data-aos="fade-left" data-aos-duration="800">
+        <!-- Caja de contenido que contiene el texto -->
+        <div class="content-box">
+          <!-- Icono de misión -->
+          <div class="icon"><i class="fas fa-bullseye"></i></div>
+          <!-- Título de la sección -->
+          <h2 class="section-title">Nuestra <span class="highlight">Misión</span></h2>
+          <!-- Descripción de la misión -->
+          <p class="description">
+            Ser la primera fábrica de software dedicada a la formación integral de estudiantes,
+            proporcionando entrenamiento y desarrollo práctico basado en problemas reales del sector.
+            Impulsamos el crecimiento profesional y fomentamos la innovación con experiencias aplicadas.
           </p>
         </div>
       </div>
     </div>
-  </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/app.js"></script>
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- Sección Visión -->
+    <div class="row align-items-center flex-md-row-reverse">
+      
+      <!-- Imagen Visión -->
+      <div class="col-md-6 text-center mb-4 mb-md-0" data-aos="fade-left" data-aos-duration="800">
+        <div class="image-container">
+          <img src="../assets/img/vision.jpg" alt="Nuestra Visión" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Texto Visión -->
+      <div class="col-md-6 text-dark" data-aos="fade-right" data-aos-duration="800">
+        <div class="content-box">
+          <div class="icon"><i class="fas fa-lightbulb"></i></div>
+          <h2 class="section-title">Nuestra <span class="highlight">Visión</span></h2>
+          <p class="description">
+            En tres años, nos consolidaremos como una unidad de servicios especializada, brindando soluciones
+            a empresas del sector real con desarrollo de software a la medida. Seremos un referente en
+            innovación y formación, impulsando el crecimiento tecnológico y profesional de nuestros colaboradores y
+            clientes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Círculos decorativos animados -->
+  <div class="decorative-circle position-absolute rounded-circle" style="
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.05);
+    top: -50px;
+    left: -50px;
+    animation: float 8s ease-in-out infinite;
+  "></div>
+  <div class="decorative-circle position-absolute rounded-circle" style="
+    width: 200px;
+    height: 200px;
+    background: rgba(245, 0, 0, 0.05);
+    top: 800px;
+    left: 1300px;
+    animation: float 8s ease-in-out infinite;
+  "></div>
+</section><section class="text-center py-5 bg-light position-relative overflow-hidden">
+  <div class="container">
+    <!-- Título con animación -->
+    <h2 class="fw-bold display-4 mb-5" data-aos="fade-down" data-aos-duration="800">
+      ¿Por Qué Elegirnos?
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-box shadow-lg">
+          <i class="fas fa-code icon-feature text-danger"></i>
+          <h5 class="fw-bold mt-3">Expertos en tecnología</h5>
+          <p class="text-muted">Contamos con un equipo multidisciplinario que entiende tus desafíos y los convierte en
+            oportunidades.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="feature-box shadow-lg">
+          <i class="fas fa-cogs icon-feature text-primary"></i>
+          <h5 class="fw-bold mt-3">Soluciones personalizadas</h5>
+          <p class="text-muted">Cada proyecto es único, y nos aseguramos de entregarte herramientas que realmente
+            impulsen tu negocio.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="feature-box shadow-lg">
+          <i class="fas fa-handshake icon-feature text-danger"></i>
+          <h5 class="fw-bold mt-3">Soporte continuo</h5>
+          <p class="text-muted">Estamos contigo en cada etapa del proceso y después de la implementación, para
+            garantizar el éxito de tu proyecto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Elemento decorativo animado -->
+  <div class="decorative-circle"></div>
+</section>
+
+  <!-- ============================================================
+     SECCIÓN: LLAMADA A LA ACCIÓN (CTA) Y PIE DE PÁGINA
+     ============================================================
+  La sección de llamada a la acción (CTA) está diseñada para invitar a los usuarios a contactar a la empresa, 
+  mientras que el pie de página contiene enlaces a los servicios, redes sociales y otros enlaces útiles.
+
+  La animación de los elementos en ambas secciones se controla con AOS (Animate on Scroll).
+  Se incluyen elementos decorativos en la sección de CTA para dar un toque visual atractivo.
+
+  La estructura es responsiva gracias al uso de clases de Bootstrap, que se adapta a diferentes tamaños de pantalla.
+-->
+
+<!-- Sección de Llamada a la Acción (CTA) -->
+<section class="text-center py-5 position-relative" style="background: linear-gradient(to right, #ffffff, #f8f9fa); overflow: hidden;">
+  <!-- Contenedor para el contenido -->
+  <div class="container">
+    
+    <!-- Título de la sección con animación -->
+    <h2 class="fw-bold display-4 mb-4 text-dark position-relative" data-aos="fade-up" style="font-weight: 800; letter-spacing: 1px;">
+      Llevamos tus ideas a la realidad tecnológica
+    </h2>
+    
+    <!-- Separador decorativo (barra horizontal) -->
+    <div class="mx-auto mb-4" style="width: 80px; height: 4px; background: #273474; border-radius: 2px;"></div>
+
+    <!-- Descripción adicional con animación -->
+    <p class="text-muted fs-5 mx-auto" data-aos="fade-up" data-aos-delay="200" style="max-width: 700px; line-height: 1.7; font-size: 1.2rem;">
+      Déjanos acompañarte en cada etapa del camino, desde el análisis hasta la implementación y más allá.
+      <strong class="text-dark">Haz que la tecnología sea un aliado para tu negocio.</strong>
+    </p>
+
+    <!-- Botón de acción con animación -->
+    <a href="../pages/contacto.html" class="btn btn-primary mt-4 px-4 py-2 shadow-sm" data-aos="zoom-in" data-aos-delay="400" style="font-size: 1.2rem; font-weight: 600; border-radius: 30px; background-color: #273474; border: none;">
+      Contáctanos
+    </a>
+  </div>
+
+  <!-- Elementos decorativos flotantes -->
+  <div class="position-absolute" style="width: 120px; height: 120px; background: rgba(39, 52, 116, 0.1); top: -20px; left: -30px; border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+
+  <div class="position-absolute" style="width: 80px; height: 80px; background: rgba(39, 52, 116, 0.1); bottom: -20px; right: -30px; border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+</section>
+
+<!-- Pie de Página -->
+<footer class="bg-primary text-light py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Logo y Redes Sociales -->
+      <div class="col-md-3 text-center text-md-start">
+        <!-- Logo de la universidad -->
+        <img src="../assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png" alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
+        
+        <!-- Íconos de redes sociales -->
+        <div class="d-flex justify-content-center justify-content-md-start gap-2">
+          <!-- Enlaces a redes sociales -->
+          <a href="https://www.facebook.com/uniempresarial/" target="_blank" rel="noreterrer noopener" class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" target="_blank" rel="noreterrer noopener" class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="https://www.instagram.com/uniempresarial/?hl=en" target="_blank" rel="noreterrer noopener" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" target="_blank" rel="noreterrer noopener" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
+        </div>
+      </div>
+
+      <!-- Enlaces de Servicios y Programas -->
+      <div class="col-md-3">
+        <h5 class="fw-bold">Nuestros Servicios</h5>
+        <ul class="list-unstyled">
+          <!-- Enlaces a servicios -->
+          <li><a href="../pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a></li>
+          <li><a href="../pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la Medida</a></li>
+          <li><a href="../pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a></li>
+          <li><a href="../pages/capacitaciones.html" class="text-light text-decoration-none">Capacitación en Software</a></li>
+        </ul>
+
+        <!-- Enlaces Directos -->
+        <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+        <ul class="list-unstyled">
+          <!-- Enlaces adicionales -->
+          <li><a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a></li>
+          <li><a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión Académica</a></li>
+          <li><a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+       <!-- ============================================================
+     SECCIÓN: NORMATIVIDAD Y POLÍTICAS
+     ============================================================
+  Esta sección está dedicada a mostrar enlaces importantes relacionados con la normatividad y políticas de la organización.
+  Los usuarios pueden acceder a varios documentos y regulaciones relevantes a través de enlaces directos.
+-->
+<div class="col-md-3">
+  <!-- Título de la sección -->
+  <h5 class="fw-bold">Normatividad y Políticas</h5>
+  <!-- Lista de enlaces a documentos normativos -->
+  <ul class="list-unstyled">
+    <!-- Enlace 1: Acceso a la Información Pública -->
+    <li>
+      <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">Acceso a la Información Pública</a>
+    </li>
+    <!-- Enlace 2: Derechos Pecuniarios 2025 -->
+    <li>
+      <a href="../assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
+    </li>
+    <!-- Enlace 3: Derechos Pecuniarios 2024 -->
+    <li>
+      <a href="../assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
+    </li>
+    <!-- Enlace 4: Estados Financieros -->
+    <li>
+      <a href="../assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">Estados Financieros</a>
+    </li>
+  </ul>
+</div>
+<!-- ============================================================
+     SECCIÓN: UBICACIÓN Y CONTACTO
+     ============================================================
+  En esta sección se proporciona información sobre la ubicación física de la empresa y los detalles de contacto.
+  También incluye un mapa interactivo para que los usuarios puedan ver la ubicación en Google Maps.
+-->
+<div class="col-md-3 text-center text-md-start">
+  <!-- Título de la sección -->
+  <h5 class="fw-bold">Ubicación</h5>
+  <!-- Mapa interactivo de Google Maps -->
+  <div class="map-container" style="
+      height: 150px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    ">
+    <!-- iframe de Google Maps que muestra la ubicación -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
+      width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <!-- Información de contacto -->
+  <p>
+    <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
+    #30-20 Bogotá D.C.
+  </p>
+  <p>
+    <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
+    6607, 6608
+  </p>
+  <p>
+    <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+  </p>
+</div>
+<!-- ============================================================
+     SECCIÓN DE SCRIPTS Y CIERRE DEL BODY Y HTML
+     ============================================================
+  En esta sección se incluyen los scripts necesarios para el funcionamiento de la página, como Bootstrap, AOS (para animaciones), 
+  y cualquier script adicional como el archivo `app.js`.
+-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Script adicional (puede contener funciones personalizadas) -->
+<script src="./js/app.js"></script>
+
+<!-- AOS CSS (para animaciones) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<!-- AOS JS (para animaciones) -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- Inicialización de AOS -->
+<script>
+  AOS.init();
+</script>
 </body>
-
 </html>
