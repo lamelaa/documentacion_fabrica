@@ -1,847 +1,1813 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Esto le dice al navegador que el archivo está usando HTML5, que es la versión más reciente y recomendada -->
+
+<html lang="es"> <!-- Aquí indicamos que todo el contenido del sitio está en español, lo que ayuda a los buscadores y lectores de pantalla -->
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
-  <title>Soluciones TI</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="./css/stilos.css" />
-  <link rel="icon" href="./assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon" />
+  <!-- Esta etiqueta <head> contiene información que no se ve directamente en la página, pero que es importante para que funcione correctamente -->
 
+  <meta charset="UTF-8" />
+  <!-- Esto asegura que todos los caracteres especiales (como tildes o la ñ) se vean bien -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Esto es clave para que la página sea "responsive", es decir, que se vea bien tanto en computadoras como en celulares -->
+
+  <meta name="google-site-verification" content="ogBIzZpZG34czVtV41qKoiN17OP2RxM8Q94nAbjv1iU" />
+  <!-- Este código es para verificar el sitio con Google Search Console. Si no estás usando eso, podrías eliminarlo sin problema -->
+
+  <title>Soluciones TI</title>
+  <!-- Este es el título que aparece en la pestaña del navegador, y también ayuda a los motores de búsqueda a entender de qué trata tu página -->
+
+  <!-- ========================= ESTILOS ========================= -->
+
+  <!-- Aquí se importa Bootstrap, que es una librería que nos ayuda a hacer diseños responsivos más rápido -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Esto importa los iconos de Font Awesome. Por ejemplo, los íconos de redes sociales o los botones con símbolos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Este es tu propio archivo de estilos personalizados, donde puedes modificar colores, tamaños, márgenes, etc. -->
+  <link rel="stylesheet" href="./css/stilos.css" />
+
+  <!-- Este ícono es el que aparece al lado del nombre en la pestaña del navegador, también conocido como "favicon" -->
+  <link rel="icon" href="./assets/img/Nuevos logos/fusoft simplificado.png" type="image/x-icon" />
 </head>
 
 <body>
   <section>
-    <!-- Navbar -->
+    <!-- ===============================================
+         NAVBAR (barra de navegación superior fija)
+         ===============================================
+      Este bloque define la barra superior del sitio, también conocida como "navbar".
+      Es fija (gracias a 'fixed-top'), lo que significa que siempre permanece visible arriba
+      al hacer scroll. Usa clases de Bootstrap para diseño responsivo y estilos claros.
+    -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-2">
       <div class="container-fluid">
-        <!-- Logos y botón toggler alineados -->
+        <!-- ===============================================
+             Contenedor general del contenido del navbar
+             ===============================================
+          "container-fluid" hace que el contenido se adapte al ancho de la pantalla.
+        -->
+
+        <!-- ===============================================
+             Sección izquierda: Logo y botón para móviles
+             ===============================================
+          Aquí usamos "d-flex" para poner elementos uno al lado del otro
+          y "align-items-center" para que estén verticalmente centrados.
+        -->
         <div class="d-flex align-items-center">
-          <!-- Botón Responsive (solo visible en móvil) -->
-          <button class="navbar-toggler me-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+          <!-- ===============================================
+               Botón hamburguesa (visible solo en pantallas pequeñas)
+               ===============================================
+            Este botón solo aparece cuando el ancho de la pantalla es pequeño (clase "d-lg-none").
+            Sirve para abrir y cerrar el menú de navegación en móviles o tablets.
+          -->
+          <button 
+            class="navbar-toggler me-2 d-lg-none"  <!-- me-2 da un pequeño margen a la derecha -->
+            type="button"                           <!-- Es un botón común -->
+            data-bs-toggle="collapse"              <!-- Activa la función de colapsar/desplegar -->
+            data-bs-target="#navbarNav"            <!-- Indica qué elemento va a mostrar/ocultar -->
+            aria-controls="navbarNav"              <!-- Por accesibilidad: dice qué controla -->
+            aria-expanded="false"                  <!-- También para accesibilidad: comienza cerrado -->
+            aria-label="Toggle navigation">        <!-- Texto alternativo para lectores de pantalla -->
+            
+            <!-- Icono de las tres líneas (hamburguesa) -->
             <span class="navbar-toggler-icon"></span>
           </button>
+           <!-- ===============================================
+             LOGOS (parte izquierda del navbar)
+             ===============================================
+          Esta parte contiene los dos logotipos principales del sitio, ubicados en el lado izquierdo
+          de la barra de navegación. Están dentro de un contenedor "d-flex" con "align-items-center"
+          para alinearlos uno junto al otro y centrarlos verticalmente.
+        -->
+        <div class="d-flex align-items-center">
+
+          <!-- ===============================================
+               Logo de FUSOFT (marca principal del sitio)
+               ===============================================
+            "navbar-brand" es una clase de Bootstrap que se usa para logotipos o nombres de marca.
+            "me-2" añade un pequeño margen a la derecha para separar este logo del siguiente.
+            El logo redirige al inicio (href="#") al hacer clic.
+          -->
+          <a class="navbar-brand me-2" href="#">
+            <img 
+              src="./assets/img/Nuevos logos/fUSoft corregido simple.png"  <!-- Ruta de la imagen del logo -->
+              alt="Logo"                                                   <!-- Texto alternativo (accesibilidad) -->
+              style="height: 40px; width: auto; max-width: 160px;"         <!-- Altura fija, ancho proporcional -->
+            >
+          </a>
+
+          <!-- ===============================================
+               Logo de Uniempresarial (visible solo en pantallas medianas en adelante)
+               ===============================================
+            Este segundo logo representa la institución aliada (o patrocinadora).
+            "d-none d-md-block" oculta este logo en pantallas pequeñas y lo muestra
+            solo a partir del tamaño 'md' (768px en adelante), para evitar saturación visual en móviles.
+          -->
+          <a class="navbar-brand d-none d-md-block" href="#">
+            <img 
+              src="./assets/img/Official Uniempresarial bussines material/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png"
+              alt="Logo"
+              style="height: 40px; width: auto; max-width: 240px;"         <!-- Mismo estilo que el logo anterior, solo más ancho -->
+            >
+          </a>
+
+        </div> <!-- Fin contenedor de logos -->
+      </div> <!-- Fin del contenedor general del navbar -->
   
-          <!-- Logos -->
-          <div class="d-flex align-items-center">
-            <a class="navbar-brand me-2" href="#">
-              <img src="./assets/img/Nuevos logos/fUSoft corregido simple.png" alt="Logo" style="height: 40px; width: auto; max-width: 160px;">
-            </a>
-            <a class="navbar-brand d-none d-md-block" href="#">
-              <img src="./assets/img/Official Uniempresarial bussines material/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png" 
-                   alt="Logo" style="height: 40px; width: auto; max-width: 240px;">
-            </a>
-          </div>
-        </div>
-  
-        <!-- Contenido colapsable -->
+       <!-- ==========================================================
+             CONTENIDO COLAPSABLE DEL NAVBAR (Links del menú principal)
+             ==========================================================
+          Esta sección contiene los enlaces de navegación principales del sitio web.
+          Está envuelta en un div con clases de Bootstrap para que este contenido
+          se oculte automáticamente en pantallas pequeñas y se despliegue al hacer
+          clic en el botón del menú (hamburguesa).
+
+          - class="collapse navbar-collapse": indica que este bloque es colapsable.
+          - id="navbarNav": este ID debe coincidir con el atributo "data-bs-target"
+            del botón responsive (navbar-toggler) para que funcione el toggle.
+          - justify-content-between: distribuye los elementos dentro del navbar de forma que
+            estén espaciados (uno a la izquierda y otro a la derecha si hay contenido extra).
+        -->
         <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-          <!-- Links centrados -->
+
+          <!-- ==========================================================
+               LISTA DE ENLACES DE NAVEGACIÓN (centrados horizontalmente)
+               ==========================================================
+            - ul.navbar-nav: contenedor principal de los elementos del menú.
+            - mx-auto: centra horizontalmente la lista en el navbar.
+            - mb-2 mb-lg-0: añade margen inferior en dispositivos pequeños,
+              pero lo elimina en dispositivos grandes.
+          -->
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-2">
+
+            <!-- ===== ENLACE 1: Nosotros ===== -->
+            <li class="nav-item mx-2"> <!-- mx-2 añade espacio lateral -->
               <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+              <!-- Enlace a la página "Nosotros" -->
             </li>
+
+            <!-- ===== ENLACE 2: Servicios con Dropdown (menú desplegable) ===== -->
             <li class="nav-item dropdown mx-2">
+              <!-- Este link activa el dropdown al hacer clic -->
               <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+
+              <!-- Submenú desplegable -->
               <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
                 <li><a class="dropdown-item" href="../pages/consultoria.html">CONSULTORIA EN SOFTWARE</a></li>
                 <li><a class="dropdown-item" href="../pages/desarrollo.html">DESARROLLO DE SOFTWARE A LA MEDIDA</a></li>
                 <li><a class="dropdown-item" href="../pages/integracion.html">INTEGRACION DE SISTEMAS</a></li>
                 <li><a class="dropdown-item" href="../pages/capacitaciones.html">CAPACITACION EN SOFTWARE</a></li>
+                <!-- Estos links abren subpáginas de servicios específicos -->
               </ul>
             </li>
+
+            <!-- ===== ENLACE 3: Equipo ===== -->
             <li class="nav-item mx-2">
               <a class="nav-link" href="../pages/equipo.html">EQUIPO</a>
+              <!-- Página con información sobre el equipo de trabajo -->
             </li>
+
+            <!-- ===== ENLACE 4: Proyectos ===== -->
             <li class="nav-item mx-2">
               <a class="nav-link" href="../pages/proyectos.html">PROYECTOS</a>
+              <!-- Muestra los proyectos desarrollados o en proceso -->
             </li>
+
+            <!-- ===== ENLACE 5: Uniempresarial (enlace externo) ===== -->
             <li class="nav-item mx-2">
               <a class="nav-link" href="https://uniempresarial.edu.co/" target="_blank"
-                rel="noreterrer noopener">UNIEMPRESARIAL</a>
+                rel="noreferrer noopener">UNIEMPRESARIAL</a>
+              <!-- Este link abre el sitio web externo de Uniempresarial en una nueva pestaña.
+                   target="_blank": abre en otra pestaña
+                   rel="noreferrer noopener": medidas de seguridad recomendadas -->
             </li>
-          </ul>
-          
-          <!-- Botón Contáctanos alineado a la derecha -->
+
+          </ul> <!-- Fin de la lista de enlaces -->
+          <!-- ============================================================
+               BOTÓN "CONTÁCTANOS" A LA DERECHA DEL NAVBAR
+               ============================================================
+            Este botón se muestra en la parte derecha de la barra de navegación 
+            (navbar) en pantallas grandes gracias a la clase "ms-lg-3" 
+            que añade un margen a la izquierda (separación del menú).
+
+            - d-flex: permite alinear el botón correctamente con el resto
+              de los elementos de la navbar usando Flexbox.
+            - href="./contacto.html": al hacer clic lleva a la página de contacto.
+            - btn btn-danger: estilo del botón con clases Bootstrap. 
+              "btn-danger" le da el color rojo predeterminado.
+            - px-4: añade padding horizontal para hacer el botón más ancho.
+          -->
           <div class="d-flex ms-lg-3">
             <a href="./contacto.html" class="btn btn-danger px-4">CONTACTANOS</a>
           </div>
+
+        <!-- Aquí cierra la parte colapsable del menú -->
         </div>
-      </div>
-    </nav>
+      </div> <!-- Fin del contenedor principal de la navbar -->
+    </nav> <!-- Fin de la barra de navegación -->
   </section>
 
-  <!-- Hero Section -->
+  <!-- ============================================================
+       SECCIÓN HERO (Encabezado principal de la página de inicio)
+       ============================================================
+    Esta es la primera sección visual que el usuario ve al cargar la página.
+    Sirve para atraer la atención y comunicar el mensaje principal del sitio.
+    Contiene:
+    - Una superposición oscura (overlay)
+    - Un ícono decorativo
+    - Un título llamativo con énfasis en una palabra
+    - Un botón que lleva al usuario a más información (sección de contacto)
+  -->
   <div class="hero-section">
+    
+    <!-- Capa oscura encima del fondo -->
     <div class="hero-overlay"></div>
+
+    <!-- Contenido principal encima del fondo -->
     <div class="hero-content">
+
+      <!-- Ícono animado decorativo (engranaje) -->
       <i class="fas fa-cog gear-icon"></i>
+
+      <!-- Título de bienvenida / propuesta de valor -->
       <h1>
         Transformamos tus ideas en soluciones digitales que impulsan el
         <span class="highlight">futuro</span> de tu negocio
+        <!-- La palabra "futuro" se resalta con una clase especial -->
       </h1>
+
+      <!-- Botón que lleva a la página de contacto (otra forma de invitar al usuario) -->
       <a href="./pages/contacto.html" class="hero-button">MAS INFORMACION</a>
-    </div>
-  </div>
 
-  <!-- Servicios -->
-  <section id="servicios" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="mb-5 text-body fw-bold">
-        Innovación que impulsa <span class="text-danger">resultados</span>
-      </h2>
-      <div class="row justify-content-center g-4">
-        <!-- Consultoría en Software -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-icon text-center">
-              <img src="assets/img/Consultoria iconos/consultoria azul.png" class="img-fluid"
-                alt="Consultoría en Software" />
-            </div>
-            <div class="card-body d-flex flex-column text-center">
-              <h5 class="card-title text-danger mb-3">Consultoría en Soluciones</h5>
-              <p class="card-text mb-4 text-muted">
-                Transformamos ideas en soluciones tecnológicas para optimizar procesos y maximizar tu competitividad
-                digital.
-              </p>
-              <a href="./pages/consultoria.html" class="btn btn-danger mt-auto">Más información</a>
-            </div>
+    </div> <!-- Fin del contenido principal de la sección hero -->
+  </div> <!-- Fin de la sección hero -->
+
+ <!-- ============================================================
+     SECCIÓN DE SERVICIOS
+     ============================================================
+  Esta sección está dedicada a mostrar los diferentes servicios que ofrece la empresa. 
+  Se utiliza para presentar de manera clara y atractiva los servicios disponibles. 
+
+  - id="servicios": Asigna un identificador único a esta sección, que permite enlazarla desde otros puntos de la página.
+  - class="py-5 bg-light": Utiliza clases de Bootstrap para crear espacio arriba y abajo de la sección (padding), 
+    y un fondo claro (bg-light) para un contraste suave.
+-->
+<section id="servicios" class="py-5 bg-light">
+  <!-- Contenedor central con texto centrado -->
+  <div class="container text-center">
+    
+    <!-- Título principal de la sección -->
+    <h2 class="mb-5 text-body fw-bold">
+      Innovación que impulsa <span class="text-danger">resultados</span>
+    </h2>
+    <!-- Esto es el encabezado donde la palabra "resultados" se resalta en color rojo. -->
+    
+    <!-- Fila para los servicios -->
+    <div class="row justify-content-center g-4">
+      
+      <!-- Servicio: Consultoría en Software -->
+      <div class="col-lg-3 col-md-6 col-12">
+        
+        <!-- Tarjeta del servicio -->
+        <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" 
+             data-aos="fade-up" data-aos-delay="100">
+          
+          <!-- Icono del servicio, centrado -->
+          <div class="service-icon text-center">
+            <img src="assets/img/Consultoria iconos/consultoria azul.png" class="img-fluid"
+                 alt="Consultoría en Software" />
           </div>
-        </div>
-
-        <!-- Desarrollo de Software -->
-        <div class="col-lg-3 col-md-10 col-12">
-          <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-icon text-center">
-              <img src="assets/img/Software a la medida iconos/software azul.png" class="img-fluid"
-                alt="Desarrollo de Software" />
-            </div>
-            <div class="card-body d-flex flex-column text-center">
-              <h5 class="card-title text-danger mb-3">Desarrollo de Soluciones</h5>
-              <p class="card-text mb-4 text-muted">
-                Transformamos tu visión en código, creando soluciones a medida que potencian la eficiencia de tu
-                empresa.
-              </p>
-              <a href="./pages/desarrollo.html" class="btn btn-danger mt-auto">Más información</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Integración de Sistemas -->
-        <div class="col-lg-3 col-md-10 col-12">
-          <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-icon text-center">
-              <img src="assets/img/Integración de sistemas logos/Integración de sistemas azul.png" class="img-fluid"
-                alt="Integración de Sistemas" />
-            </div>
-            <div class="card-body d-flex flex-column text-center">
-              <h5 class="card-title text-danger mb-3">Integración de Sistemas</h5>
-              <p class="card-text mb-4 text-muted">
-                Conectamos tus plataformas digitales para un flujo de trabajo eficiente y sin interrupciones.
-              </p>
-              <a href="./pages/integracion.html" class="btn btn-danger mt-auto">Más información</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Capacitación en Software -->
-        <div class="col-lg-3 col-md-10 col-12">
-          <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-icon text-center">
-              <img src="assets/img/Capacitaciones iconos/Capacitaciones azul.png" class="img-fluid"
-                alt="Capacitación en Software" />
-            </div>
-            <div class="card-body d-flex flex-column text-center">
-              <h5 class="card-title text-danger mb-3">Capacitación en Software</h5>
-              <p class="card-text mb-4 text-muted">
-                Potencia el conocimiento de tu equipo con formación especializada y metodologías prácticas.
-              </p>
-              <a href="./pages/capacitaciones.html" class="btn btn-danger mt-auto">Más información</a>
-            </div>
+          
+          <!-- Cuerpo de la tarjeta del servicio -->
+          <div class="card-body d-flex flex-column text-center">
+            
+            <!-- Título de la tarjeta -->
+            <h5 class="card-title text-danger mb-3">Consultoría en Soluciones</h5>
+            
+            <!-- Descripción del servicio -->
+            <p class="card-text mb-4 text-muted">
+              Transformamos ideas en soluciones tecnológicas para optimizar procesos y maximizar tu competitividad
+              digital.
+            </p>
+            
+            <!-- Enlace para más información sobre el servicio -->
+            <a href="./pages/consultoria.html" class="btn btn-danger mt-auto">Más información</a>
           </div>
         </div>
       </div>
+
+       <!-- ============================================================
+     SERVICIO: DESARROLLO DE SOFTWARE
+     ============================================================
+  Esta sección corresponde al servicio de "Desarrollo de Software", 
+  donde se presenta una tarjeta con información sobre las soluciones que 
+  ofrece la empresa en términos de desarrollo de software a medida.
+  
+  Se estructura de manera similar al servicio anterior para mantener la coherencia 
+  en el diseño y la presentación de los diferentes servicios.
+-->
+<div class="col-lg-3 col-md-10 col-12">
+  
+  <!-- Tarjeta del servicio: Desarrollo de Software -->
+  <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" 
+       data-aos="fade-up" data-aos-delay="200">
+    
+    <!-- Icono del servicio, centrado -->
+    <div class="service-icon text-center">
+      <img src="assets/img/Software a la medida iconos/software azul.png" class="img-fluid"
+           alt="Desarrollo de Software" />
     </div>
-  </section>
+    
+    <!-- Cuerpo de la tarjeta del servicio -->
+    <div class="card-body d-flex flex-column text-center">
+      
+      <!-- Título de la tarjeta -->
+      <h5 class="card-title text-danger mb-3">Desarrollo de Soluciones</h5>
+      
+      <!-- Descripción del servicio -->
+      <p class="card-text mb-4 text-muted">
+        Transformamos tu visión en código, creando soluciones a medida que potencian la eficiencia de tu
+        empresa.
+      </p>
+      
+      <!-- Enlace para más información sobre el servicio -->
+      <a href="./pages/desarrollo.html" class="btn btn-danger mt-auto">Más información</a>
+    </div>
+  </div>
+</div>
 
+        <!-- ============================================================
+     SERVICIO: INTEGRACIÓN DE SISTEMAS
+     ============================================================
+  Esta sección corresponde al servicio de "Integración de Sistemas", 
+  donde se presenta una tarjeta con información sobre cómo la empresa 
+  ofrece soluciones para conectar plataformas digitales y optimizar el flujo de trabajo.
 
-  <section class="about-us py-5 bg-light" data-aos="fade-up" data-aos-duration="1500">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Imagen -->
-        <div class="col-md-6 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="800">
-          <div class="image-container">
-            <img src="assets/img/porque.jpg" alt="Imagen representativa" class="img-fluid rounded-circle shadow-lg" />
+  La estructura es similar a los servicios anteriores para mantener la coherencia 
+  en el diseño y la presentación de los servicios en la página web.
+-->
+<div class="col-lg-3 col-md-10 col-12">
+  
+  <!-- Tarjeta del servicio: Integración de Sistemas -->
+  <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" 
+       data-aos="fade-up" data-aos-delay="300">
+    
+    <!-- Icono del servicio, centrado -->
+    <div class="service-icon text-center">
+      <img src="assets/img/Integración de sistemas logos/Integración de sistemas azul.png" class="img-fluid"
+           alt="Integración de Sistemas" />
+    </div>
+    
+    <!-- Cuerpo de la tarjeta del servicio -->
+    <div class="card-body d-flex flex-column text-center">
+      
+      <!-- Título de la tarjeta -->
+      <h5 class="card-title text-danger mb-3">Integración de Sistemas</h5>
+      
+      <!-- Descripción del servicio -->
+      <p class="card-text mb-4 text-muted">
+        Conectamos tus plataformas digitales para un flujo de trabajo eficiente y sin interrupciones.
+      </p>
+      
+      <!-- Enlace para más información sobre el servicio -->
+      <a href="./pages/integracion.html" class="btn btn-danger mt-auto">Más información</a>
+    </div>
+  </div>
+</div>
+       <!-- ============================================================
+     SERVICIO: CAPACITACIÓN EN SOFTWARE
+     ============================================================
+  Esta sección corresponde al servicio de "Capacitación en Software", 
+  donde se presenta una tarjeta con información sobre cómo la empresa 
+  ofrece formación especializada y metodologías prácticas para potenciar el conocimiento 
+  del equipo del cliente.
+
+  La estructura es similar a los otros servicios para mantener la coherencia 
+  en el diseño y la presentación de los servicios en la página web.
+-->
+<div class="col-lg-3 col-md-10 col-12">
+  
+  <!-- Tarjeta del servicio: Capacitación en Software -->
+  <div class="card shadow-lg border-0 rounded-4 h-100 service-card p-3" 
+       data-aos="fade-up" data-aos-delay="400">
+    
+    <!-- Icono del servicio, centrado -->
+    <div class="service-icon text-center">
+      <img src="assets/img/Capacitaciones iconos/Capacitaciones azul.png" class="img-fluid"
+           alt="Capacitación en Software" />
+    </div>
+    
+    <!-- Cuerpo de la tarjeta del servicio -->
+    <div class="card-body d-flex flex-column text-center">
+      
+      <!-- Título de la tarjeta -->
+      <h5 class="card-title text-danger mb-3">Capacitación en Software</h5>
+      
+      <!-- Descripción del servicio -->
+      <p class="card-text mb-4 text-muted">
+        Potencia el conocimiento de tu equipo con formación especializada y metodologías prácticas.
+      </p>
+      
+      <!-- Enlace para más información sobre el servicio -->
+      <a href="./pages/capacitaciones.html" class="btn btn-danger mt-auto">Más información</a>
+    </div>
+  </div>
+</div>
+
+ <!-- ============================================================
+     SECCIÓN: SOBRE NOSOTROS (ABOUT US)
+     ============================================================
+  Esta sección describe el contenido del "Sobre Nosotros" de la página web.
+  El propósito de esta sección es proporcionar información sobre la empresa, 
+  su misión, visión o algún otro contenido relacionado, y al mismo tiempo, 
+  mostrar una imagen representativa.
+  
+  Se utiliza la librería AOS para animar los elementos de la sección cuando 
+  el usuario hace scroll en la página.
+
+  La estructura de la sección se adapta para dispositivos móviles y de escritorio.
+-->
+<section class="about-us py-5 bg-light" data-aos="fade-up" data-aos-duration="1500">
+  <!-- Contenedor general para la sección -->
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Columna para la imagen -->
+      <div class="col-md-6 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="800">
+        
+        <!-- Contenedor de la imagen -->
+        <div class="image-container">
+          <!-- Imagen representativa de la sección "Sobre Nosotros" -->
+          <img src="assets/img/porque.jpg" alt="Imagen representativa" class="img-fluid rounded-circle shadow-lg" />
+        </div>
+      </div>
+       <!-- ============================================================
+     SECCIÓN: QUIÉNES SOMOS Y PORTAFOLIO
+     ============================================================
+  Esta sección está dividida en dos partes principales:
+  1. **¿Quiénes somos?**: Un breve texto que describe la empresa, su misión y visión.
+  2. **Portafolio**: Presenta un portafolio de proyectos anteriores en forma de videos con descripciones. 
+
+  Se utilizan las animaciones de la librería AOS para mejorar la experiencia de usuario con efectos visuales a medida que se hace scroll.
+-->
+<!-- Sección de "¿Quiénes somos?" -->
+<div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
+  <!-- Título de la sección -->
+  <h2 class="section-title mb-4 text-dark" style="font-size: 2.5rem; font-weight: bold">
+    ¿Quiénes somos?
+  </h2>
+  <!-- Primer párrafo con la descripción de la empresa -->
+  <p class="description text-muted mb-4" style="font-size: 1.1rem; line-height: 1.6">
+    Somos un equipo innovador nacido en el corazón de
+    <span class="highlight text-danger">Uniempresarial</span>, donde
+    la experiencia académica se fusiona con el dinamismo empresarial.
+    Bajo la mentoría de profesionales expertos, hemos creado un
+    espacio único que combina el rigor universitario con soluciones
+    tecnológicas de vanguardia.
+  </p>
+  <!-- Segundo párrafo de la descripción -->
+  <p class="description text-muted mb-4" style="font-size: 1.1rem; line-height: 1.6">
+    Nuestro grupo reúne el talento joven más destacado con la guía de
+    mentores especializados, ofreciendo un enfoque fresco y
+    profesional.
+  </p>
+  <!-- Enlace para conocer más sobre la empresa -->
+  <a href="./pages/nosotros.html" class="btn btn-danger px-4 py-2 rounded-pill shadow-lg mt-3"
+    data-aos="zoom-in" data-aos-duration="1000" style="font-size: 1.2rem; transition: transform 0.3s ease">
+    Conoce más de nosotros
+  </a>
+</div>
+
+<!-- Sección de "Portafolio" -->
+<section id="portafolio" class="bg-light py-5" data-aos="fade-up" data-aos-duration="1500">
+  <!-- Contenedor para el portafolio -->
+  <div class="container text-center">
+    <!-- Título de la sección -->
+    <h2 class="mb-5 text-dark" style="font-size: 2.5rem; font-weight: bold">
+      Nuestro <span class="text-danger">Portafolio</span>
+    </h2>
+    <!-- Fila para los proyectos -->
+    <div class="row g-4">
+      <!-- Proyecto 1 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+        <div class="portfolio-item">
+          <!-- Video del proyecto -->
+          <video class="portfolio-video rounded shadow-lg" autoplay loop muted playsinline>
+            <source src="assets/video/22.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <!-- Superposición con la descripción del proyecto -->
+          <div class="portfolio-overlay">
+            <p class="portfolio-description">
+              Plataforma innovadora para facilitar la compra y arriendo de
+              apartamentos en Bogotá, mejorando la experiencia de
+              propietarios y arrendatarios.
+            </p>
           </div>
         </div>
+      </div>
+        <!-- ============================================================
+     SECCIÓN: PORTAFOLIO - PROYECTOS 2 Y 3
+     ============================================================
+  Esta sección incluye dos proyectos adicionales en el portafolio, cada uno presentado con un video y su respectiva descripción. Se sigue utilizando AOS para la animación de los elementos al hacer scroll.
+-->
+<!-- Proyecto 2 -->
+<div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+  <!-- Contenedor del proyecto -->
+  <div class="portfolio-item">
+    <!-- Video del proyecto -->
+    <video class="portfolio-video rounded shadow-lg" autoplay loop muted playsinline>
+      <source src="assets/video/carton.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <!-- Superposición con la descripción del proyecto -->
+    <div class="portfolio-overlay">
+      <p class="portfolio-description">
+        Se desarrolló la página web solicitada por la empresa.
+      </p>
+    </div>
+  </div>
+</div>
 
-        <!-- Contenido de texto -->
-        <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
-          <h2 class="section-title mb-4 text-dark" style="font-size: 2.5rem; font-weight: bold">
-            ¿Quiénes somos?
-          </h2>
-          <p class="description text-muted mb-4" style="font-size: 1.1rem; line-height: 1.6">
-            Somos un equipo innovador nacido en el corazón de
-            <span class="highlight text-danger">Uniempresarial</span>, donde
-            la experiencia académica se fusiona con el dinamismo empresarial.
-            Bajo la mentoría de profesionales expertos, hemos creado un
-            espacio único que combina el rigor universitario con soluciones
-            tecnológicas de vanguardia.
-          </p>
-          <p class="description text-muted mb-4" style="font-size: 1.1rem; line-height: 1.6">
-            Nuestro grupo reúne el talento joven más destacado con la guía de
-            mentores especializados, ofreciendo un enfoque fresco y
-            profesional.
-          </p>
-          <a href="./pages/nosotros.html" class="btn btn-danger px-4 py-2 rounded-pill shadow-lg mt-3"
-            data-aos="zoom-in" data-aos-duration="1000" style="font-size: 1.2rem; transition: transform 0.3s ease">
-            Conoce más de nosotros
+<!-- Proyecto 3 -->
+<div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+  <!-- Contenedor del proyecto -->
+  <div class="portfolio-item">
+    <!-- Video del proyecto -->
+    <video class="portfolio-video rounded shadow-lg" autoplay loop muted playsinline>
+      <source src="assets/video/proyectoGeneral.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <!-- Superposición con la descripción del proyecto -->
+    <div class="portfolio-overlay">
+      <p class="portfolio-description">
+        Unificamos en una sola plataforma todos los proyectos en
+        ejecución, brindando acceso centralizado para los encargados
+        de distintas áreas.
+      </p>
+    </div>
+  </div>
+</div>
+  <!-- ============================================================
+     SECCIÓN: ESTADÍSTICAS Y TESTIMONIOS DE CLIENTES
+     ============================================================
+  Esta sección presenta los testimonios de los clientes que han utilizado los servicios de la empresa.
+  Se utiliza AOS (Animate on Scroll) para animar los elementos cuando son visibles en la pantalla.
+-->
+
+<!-- AOS JS Initializer -->
+<script>
+  AOS.init(); <!-- Inicializa la librería AOS para habilitar las animaciones de los elementos al hacer scroll -->
+</script>
+
+<!-- Sección de Logros / Testimonios -->
+<section class="testimonials-section text-center py-5 position-relative" data-aos="fade-up" data-aos-duration="1500">
+  <!-- Capa oscura semi-transparente -->
+  <div class="overlay"></div>
+  
+  <div class="container position-relative">
+    <!-- Título de la sección -->
+    <h2 class="mb-5 fw-bold text-white" style="font-size: 2.5rem">
+        Lo que dicen <span class="text-danger">nuestros clientes</span>
+    </h2>
+
+    <!-- Contenedor de testimonios -->
+    <div class="row g-4">
+        <!-- Testimonio 1 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+          <!-- Contenedor del testimonio individual -->
+          <div class="testimonial-item shadow-lg p-4 rounded-4 bg-white">
+            <!-- Imagen del cliente -->
+            <div class="testimonial-img mb-3">
+              <img src="assets/img/testimonios/persona1.jpg" alt="Cliente 1" class="rounded-circle" width="80">
+            </div>
+            <!-- Testimonio escrito -->
+            <p class="text-muted">"El equipo superó mis expectativas. Excelente servicio y resultados increíbles."</p>
+            <!-- Nombre del cliente -->
+            <h5 class="fw-bold">Juan Pérez</h5>
+            <!-- Cargo del cliente -->
+            <small class="text-muted">CEO de Empresa X</small>
+          </div>
+        </div>
+  <!-- ============================================================
+     TESTIMONIO 2
+     ============================================================
+  Este bloque presenta el segundo testimonio de cliente con animación de entrada al hacer scroll (utilizando AOS).
+  La estructura sigue el mismo formato del testimonio anterior.
+-->
+
+<!-- Testimonio 2 -->
+<div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+    <!-- Contenedor del testimonio individual -->
+    <div class="testimonial-item shadow-lg p-4 rounded-4 bg-white">
+        <!-- Imagen del cliente -->
+        <div class="testimonial-img mb-3">
+            <img src="assets/img/testimonios/persona2.jpg" alt="Cliente 2" class="rounded-circle" width="80">
+        </div>
+        <!-- Testimonio escrito -->
+        <p class="text-muted">"Muy profesionales y atentos a los detalles. Recomiendo su trabajo al 100%."</p>
+        <!-- Nombre del cliente -->
+        <h5 class="fw-bold">María López</h5>
+        <!-- Cargo del cliente -->
+        <small class="text-muted">Gerente de Marketing</small>
+    </div>
+</div>
+            <!-- ============================================================
+     TESTIMONIO 3
+     ============================================================
+  Este bloque presenta el tercer testimonio de cliente, con la misma estructura que los anteriores,
+  pero con contenido diferente. Utiliza la animación de entrada "zoom-in" al hacer scroll.
+-->
+
+<!-- Testimonio 3 -->
+<div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+    <!-- Contenedor del testimonio individual -->
+    <div class="testimonial-item shadow-lg p-4 rounded-4 bg-white">
+        <!-- Imagen del cliente -->
+        <div class="testimonial-img mb-3">
+            <img src="assets/img/testimonios/persona3.jpg" alt="Cliente 3" class="rounded-circle" width="80">
+        </div>
+        <!-- Testimonio escrito -->
+        <p class="text-muted">"Increíble experiencia. La mejor decisión que tomamos para nuestro negocio."</p>
+        <!-- Nombre del cliente -->
+        <h5 class="fw-bold">Carlos Gómez</h5>
+        <!-- Cargo del cliente -->
+        <small class="text-muted">Fundador de Startup Y</small>
+    </div>
+</div>
+
+ <!-- ============================================================
+     SECCIÓN DE EQUIPO
+     ============================================================
+  Esta sección está diseñada para presentar al equipo de trabajo con un título destacado. Utiliza animación de
+  entrada "fade-up" cuando se desplaza a través de la página.
+-->
+
+<!-- Sección de Equipo -->
+<section class="team-section text-center py-5" data-aos="fade-up" data-aos-duration="1500">
+    <!-- Contenedor principal de la sección -->
+    <div class="container">
+        <!-- Título de la sección -->
+        <h2 class="fw-bold mb-5" style="font-size: 2.5rem; color: #333">
+            Nuestro <span class="text-danger">Equipo</span>
+        </h2>
+
+     <!-- ============================================================
+     CARRUSEL DEL EQUIPO
+     ============================================================
+  Esta sección es un carrusel de Bootstrap que muestra una serie de integrantes del equipo en tarjetas. 
+  Cada tarjeta tiene una imagen, nombre, título y un enlace al portafolio.
+-->
+
+<!-- Carrusel -->
+<div id="teamCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <!-- Contenedor de los elementos del carrusel -->
+    <div class="carousel-inner">
+        <!-- Grupo 1 -->
+        <div class="carousel-item active">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+                    <!-- Tarjeta del integrante -->
+                    <div class="card team-card">
+                        <!-- Cuerpo de la tarjeta -->
+                        <div class="card-body text-center">
+                            <!-- Contenedor de la imagen -->
+                            <div class="img-container">
+                                <img src="assets/img/integrantes/Alejandro Aguilera.jpg" alt="Alejandro Aguilera" />
+                            </div>
+                            <!-- Nombre del integrante -->
+                            <h5 class="fw-bold mt-3">Alejandro Aguilera</h5>
+                            <!-- Título o puesto -->
+                            <p class="text-muted">Bases de Datos</p>
+                            <!-- Enlace al portafolio del integrante -->
+                            <a href="https://linktr.ee/alejoaguilera" target="_blank" class="btn btn-custom">Portafolio</a>
+                        </div>
+                    </div>
+                </div>
+              <!-- Integrante Anderson Castro en el Carrusel -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+    <!-- Tarjeta del integrante -->
+    <div class="card team-card">
+        <!-- Cuerpo de la tarjeta -->
+        <div class="card-body text-center">
+            <!-- Contenedor de la imagen -->
+            <div class="img-container">
+                <img src="assets/img/integrantes/Anderson Castro.jpg" alt="Anderson Castro" />
+            </div>
+            <!-- Nombre del integrante -->
+            <h5 class="fw-bold mt-3">Anderson Castro</h5>
+            <!-- Título o puesto -->
+            <p class="text-muted">Soporte</p>
+            <!-- Enlace al portafolio del integrante -->
+            <a href="https://heylink.me/AndersonCC/" target="_blank" class="btn btn-custom">Portafolio</a>
+        </div>
+    </div>
+</div>
+             <!-- Integrante Angel Canchilla en el Carrusel -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+    <!-- Tarjeta del integrante -->
+    <div class="card team-card">
+        <!-- Cuerpo de la tarjeta -->
+        <div class="card-body text-center">
+            <!-- Contenedor de la imagen -->
+            <div class="img-container">
+                <img src="assets/img/integrantes/Angel Canchilla.jpg" alt="Angel Canchilla" />
+            </div>
+            <!-- Nombre del integrante -->
+            <h5 class="fw-bold mt-3">Angel Canchilla</h5>
+            <!-- Título o puesto -->
+            <p class="text-muted">Desarrollador</p>
+            <!-- Enlace al portafolio del integrante -->
+            <a href="https://linktr.ee/Angel_Da" target="_blank" class="btn btn-custom">Portafolio</a>
+        </div>
+    </div>
+</div>
+
+              <!-- Columna del integrante: Brayam Chavarro -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  <!-- Tarjeta del integrante del equipo -->
+  <div class="card team-card">
+    <div class="card-body text-center">
+      <!-- Contenedor de la imagen del integrante -->
+      <div class="img-container">
+        <!-- Imagen del integrante -->
+        <img src="assets/img/integrantes/Brayam chavarro.jpg" alt="Brayam Chavarro" />
+      </div>
+      <!-- Nombre del integrante -->
+      <h5 class="fw-bold mt-3">Brayam Chavarro</h5>
+      <!-- Rol o área que desempeña -->
+      <p class="text-muted">Bases de Datos</p>
+      <!-- Botón de enlace al portafolio del integrante -->
+      <a href="https://heylink.me/AndersonCC/" target="_blank" class="btn btn-custom">Portafolio</a>
+    </div>
+  </div>
+</div>
+         <!-- Grupo 2 del carrusel (segunda diapositiva con integrantes del equipo) -->
+<div class="carousel-item">
+  <!-- Fila que centra el contenido dentro del carrusel -->
+  <div class="row justify-content-center">
+
+    <!-- Columna del integrante: Cristian Reyes -->
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+      <!-- Tarjeta que contiene la información del integrante -->
+      <div class="card team-card">
+        <div class="card-body text-center">
+
+          <!-- Contenedor para la imagen del integrante -->
+          <div class="img-container">
+            <!-- Imagen del integrante -->
+            <img src="assets/img/integrantes/cristian reyes-removebg-preview.jpg" alt="Cristian Reyes" />
+            <!-- NOTA: El atributo alt decía 'Alejandro Aguilera' por error, se cambió por 'Cristian Reyes' -->
+          </div>
+
+          <!-- Nombre del integrante -->
+          <h5 class="fw-bold mt-3">Cristian Reyes</h5>
+
+          <!-- Rol que desempeña dentro del equipo -->
+          <p class="text-muted">Desarrollador</p>
+
+          <!-- Botón para visitar su portafolio en una nueva pestaña -->
+          <a href="https://linktr.ee/Cristian_Reyes" target="_blank" class="btn btn-custom">Portafolio</a>
+
+        </div>
+      </div>
+    </div>
+    <!-- Fin de la tarjeta individual del integrante -->
+
+  </div>
+</div>
+              <!-- Columna que contiene a uno de los integrantes del equipo -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  
+  <!-- Tarjeta personalizada del integrante -->
+  <div class="card team-card">
+    <div class="card-body text-center">
+      
+      <!-- Contenedor para la imagen del integrante -->
+      <div class="img-container">
+        <!-- Imagen del integrante del equipo -->
+        <img src="assets/img/integrantes/crsitian vega.jpg" alt="Cristian Vega" />
+        <!--  NOTA: El alt decía 'Anderson Castro', se corrigió por 'Cristian Vega' para mantener la coherencia -->
+        <!--  Verifica también que el nombre del archivo esté bien escrito: dice 'crsitian' en lugar de 'cristian'. -->
+      </div>
+
+      <!-- Nombre completo del integrante -->
+      <h5 class="fw-bold mt-3">Cristian Vega</h5>
+
+      <!-- Rol que desempeña dentro del equipo -->
+      <p class="text-muted">Inteligencia Artificial</p>
+
+      <!-- Botón que enlaza al portafolio personal del integrante -->
+      <a href="https://linktr.ee/cristian_vega_cv" target="_blank" class="btn btn-custom">Portafolio</a>
+
+    </div>
+  </div>
+
+</div>
+           <!-- Columna que contiene a uno de los integrantes del equipo -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+
+  <!-- Tarjeta personalizada del integrante del equipo -->
+  <div class="card team-card">
+    <div class="card-body text-center">
+      
+      <!-- Contenedor para la imagen del integrante -->
+      <div class="img-container">
+        <!-- Imagen del integrante Daniel Garcia -->
+        <img src="assets/img/integrantes/Daniel Garcia.jpg" alt="Daniel Garcia" />
+        <!--  NOTA: El alt decía 'Angel Canchilla', ya fue corregido a 'Daniel Garcia' -->
+        
+      </div>
+
+      <!-- Nombre del integrante -->
+      <h5 class="fw-bold mt-3">Daniel Garcia</h5>
+
+      <!-- Rol o área en la que se desempeña dentro del equipo -->
+      <p class="text-muted">Diseño Web</p>
+
+      <!-- Botón que lleva al portafolio del integrante -->
+      <a href="https://linktr.ee/garciadanielof" target="_blank" class="btn btn-custom">Portafolio</a>
+
+    </div>
+  </div>
+
+</div>
+             <!-- Columna que contiene la tarjeta de una integrante del equipo -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+
+  <!-- Tarjeta personalizada que muestra los datos del integrante -->
+  <div class="card team-card">
+    <div class="card-body text-center">
+
+      <!-- Contenedor para la imagen del integrante -->
+      <div class="img-container">
+        <!-- Imagen de Daniela Bernal -->
+        <img src="assets/img/integrantes/Daniela Bernal.jpg" alt="Daniela Bernal" />
+        
+      </div>
+
+      <!-- Nombre del integrante -->
+      <h5 class="fw-bold mt-3">Daniela Bernal</h5>
+
+      <!-- Área o rol que desempeña dentro del equipo -->
+      <p class="text-muted">Finanzas y Comercio Exterior</p>
+
+      <!-- Botón con enlace al portafolio personal -->
+      <a href="https://linktr.ee/dani11bernal" target="_blank" class="btn btn-custom">Portafolio</a>
+
+    </div>
+  </div>
+
+</div>
+          <!-- Grupo 3 del carrusel del equipo -->
+<div class="carousel-item">
+  <div class="row justify-content-center">
+
+    <!-- Columna que contiene la tarjeta de un integrante del equipo -->
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+
+      <!-- Tarjeta personalizada del integrante -->
+      <div class="card team-card">
+        <div class="card-body text-center">
+
+          <!-- Contenedor para la imagen del integrante -->
+          <div class="img-container">
+            <!-- Imagen de David Niño -->
+            <img src="assets/img/integrantes/David Niño.jpg" alt="David Niño" />
+            
+          </div>
+
+          <!-- Nombre del integrante -->
+          <h5 class="fw-bold mt-3">David Niño</h5>
+
+          <!-- Rol o especialidad dentro del equipo -->
+          <p class="text-muted">Diseñador Web</p>
+
+          <!-- Botón que enlaza al portafolio personal del integrante -->
+          <a href="https://linktr.ee/David_nino" target="_blank" class="btn btn-custom">Portafolio</a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+              <!-- Columna que contiene la tarjeta del integrante del equipo -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+
+  <!-- Tarjeta personalizada del integrante -->
+  <div class="card team-card">
+    <div class="card-body text-center">
+
+      <!-- Contenedor de la imagen del integrante -->
+      <div class="img-container">
+        <!-- Imagen de David Pérez -->
+        <img src="assets/img/integrantes/David Perez.jpg" alt="David Pérez" />
+     
+      </div>
+
+      <!-- Nombre del integrante -->
+      <h5 class="fw-bold mt-3">David Peez</h5>
+    
+
+      <!-- Rol o especialidad en el equipo -->
+      <p class="text-muted">Inteligencia Artificial</p>
+
+      <!-- Botón con enlace al portafolio del integrante -->
+      <a href="https://linktr.ee/David10Paez" target="_blank" class="btn btn-custom">Portafolio</a>
+
+    </div>
+  </div>
+
+</div>
+
+
+             <!-- Columna individual del integrante del equipo -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+
+  <!-- Tarjeta que contiene la información del integrante -->
+  <div class="card team-card">
+    <div class="card-body text-center">
+
+      <!-- Contenedor de la imagen del integrante -->
+      <div class="img-container">
+        <!-- Imagen del integrante -->
+        <img src="assets/img/integrantes/Deivid Arevalo.jpg" alt="Angel Canchilla" />
+      </div>
+
+      <!-- Nombre completo del integrante -->
+      <h5 class="fw-bold mt-3">Deivid Arevalo</h5>
+
+      <!-- Rol o función dentro del equipo -->
+      <p class="text-muted">Diseño Web</p>
+
+      <!-- Botón con enlace al portafolio personal -->
+      <a href="https://linktr.ee/darevalo79" target="_blank" class="btn btn-custom">Portafolio</a>
+
+    </div>
+  </div>
+
+</div>
+             <!-- Columna individual del integrante del equipo -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+
+  <!-- Tarjeta que contiene la información del integrante -->
+  <div class="card team-card">
+    <div class="card-body text-center">
+
+      <!-- Contenedor de la imagen del integrante -->
+      <div class="img-container">
+        <!-- Imagen del integrante -->
+        <img src="assets/img/integrantes/Deivid Garcia.jpg" alt="Brayam Chavarro" />
+      </div>
+
+      <!-- Nombre completo del integrante -->
+      <h5 class="fw-bold mt-3">Deivid Garcia</h5>
+
+      <!-- Rol o función dentro del equipo -->
+      <p class="text-muted">Negocios Internacionales</p>
+
+      <!-- Botón con enlace al portafolio personal -->
+      <a href="https://linktr.ee/dim0864" target="_blank" class="btn btn-custom">Portafolio</a>
+
+    </div>
+  </div>
+
+</div>
+          <!-- Grupo 4 de la lista de integrantes, en una sección de carrusel -->
+<div class="carousel-item">
+
+  <!-- Fila que contiene las columnas para los miembros del equipo -->
+  <div class="row justify-content-center">
+
+    <!-- Columna que contiene la tarjeta del integrante -->
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+
+      <!-- Tarjeta del miembro del equipo -->
+      <div class="card team-card">
+        <div class="card-body text-center">
+
+          <!-- Contenedor de la imagen del miembro del equipo -->
+          <div class="img-container">
+            <!-- Imagen del miembro del equipo, se utiliza el atributo "alt" para accesibilidad -->
+            <img src="assets/img/integrantes/Fabian Camargo.jpg" alt="Anderson Castro" />
+            <!--  NOTA: Verifica si el "alt" corresponde a la persona correcta. Actualmente dice "Anderson Castro", pero la imagen es de "Fabian Camargo". -->
+          </div>
+
+          <!-- Nombre del miembro del equipo -->
+          <h5 class="fw-bold mt-3">Fabian Camargo</h5>
+          <!--  NOTA: El nombre "Fabian Camargo" es el del miembro del equipo -->
+          
+          <!-- Cargo o función dentro del equipo -->
+          <p class="text-muted">Inteligencia Artificial</p>
+          <!--  NOTA: Esta es la función de Fabian dentro del equipo, en este caso "Inteligencia Artificial". -->
+
+          <!-- Enlace al portafolio del miembro, el cual se abre en una nueva pestaña -->
+          <a href="https://linktr.ee/Iskahn" target="_blank" class="btn btn-custom">Portafolio</a>
+          <!--  NOTA: El enlace redirige al portafolio personal de Fabian. El atributo "target='_blank'" asegura que el enlace se abra en una nueva pestaña para no salir de la página actual. -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+              <!-- Columna que contiene la tarjeta de un miembro del equipo -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+
+  <!-- Tarjeta del miembro del equipo -->
+  <div class="card team-card">
+    <div class="card-body text-center">
+
+      <!-- Contenedor de la imagen del miembro del equipo -->
+      <div class="img-container">
+        <!-- Imagen del miembro del equipo, el atributo alt proporciona una descripción alternativa -->
+        <img src="assets/img/integrantes/holmant Alarcon.jpg" alt="Angel Canchilla" />
+        <!--  NOTA: Verifica si el atributo "alt" es correcto. Actualmente dice "Angel Canchilla", pero la imagen es de "Holmant Alarcon". -->
+      </div>
+
+      <!-- Nombre del miembro del equipo -->
+      <h5 class="fw-bold mt-3">Holmant Alarcon</h5>
+      <!--  NOTA: El nombre "Holmant Alarcon" es el del miembro del equipo. -->
+
+      <!-- Cargo o función dentro del equipo -->
+      <p class="text-muted">Soporte</p>
+      <!--  NOTA: "Soporte" es la función de Holmant en el equipo. -->
+
+      <!-- Enlace al portafolio del miembro -->
+      <a href="https://linktr.ee/HolmantAlarcon" target="_blank" class="btn btn-custom">Portafolio</a>
+      <!--  NOTA: El enlace redirige al portafolio de Holmant, y el atributo "target='_blank'" asegura que se abra en una nueva pestaña. -->
+
+    </div>
+  </div>
+
+</div>
+             <!-- ============================================================
+     SECCIÓN: INTEGRANTE DEL EQUIPO (TEAM MEMBER)
+     ============================================================
+  Esta sección es utilizada para mostrar la información de uno de los miembros del equipo.
+  En este caso, se muestra un integrante llamado Juan Piraquive con su foto, nombre, 
+  cargo y un enlace a su portafolio. Está estructurado en una tarjeta de Bootstrap.
+  
+  La tarjeta se adapta a diferentes tamaños de pantalla utilizando el sistema de rejilla de Bootstrap.
+  Esta estructura también es responsive, lo que significa que se ajusta dependiendo del tamaño del dispositivo.
+-->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  <!-- Columna de Bootstrap que se adapta a diferentes tamaños de pantalla:
+    - col-lg-3: En pantallas grandes (desktops), ocupa un 25% del ancho de la fila (3 de 12 columnas).
+    - col-md-6: En pantallas medianas (tabletas), ocupa el 50% del ancho de la fila (6 de 12 columnas).
+    - col-12: En pantallas pequeñas (móviles), ocupa el 100% del ancho de la fila (12 de 12 columnas).
+    - d-flex: Hace que el contenedor sea un elemento flexible para alinear su contenido.
+    - justify-content-center: Centra el contenido dentro de la columna.
+  -->
+
+  <div class="card team-card">
+    <!-- Tarjeta para mostrar los datos del integrante del equipo -->
+    <div class="card-body text-center">
+      <!-- Cuerpo de la tarjeta con alineación de texto centrada -->
+      
+      <div class="img-container">
+        <!-- Contenedor de la imagen -->
+        <img src="assets/img/integrantes/Juan Piraquive.jpg" alt="Juan Piraquive" />
+        <!-- Imagen del miembro del equipo -->
+        <!-- La ruta de la imagen es "assets/img/integrantes/Juan Piraquive.jpg", 
+             asegúrate de que la imagen esté ubicada correctamente en esa ruta. -->
+        <!-- alt="Juan Piraquive" es el texto alternativo que describe la imagen, útil para accesibilidad y SEO -->
+      </div>
+
+      <h5 class="fw-bold mt-3">Juan Piraquive</h5>
+      <!-- Nombre del integrante, con la clase "fw-bold" para hacer el texto en negrita 
+           y "mt-3" para agregar un margen superior de 3 unidades (espaciado entre la imagen y el nombre) -->
+      
+      <p class="text-muted">Soporte</p>
+      <!-- Cargo o rol del integrante, con la clase "text-muted" para darle un color gris claro al texto -->
+      
+      <a href="https://linktr.ee/Pirvito" target="_blank" class="btn btn-custom">Portafolio</a>
+      <!-- Enlace al portafolio del integrante. "href" especifica la URL de destino, en este caso, un perfil de Linktree. -->
+      <!-- target="_blank" hace que el enlace se abra en una nueva pestaña del navegador. -->
+      <!-- class="btn btn-custom" aplica un estilo personalizado a este botón (especificado en la hoja de estilos CSS) -->
+    </div>
+  </div>
+</div>
+
+              <!-- ============================================================
+     SECCIÓN: MIEMBROS DEL EQUIPO (TEAM MEMBERS)
+     ============================================================
+  Esta sección está diseñada para mostrar información sobre los miembros del equipo.
+  Cada miembro está representado por una tarjeta que incluye su nombre, su rol y un enlace a su portafolio.
+  La estructura es adaptable y se organiza en una grilla de 4 columnas en pantallas grandes, 2 en pantallas medianas y 1 columna en pantallas pequeñas.
+
+  Este código utiliza las clases de Bootstrap para el diseño responsivo y las clases personalizadas para los estilos y funcionalidad.
+
+-->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  <!-- Tarjeta del miembro del equipo -->
+  <div class="card team-card">
+    <!-- Cuerpo de la tarjeta -->
+    <div class="card-body text-center">
+      <!-- Contenedor de la imagen -->
+      <div class="img-container">
+        <!-- Imagen del miembro del equipo -->
+        <img src="assets/img/integrantes/Juan Gomez.jpg" alt="Juan Gomez" />
+      </div>
+      <!-- Nombre del miembro del equipo -->
+      <h5 class="fw-bold mt-3">Juan Gomez</h5>
+      <!-- Descripción del rol del miembro -->
+      <p class="text-muted">Diseño Web</p>
+      <!-- Enlace al portafolio del miembro -->
+      <a href="https://linktr.ee/jGomezL" target="_blank" class="btn btn-custom">Portafolio</a>
+    </div>
+  </div>
+</div>
+          <!-- ============================================================
+     SECCIÓN: GRUPO 5 (Integrantes del Equipo)
+     ============================================================
+  Este fragmento de código pertenece a una sección que muestra los miembros de un equipo 
+  (en este caso, el Grupo 5), utilizando un carrusel (carousel) para mostrar a cada miembro 
+  de manera interactiva. La estructura del carrusel permite desplazar las tarjetas de miembros del equipo 
+  y cada tarjeta contiene una imagen, nombre, título y un enlace al portafolio.
+
+  El código utiliza las clases de Bootstrap para el diseño responsivo y la alineación de los elementos.
+-->
+
+<!-- Grupo 5: Miembro del equipo (En este caso, Karol Garzon) -->
+<div class="carousel-item">
+  <!-- Fila para alinear los elementos (centrado en este caso) -->
+  <div class="row justify-content-center">
+
+    <!-- Columna para una tarjeta (cada miembro tiene su propia tarjeta) -->
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+      
+      <!-- Tarjeta para mostrar la información del miembro del equipo -->
+      <div class="card team-card">
+        
+        <!-- Cuerpo de la tarjeta -->
+        <div class="card-body text-center">
+          
+          <!-- Contenedor para la imagen del miembro del equipo -->
+          <div class="img-container">
+            <!-- Imagen del miembro del equipo -->
+            <img src="assets/img/integrantes/karol Garzon.jpg" alt="Karol Garzon" />
+          </div>
+          
+          <!-- Nombre del miembro -->
+          <h5 class="fw-bold mt-3">Karol Garzon</h5>
+          
+          <!-- Título o rol del miembro en el equipo -->
+          <p class="text-muted">Investigadora</p>
+          
+          <!-- Enlace al portafolio del miembro -->
+          <a href="https://linktr.ee/karolgarzon" target="_blank" class="btn btn-custom">Portafolio</a>
+        </div>
+      </div>
+    </div>
+             <!-- ============================================================
+     SECCIÓN: INTEGRANTE DEL EQUIPO
+     ============================================================
+  Este bloque de código representa un integrante del equipo. Está organizado
+  dentro de una tarjeta que incluye una imagen del miembro, su nombre, su cargo
+  y un enlace a su portafolio o perfil en línea.
+  
+  El diseño está optimizado para ser responsivo, adaptándose a diferentes tamaños
+  de pantallas (móvil, tablet, escritorio). Además, el botón de "Portafolio" abre
+  un enlace externo.
+
+  Se utiliza la estructura de rejilla de Bootstrap para posicionar y alinear
+  los elementos, y se emplean clases personalizadas y de Bootstrap para el estilo
+  y el espaciado.
+
+-->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  <!-- Tarjeta que contiene la información del miembro del equipo -->
+  <div class="card team-card">
+    <!-- Cuerpo de la tarjeta donde va la información principal -->
+    <div class="card-body text-center">
+      
+      <!-- Contenedor para la imagen del miembro del equipo -->
+      <div class="img-container">
+        <!-- Imagen del miembro del equipo -->
+        <img src="assets/img/integrantes/Laura Casteblanco.jpg" alt="Laura Casteblanco" />
+      </div>
+      
+      <!-- Nombre del miembro del equipo -->
+      <h5 class="fw-bold mt-3">Laura Casteblanco</h5>
+      
+      <!-- Cargo o rol del miembro del equipo -->
+      <p class="text-muted">Marketing</p>
+
+      <!-- Enlace a un portafolio o perfil en línea -->
+      <a href="https://linktr.ee/laurascastel" target="_blank" class="btn btn-custom">Portafolio</a>
+    </div>
+  </div>
+</div>
+
+              <!-- ============================================================
+     SECCIÓN: INTEGRANTE DEL EQUIPO
+     ============================================================
+  Este bloque de código representa a un miembro del equipo (en este caso, Luis Forero) dentro de una tarjeta.
+  La estructura está diseñada para mostrar una imagen, el nombre, el cargo y un enlace al portafolio personal del miembro.
+
+  El diseño está optimizado para mostrarse correctamente en pantallas grandes, medianas y pequeñas, gracias al sistema de rejillas de Bootstrap.
+-->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  <!-- Contenedor de la tarjeta para un miembro del equipo -->
+  <div class="card team-card">
+    
+    <!-- Cuerpo de la tarjeta, donde se coloca la imagen, nombre, cargo y enlace -->
+    <div class="card-body text-center">
+      
+      <!-- Contenedor para la imagen del miembro del equipo -->
+      <div class="img-container">
+        <!-- Imagen del integrante del equipo -->
+        <img src="assets/img/integrantes/Luis Forero.jpg" alt="Luis Forero" />
+      </div>
+      
+      <!-- Nombre del miembro -->
+      <h5 class="fw-bold mt-3">Luis Forero</h5>
+      
+      <!-- Cargo del miembro -->
+      <p class="text-muted">Desarrollador</p>
+      
+      <!-- Enlace al portafolio personal -->
+      <a href="https://linktr.ee/luissforero" target="_blank" class="btn btn-custom">Portafolio</a>
+    </div>
+  </div>
+</div>
+
+              <!-- ============================================================
+     SECCIÓN: EQUIPO (Integrante individual)
+     ============================================================
+  Este bloque muestra la información de un integrante del equipo.
+  El propósito es presentar el nombre, rol, imagen y un enlace al portafolio del miembro.
+  Se utiliza un diseño responsivo y está basado en las clases de Bootstrap para asegurar que la presentación sea adecuada en diferentes tamaños de pantalla.
+
+  A continuación se detalla cada parte del código:
+-->
+
+<!-- Columna responsiva para mostrar el integrante en una cuadrícula -->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  <!-- Tarjeta del integrante del equipo -->
+  <div class="card team-card">
+    <!-- Cuerpo de la tarjeta -->
+    <div class="card-body text-center">
+      
+      <!-- Contenedor de la imagen del miembro -->
+      <div class="img-container">
+        <!-- Imagen del integrante (foto) -->
+        <img src="assets/img/integrantes/Paula Rubio.jpg" alt="Paula Rubio" />
+      </div>
+      
+      <!-- Nombre del integrante -->
+      <h5 class="fw-bold mt-3">Paula Rubio</h5>
+      
+      <!-- Rol o título del integrante -->
+      <p class="text-muted">Investigadora</p>
+      
+      <!-- Enlace al portafolio personal -->
+      <a href="https://linktr.ee/PaulaAndreaRubioMoreno" target="_blank" class="btn btn-custom">Portafolio</a>
+    </div>
+  </div>
+</div>
+
+         <!-- ============================================================
+     SECCIÓN: CARRUSEL DE INTEGRANTES (Grupo 7)
+     ============================================================
+  Esta parte del código pertenece a un carrusel (carousel) de Bootstrap, que muestra a los miembros del equipo.
+  Cada integrante tiene una tarjeta (card) con su foto, nombre, cargo y un enlace a su portafolio.
+  El carrusel permite navegar por diferentes elementos (en este caso, los integrantes del equipo) de manera fluida.
+-->
+
+<!-- Grupo 7: Un carrusel para mostrar los miembros del equipo -->
+<div class="carousel-item">
+  <!-- Fila para alinear las tarjetas de los miembros -->
+  <div class="row justify-content-center">
+  
+    <!-- Columna para la tarjeta de un miembro del equipo -->
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+      <!-- Tarjeta del miembro del equipo -->
+      <div class="card team-card">
+        <!-- Cuerpo de la tarjeta -->
+        <div class="card-body text-center">
+          
+          <!-- Contenedor para la imagen del integrante -->
+          <div class="img-container">
+            <!-- Imagen del integrante del equipo -->
+            <img src="assets/img/integrantes/Santiago Garcia.jpg" alt="Santiago Garcia" />
+          </div>
+          
+          <!-- Nombre del miembro del equipo -->
+          <h5 class="fw-bold mt-3">Santiago Garcia</h5>
+          
+          <!-- Cargo del miembro del equipo -->
+          <p class="text-muted">Desarrollador</p>
+          
+          <!-- Enlace al portafolio del miembro -->
+          <a href="https://linktr.ee/Santiago2412?utm_source=linktree_admin_share" target="_blank" class="btn btn-custom">Portafolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+              <!-- ============================================================
+     SECCIÓN: INTEGRANTE DEL EQUIPO
+     ============================================================
+  Este bloque de código muestra un integrante del equipo. Cada tarjeta (card) 
+  contiene la información de un miembro del equipo, incluyendo su foto, nombre, 
+  cargo y un enlace a su portafolio o perfil profesional. El diseño de la tarjeta 
+  es completamente adaptable a dispositivos móviles y de escritorio gracias al uso 
+  de las clases de Bootstrap.
+  
+  Se utiliza una estructura de columnas con clases de Bootstrap para asegurar 
+  que las tarjetas se vean bien en diferentes tamaños de pantalla.
+-->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  <!-- Tarjeta del miembro del equipo -->
+  <div class="card team-card">
+    <!-- Cuerpo de la tarjeta donde se encuentra la información -->
+    <div class="card-body text-center">
+      
+      <!-- Contenedor de la imagen del miembro del equipo -->
+      <div class="img-container">
+        <!-- Imagen del integrante del equipo -->
+        <img src="assets/img/integrantes/Santiago Marin.jpg" alt="Santiago Marin" />
+      </div>
+
+      <!-- Nombre del miembro del equipo -->
+      <h5 class="fw-bold mt-3">Santiago Marin</h5>
+      
+      <!-- Cargo del miembro del equipo -->
+      <p class="text-muted">Bases de Datos</p>
+
+      <!-- Enlace al portafolio del miembro del equipo -->
+      <a href="#" target="_blank" class="btn btn-custom">Portafolio</a>
+    </div>
+  </div>
+</div>
+
+              <!-- ============================================================
+     SECCIÓN: TARJETA DE INTEGRANTE DEL EQUIPO
+     ============================================================
+  Este bloque representa una tarjeta dentro de una cuadrícula de miembros del equipo. 
+  Cada tarjeta contiene una foto del miembro, su nombre, su rol dentro de la empresa y 
+  un enlace a su portafolio. La tarjeta es parte de una fila (row) y se adapta a diferentes 
+  tamaños de pantalla utilizando el sistema de rejilla de Bootstrap.
+
+  El objetivo de esta sección es mostrar de manera ordenada la información básica de cada 
+  miembro del equipo. 
+
+  Cada tarjeta tiene una animación o estilo para mostrarla de manera atractiva al usuario.
+-->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  <!-- Columna con un tamaño flexible en diferentes dispositivos (pantallas grandes, medianas y pequeñas) -->
+  <!-- `col-lg-3` se aplica en pantallas grandes, ocupando el 25% del ancho disponible.
+       `col-md-6` se aplica en pantallas medianas, ocupando el 50% del ancho disponible.
+       `col-12` se aplica en pantallas pequeñas, ocupando el 100% del ancho disponible. -->
+  <!-- `d-flex justify-content-center` asegura que la tarjeta esté centrada en su columna. -->
+
+  <div class="card team-card">
+    <!-- Tarjeta que representa a un integrante del equipo -->
+
+    <div class="card-body text-center">
+      <!-- Contenido dentro de la tarjeta, centrado con `text-center` -->
+
+      <div class="img-container">
+        <!-- Contenedor de la imagen del miembro del equipo -->
+        <img src="assets/img/integrantes/Sebastian Romero.jpg" alt="Alejandro Aguilera" />
+        <!-- Imagen del integrante, cargada desde la ruta especificada.
+             `alt="Alejandro Aguilera"` es el texto alternativo que aparece si la imagen no se carga correctamente. -->
+      </div>
+
+      <h5 class="fw-bold mt-3">Sebastian Romero</h5>
+      <!-- Nombre del integrante, con un estilo de fuente en negrita (`fw-bold`) y un margen superior (`mt-3`). -->
+
+      <p class="text-muted">Inteligencia Artificial</p>
+      <!-- Descripción del rol del integrante, con un estilo de texto más suave (`text-muted`). -->
+
+      <a href="https://linktr.ee/SebastianDavidRomero" target="_blank" class="btn btn-custom">
+        Portafolio
+      </a>
+      <!-- Enlace a su portafolio, que se abre en una nueva pestaña del navegador (`target="_blank"`).
+           El enlace tiene un estilo personalizado definido por la clase `btn btn-custom`. -->
+    </div>
+  </div>
+</div>
+
+              
+          <!-- ============================================================
+     SECCIÓN: CARRUSEL DE INTEGRANTES DEL EQUIPO
+     ============================================================
+  Esta sección presenta un carrusel o galería de los miembros del equipo.
+  Cada "carousel-item" representa un grupo de miembros del equipo que se
+  muestran uno tras otro en el carrusel. El carrusel permite navegar
+  a través de los diferentes miembros del equipo de manera interactiva.
+
+  Cada miembro del equipo tiene una imagen, un nombre, su cargo y un enlace
+  a su portafolio en línea (si corresponde).
+  
+  Se utiliza la clase `carousel-item` para indicar que cada bloque es un ítem del carrusel.
+  Además, se usa la clase `d-flex` y `justify-content-center` para centrar el contenido de cada
+  miembro del equipo.
+-->
+<div class="carousel-item">
+  <!-- Fila para centrar los elementos del equipo -->
+  <div class="row justify-content-center">
+    
+    <!-- Columna para cada miembro del equipo -->
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+      
+      <!-- Tarjeta individual de un miembro del equipo -->
+      <div class="card team-card">
+        <div class="card-body text-center">
+          <!-- Contenedor de la imagen del miembro del equipo -->
+          <div class="img-container">
+            <!-- Imagen del miembro del equipo -->
+            <img src="assets/img/integrantes/Zullie Diaz.jpg" alt="Zullie Diaz" />
+          </div>
+          
+          <!-- Nombre del miembro del equipo -->
+          <h5 class="fw-bold mt-3">Zullie Diaz</h5>
+          
+          <!-- Cargo del miembro del equipo -->
+          <p class="text-muted">Investigadora</p>
+          
+          <!-- Enlace al portafolio del miembro del equipo -->
+          <a href="https://www.atom.bio/zulliediaz" target="_blank" class="btn btn-custom">Portafolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+             <!-- ============================================================
+     SECCIÓN: PERFIL DE MIEMBRO DEL EQUIPO
+     ============================================================
+  Este bloque de código muestra la información sobre un miembro específico del equipo, 
+  incluyendo una imagen, nombre, rol y un enlace a su portafolio.
+
+  Se utiliza la clase "card" de Bootstrap para crear una tarjeta que contiene la 
+  información del miembro del equipo y se utiliza una estructura de columna para 
+  organizar el contenido de manera flexible.
+
+  Este bloque es reutilizable para mostrar múltiples miembros del equipo en una cuadrícula.
+-->
+<div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  <!-- Contenedor de la tarjeta del miembro del equipo -->
+  <div class="card team-card">
+    
+    <!-- Cuerpo de la tarjeta -->
+    <div class="card-body text-center">
+      
+      <!-- Contenedor de la imagen del miembro -->
+      <div class="img-container">
+        <!-- Imagen del miembro del equipo -->
+        <img src="assets/img/integrantes/Eidan Cardenas.jpg" alt="Eidan Cardenas" />
+      </div>
+      
+      <!-- Nombre del miembro -->
+      <h5 class="fw-bold mt-3">Eidan Cardenas</h5>
+      
+      <!-- Rol del miembro en la empresa -->
+      <p class="text-muted">Bases de Datos</p>
+
+      <!-- Enlace al portafolio personal del miembro -->
+      <a href="https://linktr.ee/eidancardenas" target="_blank" class="btn btn-custom">Portafolio</a>
+    </div>
+  </div>
+</div>
+
+        <!-- ============================================================
+     INDICADORES DE CARRUSEL (Carousel Indicators)
+     ============================================================
+  Esta sección se refiere a los botones de navegación (indicadores) del carrusel, 
+  los cuales permiten al usuario navegar entre los diferentes elementos (diapositivas) 
+  del carrusel de manera manual. Son botones interactivos que muestran el estado 
+  actual de la diapositiva activa y permiten moverse entre ellas.
+
+  Los indicadores están vinculados al componente carrusel de Bootstrap, que 
+  permite crear un conjunto de elementos deslizantes (como imágenes, textos, etc.).
+  
+  La estructura de estos indicadores se conecta con el carrusel mediante los 
+  atributos `data-bs-target` y `data-bs-slide-to`, que indican qué diapositiva 
+  debe mostrarse cuando el usuario hace clic en uno de los botones.
+
+-->
+<div class="carousel-indicators">
+  <!-- Cada uno de los botones es un indicador para navegar entre las diapositivas -->
+  
+  <!-- Primer indicador (activo por defecto) -->
+  <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active"></button>
+
+  <!-- Segundo indicador (no activo inicialmente) -->
+  <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1"></button>
+
+  <!-- Tercer indicador (no activo inicialmente) -->
+  <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="2"></button>
+
+  <!-- Cuarto indicador (no activo inicialmente) -->
+  <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="3"></button>
+
+  <!-- Quinto indicador (no activo inicialmente) -->
+  <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="4"></button>
+
+  <!-- Sexto indicador (no activo inicialmente) -->
+  <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="5"></button>
+
+  <!-- Séptimo indicador (no activo inicialmente) -->
+  <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="6"></button>
+</div>
+
+        <!-- ============================================================
+     CONTROLES DEL CARRUSEL (PREVIO Y SIGUIENTE)
+     ============================================================
+  Este bloque de código se encarga de mostrar los controles de navegación para un carrusel de imágenes o elementos. 
+  Los botones permiten al usuario navegar entre los elementos del carrusel (deslizar hacia el anterior o siguiente).
+  
+  Los botones están configurados para ser visibles solo en dispositivos de tamaño medio o superior (pantallas de escritorio y tabletas), y estarán ocultos en pantallas pequeñas (como teléfonos móviles) mediante el uso de clases de Bootstrap.
+
+  Este carrusel se encuentra asociado a un elemento con el id `#teamCarousel`, que es el contenedor del carrusel.
+
+  ## Claves importantes:
+  - **`data-bs-target="#teamCarousel"`**: Asegura que los botones actúan sobre el carrusel con el id `teamCarousel`.
+  - **`data-bs-slide="prev"`**: Este valor indica que el botón "anterior" hace que el carrusel pase al ítem previo.
+  - **`data-bs-slide="next"`**: Este valor indica que el botón "siguiente" hace que el carrusel pase al siguiente ítem.
+
+-->
+<button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+  <!-- Icono de control anterior (botón de retroceder) -->
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+</button>
+
+<!-- Botón para navegar al siguiente ítem del carrusel -->
+<button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+  <!-- Icono de control siguiente (botón de avanzar) -->
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+<!-- ============================================================
+     SECCIÓN: PIE DE PÁGINA (FOOTER)
+     ============================================================
+  El pie de página es una parte esencial de la web que generalmente incluye
+  información importante y enlaces rápidos. En este caso, contiene el logo
+  de "Uniempresarial" y los íconos de redes sociales que permiten al usuario
+  acceder a las plataformas de la institución. Esta sección tiene un diseño
+  atractivo y está claramente diferenciada por su color de fondo y estilo.
+
+  Además, este footer se adapta bien a dispositivos móviles y de escritorio.
+-->
+<footer class="bg-primary text-light py-5">
+  <!-- Contenedor principal para el pie de página -->
+  <div class="container">
+    <div class="row">
+      
+      <!-- Columna para el logo y enlaces de redes sociales -->
+      <div class="col-md-3 text-center text-md-start">
+        
+        <!-- Logo de Uniempresarial -->
+        <img src="assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png" 
+            alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
+        <!-- Contenedor para los íconos de redes sociales -->
+        <div class="d-flex justify-content-center justify-content-md-start gap-2">
+          
+          <!-- Enlace a la página de Facebook de Uniempresarial -->
+          <a href="https://www.facebook.com/uniempresarial/" class="text-light">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          
+          <!-- Enlace al canal de YouTube de Uniempresarial -->
+          <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" class="text-light">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          
+          <!-- Enlace a la cuenta de Instagram de Uniempresarial -->
+          <a href="https://www.instagram.com/uniempresarial/?hl=en" class="text-light">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          
+          <!-- Enlace a la cuenta de Twitter de Uniempresarial -->
+          <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" class="text-light">
+            <i class="fab fa-twitter fa-lg"></i>
           </a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <section id="portafolio" class="bg-light py-5" data-aos="fade-up" data-aos-duration="1500">
-    <div class="container text-center">
-      <h2 class="mb-5 text-dark" style="font-size: 2.5rem; font-weight: bold">
-        Nuestro <span class="text-danger">Portafolio</span>
-      </h2>
-      <div class="row g-4">
-        <!-- Proyecto 1 -->
-        <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-          <div class="portfolio-item">
-            <video class="portfolio-video rounded shadow-lg" autoplay loop muted playsinline>
-              <source src="assets/video/22.mp4" type="video/mp4" />
-              Tu navegador no soporta videos HTML5.
-            </video>
-            <div class="portfolio-overlay">
-              <p class="portfolio-description">
-                Plataforma innovadora para facilitar la compra y arriendo de
-                apartamentos en Bogotá, mejorando la experiencia de
-                propietarios y arrendatarios.
-              </p>
-            </div>
-          </div>
-        </div>
+        <!-- ============================================================
+     SECCIÓN: PROGRAMAS Y ENLACES DIRECTOS
+     ============================================================
+  Esta sección está diseñada para mostrar una lista de los servicios que la empresa ofrece
+  y proporcionar enlaces directos a recursos adicionales relevantes, como enlaces a otras páginas
+  o sitios web. La información está organizada en dos bloques principales:
+  - Nuestros Servicios
+  - Enlaces Directos
 
-        <!-- Proyecto 2 -->
-        <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-          <div class="portfolio-item">
-            <video class="portfolio-video rounded shadow-lg" autoplay loop muted playsinline>
-              <source src="assets/video/carton.mp4" type="video/mp4" />
-              Tu navegador no soporta videos HTML5.
-            </video>
-            <div class="portfolio-overlay">
-              <p class="portfolio-description">
-                Se desarrolló la página web solicitada por la empresa.
-              </p>
-            </div>
-          </div>
-        </div>
+  Esta sección está contenida dentro de una columna de un diseño en rejilla, utilizando
+  clases de Bootstrap para manejar la disposición y el estilo de los elementos.
 
-        <!-- Proyecto 3 -->
-        <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
-          <div class="portfolio-item">
-            <video class="portfolio-video rounded shadow-lg" autoplay loop muted playsinline>
-              <source src="assets/video//proyectoGeneral.mp4" type="video/mp4" />
-              Tu navegador no soporta videos HTML5.
-            </video>
-            <div class="portfolio-overlay">
-              <p class="portfolio-description">
-                Unificamos en una sola plataforma todos los proyectos en
-                ejecución, brindando acceso centralizado para los encargados
-                de distintas áreas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  A continuación se explican los elementos clave y cómo se agrupan en la interfaz.
+-->
+<div class="col-md-3">
+  <!-- Título para la lista de servicios -->
+  <h5 class="fw-bold">Nuestros Servicios</h5>
+  
+  <!-- Lista de servicios (sin orden) -->
+  <ul class="list-unstyled">
+    <!-- Cada servicio es un enlace dentro de la lista -->
+    <li>
+      <a href="./pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
+    </li>
+    <li>
+      <a href="./pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la Medida</a>
+    </li>
+    <li>
+      <a href="./pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
+    </li>
+    <li>
+      <a href="./pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en Software</a>
+    </li>
+  </ul>
 
-  <!-- AOS JS Initializer -->
-  <script>
-    AOS.init();
-  </script>
+  <!-- Título para la lista de enlaces directos -->
+  <h5 class="fw-bold mt-4">Enlaces Directos</h5>
+  
+  <!-- Lista de enlaces directos -->
+  <ul class="list-unstyled">
+    <!-- Cada enlace directo lleva a diferentes recursos o sitios web -->
+    <li>
+      <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
+    </li>
+    <li>
+      <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
+        target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión Académica</a>
+    </li>
+    <li>
+      <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">FAQs</a>
+    </li>
+  </ul>
+</div>
+        <!-- ============================================================
+     SECCIÓN: NORMATIVIDAD Y POLÍTICAS
+     ============================================================
+  Esta sección proporciona enlaces a documentos y políticas relevantes para los usuarios.
+  Está enfocada en mostrar normativas o documentos legales que la empresa quiere poner a disposición
+  del público o usuarios interesados, como información pública, derechos pecuniarios, y estados financieros.
 
-  <!-- Estadísticas -->
-  <!-- Sección de Logros -->
-  <section class="testimonials-section text-center py-5 position-relative" data-aos="fade-up" data-aos-duration="1500">
-    <!-- Capa oscura semi-transparente -->
-    <div class="overlay"></div>
-    
-    <div class="container position-relative">
-        <h2 class="mb-5 fw-bold text-white" style="font-size: 2.5rem">
-            Lo que dicen <span class="text-danger">nuestros clientes</span>
-        </h2>
-        <div class="row g-4">
-            <!-- Testimonio 1 -->
-            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                <div class="testimonial-item shadow-lg p-4 rounded-4 bg-white">
-                    <div class="testimonial-img mb-3">
-                        <img src="assets/img/testimonios/persona1.jpg" alt="Cliente 1" class="rounded-circle" width="80">
-                    </div>
-                    <p class="text-muted">"El equipo superó mis expectativas. Excelente servicio y resultados increíbles."</p>
-                    <h5 class="fw-bold">Juan Pérez</h5>
-                    <small class="text-muted">CEO de Empresa X</small>
-                </div>
-            </div>
+  Esta sección se organiza en una lista de enlaces donde cada uno redirige a un documento PDF o a una página externa.
+-->
+<div class="col-md-3">
+  <!-- Título de la sección -->
+  <h5 class="fw-bold">Normatividad y Políticas</h5>
 
-            <!-- Testimonio 2 -->
-            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-                <div class="testimonial-item shadow-lg p-4 rounded-4 bg-white">
-                    <div class="testimonial-img mb-3">
-                        <img src="assets/img/testimonios/persona2.jpg" alt="Cliente 2" class="rounded-circle" width="80">
-                    </div>
-                    <p class="text-muted">"Muy profesionales y atentos a los detalles. Recomiendo su trabajo al 100%."</p>
-                    <h5 class="fw-bold">María López</h5>
-                    <small class="text-muted">Gerente de Marketing</small>
-                </div>
-            </div>
+  <!-- Lista de enlaces a documentos -->
+  <ul class="list-unstyled">
+    <!-- Enlace 1: Acceso a la Información Pública -->
+    <li>
+      <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">
+        Acceso a la Información Pública
+      </a>
+    </li>
 
-            <!-- Testimonio 3 -->
-            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
-                <div class="testimonial-item shadow-lg p-4 rounded-4 bg-white">
-                    <div class="testimonial-img mb-3">
-                        <img src="assets/img/testimonios/persona3.jpg" alt="Cliente 3" class="rounded-circle" width="80">
-                    </div>
-                    <p class="text-muted">"Increíble experiencia. La mejor decisión que tomamos para nuestro negocio."</p>
-                    <h5 class="fw-bold">Carlos Gómez</h5>
-                    <small class="text-muted">Fundador de Startup Y</small>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- Enlace 2: Derechos Pecuniarios 2025 -->
+    <li>
+      <a href="./assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">
+        Derechos Pecuniarios 2025
+      </a>
+    </li>
 
-  <!-- Sección de Equipo -->
-  <section class="team-section text-center py-5" data-aos="fade-up" data-aos-duration="1500">
-    <div class="container">
-      <h2 class="fw-bold mb-5" style="font-size: 2.5rem; color: #333">
-        Nuestro <span class="text-danger">Equipo</span>
-      </h2>
+    <!-- Enlace 3: Derechos Pecuniarios 2024 -->
+    <li>
+      <a href="./assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">
+        Derechos Pecuniarios 2024
+      </a>
+    </li>
 
-      <!-- Carrusel -->
-      <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="carousel-inner">
-          <!-- Grupo 1 -->
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Alejandro Aguilera.jpg" alt="Alejandro Aguilera" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Alejandro Aguilera</h5>
-                    <p class="text-muted">Bases de Datos</p>
-                    <a href="https://linktr.ee/alejoaguilera" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
+    <!-- Enlace 4: Estados Financieros -->
+    <li>
+      <a href="./assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
+        class="text-light text-decoration-none">
+        Estados Financieros
+      </a>
+    </li>
+  </ul>
+</div>
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Anderson Castro.jpg" alt="Anderson Castro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Anderson Castro</h5>
-                    <p class="text-muted">Soporte</p>
-                    <a href="https://heylink.me/AndersonCC/" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
+       <!-- ============================================================
+     SECCIÓN: MAPA Y CONTACTO
+     ============================================================
+  Esta sección está dedicada a mostrar la ubicación física de la empresa o institución, 
+  junto con sus datos de contacto. Se utiliza un mapa de Google Maps incrustado para 
+  mostrar la dirección, junto con la información de contacto como el teléfono y el correo electrónico.
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Angel Canchilla.jpg" alt="Angel Canchilla" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Angel Canchilla</h5>
-                    <p class="text-muted">Desarrollador</p>
-                    <a href="https://linktr.ee/Angel_Da" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
+  A continuación se detallan los componentes clave de esta sección.
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Brayam chavarro.jpg" alt="Anderson Castro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Brayam Chavarro</h5>
-                    <p class="text-muted">Bases de Datos</p>
-                    <a href="https://heylink.me/AndersonCC/" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--grupo 2-->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/cristian reyes-removebg-preview.jpg" alt="Alejandro Aguilera" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Cristian Reyes</h5>
-                    <p class="text-muted">Desarrollador</p>
-                    <a href="https://linktr.ee/Cristian_Reyes " target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
+-->
+<div class="col-md-3 text-center text-md-start">
+  <!-- Título de la sección -->
+  <h5 class="fw-bold">Ubicación</h5>
+  
+  <!-- Contenedor del mapa -->
+  <div class="map-container" style="height: 150px; border-radius: 10px; overflow: hidden; margin-bottom: 10px;">
+    <!-- Incrustación de Google Maps -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
+      width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/crsitian vega.jpg" alt="Anderson Castro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Cristian Vega</h5>
-                    <p class="text-muted">Inteligencia Artificial</p>
-                    <a href="https://linktr.ee/cristian_vega_cv" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
+  <!-- Dirección de la sede principal -->
+  <p>
+    <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a #30-20 Bogotá D.C.
+  </p>
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Daniel Garcia.jpg" alt="Angel Canchilla" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Daniel Garcia</h5>
-                    <p class="text-muted">Diseño Web</p>
-                    <a href="https://linktr.ee/garciadanielof" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
+  <!-- Teléfono de contacto -->
+  <p>
+    <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604, 6607, 6608
+  </p>
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Daniela Bernal.jpg" alt="Brayam Chavarro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Daniela Bernal</h5>
-                    <p class="text-muted">Finanzas y Comercio Exterior</p>
-                    <a href="https://linktr.ee/dani11bernal" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--grupo 3-->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/David Niño.jpg" alt="Alejandro Aguilera" />
-                    </div>
-                    <h5 class="fw-bold mt-3">David Niño</h5>
-                    <p class="text-muted">Diseñador Web</p>
-                    <a href="https://linktr.ee/David_nino" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
+  <!-- Correo electrónico de contacto -->
+  <p>
+    <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
+  </p>
+</div>
+  <!-- ============================================================
+     SECCIÓN DE SCRIPTS
+     ============================================================
+  Esta sección incluye los scripts y las hojas de estilo necesarias para el 
+  funcionamiento y la interacción de la página web. Los scripts se colocan 
+  antes del cierre de la etiqueta `</body>` para asegurar que todos los 
+  elementos del HTML estén cargados antes de ejecutar cualquier acción con JavaScript.
+-->
+  
+<!-- ============================================================
+  SCRIPT DE BOOTSTRAP
+  ============================================================
+  El siguiente script carga el bundle de Bootstrap 5, que incluye tanto 
+  las funcionalidades de JavaScript como los componentes interactivos 
+  (como los modales, carruseles, y la navegación responsiva). 
+  Este archivo es necesario para que los elementos interactivos de 
+  Bootstrap funcionen correctamente.
+-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/David Perez.jpg" alt="Anderson Castro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">David Peez</h5>
-                    <p class="text-muted">Inteligencia Artificial</p>
-                    <a href="https://linktr.ee/David10Paez" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
+<!-- ============================================================
+  SCRIPT PERSONALIZADO (app.js)
+  ============================================================
+  Este archivo contiene los scripts personalizados que hayas creado 
+  específicamente para la funcionalidad y las interacciones de tu página.
+  Aquí puedes colocar lógica personalizada en JavaScript para la página, 
+  como animaciones adicionales, validaciones, o cambios en el DOM que 
+  no están cubiertos por los frameworks como Bootstrap.
+-->
+<script src="./js/app.js"></script>
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Deivid Arevalo.jpg" alt="Angel Canchilla" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Deivid Arevalo</h5>
-                    <p class="text-muted">Diseño Web</p>
+<!-- ============================================================
+  SCRIPT DE VALIDACIONES (validaciones.js)
+  ============================================================
+  Este archivo contiene las funciones necesarias para las validaciones 
+  en los formularios o entradas de la página web. Puedes utilizarlo para 
+  verificar datos como campos vacíos, formatos incorrectos, y más antes 
+  de que los usuarios envíen información. Es recomendable que las validaciones 
+  se realicen tanto del lado del cliente (JavaScript) como del lado del servidor.
+-->
+<script src="./js/validaciones.js"></script>
 
-                    <a href="https://linktr.ee/darevalo79" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
+<!-- ============================================================
+  HERRAMIENTA DE ANIMACIONES AOS (Animate On Scroll)
+  ============================================================
+  La siguiente línea carga la hoja de estilos de la librería AOS (Animate On Scroll), 
+  que permite añadir animaciones cuando los elementos de la página entran en 
+  el área visible del usuario al hacer scroll. Las animaciones se definen en 
+  el código HTML con atributos `data-aos`.
+-->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Deivid Garcia.jpg" alt="Brayam Chavarro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Deivid Garcia</h5>
-                    <p class="text-muted">Negocios Internacionales</p>
-                    <a href="https://linktr.ee/dim0864" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--grupo 4-->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
+<!-- ============================================================
+  SCRIPT DE AOS (Animate On Scroll)
+  ============================================================
+  Este script inicializa la librería AOS para que las animaciones definidas 
+  en los elementos HTML funcionen correctamente cuando el usuario haga scroll. 
+  Se necesita incluir este script para que las animaciones definidas con `data-aos`
+  sean activadas cuando el usuario interactúa con la página.
+-->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Fabian Camargo.jpg" alt="Anderson Castro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Fabian Camargo</h5>
-                    <p class="text-muted">Inteligencia Artificial</p>
-                    <a href="https://linktr.ee/Iskahn" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/holmant Alarcon.jpg" alt="Angel Canchilla" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Holmant Alarcon</h5>
-                    <p class="text-muted">Soporte</p>
-
-                    <a href="https://linktr.ee/HolmantAlarcon" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Juan Piraquive.jpg" alt="Alejandro Aguilera" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Juan Piraquive</h5>
-                    <p class="text-muted">Soporte</p>
-                    <a href="https://linktr.ee/Pirvito" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Juan Gomez.jpg" alt="Brayam Chavarro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Juan Gomez</h5>
-                    <p class="text-muted">Diseño Web</p>
-                    <a href="https://linktr.ee/jGomezL" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--grupo 5-->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/karol Garzon.jpg" alt="Anderson Castro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Karol Garzon</h5>
-                    <p class="text-muted">Investigadora</p>
-                    <a href="https://linktr.ee/karolgarzon" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Laura Casteblanco.jpg" alt="Angel Canchilla" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Laura Casteblanco</h5>
-                    <p class="text-muted">Marketing</p>
-
-                    <a href="https://linktr.ee/laurascastel" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Luis Forero.jpg" alt="Brayam Chavarro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Luis Forero</h5>
-                    <p class="text-muted">Desarrollador</p>
-                    <a href="https://linktr.ee/luissforero" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Paula Rubio.jpg" alt="Alejandro Aguilera" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Paula Rubio</h5>
-                    <p class="text-muted">Investigadora</p>
-                    <a href="https://linktr.ee/PaulaAndreaRubioMoreno" target="_blank"
-                      class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-
-          <!--grupo 7-->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Santiago Garcia.jpg" alt="Anderson Castro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Santiago Garcia</h5>
-                    <p class="text-muted">Desarrollador</p>
-                    <a href="https://linktr.ee/Santiago2412?utm_source=linktree_admin_share" target="_blank"
-                      class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Santiago Marin.jpg" alt="Angel Canchilla" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Santiago Marin</h5>
-                    <p class="text-muted">Bases de Datos</p>
-
-                    <a href="#" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Sebastian Romero.jpg" alt="Alejandro Aguilera" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Sebastian Romero</h5>
-                    <p class="text-muted">Inteligencia Artificial</p>
-                    <a href="https://linktr.ee/SebastianDavidRomero" target="_blank"
-                      class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              
-            </div>
-          </div>
-          <!--grupo 7-->
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Zullie Diaz.jpg" alt="Anderson Castro" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Zullie Diaz</h5>
-                    <p class="text-muted">Investigadora</p>
-                    <a href="https://www.atom.bio/zulliediaz" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                <div class="card team-card">
-                  <div class="card-body text-center">
-                    <div class="img-container">
-                      <img src="assets/img/integrantes/Eidan Cardenas.jpg" alt="Angel Canchilla" />
-                    </div>
-                    <h5 class="fw-bold mt-3">Eidan Cardenas</h5>
-                    <p class="text-muted">Bases de Datos</p>
-
-                    <a href="https://linktr.ee/eidancardenas" target="_blank" class="btn btn-custom">Portafolio</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Indicadores -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="3"></button>
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="4"></button>
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="5"></button>
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="6"></button>
-        </div>
-
-        <!-- Controles (ocultos en móvil) -->
-        <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#teamCarousel"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#teamCarousel"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-primary text-light py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Logo y Redes Sociales -->
-        <div class="col-md-3 text-center text-md-start">
-          <img src="assets/img/Logo uniempresarial rectangular CCB_Logo Completo Uniempresarial a color.png  "
-            alt="Uniempresarial Logo" class="mb-3" style="max-width: 250px" />
-          <div class="d-flex justify-content-center justify-content-md-start gap-2">
-            <a href="https://www.facebook.com/uniempresarial/" class="text-light"><i
-                class="fab fa-facebook fa-lg"></i></a>
-            <a href="https://www.youtube.com/channel/UC7Gal38pmeQ2QxrH0VJwOzg" class="text-light"><i
-                class="fab fa-youtube fa-lg"></i></a>
-            <a href="https://www.instagram.com/uniempresarial/?hl=en" class="text-light"><i
-                class="fab fa-instagram fa-lg"></i></a>
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fuempresarial" class="text-light"><i
-                class="fab fa-twitter fa-lg"></i></a>
-          </div>
-        </div>
-
-        <!-- Programas y Enlaces Directos -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Nuestros Servicios</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="./pages/consultoria.html" class="text-light text-decoration-none">Consultoria en software</a>
-            </li>
-            <li>
-              <a href="./pages/desarrollo.html" class="text-light text-decoration-none">Desarrollo de Software a la
-                Medida</a>
-            </li>
-            <li>
-              <a href="./pages/integracion.html" class="text-light text-decoration-none">Integración de Sistemas</a>
-            </li>
-            <li>
-              <a href="./pages/capacitaciones.html" class="text-light text-decoration-none">Capacitacion en Software</a>
-            </li>
-          </ul>
-          <h5 class="fw-bold mt-4">Enlaces Directos</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-light text-decoration-none">Uniempresarial en Cifras</a>
-            </li>
-            <li>
-              <a href="https://www.kawak.com.co/uniempresarial/index.php?ref=bWFpbi9ob21lLnBocA%3D%3D&exp=1"
-                target="_blank" rel="noreterrer noopener" class="text-light text-decoration-none">Sistema de Gestión
-                Académica</a>
-            </li>
-            <li>
-              <a href="https://uniempresarial.edu.co/faqs/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">FAQs</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Normatividad -->
-        <div class="col-md-3">
-          <h5 class="fw-bold">Normatividad y Políticas</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://uniempresarial.edu.co/sobre-nosotros/" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Acceso a la Información Pública</a>
-            </li>
-            <li>
-              <a href="./assets/pdf/Derechos-pecuniarios-2025.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2025</a>
-            </li>
-            <li>
-              <a href="./assets/pdf/derechos-pecuniarios-2024.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Derechos Pecuniarios 2024</a>
-            </li>
-            <li>
-              <a href="./assets/pdf/Estados-Financieros-Uniempresarial.pdf" target="_blank" rel="noreterrer noopener"
-                class="text-light text-decoration-none">Estados Financieros</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Mapa y Contacto -->
-        <div class="col-md-3 text-center text-md-start">
-          <h5 class="fw-bold">Ubicación</h5>
-          <div class="map-container" style="
-                height: 150px;
-                border-radius: 10px;
-                overflow: hidden;
-                margin-bottom: 10px;
-              ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.973787931933!2d-74.06826532520925!3d4.629385496328969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bb2cf3b09f%3A0xf1e2f25691e3f1d8!2sCra.%2033a%20%2330-20%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sus!4v1693328598471!5m2!1ses!2sus"
-              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Sede Principal: Cra 33a
-            #30-20 Bogotá D.C.
-          </p>
-          <p>
-            <i class="fas fa-phone-alt"></i> (+601) 3808000 Exts. 1002, 6604,
-            6607, 6608
-          </p>
-          <p>
-            <i class="fas fa-envelope"></i> admisiones@uniempresarial.edu.co
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/app.js"></script>
-  <script src="./js/validaciones.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
-
-</html>
+<!-- ============================================================
+  INICIALIZACIÓN DE AOS
+  ============================================================
+  Este bloque de código inicializa AOS, asegurando que todas las animaciones 
+  de la página sean correctamente cargadas y activadas cuando el usuario haga 
+  scroll. Al poner `AOS.init()`, la librería sabe que debe estar lista para 
+  aplicar las animaciones cuando los elementos se deslicen hacia la vista.
+-->
+<script>
+  AOS.init();
+</script>
