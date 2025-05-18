@@ -1,10 +1,10 @@
-# 🏭 Documentación del Proyecto Fábrica
+# Documentación del Proyecto Fábrica
 
 Este repositorio contiene la documentación técnica y recursos relacionados con el proyecto **Fábrica**, una aplicación web orientada a la gestión de procesos industriales y el diseño de una planta de producción digitalizada.
 
 ---
 
-## 📁 Estructura del Proyecto
+# Estructura del Proyecto
 ├── index.html
 ├── css/
 │ └── estilos.css
@@ -16,10 +16,6 @@ Este repositorio contiene la documentación técnica y recursos relacionados con
 │ └── páginas adicionales como nosotros.html, contacto.html
 └── README.md
 --
-
-## 🚀 Cómo Ejecutar el Proyecto
-
-1. **Clonar el repositorio:**
 
 ```bash
 git clone https://github.com/lamelaa/documentacion_fabrica.git
