@@ -17,6 +17,3 @@ Este repositorio contiene la documentación técnica y recursos relacionados con
 └── README.md
 --
 
-```bash
-git clone https://github.com/lamelaa/documentacion_fabrica.git
-cd documentacion_fabrica
