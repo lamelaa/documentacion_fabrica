@@ -1,6 +1,6 @@
 # Documentación del Proyecto Fábrica
 
-Este repositorio contiene la documentación técnica y recursos relacionados con el proyecto **Fábrica**, una aplicación web orientada a la gestión de procesos industriales y el diseño de una planta de producción digitalizada.
+Este repositorio contiene la documentación técnica y recursos relacionados con el proyecto **Fábrica**, una aplicación web orientada a la gestión de procesos industriales y el diseño de una planta de producción digitalizada.uniempresarial.
 
 ---
 
